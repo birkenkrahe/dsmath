@@ -54,7 +54,7 @@ cardiovascular health. Source: [[https://www.explainxkcd.com/wiki/index.php/2652
 * COURSE TOPICS (SPELLED OUT)
 #+attr_html: :width 500px
 #+caption: Pablo Picasso, Guernica (1937), grayscale painting
-[[../img/1_guernica.jpg]]
+[[../img/1_guernica.png]]
 
 1) Elementary statistics
 2) Basic data visualization
@@ -223,25 +223,6 @@ There are 15 programming assignments altogether = 10 points each, or
 - A subset of the test questions will form the *final exam* (20% of your
   final grade) - we will practice in the last week before the exam.
 
-* PRACTICE - COURSE INFRASTRUCTURE
-
-*Useful:* take notes! Practice leads to mastery and the practice
-exercises will often come back to haunt you in the tests.
-
-1) Open a browser
-2) Find the GitHub repos (birkenkrahe/dsmath and birkenkrahe/org)
-3) Open the command line terminal
-4) Open/close R
-5) Open Emacs
-6) Find the Emacs tutorial
-7) Open/close R inside Emacs
-8) Run R in an Org-mode file
-9) Close Emacs
-10) Close the command line terminal
-
-    *Note:* Class room practice completion = 10 points each for active
-    participation.
-
 * GLOSSARY
 
 | TERM           | MEANING                                |
@@ -268,13 +249,11 @@ exercises will often come back to haunt you in the tests.
 
 * REFERENCES
 
-- datavizblog.com (May 26, 2013).DataViz History: Charles Minard's
-  Flow Map of Napoleon's Russian Campaign of 1812. [[https://datavizblog.com/2013/05/26/dataviz-history-charles-minards-flow-map-of-napoleons-russian-campaign-of-1812-part-5/][Online:
-  datavizblog.com]]
-- Davies T D (2016). The Book of R. NoStarch Press.
-- Pearson R K (2018). Exploratory Data Analysis Using R. CRC Press.
-- Wilke C (2019). Fundamentals of Data Visualization. O'Reilly
-  Media. [[https://clauswilke.com/dataviz/][Online: clauswilke.com]]
+- Davies T D (2016). The Book of R. [[https://nostarch.com/bookofr][NoStarch Press]].
+- Dalgaard P (2008). Introductory Statistics with R. [[https://link.springer.com/book/10.1007/978-0-387-79054-1][Springer]].
+- Matloff N (2020). Probability and stats for data science. [[https://www.routledge.com/Probability-and-Statistics-for-Data-Science-Math--R--Data/Matloff/p/book/9781138393295][CRC Press]].
+- Matloff N (2022). fasteR: fast Lane to Learning R! [[https://github.com/matloff/fasteR][Github]].
+- Morin D (2016). Probability For the Enthusiastic Beginner. [[https://scholar.harvard.edu/david-morin/probability][Harvard]].
 
 * Footnotes
 

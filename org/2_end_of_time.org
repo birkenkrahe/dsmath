@@ -1,0 +1,58 @@
+#+TITLE: LECTURE: DATA SCIENCE AT THE END OF TIME
+#+AUTHOR: MARCUS BIRKENKRAHE
+#+SUBTITLE: Applied math for data science (DSC 482/MTH 445) Fall 2022
+#+STARTUP:overview hideblocks indent inlineimages
+#+attr_html: :width 700px
+#+caption: Pablo Picasso, Guernica (1937), grayscale painting
+[[../img/1_guernica.png]]
+
+#+begin_quote
+“It is taken increasingly for granted that man ought to be treated as
+an object. Man confronts this attitude in the range of authority
+exercised over him; he may merely meet it in countless statistics and
+tables or he may experience its culmination in an unspeakable rape of
+the individual, of the group, even of the whole nation.”
+
+-- Romano Guardini (1956)
+#+end_quote
+
+1) How did people in antiquity experience and view the world?[fn:1]
+2) How did people in the middle ages experience and view the world?
+3) How do we experience and view the world?
+4) What does this have to do with statistics and probability?
+
+* ANTIQUITY
+
+- What time are we talking about?
+- Do you know a thinker of that time and what he said or wrote?
+- As a person in antiquity, what would your world-view have been?
+  
+** Summary
+
+
+* MIDDLE AGES
+
+
+* MODERN WORLD
+
+* REFERENCES
+
+- Guardini, R (1956). The End of the Modern World - . Intercollegiate
+  Studies Institute; REV ed. (April 1, 2001). ([[https://www.amazon.com/End-Modern-World-Romano-Guardini/dp/1882926587][Amazon]])
+
+  [[https://www.amazon.com/gp/customer-reviews/R1F7PMYOPITMWC/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8&ASIN=1882926587][From an amazon.com review]]: "Written shortly after the end of World
+  War II, The End of the Modern World is a bracing, sometimes bleak
+  jeremiad against the dehumanizing dangers of what we now call
+  postmodernism. Guardini is not a pessimist, but he is vitally
+  concerned about the potential loss of human dignity and individual
+  responsibility in a world culture dominated by technological
+  utilitarianism."
+
+- Wigner E (1960). The Unreasonable Effectiveness of Mathematics in
+  the Natural Sciences. Comm. Pure and Appl. Math. 13(1). ([[https://www.maths.ed.ac.uk/~v1ranick/papers/wigner.pdf][PDF]])
+
+* Footnotes
+
+[fn:1]The German words for this are "Daseinsgefühl" (the feeling one
+has when existing), and "Weltbild" (a view of the whole world). 
+

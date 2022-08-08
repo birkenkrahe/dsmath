@@ -1,0 +1,92 @@
+#+TITLE: Practice: Course Infrastructure
+#+AUTHOR: [YourName]
+#+SUBTITLE: Data visualization (DSC 302) Fall 2022
+#+OPTIONS: toc:nil num:nil ^:nil
+* README
+
+  - Practice instructions for data science course infrastructure
+  - Emacs + ESS + Org-mode and R must be installed
+  - Upload the completed file as a class assignment
+
+  #+name: tab:3_practice
+  | PRACTICE         | MIN |
+  |------------------+-----|
+  | Prerequisites    |  15 |
+  | Loading packages |  15 |
+  | Looking at data  |  15 |
+  | Factors vectors  |  15 |
+  | Summary stats    |  15 |
+  | Boxplots         |  10 |
+  | Scatterplots     |  10 |
+  | Bar charts       |  10 |
+  | Customization    |  15 |
+  |------------------+-----|
+  | TOTAL            | 120 |
+  #+TBLFM: @11$2=vsum(@2..@10)
+
+* TODO IDENTIFY YOURSELF
+
+  - Update the ~#+AUTHOR:~ information in the header
+  - Add this on a line to the header of this file :
+    ~#+STARTUP: overview hideblocks indent~
+  - With the cursor on theline, activate the header line with ~C-c C-c~.
+  - Put your cursor on the headline of this section, and type ~S <LEFT>~
+    until you see ~DONE~ instead of ~TODO~ next to the title.
+  - Perform this last step each time you complete a section.
+
+* TODO PREREQUISITES
+
+  1) Check that R is installed on your machine. All of these are
+     equivalent but lead to different interfaces:
+     - open Emacs and open an R session with ~M-x R~
+     - open the CMD line terminal and enter the command ~R~
+     - open the CMD line terminal and enter the command ~Rgui~
+
+  2) Check that you can execute R code blocks inside Emacs: execute the
+     following code block named [[version]] by moving the cursor anywhere on
+     the block - either on the metadata or on the line of code - and
+     enter ~C-c C-c~.
+
+     The ~result~ of [[version]] is R ~version~ information. Because of the
+     output size, it is automatically wrapped in an ~example~ block.
+
+     #+name: version
+     #+begin_src R :results output
+       version
+     #+end_src
+
+  3) Alternatively to executing the block in the Org-mode buffer, you
+     can move the cursor on the block and enter ~C-c '~. This will open
+     the source code in a new buffer where you can execute it or edit
+     it. This time, the output will appear in the ~*R*~ buffer instead of
+     the Org-mode file.
+
+  4) If R is not installed, you need to install it. If you cannot
+     execute R code blocks, you are probably missing the correct Emacs
+     init file ~/.emacs~: [[https://github.com/birkenkrahe/org/blob/master/emacs/.emacs][download the file from here]]. You might also miss
+     the ESS (Emacs Speaks Statistics) package. Try ~M-x load-library ESS
+     RET~.
+
+  5) If you're in an R session now, exit by entering ~q()~. R is
+     case-sensitive, so this must be lower-case. When asked if you want
+     to save the workspace, say *no*[fn:1].
+
+* TODO COURSE INFRASTRUCTURE
+
+*Useful:* take notes! Practice leads to mastery and the practice
+exercises will often come back to haunt you in the tests.
+
+1) Open a browser
+2) Find the GitHub repos (birkenkrahe/dsmath and birkenkrahe/org)
+3) Open the command line terminal
+4) Open/close R
+5) Open Emacs
+6) Find the Emacs tutorial
+7) Open/close R inside Emacs
+8) Run R in an Org-mode file
+9) Close Emacs
+10) Close the command line terminal
+
+*Note:* Class room practice completion = 10 points each for active
+participation.
+

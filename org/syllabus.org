@@ -342,8 +342,8 @@ behind.
   #+name: tab:schedule
   | WK | NO | DATE       | TESTS      | TEXTBOOK                     | ASSIGNMENT[fn:1]                   |
   |----+----+------------+------------+------------------------------+------------------------------------|
-  |  1 |  1 | Tue-16-Aug | Entry Test |                              |                                    |
-  |    |  2 | Thu-18-Aug |            |                              | 1. Emacs tutorial                  |
+  |  1 |  1 | Tue-16-Aug | Entry Test |                              | 1. Emacs tutorial                  |
+  |    |  2 | Thu-18-Aug |            |                              |                                    |
   |----+----+------------+------------+------------------------------+------------------------------------|
   |  2 |  3 | Tue-23-Aug | Test 1     | 13. Elementary statistics    | 2. Introduction to statistics      |
   |    |  4 | Thu-25-Aug |            |                              |                                    |
