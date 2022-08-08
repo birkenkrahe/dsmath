@@ -1,234 +1,289 @@
-#+TITLE: Course overview
-#+AUTHOR: Marcus Birkenkrahe
-#+SUBTITLE: Data visualization (DSC 302) Fall 2022
+#+TITLE: COURSE OVERVIEW
+#+AUTHOR: MARCUS BIRKENKRAHE
+#+SUBTITLE: Applied math for data science (DSC 482/MTH 445) Fall 2022
 #+STARTUP:overview hideblocks indent inlineimages
-#+attr_html: :width 600px
-#+caption: The Red Tower/La tour rouge (Giorgio de Chirico, 1913) Source: Guggenheim
-[[../img/1_tower.jpg]]
+#+attr_html: :width 200px
+#+caption: Cutting the stone/cure of folly, Hieronymous Bosch (1494)
+[[../img/1_bosch.jpg]]
+#+begin_notes
+Cutting the Stone, also called The Extraction of the Stone of Madness,
+or The Cure of Folly, is a painting by Hieronymous Bosch
+from 1494. The painting depicts a surgeon, wearing a funnel hat,
+removing the stone of madness from a patient's head by
+trepanation. The stone (Dutch: /kei/) appears as a flower bulb. The
+Gothic inscription reads: /Master, cut the stone out, fast. My name is
+Lubbert Das/. (Source: Wikipedia)
+#+end_notes
 * MUTUAL INTRODUCTIONS
-  #+attr_html: :width 500px
-  #+caption: Marc Chagall, Over the town (2018) Source: Wikiart
-  [[../img/1_chagall.jpg]]
+#+attr_html: :width 500px
+#+caption: Detail from the Garden of Earthly Delights (Hell) by Bosch (1503)
+[[../img/1_hell.png]]
 
-  1. Why are you here?
-  2. What would delight you?
-  3. What would disappoint you?
-  4. Where are you headed?
+1. Why are you here?
+2. What would delight you?
+3. What would disappoint you?
+4. Where are you headed?
 * COURSE SYLLABUS (on GitHub and on Canvas)
-  #+attr_html: :width 500px
-  #+caption: DSC 302 Syllabus on GitHub
-  [[../img/1_syllabus.png]]
+#+attr_html: :width 500px
+#+caption: DSC 302 Syllabus on GitHub
+[[../img/1_syllabus.png]]
 
-  - General information & standard policies
-  - Course information (grading, attendance)
-  - [[https://github.com/birkenkrahe/ds1/blob/piHome/org/syllabus.org#classroom-sessions-schedule][Schedule]] with dates of tests and assignments
-  - The [[https://github.com/birkenkrahe/dviz][GitHub repo]] contains course material
+- General information & standard policies
+- Course information (grading, attendance)
+- [[https://github.com/birkenkrahe/dsmath/blob/main/org/syllabus.org#dates-and-class-schedule][Schedule]] with dates of tests and assignments
+- The [[https://github.com/birkenkrahe/dsmath][GitHub repo]] contains course material
 
 * COURSE TOPICS (ILLUSTRATED)
-  #+attr_html: :width 550px
-  #+caption: Course topics
-  [[../img/1_xkcd_curve_fitting.png]]
+#+attr_html: :width 400px
+#+caption: xkcd 2652: Proxy Variable (explainxkcd.com, July 29, 2022)
+[[../img/1_xkcd_proxy_variable.png]]
+
+#+begin_notes
+Title: 'Our work has produced great answers. Now someone just needs to
+figure out which questions they go with."  In statistics, a proxy
+variable is used as a stand-in for one or more other variables that
+are difficult to measure. In order to be useful as such, proxy
+variables must be correlated with what they are intended to
+represent. For example, a drug might aim to reduce deaths from a
+slow-acting disease. But testing if it reduces deaths might take many
+years, so researchers might test for a proxy outcome instead, like
+whether it results in loss of bone density or damage to
+cells. Physicians use blood pressure as one of many proxies for
+cardiovascular health. Source: [[https://www.explainxkcd.com/wiki/index.php/2652:_Proxy_Variable][explanation]] (July 29, 2022)
+#+end_notes
 * COURSE TOPICS (SPELLED OUT)
-  #+attr_html: :width 500px
-  #+caption: Lyonel Feininger, Sailing Boats (1929)
-  [[../img/1_topics.png]]
+#+attr_html: :width 500px
+#+caption: Pablo Picasso, Guernica (1937), grayscale painting
+[[../img/1_guernica.jpg]]
 
-  1) Exploratory Data Analysis (EDA) using R
-  2) Graphics in base R with applications
-  3) Working with external data (critically)
-* WHY "DATA VISUALIZATION"?
+1) Elementary statistics
+2) Basic data visualization
+3) Probability
+4) Distributions
+5) Linear regression
 
-  #+attr_html: :width 700px
-  #+caption: Charles Minard, Napoleon's Russian campaign 1812
-  [[../img/1_minard.png]]
+#+begin_notes
+Guernica by Picasso (1937) depics the bombing on the Spanish city of
+Guernica during the Spanish Civil War. It is also a typical
+cubist-surrealist painting where reality is dissolved in geometric
+patterns and symbols, distorted and disfigured to achieve a heightened
+effect. Our upcoming discussion on the origins of statistics and
+probability will make it clearer why I chose this image to illustrate
+the list of topics.
+#+end_notes
+* WHY "MATH FOR DATA SCIENCE"?
+#+attr_html: :width 500px
+#+caption: Joseph Wright of Derby: An Experiment on a Bird in an Air Pump (1768)
+[[../img/1_experiment.jpg]]
 
-  - The purpose of data science is /pattern identification/
-  - /Visualization/ happens in the head of the researcher first
-  - /Graphing/ happens throughout, /storytelling/ happens last
+- The central purpose of data science is /pattern identification/
+- Patterns cannot usually be discerned directly from the data
+- In experiments, data must be sampled and analyzed
+- Data analysis is primarily a mathematical discipline
+- Core: statistical summaries and probability distributions
+- Alternative name: causal inferential statistics
+- Distinct from: machine learning, big data (massive datasets)
 
   #+begin_notes
-  - The diagram by Charles Minard (1869) tells the story of Napoleon's
-    disastrous Russian campaign in 1812 (datavizblog.com, 2013)
-  - Variables: army location, temperature, size over time
-  - Diagram type: [[https://analytics.googleblog.com/2011/12/sankey-diagrams-and-flow-over-hundred.html][Sankey flow diagram]] ([[https://www.sankey-diagrams.com/][many examples]])
-  - Data type: time series (an object class, ~ts~, in R)
-  - The story of this campaign is also the backstory for Tolstoy's
-    novel [[https://en.wikipedia.org/wiki/War_and_Peace]["WAR AND PEACE" (Война и мир, 1867)]]
+  "The painting departed from convention of the time by depicting a
+  scientific subject in the reverential manner formerly reserved for
+  scenes of historical or religious significance. Wright was
+  intimately involved in depicting the Industrial Revolution and the
+  scientific advances of the Enlightenment." (Source: [[https://en.wikipedia.org/wiki/An_Experiment_on_a_Bird_in_the_Air_Pump][Wikipedia]])
   #+end_notes
 
-* GET THE STORY BEHIND THE STATS
+* THE WHOLE DATA SCIENCE PIPELINE
+#+attr_html: :width 500px
+#+caption: Data science pipeline
+[[../img/1_pipeline.png]]
 
-  Even /The Fayetteville Observer/ is trying to catch readers with data
-  visualization / data story offers:
+- Math important for: data cleaning and data modeling
+- Need to know: coding (R programming) and story (visualization)
+- This course focuses on descriptive rather than predictive stats
+- The followup course ("Machine learning") is about prediction
 
-  #+attr_html: :width 300px
-  #+caption: The Fayetteville Observer ad (Aug 5, 2022)
-  [[../img/1_FayettevilleObserver.png]]
-  
 * AGILE TEAM PROJECT
-  #+attr_html: :width 600px
-  #+caption: Agile (Scrum) project
-  [[../img/1_scrum.png]]
+#+attr_html: :width 600px
+#+caption: Agile (Scrum) project
+[[../img/1_scrum.png]]
 
-  The team project makes up 20% of your final grade for this course.
+The team project makes up 20% of your final grade for this course.
 
-  - What is a team project? (FAQ)
-  - Do you have examples for data science projects? (FAQ)
-  - Can you do a project as an absolute beginner? (FAQ)
+- What is a team project? (FAQ)
+- Do you have examples for data science projects? (FAQ)
+- Can you do a project as an absolute beginner? (FAQ)
 
-  *Note:* the first /[[https://github.com/birkenkrahe/org/blob/master/FAQ.org#what-is-a-sprint-review][sprint review]]/ is on August 31. Use it to present your
-  initial results (see FAQ on [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#what-do-i-need-to-deliver-at-a-sprint-review][what to deliver]], and [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#what-should-we-do-in-the-first-sprint][1st sprint review]]).
+  *Note:* the first /[[https://github.com/birkenkrahe/org/blob/master/FAQ.org#what-is-a-sprint-review][sprint review]]/ is on September 1st. Use it to present
+  your initial results (see FAQ on [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#what-do-i-need-to-deliver-at-a-sprint-review][what to deliver]], and [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#what-should-we-do-in-the-first-sprint][1st sprint
+  review]]).
+
 * MANY PROJECT OPPORTUNITIES
 
-  #+attr_html: :width 200px
-  #+caption: DataCamp competition announcement
-  [[../img/1_competition.png]]
+#+attr_html: :width 200px
+#+caption: DataCamp competition announcement
+[[../img/1_competition.png]]
 
-  - Create an interesting data visualization
-  - Explore a graphics or animation package
-  - Solve a real-world problem
-  - Analyse existing visualizations
-  - See [[https://app.datacamp.com/learn/projects][DataCamp projects]] for examples
-  - [[https://www.datacamp.com/blog/12-of-the-best-data-visualizations-tools][Explore a data visualization tool]]
-  - [[https://github.com/birkenkrahe/dviz/issues/12][Visualize whale song / double up between 2 or 3 courses]]
-  - Explore any of these graphics solutions (~base~, ~ggplot2~ and ~Shiny~ are
-    covered in this course already):
-    #+attr_html: :width 400px
-    #+caption: Source: Modern Data Visualization with R (Kabacoff, 2021)
-    [[../img/1_graphics.png]]
+- Analyze an interesting data visualization (explore math content)
+- Explore a statistical package or platform (e.g. SPSS, MATLAB[fn:2])
+- Explore an R package (e.g. ~data.table~[fn:1], [[https://cran.r-project.org/web/packages/MASS/index.html][MASS]])
+- Solve a real-world problem (you can decide how much math you need)
+- See [[https://app.datacamp.com/learn/projects][DataCamp projects]] for examples (the math is often missing)
+- [[https://github.com/birkenkrahe/dviz/issues/12][Example: visualize whale song / double up between 2 or 3 courses]]
+- Deepen any of our topics with current or [[https://statmodeling.stat.columbia.edu/2014/03/31/cited-statistics-papers-ever/][classic scientific papers]]
+- Deepen any of the course topics with a [[https://www.statmethods.net/advstats/timeseries.html][detailed applied example]][fn:3]
+- If you can use, topics, experiments etc. from other courses!
 
 * INTRODUCTION TO DataCamp
-  #+attr_html: :width 500px
-  #+caption: DataCamp course "Data Visualization For Everyone" start page
-  [[../img/1_datacamp.png]]
+#+attr_html: :width 500px
+#+caption: DataCamp course "Introduction to statistics" start page
+[[../img/1_datacamp.png]]
 
-  - DataCamp is a data science learning platform
-  - Access for you is free (classroom license)
-  - 9/15 assignments are DataCamp assignments
-  - Assignments are drawn from 5 courses
-    1. Data visualization for everyone
-    2. Data visualization with R
-    3. Introduction to data visualization with ggplot2
-    4. Building web applications with Shiny in R
-    5. Introduction to Tableau
-  - Complete them on time to get full points
-  - Completed DataCamp courses can [[https://www.linkedin.com/in/birkenkrahe/][support your resume]]
+- *DataCamp* is a data science learning platform
+- Access for you is *free* (classroom license)
+- 14/15 assignments are DataCamp assignments
+- Assignments are drawn from 3 courses
+  1. [[https://app.datacamp.com/learn/courses/introduction-to-statistics][Introduction to statistics]] (4/4)
+  2. [[https://app.datacamp.com/learn/courses/introduction-to-statistics-in-r][Introduction to statistics in R]] (4/4)
+  3. [[https://www.datacamp.com/courses/foundations-of-probability-in-r/][Foundations of probability in R]] (4/4)
+  4. [[https://app.datacamp.com/learn/courses/introduction-to-regression-in-r][Introduction to regression in R]] (2/4)
+- Complete them on time to get full points
+- Completed DataCamp courses can [[https://www.linkedin.com/in/birkenkrahe/][support your resume]]
+
 * INTRODUCTION TO THE TEXTBOOK
-  #+attr_html: :width 200px
-  #+caption: Cover of EDA Using R (Pearson, 2018)
-  [[../img/1_textbook.jpg]]
+#+attr_html: :width 200px
+#+caption: Cover of Book of R (Davies, 2016)
+[[../img/1_bookofR.png]]
 
-  - R is /FOSS/ with focus on stats and graphics
-  - Pearson's "[[https://www.routledge.com/Exploratory-Data-Analysis-Using-R/Pearson/p/book/9780367571566][EDA Using R]]" is extensive (563 pp.)
-  - You don't have to read along but it might help
+- R is /FOSS/ with focus on stats and graphics
+- Davies' "[[https://nostarch.com/bookofr][Book of R]]" is extensive (832p.) => library
+- We will (hopefully) cover most of Part III (ca. 120 p.)
+- You don't have to read along but it might help
 
 * OTHER SOURCES
-  #+attr_html: :width 200px
-  #+caption: Cover of Fundamentals of Data Visualization (2019) by Claus Wilke
-  [[../img/1_wilke.png]]
+#+attr_html: :width 150px
+#+caption: Peter Dalgaard, Introductory Statistics with R (2008)
+[[../img/1_dalgaard.png]]
+#+attr_html: :width 150px
+#+caption: David Morin, Probability for the enthusiastic beginner (2016)
+[[../img/1_morin.jpg]]
+#+attr_html: :width 150px
+#+caption: Norman Matloff, Probability and Statistics for Data Science (2020)x
+[[../img/1_matloff.png]]
 
-  - [[https://clauswilke.com/dataviz/][Introduction to data visualization]]: Wilke (2019) - *in library*
-  - Many other tutorials and textbooks available
-  - The best (free) short online tutorial: [[https://github.com/matloff/fasteR][Matloff's "fasteR"]]
-  - The best complete textbook: Davies' "[[https://nostarch.com/bookofr][Book of R]]" - *in library*
-  - Beware of ideologies (cp. Matloff's "[[http://github.com/matloff/TidyverseSkeptic][TidyverseSceptic]]")
+- Matloff, Probability & statistics for data science (2020) => library
+- Good (free) short online tutorial for R: [[https://github.com/matloff/fasteR][Matloff's "fasteR"]]
+- Beware of ideologies in science(cp. Matloff's "[[http://github.com/matloff/TidyverseSkeptic][TidyverseSceptic]]")
 * INTRODUCTION to GNU Emacs + ESS + Org-mode
-  #+attr_html: :width 500px
-  #+caption: GNU Emacs start page
-  [[../img/1_emacs.png]]
+#+attr_html: :width 500px
+#+caption: GNU Emacs start page
+[[../img/1_emacs.png]]
 
-  - Emacs: self-documenting, extensible /FOSS/ text editor
-  - Process, file and package management (like an OS)
-  - /Literate programming/ environment for 43 languages
-  - /IDE/ for R programming and /REPL/ for interactive coding
+- Emacs: self-documenting, extensible /FOSS/ text editor
+- Process, file and package management (like an OS)
+- /Literate programming/ environment for 43 languages
+- /IDE/ for R programming and /REPL/ for interactive coding
 * LITERATE PROGRAMMING
-  #+attr_html: :width 600px
-  #+caption: What is literate programming?
-  [[../img/1_litprog.png]]
+#+attr_html: :width 600px
+#+caption: What is literate programming?
+[[../img/1_litprog.png]]
 
-  Source: "[[https://docs.google.com/presentation/d/1wA7sb41EjV6GP3oBEFsOiYnoe29WILtLJR2sHSfr6Fs/edit?usp=sharing][Teaching data science with hacker tools]]" (2022)
+Source: "[[https://docs.google.com/presentation/d/1wA7sb41EjV6GP3oBEFsOiYnoe29WILtLJR2sHSfr6Fs/edit?usp=sharing][Teaching data science with hacker tools]]" (2022)
 
-  - Common practice among data scientists
-  - /Paradigm/ behind interactive computing notebooks
-  - Useful when learning any programming language
+- Common practice among data scientists
+- /Paradigm/ behind interactive computing notebooks
+- Useful when learning any programming language
 * HOME ASSIGNMENTS
 
-  - There are 15 programming assignments altogether = 10 points each, or
-    30% of your final grade.
+There are 15 programming assignments altogether = 10 points each, or
+30% of your final grade.
 
-  - Register with DataCamp and complete the DataCamp chapter
-    "[[https://app.datacamp.com/learn/courses/data-visualization-for-everyone][Visualizing distributions]]" from the course "Data visualization for
-    everyone" by Monday, 22 August at 3 pm (ca. 20 min).
+1) [[https://lyon.instructure.com/courses/568/assignments/1436][Complete the Emacs on-board tutorial]] and upload an edited copy to
+   Canvas by Thursday, 25 August at 8 am (ca. 60 min).
 
-    + Motivating visualization of data
-    + Continous vs. categorical variables
-    + Plot types: histograms and box plots
+   + Get comfortable with Emacs keyboard bindings
+   + Learn how to create, view, edit, save files
+   + Learn how to insert a time stamp automatically
 
-  - [[https://lyon.instructure.com/courses/568/assignments/1436][Complete the Emacs on-board tutorial]] and upload an edited copy to
-    Canvas by Friday, 26 August at 11 am (ca. 60 min).
+2) Register with DataCamp and complete the DataCamp chapter "Summary
+   statistics" from the course "[[https://app.datacamp.com/learn/courses/introduction-to-statistics][Introduction to statistics]]" by Tuesday,
+   30 August at 8 am.
+   + Motivating summary statistics
+   + Mean, median, standard deviation
+   + Interpretation of statistical summaries
 
-    + Get comfortable with Emacs keyboard bindings
-    + Learn how to create, view, edit, save files
-    + Learn how to insert a time stamp automatically
 * TESTS (NOT GRADED)
-  #+attr_html: :width 500px
-  #+caption: Start page of the entry quiz on Canvas
-  [[../img/1_entry_quiz.png]]
+#+attr_html: :width 500px
+#+caption: Start page of the entry quiz on Canvas
+[[../img/1_entry_quiz.png]]
 
-  - Tests have to be completed online, are timed, and have a deadline;
-    after the deadline, you can play them an unlimited number of times
-  - There will be a revision quiz on Canvas every week, consisting of
-    5-10 multiple choice, matching and true/false questions.
-  - A subset of the test questions will form the final exam (20% of your
-    final grade) - we will practice in the last week before the exam.
+- Tests have to be completed online, are timed, and have a deadline;
+  after the deadline, you can play them an unlimited number of times
+- There will be a revision quiz on Canvas every week, consisting of
+  5-10 multiple choice, matching and true/false questions.
+- A subset of the test questions will form the *final exam* (20% of your
+  final grade) - we will practice in the last week before the exam.
 
 * PRACTICE - COURSE INFRASTRUCTURE
 
-  *Useful:* take notes! Practice leads to mastery and the practice
-  exercises will often come back to haunt you in the tests.
+*Useful:* take notes! Practice leads to mastery and the practice
+exercises will often come back to haunt you in the tests.
 
-  1) Open a browser
-  2) Find the GitHub repos (birkenkrahe/ds1 and /org)
-  3) Open the command line terminal
-  4) Open/close R
-  5) Open Emacs
-  6) Find the Emacs tutorial
-  7) Open/close R inside Emacs
-  8) Run R in an Org-mode file
-  9) Close Emacs
-  10) Close the command line terminal
+1) Open a browser
+2) Find the GitHub repos (birkenkrahe/dsmath and birkenkrahe/org)
+3) Open the command line terminal
+4) Open/close R
+5) Open Emacs
+6) Find the Emacs tutorial
+7) Open/close R inside Emacs
+8) Run R in an Org-mode file
+9) Close Emacs
+10) Close the command line terminal
 
-  *Note:* Class room practice completion = 10 points each for active
-  participation.
+    *Note:* Class room practice completion = 10 points each for active
+    participation.
 
 * GLOSSARY
 
-  | TERM          | MEANING                               |
-  |---------------+---------------------------------------|
-  | Command line  | aka terminal/shell to talk to the OS  |
-  | Emacs         | GNU self-extensible text editor       |
-  | FOSS          | Free and Open Source Software         |
-  | GitHub        | Software development platform         |
-  | Git           | Version control software              |
-  | GNU           | GNU's not Unix                        |
-  | IDE           | Integrated Development Environment    |
-  | "Literate     |                                       |
-  | Programming"  | Story + code => source code + doc     |
-  | Paradigm      | A standard way of looking at things   |
-  | R             | FOSS statistical programming language |
-  | REPL          | Read-Eval-Print-Loop                  |
-  | Repo          | Code repository                       |
-  | "Tidyverse"   | Popular R package bundle              |
-  | Scrum         | Agile project management method       |
-  | Sprint review | Period to complete a prototype        |
-  | Prototype     | Intermediate (not perfect) solution   |
+| TERM           | MEANING                                |
+|----------------+----------------------------------------|
+| Proxy variable | Observable stand-in for the real thing |
+| Enlightenment  | 17th/18th century cultural movement    |
+| Command line   | aka terminal/shell to talk to the OS   |
+| Emacs          | GNU self-extensible text editor        |
+| FOSS           | Free and Open Source Software          |
+| GitHub         | Software development platform          |
+| Git            | Version control software               |
+| GNU            | GNU's not Unix                         |
+| IDE            | Integrated Development Environment     |
+| "Literate      |                                        |
+| Programming"   | Story + code => source code + doc      |
+| Paradigm       | A standard way of looking at things    |
+| R              | FOSS statistical programming language  |
+| REPL           | Read-Eval-Print-Loop                   |
+| Repo           | Code repository                        |
+| "Tidyverse"    | Popular R package bundle               |
+| Scrum          | Agile project management method        |
+| Sprint review  | Period to complete a prototype         |
+| Prototype      | Intermediate (not perfect) solution    |
 
 * REFERENCES
 
-  - datavizblog.com (May 26, 2013).DataViz History: Charles Minard's
-    Flow Map of Napoleon's Russian Campaign of 1812. [[https://datavizblog.com/2013/05/26/dataviz-history-charles-minards-flow-map-of-napoleons-russian-campaign-of-1812-part-5/][Online:
-    datavizblog.com]]
-  - Davies T D (2016). The Book of R. NoStarch Press.
-  - Pearson R K (2018). Exploratory Data Analysis Using R. CRC Press.
-  - Wilke C (2019). Fundamentals of Data Visualization. O'Reilly
-    Media. [[https://clauswilke.com/dataviz/][Online: clauswilke.com]]
+- datavizblog.com (May 26, 2013).DataViz History: Charles Minard's
+  Flow Map of Napoleon's Russian Campaign of 1812. [[https://datavizblog.com/2013/05/26/dataviz-history-charles-minards-flow-map-of-napoleons-russian-campaign-of-1812-part-5/][Online:
+  datavizblog.com]]
+- Davies T D (2016). The Book of R. NoStarch Press.
+- Pearson R K (2018). Exploratory Data Analysis Using R. CRC Press.
+- Wilke C (2019). Fundamentals of Data Visualization. O'Reilly
+  Media. [[https://clauswilke.com/dataviz/][Online: clauswilke.com]]
+
+* Footnotes
+
+[fn:3][[https://www.statmethods.net/advstats/timeseries.html][Time series]] is the example featured here, with important
+applications in environmental science, finance, portfolio analysis
+
+[fn:2]Both of these are commercial, but there are other languages and
+platforms, e.g. Tableau (also featured on DataCamp), or GNU Octave.
+
+[fn:1]This is a great package whose abilities will remind those of you
+with SQL knowledge of the database course. To learn more about it, the
+[[https://app.datacamp.com/learn/courses/data-manipulation-with-datatable-in-r][DataCamp course]] is a good starting point.
