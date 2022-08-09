@@ -29,7 +29,7 @@
 - Review: Entry test
 - Lecture: Course overview
 - Discussion: Mutual introductions
-- Lecture: Data Science At The End Of Modern Time
+- Orientation: Data Science At The End Of Modern Time
 - Practice: course infrastructure
 - Homework: Assignments
 - Glossary

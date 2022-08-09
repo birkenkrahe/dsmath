@@ -1,40 +1,244 @@
-#+TITLE: LECTURE: DATA SCIENCE AT THE END OF TIME
+#+TITLE: ORIENTATION: DATA SCIENCE AT THE END OF TIME
 #+AUTHOR: MARCUS BIRKENKRAHE
 #+SUBTITLE: Applied math for data science (DSC 482/MTH 445) Fall 2022
 #+STARTUP:overview hideblocks indent inlineimages
+#+attr_html: :width 250px
+#+caption: Cover of Guardini, The End of the Modern World (2001)
+[[../img/2_guardini.jpg]]
+
+- How did people in antiquity experience and view the world?[fn:1]
+- How did people in the middle ages experience and view the world?
+- How do we in the modern age experience and view the world?
+- What does this have to do with statistics and probability?
+
+#+begin_notes
+The essay '[[https://www.amazon.com/End-Modern-World-Romano-Guardini/dp/1882926587][The End of the Modern World]]' by Romano Guardini gave me the
+idea for this section. It was born out of the thought that probability
+as the foundation of statistics, is a profoundly *modern* concept, and I
+was wondering if a brief historical, non-technical, philosophical
+journey might help us orient ourselves towards it.
+
+Guardini's book will appear pessimistic to non-faithful readers. It
+was however, written to help people in Germany right after WW II get a
+sense of purpose and orientation that they had lost after 12 years of
+life under the Nazis.
+
+The book is strangely prophetic in many ways - probably because it was
+quite clear around the middle of the 20th century, what the essence of
+modernity was, and where the journey would lead us in the 21st
+century.
+
+I'm offering this section to you because the DSC 482 classes should also
+have a "senior spirit" of discourse and critical discussion, which one
+cannot get from topical (in this case: statistics) textbooks alone.
+#+end_notes   
+   
+* ANTIQUITY - CLASSICAL MAN
+#+attr_html: :width 700px
+#+caption: Jacques-Louis David (1748-1825) - Death of Socrates
+[[../img/2_pergamon.jpg]]
+
+1. What historical time period are we talking about?
+2. Do you know anyone from that time and what they said, wrote or did?
+3. What were the world-views of people in antiquity?
+
+#+begin_notes
+Image: [[https://en.wikipedia.org/wiki/Pergamon_Altar][Pergamonaltar, Berlin]] (Βωμός τς Περγάμου), 2nd century BC. The
+base of this altar from a temple for Zeus is a relief showing the
+battle between the Giants and the Olympian gods
+("Gigantomachy"). Excavated by the German engineer Carl Humann
+1878-1886, this is at the heart of the Pergamon-Museum in Berlin. This
+altar stood in the ancient city of Troy (of Homer's [[https://en.wikipedia.org/wiki/Iliad][Iliad]]).
+#+end_notes
+
+* SUMMARY
+#+attr_html: :width 700px
+#+caption: Jacques-Louis David - Death of Socrates (1787)
+[[../img/2_socrates.jpg]]
+
+1. From Ancient Greece, ca. 400 BC to the End of Rome, ca. 476 AD
+2. Socrates & Plato (philosophy), Aristotle (physics), Euclid (maths)
+3. The world is a (closed) ball or sphere within which the Gods live
+   with us; man must search for truth and experiment with hypotheses.
+
+#+begin_notes
+/Image: David, Death of Socrates (1787)./ The Greek philosopher and
+distinguished veteran of the Peloponnesian war, Socrates (469-399 BC),
+was convicted of impiety by the Athenian court. Instead of renouncing
+his beliefs, he died willingly, discoursing on the immortality of the
+soul before drinking poisonous hemlock.
+#+end_notes   
+#+begin_notes
+Guardini: "Classical man never went beyond his world; his feeling for
+life, his imagination and his vision of existence were one with the
+limited world he knew. He never asked himself whether or not something
+might exist beyond his known world [...] because he lacked any
+relation which could transcend his world."
+
+"Classical man /could not even conceive/ of a desire to break the limits
+of his world. To do so those limits must have already been
+broken. This was simply not the case."[fn:2]
+
+This implies the impossibility of thinking up a concept like
+'probability'. However, classical man had mathematics as defined by
+Wigner (1960): /"Mathematics is the science of skillful operations with
+concepts and rules invented just for this purpose./ Euclid's elements
+are an example, and his geometry was enough for Aristotle to explain
+many natural phenomena (though the classical concept of "nature" has
+got nothing to do with our modern idea of "nature")[fn:3]:
+
+"Greek scientific thought was marked by flexbility and absence of
+dogmatism. The Greek mind was gripped by an endless quest for
+understanding of the ways of the world. Nothing however, had been
+decided conclusively; every question remained open, waiting to be
+answered further. Every philosophical reflection might contain the
+answer to life; therefore it could compete with any other possible
+supposition. Always, however, one had to remain within the limits laid
+down by the fundamental ethos of the Greek world. These limits could
+not be transgressed, and the trial of Socrates attest to the strnegth
+of this prohibition."
+#+end_notes    
+
+* MIDDLE AGES - MEDIEVAL MAN
+#+attr_html: :width 700px
+#+caption: Annunciation of Cortona by Fran Angelico (1433)
+[[../img/2_annunciation.jpg]]
+
+1. What historical time period are we talking about?
+2. Do you know anyone from that time and what they said, wrote or did?
+3. What were the world-views of people in the middle ages?
+
+#+begin_notes
+Image: Annunciation of Cortona by Fra Angelico (1433). The scene
+depicts the annunciation of Mary by the Archangel Gabriel. The words
+in the painting can only be read upside-down to indicate that they are
+addressed to God, who wold be in the proper position to read them.
+
+[[https://en.wikipedia.org/wiki/Cortona][Cortona]], my own favorite place in Italy, is a small medieval town in
+Tuscany - it was supposedly founded by one of Noah's sons, Crano, 273
+years after the Great Flood. The city was already inhabited by
+Etruscans at least since the 7th century BC. Lake Trasimeno where
+Scipio the younger defeated Hannibal after he had crossed the Alps
+with elephants, can be seen from Cortona. Next to the town is a small
+convent, Le Celle, where St Francis of Assisi lived in a tiny cell.
+#+end_notes
+
+* SUMMARY
+#+attr_html: :width 500px
+#+caption: Richard of Wallingford, Abbot of St Albans
+[[../img/2_medieval.jpg]]
+
+1. From the end of the Roman Empire (ca. 400 AD) to the 15th century
+2. Benedict of Nursia, Charlemagne, St Stephen, Thomas Aquinas, Gengis
+   Khan, Jean d'Arc, Dante, Leonardo da Vinci, Michelangelo.
+3. Impatience with all limitations through Christian Faith; Germanic
+   drive for transcendence; Truth through meditation
+
+#+begin_notes
+Image: [[https://en.wikipedia.org/wiki/Richard_of_Wallingford][Richard of Wallingford]], English mathematician, astronomer,
+horologist (the study of the measurement of time) and abbot of St
+Albans (1292-1336). Invented the most advanced clock of his time.
+#+end_notes
+
+#+begin_notes
+"The crucial truth for medieval man was the fact of Divine Revelation
+[...] set forth within the dogma of the Church [which] bound and
+limited man by its authority; [but also] made it possible to surmount
+this world. Revealed truth was conceptualized by means of a delicate
+logic which distinguished and then united all of reality. The
+theological system erect upon these foundations unfolded itself as a
+great synthesis. In the modern sense of the term, however, scientific
+explanation was almost unknown. The one point of departure for science
+in the medieval intellectual synthesis was authority, that of
+antiquity and especially the work of Aristotle" (384-322 BC), himself
+a disciple of Plato's. "The Middle Ages had established a relationship
+with antiquity which, although seemingly naive, was constructive."
+
+"This drive for reconciliation [with antiquity] is crystallized in the
+/Summae/, which united theology and philosophy, sociology and
+morality. [...] Medieval man neither wished to explore the mysteries
+of the world empirically nor did he want to illuminate them by a
+rational methodology. He was interested in building his world out of
+the content of Revelation and upon the principles and insights of
+classical [Greek] philosophy. The /Summae/ are that world as it was
+erected by the human mind. They can be compared with the medieval
+cathedral in which every form and artifact [...] were given a symbolic
+value which made possible a life and a sense of being integrally
+religious in nature."
+
+"What medieval man lacked was any desire for exact, empirical
+knowledge of reality. [But] unless we free ourselves of the
+evaluations made by the minds of the Renaissance and the
+Enlightenment, we cannot really understand the Middle Ages. The
+judgements then leveled were made under the pressure of a polemic,
+which has succeeded in distorting the truth even to our own
+day. Equally distorted was the glorified Middle Ages of the
+Romantics."
+
+"The Middle Ages were filled with a sense of religion, which was as
+deep as it was rich, as strong as it was delicate, as firm in its
+grasp of principles as it was original and fertile in their concrete
+expression. From cloister and monastery there sone a religious light
+whose strength cannot be overestimated. Medieval man thirsted for the
+truth. [...] This passion for understanding, however, had nothing in
+common with our modern enthusiasm for the techniques of scientific
+investigation. Medieval man was interested neither in pursuing nature
+and history empirically nor in mastering reality theoretically. He
+chose to plunge into truth by way of meditation."
+#+end_notes
+
+* MODERN WORLD - MODERN MAN
+#+attr_html: :width 700px
+#+caption: Cross-section of the Large Hadron Collider
+[[../img/2_cern.png]]
+
+1. What historical time period are we talking about?
+2. Do you know anyone from that time and what they said, wrote or did?
+3. What are the world-views of people in the modern era?
+
+#+begin_notes
+/Image:/ cross-section of the Large Hadron Collider (LHC) at CERN,
+Switzerland, where I spent a few good summers starting as a teenager,
+working with physicists on photo multipliers, to my own PhD many years
+later. I even met my wife there, at the first World-Wide Web
+conference! - Particle accelerators like the LHC, and the data
+processing surrounding a particle physics experiment are among the
+greatest "big data" events you can think of: ALICE, one of the
+detectors located in the cross-section shown above, has more than 12
+billion sensors that create a data stream of more than 3.5 terabytes
+per second, or 300 petabytes per day, which is more than the estimated
+data created world-wide per day.
+#+end_notes
+
+* SUMMARY
 #+attr_html: :width 700px
 #+caption: Pablo Picasso, Guernica (1937), grayscale painting
 [[../img/1_guernica.png]]
 
+1. Renaissance (1500s); Enlightenment (1700s); Modernism (1900s)
+2. Galileo (method), Newton (laws of motion), Einstein (relativity)
+3. Man vs. machine; Earth vs. universe; Nature / Science vs. God
+
+#+begin_notes
+/Image:/ The grayscale painting "Guernica" by Picasso (1937) depics the bombing
+on the Spanish city of Guernica during the Spanish Civil War. It is
+also a typical cubist-surrealist painting where reality is dissolved
+in geometric patterns and symbols, distorted and disfigured to achieve
+a heightened effect. 
+#+end_notes
+
 #+begin_quote
+"[In the modern age,] man's passion for knowledge began to lead him
+away from authority, pointing him directly toward real things.
+
 “It is taken increasingly for granted that man ought to be treated as
 an object. Man confronts this attitude in the range of authority
 exercised over him; he may merely meet it in countless statistics and
 tables or he may experience its culmination in an unspeakable rape of
 the individual, of the group, even of the whole nation.”
 
--- Romano Guardini (1956)
+
 #+end_quote
-
-1) How did people in antiquity experience and view the world?[fn:1]
-2) How did people in the middle ages experience and view the world?
-3) How do we experience and view the world?
-4) What does this have to do with statistics and probability?
-
-* ANTIQUITY
-
-- What time are we talking about?
-- Do you know a thinker of that time and what he said or wrote?
-- As a person in antiquity, what would your world-view have been?
-  
-** Summary
-
-
-* MIDDLE AGES
-
-
-* MODERN WORLD
-
 * REFERENCES
 
 - Guardini, R (1956). The End of the Modern World - . Intercollegiate
@@ -51,8 +255,25 @@ the individual, of the group, even of the whole nation.”
 - Wigner E (1960). The Unreasonable Effectiveness of Mathematics in
   the Natural Sciences. Comm. Pure and Appl. Math. 13(1). ([[https://www.maths.ed.ac.uk/~v1ranick/papers/wigner.pdf][PDF]])
 
+* Images
+
+- David, [[https://live.staticflickr.com/2357/1659482830_42231fb724_b.jpg][Death of Socrates]], The Metropolitan Museum of Art
+- [[https://en.wikipedia.org/wiki/Pergamon_Altar][Pergamonaltar]], Berlin
+- [[https://commons.wikimedia.org/wiki/File:Richard_of_Wallingford.jpg][Richard of Wallingford]], St Albans
+
 * Footnotes
 
-[fn:1]The German words for this are "Daseinsgefühl" (the feeling one
-has when existing), and "Weltbild" (a view of the whole world). 
+[fn:3]Wigner's 1960 paper is still worth reading. He writes about the
+"miracle of appropriateness of the language of mathematics for the
+formulation of the laws of physics," and admits that "we do not know
+why our theories work so well." This is a rather medieval,
+miracle-conscious,"unreasonable" way of thinking, for which Wigner
+(one of the greatest physicists, and a close friend of Einstein's) was
+heavily criticized.
 
+[fn:2]Counter arguments one might bring forward: what about astronomy
+and astrology of the ancient world? The answer: these (pseudo)
+sciences never left the sphere that bounded the world. 
+
+[fn:1]The German words for this are "Daseinsgefühl" (the feeling one
+has when existing), and "Weltbild" (a view of the whole world).

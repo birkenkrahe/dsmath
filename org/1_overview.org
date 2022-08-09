@@ -101,6 +101,7 @@ the list of topics.
 - Need to know: coding (R programming) and story (visualization)
 - This course focuses on descriptive rather than predictive stats
 - The followup course ("Machine learning") is about prediction
+- Missing (among other things): measure theory (project?)[fn:4]
 
 * AGILE TEAM PROJECT
 #+attr_html: :width 600px
@@ -256,6 +257,12 @@ There are 15 programming assignments altogether = 10 points each, or
 - Morin D (2016). Probability For the Enthusiastic Beginner. [[https://scholar.harvard.edu/david-morin/probability][Harvard]].
 
 * Footnotes
+
+[fn:4]A measure assigns a probability to sets of events where each
+individual event has zero probability so that expectations for
+continuous random variables can be defined. [[https://youtu.be/Q9KOeP-nrYQ][This mini lecture]]
+(Lawrence, 2012) from an advanced probability seminar addresses
+answers the question why measure theory is needed here. 
 
 [fn:3][[https://www.statmethods.net/advstats/timeseries.html][Time series]] is the example featured here, with important
 applications in environmental science, finance, portfolio analysis
