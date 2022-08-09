@@ -34,10 +34,32 @@
 - Homework: Assignments
 - Glossary
 
+** Group exercise: orientation
+
+- *Group 1: Antiquity / Classical man*
+  1. What historical time period are we talking about?
+  2. Do you know anyone from that time and what they said, wrote or did?
+  3. What were the world-views of people in antiquity?
+
+- *Group 2: Middle ages / Medieval man*
+  1. What historical time period are we talking about?
+  2. Do you know anyone from that time and what they said, wrote or did?
+  3. What were the world-views of people in the middle ages?
+
+- *Group 3: Modern world / Mass man*
+  1. What historical time period are we talking about?
+  2. Do you know anyone from that time and what they said, wrote or did?
+  3. What are the world-views of people in the modern era?
+  4. What is the importance of statistics and probability today?
+
+- Collect your insights [[https://ideaboardz.com/for/Data%20Science%20At%20The%20End%20Of%20Time/4595645][on this online board]] (10 min for all)
+
+- Present your insights to the class (5 min per group)
+
+- Summary discussion / lecture
+  
 * Week 2: GETTING STARTED
 
 - Quiz 1: course infrastructure
 - Lectures: Describing raw data
 - Practice: Getting started with R
-  
-    

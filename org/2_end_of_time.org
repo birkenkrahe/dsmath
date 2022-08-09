@@ -31,8 +31,8 @@ century.
 I'm offering this section to you because the DSC 482 classes should also
 have a "senior spirit" of discourse and critical discussion, which one
 cannot get from topical (in this case: statistics) textbooks alone.
-#+end_notes   
-   
+#+end_notes
+
 * ANTIQUITY - CLASSICAL MAN
 #+attr_html: :width 700px
 #+caption: Jacques-Louis David (1748-1825) - Death of Socrates
@@ -67,7 +67,7 @@ distinguished veteran of the Peloponnesian war, Socrates (469-399 BC),
 was convicted of impiety by the Athenian court. Instead of renouncing
 his beliefs, he died willingly, discoursing on the immortality of the
 soul before drinking poisonous hemlock.
-#+end_notes   
+#+end_notes
 #+begin_notes
 Guardini: "Classical man never went beyond his world; his feeling for
 life, his imagination and his vision of existence were one with the
@@ -97,7 +97,7 @@ supposition. Always, however, one had to remain within the limits laid
 down by the fundamental ethos of the Greek world. These limits could
 not be transgressed, and the trial of Socrates attest to the strnegth
 of this prohibition."
-#+end_notes    
+#+end_notes
 
 * MIDDLE AGES - MEDIEVAL MAN
 #+attr_html: :width 700px
@@ -195,6 +195,7 @@ chose to plunge into truth by way of meditation."
 1. What historical time period are we talking about?
 2. Do you know anyone from that time and what they said, wrote or did?
 3. What are the world-views of people in the modern era?
+4. What is the importance of statistics and probability today?
 
 #+begin_notes
 /Image:/ cross-section of the Large Hadron Collider (LHC) at CERN,
@@ -217,29 +218,101 @@ data created world-wide per day.
 
 1. Renaissance (1500s); Enlightenment (1700s); Modernism (1900s)
 2. Galileo (method), Newton (laws of motion), Einstein (relativity)
-3. Man vs. machine; Earth vs. universe; Nature / Science vs. God
+3. Man vs. machine; Earth vs. universe; Nature/Science vs. God.
+4. Probability vs. certainty. Statistics vs. experiment.
 
 #+begin_notes
 /Image:/ The grayscale painting "Guernica" by Picasso (1937) depics the bombing
 on the Spanish city of Guernica during the Spanish Civil War. It is
 also a typical cubist-surrealist painting where reality is dissolved
 in geometric patterns and symbols, distorted and disfigured to achieve
-a heightened effect. 
+a heightened effect.
 #+end_notes
 
-#+begin_quote
+#+begin_notes
 "[In the modern age,] man's passion for knowledge began to lead him
-away from authority, pointing him directly toward real things.
+away from authority, pointing him directly toward real things. He
+chose to probe things with his own intelligence and to reach
+established judgements which were independent of any pattern first
+laid down by authority."
 
-“It is taken increasingly for granted that man ought to be treated as
-an object. Man confronts this attitude in the range of authority
-exercised over him; he may merely meet it in countless statistics and
-tables or he may experience its culmination in an unspeakable rape of
-the individual, of the group, even of the whole nation.”
+"Man begin to find his own individuality an absorbing object for
+study, for introspection and psychological analysis. [...] *Genius*
+became the most important measure of human value [and] the standard
+for all human judgements."
 
+"Anxiety is the dizziness of freedom" (Kierkegaard, 1844): "Modern
+anxiety arises from man's deep-seated consciousness that he lacks
+either a 'real' or a symbolic place in reality. In spite of his actual
+position on Earth, he is a being without security. The very needs of
+man's senses are left unsatisfied, since he has ceased to experience a
+world which guarantees him a place in the total scheme of existence."
 
-#+end_quote
+'Arkansas - the natural state': "Nature was all those things which
+existed in the world prior to anything man did to them; it was also
+the sum total of energy, matter, essences and natural laws [and] made
+a matter of value in itself. [Nature] became the norm which guided man
+in action and in reason toward whatever was right or healthful or
+perfect."
+
+"Prior to the Renaissance, only the Work of God had an absolute
+meaning; after the Renaissance, the world ceased to be the Creation of
+God. It had become the work of Nature. Similarly the work of a man
+ceased to be an act of obedience to God's ordained service; it became
+a 'creation' in itself. Previously a worshipper and a servant, man now
+took to himself the prerogatives of a 'creator'."
+
+Science and technology as the new religion - Goethe: "Who possesses
+science and art, possesses religion as well." - "The three-sided
+vision [of 'nature', 'personality', and 'culture'] harmonized with the
+conceptions upon which modern science was being built. From modern
+science, technology has grown, and technology is a concentration of
+processes allowing man to posit ends in conformity with his own
+desires [...] and cut themselves away from an ethic which once had
+bound men universally."
+#+end_notes
+* DISSOLUTION OF THE MODERN WORLD
+#+attr_html: :width 700px
+#+caption: Schematic presentation of Schumpeterian long waves
+[[../img/2_schumpeter.png]]
+
+#+begin_notes
+/Image:/ From 'The Ontology of Technology Beyond Anthropocentrism and
+Determinism: The Role of Technologies in the Constitution of the
+(post) Anthropocene World (Blok, 2022). [[https://h5p.org/node/1095582][See here]] for an attempt at
+analysing this visualization.)
+#+end_notes
+
+#+begin_notes
+- Uncertainty about the position of man in reality: “It is [now] taken
+  increasingly for granted that man ought to be treated as an
+  object. Man confronts this attitude in the range of authority
+  exercised over him; he may merely meet it in countless statistics
+  and tables or he may experience its culmination in an unspeakable
+  rape of the individual, of the group, even of the whole nation.”
+  Guardini (1956)
+
+- Unknown relationship between probability and reality: "Perhaps there
+  are further metaphysical desiderata that we might impose on the
+  interpretations. For example, there appear to be connections between
+  probability and modality. Events with positive probability can
+  happen, even if they don’t. Some authors also insist on the converse
+  condition that only events with positive probability can happen,
+  although this is more controversial." (Hajek, 2019)
+
+- Free will remains elusive as a concept: "Attempts have been made to
+  link the existence of free will with the indeterminacy of quantum
+  mechanics, but it is difficult to see how this feature of the theory
+  makes free will more plausible. On the contrary, free will
+  presumably implies rational thought and decision, whereas the
+  essence of the indeterminism in quantum mechanics is that it is due
+  to intrinsic randomness." (Britannica) 
+#+end_notes
+
 * REFERENCES
+
+- Encyclopedia Britannica (2022). Quantum Mechanics - Physics. [[https://www.britannica.com/science/quantum-mechanics-physics][URL:
+  britannica.com]].
 
 - Guardini, R (1956). The End of the Modern World - . Intercollegiate
   Studies Institute; REV ed. (April 1, 2001). ([[https://www.amazon.com/End-Modern-World-Romano-Guardini/dp/1882926587][Amazon]])
@@ -252,14 +325,33 @@ the individual, of the group, even of the whole nation.”
   responsibility in a world culture dominated by technological
   utilitarianism."
 
+- Hajek A (2019). Interpretations of Probability. In: Stanford
+  Encyclopedia of Philosophy.
+
+- Kierkegaard S (1844). The Concept of Anxiety.
+
+  Anxiety as both modern man's curse and saving grace: "I would say
+  that learning to know anxiety is an adventure which every man has to
+  affront if he would not go to perdition either by not having known
+  anxiety or by sinking under it. He therefore who has learned rightly
+  to be anxious has learned the most important thing."
+
 - Wigner E (1960). The Unreasonable Effectiveness of Mathematics in
   the Natural Sciences. Comm. Pure and Appl. Math. 13(1). ([[https://www.maths.ed.ac.uk/~v1ranick/papers/wigner.pdf][PDF]])
 
-* Images
-
-- David, [[https://live.staticflickr.com/2357/1659482830_42231fb724_b.jpg][Death of Socrates]], The Metropolitan Museum of Art
-- [[https://en.wikipedia.org/wiki/Pergamon_Altar][Pergamonaltar]], Berlin
-- [[https://commons.wikimedia.org/wiki/File:Richard_of_Wallingford.jpg][Richard of Wallingford]], St Albans
+  There is an extension of Wigner's thought by Turing Prize laureate
+  [[https://math.dartmouth.edu/~matc/MathDrama/reading/Hamming.html][Richard Hamming (1980)]]. He observed: "When examining [Einstein's
+  1905] special theory of relativity paper one has the feeling that
+  one is dealing with a scholastic philosopher's approach. He knew in
+  advance what the theory should look like. and he explored the
+  theories with mathematical tools, not actual experiments. He was so
+  confident of the rightness of the relativity theories that, when
+  experiments were done to check them, he was not much interested in
+  the outcomes, saying that they had to come out that way or else the
+  experiments were wrong. And many people believe that the two
+  relativity theories rest more on philosophical grounds than on
+  actual experiments." As a modern man, Hamming claims "Mathematics
+  has been made by man."
 
 * Footnotes
 
@@ -273,7 +365,7 @@ heavily criticized.
 
 [fn:2]Counter arguments one might bring forward: what about astronomy
 and astrology of the ancient world? The answer: these (pseudo)
-sciences never left the sphere that bounded the world. 
+sciences never left the sphere that bounded the world.
 
 [fn:1]The German words for this are "Daseinsgefühl" (the feeling one
 has when existing), and "Weltbild" (a view of the whole world).
