@@ -1,0 +1,49 @@
+#+TITLE: DESCRIBING RAW DATA
+#+AUTHOR: MARCUS BIRKENKRAHE
+#+SUBTITLE: Applied math for data science (DSC 482/MTH 445) Fall 2022
+#+STARTUP:overview hideblocks indent inlineimages
+#+attr_html: :width 700px
+#+caption: From "Person of Interest" (2011-2016) by Jonathan Nolan
+[[../img/3_poi.png]]
+
+- What is statistics?
+- Statistical variables
+- Numeric variables
+- Categorical variables
+- Univariate and multivariate data
+- Parameter or statistic?
+- Exercises
+* What is statistics?
+
+#+begin_quote
+"Statistics are all around us, from marketing to sales to
+healthcare. The ability to collect, analyze, and draw conclusions from
+data is not only extremely valuable, but it is also becoming
+commonplace to expect roles that are not traditionally analytical to
+understand the fundamental concepts of statistics." (DataCamp, n.d.)
+#+end_quote
+
+- Which information does this "definition" contain?
+
+  #+begin_notes
+  - Application of statistics (marketing, sales, healthcare)
+  - Input (data), process (collect, analyze), and output (conclusions)
+  - Importance (commonplace)
+  #+end_notes
+
+- Okay, but what *is* statistics?
+
+  #+begin_notes
+  Statistics is the practice of turning data into information to
+  identify trends and understand features of populations. (Davies, 2016)
+  #+end_notes
+
+* Statistical variables
+* Numeric variables
+* Categorical variables
+* Univariate and multivariate data
+* Parameter or statistic?
+* References
+
+- DataCamp (n.d.). Introduction to Statistics. URL: datacamp.com.
+- Davies TD (2016). Book of R. NoStarch Press. URL: nostarch.com
