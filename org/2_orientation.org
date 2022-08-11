@@ -11,7 +11,7 @@
 - How do we in the modern age experience and view the world?
 - What does this have to do with statistics and probability?
 
-#+begin_notes
+#+begin_quote
 The essay '[[https://www.amazon.com/End-Modern-World-Romano-Guardini/dp/1882926587][The End of the Modern World]]' by Romano Guardini gave me the
 idea for this section. It was born out of the thought that probability
 as the foundation of statistics, is a profoundly *modern* concept, and I
@@ -31,7 +31,7 @@ century.
 I'm offering this section to you because the DSC 482 classes should also
 have a "senior spirit" of discourse and critical discussion, which one
 cannot get from topical (in this case: statistics) textbooks alone.
-#+end_notes
+#+end_quote
 
 * ANTIQUITY - CLASSICAL MAN
 #+attr_html: :width 700px
@@ -42,14 +42,14 @@ cannot get from topical (in this case: statistics) textbooks alone.
 2. Do you know anyone from that time and what they said, wrote or did?
 3. What were the world-views of people in antiquity?
 
-#+begin_notes
+#+begin_quote
 Image: [[https://en.wikipedia.org/wiki/Pergamon_Altar][Pergamonaltar, Berlin]] (Βωμός τς Περγάμου), 2nd century BC. The
 base of this altar from a temple for Zeus is a relief showing the
 battle between the Giants and the Olympian gods
 ("Gigantomachy"). Excavated by the German engineer Carl Humann
 1878-1886, this is at the heart of the Pergamon-Museum in Berlin. This
 altar stood in the ancient city of Troy (of Homer's [[https://en.wikipedia.org/wiki/Iliad][Iliad]]).
-#+end_notes
+#+end_quote
 
 * SUMMARY
 #+attr_html: :width 700px
@@ -61,14 +61,14 @@ altar stood in the ancient city of Troy (of Homer's [[https://en.wikipedia.org/w
 3. The world is a (closed) ball or sphere within which the Gods live
    with us; man must search for truth and experiment with hypotheses.
 
-#+begin_notes
+#+begin_quote
 /Image: David, Death of Socrates (1787)./ The Greek philosopher and
 distinguished veteran of the Peloponnesian war, Socrates (469-399 BC),
 was convicted of impiety by the Athenian court. Instead of renouncing
 his beliefs, he died willingly, discoursing on the immortality of the
 soul before drinking poisonous hemlock.
-#+end_notes
-#+begin_notes
+#+end_quote
+#+begin_quote
 Guardini: "Classical man never went beyond his world; his feeling for
 life, his imagination and his vision of existence were one with the
 limited world he knew. He never asked himself whether or not something
@@ -97,7 +97,7 @@ supposition. Always, however, one had to remain within the limits laid
 down by the fundamental ethos of the Greek world. These limits could
 not be transgressed, and the trial of Socrates attest to the strnegth
 of this prohibition."
-#+end_notes
+#+end_quote
 
 * MIDDLE AGES - MEDIEVAL MAN
 #+attr_html: :width 700px
@@ -108,7 +108,7 @@ of this prohibition."
 2. Do you know anyone from that time and what they said, wrote or did?
 3. What were the world-views of people in the middle ages?
 
-#+begin_notes
+#+begin_quote
 Image: Annunciation of Cortona by Fra Angelico (1433). The scene
 depicts the annunciation of Mary by the Archangel Gabriel. The words
 in the painting can only be read upside-down to indicate that they are
@@ -121,7 +121,7 @@ Etruscans at least since the 7th century BC. Lake Trasimeno where
 Scipio the younger defeated Hannibal after he had crossed the Alps
 with elephants, can be seen from Cortona. Next to the town is a small
 convent, Le Celle, where St Francis of Assisi lived in a tiny cell.
-#+end_notes
+#+end_quote
 
 * SUMMARY
 #+attr_html: :width 500px
@@ -134,13 +134,13 @@ convent, Le Celle, where St Francis of Assisi lived in a tiny cell.
 3. Impatience with all limitations through Christian Faith; Germanic
    drive for transcendence; Truth through meditation
 
-#+begin_notes
+#+begin_quote
 Image: [[https://en.wikipedia.org/wiki/Richard_of_Wallingford][Richard of Wallingford]], English mathematician, astronomer,
 horologist (the study of the measurement of time) and abbot of St
 Albans (1292-1336). Invented the most advanced clock of his time.
-#+end_notes
+#+end_quote
 
-#+begin_notes
+#+begin_quote
 "The crucial truth for medieval man was the fact of Divine Revelation
 [...] set forth within the dogma of the Church [which] bound and
 limited man by its authority; [but also] made it possible to surmount
@@ -185,7 +185,7 @@ common with our modern enthusiasm for the techniques of scientific
 investigation. Medieval man was interested neither in pursuing nature
 and history empirically nor in mastering reality theoretically. He
 chose to plunge into truth by way of meditation."
-#+end_notes
+#+end_quote
 
 * MODERN WORLD - MODERN MAN
 #+attr_html: :width 700px
@@ -197,7 +197,7 @@ chose to plunge into truth by way of meditation."
 3. What are the world-views of people in the modern era?
 4. What is the importance of statistics and probability today?
 
-#+begin_notes
+#+begin_quote
 /Image:/ cross-section of the Large Hadron Collider (LHC) at CERN,
 Switzerland, where I spent a few good summers starting as a teenager,
 working with physicists on photo multipliers, to my own PhD many years
@@ -209,7 +209,7 @@ detectors located in the cross-section shown above, has more than 12
 billion sensors that create a data stream of more than 3.5 terabytes
 per second, or 300 petabytes per day, which is more than the estimated
 data created world-wide per day.
-#+end_notes
+#+end_quote
 
 * SUMMARY
 #+attr_html: :width 700px
@@ -221,15 +221,15 @@ data created world-wide per day.
 3. Man vs. machine; Earth vs. universe; Nature/Science vs. God.
 4. Probability vs. certainty. Statistics vs. experiment.
 
-#+begin_notes
+#+begin_quote
 /Image:/ The grayscale painting "Guernica" by Picasso (1937) depics the bombing
 on the Spanish city of Guernica during the Spanish Civil War. It is
 also a typical cubist-surrealist painting where reality is dissolved
 in geometric patterns and symbols, distorted and disfigured to achieve
 a heightened effect.
-#+end_notes
+#+end_quote
 
-#+begin_notes
+#+begin_quote
 "[In the modern age,] man's passion for knowledge began to lead him
 away from authority, pointing him directly toward real things. He
 chose to probe things with his own intelligence and to reach
@@ -270,20 +270,20 @@ science, technology has grown, and technology is a concentration of
 processes allowing man to posit ends in conformity with his own
 desires [...] and cut themselves away from an ethic which once had
 bound men universally."
-#+end_notes
+#+end_quote
 * DISSOLUTION OF THE MODERN WORLD
 #+attr_html: :width 700px
 #+caption: Schematic presentation of Schumpeterian long waves
 [[../img/2_schumpeter.png]]
 
-#+begin_notes
+#+begin_quote
 /Image:/ From 'The Ontology of Technology Beyond Anthropocentrism and
 Determinism: The Role of Technologies in the Constitution of the
 (post) Anthropocene World (Blok, 2022). [[https://h5p.org/node/1095582][See here]] for an attempt at
 analysing this visualization.)
-#+end_notes
+#+end_quote
 
-#+begin_notes
+#+begin_quote
 - Uncertainty about the position of man in reality: “It is [now] taken
   increasingly for granted that man ought to be treated as an
   object. Man confronts this attitude in the range of authority
@@ -310,7 +310,7 @@ analysing this visualization.)
 
 - The search for religion is alive and well among scientists, too: see
   e.g. "[[https://www-cs-faculty.stanford.edu/~knuth/things.html][Things a Computer Scientist Rarely Talks About]]", by Don Knuth.
-#+end_notes
+#+end_quote
 
 * LIKELIHOOD IS AT THE CORE OF SCIENCE
 
