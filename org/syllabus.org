@@ -312,15 +312,13 @@ an extension. Extensions will *not* be granted for reasons such as:
     prior to the scheduled time.  If you are sick the day of the test,
     please e-mail me or leave a message on my phone before the
     scheduled time, and we can make arrangements when you return.
-* TODO Attendance policy
+* Attendance policy
 
 In accordance with college policy, if you miss 4 weeks of class, you
 fail the course automatically. Any missed meetings result in an [[https://catalog.lyon.edu/class-attendance]["Early
-Alert" report]].
-
-You should take care not to miss consecutive sessions if at all
-possible - otherwise you risk losing touch with the class and falling
-behind.
+Alert" report]]. You should take care not to miss consecutive sessions
+if at all possible - otherwise you risk losing touch with the class
+and falling behind.
 * Dates and class schedule
 
 - Important extra-curricular dates
