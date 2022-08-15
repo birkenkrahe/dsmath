@@ -14,7 +14,7 @@
   as well as some content.
 - You can also look at [[https://github.com/birkenkrahe/dsmath/blob/main/org/agenda.org][the agenda on GitHub]].
 
-* FAQ - FREQUENTLY ASKED QUESTIONS
+* FAQ - Frequently Asked Questions
 
 #+attr_html: :width 300px
 #+caption: Three Spheres II, M.C. Escher (1946)
@@ -24,7 +24,7 @@
 - First place to go to with a general question
 - FAQ is regularly updated with new content
 
-* WEEK 1: INTRODUCTION TO THE COURSE
+* Week 1: introduction to the course
 
 - Review: Entry test
 - Lecture: Course overview
@@ -33,6 +33,24 @@
 - Practice: course infrastructure
 - Homework: Assignments
 - Glossary
+
+** Quick entry test analysis
+
+#+begin_src R :results output graphics file :file ../img/entry_hist.png
+  results <- c(7.17, 10.83, 9.67, 11.67, 14.42)
+  hist_results <- hist(results)
+#+end_src
+
+#+RESULTS:
+[[file:../img/entry_hist.png]]
+
+#+begin_src R :results output graphics file :file ../img/entry_dens.png
+  results <- c(7.17, 10.83, 9.67, 11.67, 14.42)
+  plot(density(results))
+#+end_src
+
+#+RESULTS:
+[[file:../img/entry_dens.png]]
 
 ** Group exercise: orientation
 
@@ -58,8 +76,28 @@
 
 - Summary discussion / lecture
   
-* Week 2: GETTING STARTED
+** Practice - course infrastructure
+
+*Useful:* take notes! Practice leads to mastery and the practice
+exercises will often come back to haunt you in the tests.
+
+1) Open a browser
+2) Find the GitHub repos (birkenkrahe/dviz and /org)
+3) Open the command line terminal
+4) Open/close R
+5) Open Emacs
+6) Find the Emacs tutorial
+7) Open/close R inside Emacs
+8) Run R in an Org-mode file
+9) Close Emacs
+10) Close the command line terminal
+
+*Note:* Class room practice completion = 10 points each for active
+participation.
+
+* Week 2: getting started
 
 - Quiz 1: course infrastructure
 - Lectures: Describing raw data
 - Practice: Getting started with R
+  
