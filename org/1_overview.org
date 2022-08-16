@@ -14,7 +14,17 @@ trepanation. The stone (Dutch: /kei/) appears as a flower bulb. The
 Gothic inscription reads: /Master, cut the stone out, fast. My name is
 Lubbert Das/. (Source: Wikipedia)
 #+end_notes
-* MUTUAL INTRODUCTIONS
+* About me
+
+#+attr_html: :width 300px
+#+caption: Teddy Roosevelt at Harvard (ca. 1877)
+[[../img/Teddy.jpg]]
+
+- Math specialty: [[https://www.math.hkust.edu.hk/~mamu/courses/531/tutorial_with_corrections.pdf][multigrid methods]] (multilevel PD solvers)
+- Computer science: Linux (bash), Emacs (Lisp), OOP (C++)
+- Data science: R, process mining, medical image recognition
+
+* Mutual introductions
 #+attr_html: :width 500px
 #+caption: Detail from the Garden of Earthly Delights (Hell) by Bosch (1503)
 [[../img/1_hell.png]]
@@ -23,7 +33,7 @@ Lubbert Das/. (Source: Wikipedia)
 2. What would delight you?
 3. What would disappoint you?
 4. Where are you headed?
-* COURSE SYLLABUS (on GitHub and on Canvas)
+* Course syllabus (on GitHub and on Canvas)
 #+attr_html: :width 500px
 #+caption: DSC 302 Syllabus on GitHub
 [[../img/1_syllabus.png]]
@@ -33,7 +43,7 @@ Lubbert Das/. (Source: Wikipedia)
 - [[https://github.com/birkenkrahe/dsmath/blob/main/org/syllabus.org#dates-and-class-schedule][Schedule]] with dates of tests and assignments
 - The [[https://github.com/birkenkrahe/dsmath][GitHub repo]] contains course material
 
-* COURSE TOPICS (ILLUSTRATED)
+* Course topics (illustrated)
 #+attr_html: :width 400px
 #+caption: xkcd 2652: Proxy Variable (explainxkcd.com, July 29, 2022)
 [[../img/1_xkcd_proxy_variable.png]]
@@ -51,7 +61,7 @@ whether it results in loss of bone density or damage to
 cells. Physicians use blood pressure as one of many proxies for
 cardiovascular health. Source: [[https://www.explainxkcd.com/wiki/index.php/2652:_Proxy_Variable][explanation]] (July 29, 2022)
 #+end_notes
-* COURSE TOPICS (SPELLED OUT)
+* Course topics (spelled out)
 #+attr_html: :width 500px
 #+caption: Pablo Picasso, Guernica (1937), grayscale painting
 [[../img/1_guernica.png]]
@@ -71,77 +81,79 @@ effect. Our upcoming discussion on the origins of statistics and
 probability will make it clearer why I chose this image to illustrate
 the list of topics.
 #+end_notes
-* WHY "MATH FOR DATA SCIENCE"?
+* Why "math for data science"?
 #+attr_html: :width 500px
 #+caption: Joseph Wright of Derby: An Experiment on a Bird in an Air Pump (1768)
 [[../img/1_experiment.jpg]]
 
 - The central purpose of data science is /pattern identification/
 - Patterns cannot usually be discerned directly from the data
-- In experiments, data must be sampled and analyzed
-- Data analysis is primarily a mathematical discipline
-- Core: statistical summaries and probability distributions
-- Alternative name: causal inferential statistics
+- In experiments, data must be /sampled/ and /analyzed/
+- Data analysis is primarily a /mathematical/ discipline
+- Core: statistical /summaries/ and probability /distributions/
+- Alternative name: /causal inferential statistics/
 - Distinct from: machine learning, big data (massive datasets)
 
-  #+begin_notes
-  "The painting departed from convention of the time by depicting a
-  scientific subject in the reverential manner formerly reserved for
-  scenes of historical or religious significance. Wright was
-  intimately involved in depicting the Industrial Revolution and the
-  scientific advances of the Enlightenment." (Source: [[https://en.wikipedia.org/wiki/An_Experiment_on_a_Bird_in_the_Air_Pump][Wikipedia]])
-  #+end_notes
+#+begin_notes
+"The painting departed from convention of the time by depicting a
+scientific subject in the reverential manner formerly reserved for
+scenes of historical or religious significance. Wright was
+intimately involved in depicting the Industrial Revolution and the
+scientific advances of the Enlightenment." (Source: [[https://en.wikipedia.org/wiki/An_Experiment_on_a_Bird_in_the_Air_Pump][Wikipedia]])
+#+end_notes
 
-* THE WHOLE DATA SCIENCE PIPELINE
+* The whole data science pipeline
 #+attr_html: :width 500px
 #+caption: Data science pipeline
 [[../img/1_pipeline.png]]
 
-- Math important for: data cleaning and data modeling
-- Need to know: coding (R programming) and story (visualization)
-- This course focuses on descriptive rather than predictive stats
-- The followup course ("Machine learning") is about prediction
-- Missing (among other things): measure theory (project?)[fn:4]
+- Math important for: data /cleaning/ and data /modeling/
+- You need: /coding/ (R programming) and /storytelling/ (visualization)
+- This course focuses on /descriptive/ rather than /predictive/ stats
+- Prediction: spring '23 course /"Machine learning"/ (DSC 305)
+- Missing (among other things): /measure theory/ (project?)[fn:4]
 
-* AGILE TEAM PROJECT
+* Agile team project
 #+attr_html: :width 600px
 #+caption: Agile (Scrum) project
 [[../img/1_scrum.png]]
 
 The team project makes up 20% of your final grade for this course.
 
-- What is a team project? (FAQ)
-- Do you have examples for data science projects? (FAQ)
-- Can you do a project as an absolute beginner? (FAQ)
+Answered in the [[https://github.com/birkenkrahe/org/blob/master/FAQ.org][FAQ]]:
+- What is a team project?
+- Do you have examples for data science projects? 
+- Can you do a project as an absolute beginner? 
 
-  *Note:* the first /[[https://github.com/birkenkrahe/org/blob/master/FAQ.org#what-is-a-sprint-review][sprint review]]/ is on September 1st. Use it to present
-  your initial results (see FAQ on [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#what-do-i-need-to-deliver-at-a-sprint-review][what to deliver]], and [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#what-should-we-do-in-the-first-sprint][1st sprint
-  review]]).
+*Note:* the first /[[https://github.com/birkenkrahe/org/blob/master/FAQ.org#what-is-a-sprint-review][sprint review]]/ is on September 1st. Use it to present
+your initial results (see FAQ on [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#what-do-i-need-to-deliver-at-a-sprint-review][what to deliver]], and [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#what-should-we-do-in-the-first-sprint][1st sprint
+review]]).
 
-* MANY PROJECT OPPORTUNITIES
+* Many project opportunities
 
 #+attr_html: :width 200px
 #+caption: DataCamp competition announcement
 [[../img/1_competition.png]]
 
-- Analyze an interesting data visualization (explore math content)
-- Explore a statistical package or platform (e.g. SPSS, MATLAB[fn:2])
-- Explore an R package (e.g. ~data.table~[fn:1], [[https://cran.r-project.org/web/packages/MASS/index.html][MASS]])
-- Solve a real-world problem (you can decide how much math you need)
-- See [[https://app.datacamp.com/learn/projects][DataCamp projects]] for examples (the math is often missing)
-- [[https://github.com/birkenkrahe/dviz/issues/12][Example: visualize whale song / double up between 2 or 3 courses]]
-- Deepen any of our topics with current or [[https://statmodeling.stat.columbia.edu/2014/03/31/cited-statistics-papers-ever/][classic scientific papers]]
-- Deepen any of the course topics with a [[https://www.statmethods.net/advstats/timeseries.html][detailed applied example]][fn:3]
-- If you can use, topics, experiments etc. from other courses!
+1. Analyze an interesting data visualization (explore math content)
+2. Explore a statistical package or platform (e.g. SPSS, MATLAB[fn:2])
+3. Explore an R package (e.g. ~data.table~[fn:1], [[https://cran.r-project.org/web/packages/MASS/index.html][MASS]])
+4. Solve a real-world problem (you can decide how much math you need)
+5. See [[https://app.datacamp.com/learn/projects][DataCamp projects]] for examples (the math is often missing)
+6. [[https://github.com/birkenkrahe/dviz/issues/12][Example: visualize whale song / double up between 2 or 3 courses]]
+7. Deepen any of our topics with current or [[https://statmodeling.stat.columbia.edu/2014/03/31/cited-statistics-papers-ever/][classic scientific papers]]
+8. Deepen any of the course topics with a [[https://www.statmethods.net/advstats/timeseries.html][detailed applied example]][fn:3]
+9. If you can use, topics, experiments etc. from other courses!
+10. Come up with another idea and run it by me!
 
-* INTRODUCTION TO DataCamp
+* Introduction to DataCamp
 #+attr_html: :width 500px
 #+caption: DataCamp course "Introduction to statistics" start page
 [[../img/1_datacamp.png]]
 
 - *DataCamp* is a data science learning platform
 - Access for you is *free* (classroom license)
-- 14/15 assignments are DataCamp assignments
+- 14/15 assignments are DataCamp assignments ([[https://github.com/birkenkrahe/dsmath/blob/main/org/syllabus.org][syllabus]]) 
 - Assignments are drawn from 3 courses
   1. [[https://app.datacamp.com/learn/courses/introduction-to-statistics][Introduction to statistics]] (4/4)
   2. [[https://app.datacamp.com/learn/courses/introduction-to-statistics-in-r][Introduction to statistics in R]] (4/4)
@@ -150,7 +162,7 @@ The team project makes up 20% of your final grade for this course.
 - Complete them on time to get full points
 - Completed DataCamp courses can [[https://www.linkedin.com/in/birkenkrahe/][support your resume]]
 
-* INTRODUCTION TO THE TEXTBOOK
+* Introduction to the textbook
 #+attr_html: :width 200px
 #+caption: Cover of Book of R (Davies, 2016)
 [[../img/1_bookofR.png]]
@@ -160,7 +172,7 @@ The team project makes up 20% of your final grade for this course.
 - We will (hopefully) cover most of Part III (ca. 120 p.)
 - You don't have to read along but it might help
 
-* OTHER SOURCES
+* Other sources
 #+attr_html: :width 150px
 #+caption: Peter Dalgaard, Introductory Statistics with R (2008)
 [[../img/1_dalgaard.png]]
@@ -174,7 +186,7 @@ The team project makes up 20% of your final grade for this course.
 - Matloff, Probability & statistics for data science (2020) => library
 - Good (free) short online tutorial for R: [[https://github.com/matloff/fasteR][Matloff's "fasteR"]]
 - Beware of ideologies in science(cp. Matloff's "[[http://github.com/matloff/TidyverseSkeptic][TidyverseSceptic]]")
-* INTRODUCTION to GNU Emacs + ESS + Org-mode
+* Introduction to GNU Emacs + ESS + Org-mode
 #+attr_html: :width 500px
 #+caption: GNU Emacs start page
 [[../img/1_emacs.png]]
@@ -183,7 +195,7 @@ The team project makes up 20% of your final grade for this course.
 - Process, file and package management (like an OS)
 - /Literate programming/ environment for 43 languages
 - /IDE/ for R programming and /REPL/ for interactive coding
-* LITERATE PROGRAMMING
+* Literate programming
 #+attr_html: :width 600px
 #+caption: What is literate programming?
 [[../img/1_litprog.png]]
@@ -193,7 +205,7 @@ Source: "[[https://docs.google.com/presentation/d/1wA7sb41EjV6GP3oBEFsOiYnoe29WI
 - Common practice among data scientists
 - /Paradigm/ behind interactive computing notebooks
 - Useful when learning any programming language
-* HOME ASSIGNMENTS
+* Home assignments
 
 There are 15 programming assignments altogether = 10 points each, or
 30% of your final grade.
@@ -212,7 +224,7 @@ There are 15 programming assignments altogether = 10 points each, or
    + Mean, median, standard deviation
    + Interpretation of statistical summaries
 
-* TESTS (NOT GRADED)
+* Tests (not graded)
 #+attr_html: :width 500px
 #+caption: Start page of the entry quiz on Canvas
 [[../img/1_entry_quiz.png]]
@@ -224,7 +236,7 @@ There are 15 programming assignments altogether = 10 points each, or
 - A subset of the test questions will form the *final exam* (20% of your
   final grade) - we will practice in the last week before the exam.
 
-* GLOSSARY
+* Glossary
 
 | TERM           | MEANING                                |
 |----------------+----------------------------------------|
@@ -248,7 +260,7 @@ There are 15 programming assignments altogether = 10 points each, or
 | Sprint review  | Period to complete a prototype         |
 | Prototype      | Intermediate (not perfect) solution    |
 
-* REFERENCES
+* References
 
 - Davies T D (2016). The Book of R. [[https://nostarch.com/bookofr][NoStarch Press]].
 - Dalgaard P (2008). Introductory Statistics with R. [[https://link.springer.com/book/10.1007/978-0-387-79054-1][Springer]].

@@ -3,6 +3,10 @@
 #+SUBTITLE:Agenda - DSC 482 - Applied Math for Data Science, Fall 2022
 #+STARTUP:overview hideblocks indent inlineimages
 #+OPTIONS: toc:nil num:nil ^:nil
+
+#+attr_html: :width 500px
+[[../img/dice.jpg]]
+
 * README
 
 - DSC 482 focuses on statistics, probability and distributions
@@ -26,16 +30,16 @@
 
 * Week 1: introduction to the course
 
-- Review: Prerequisite (see my email on July 18)
+- Review: Prerequisites (see my email on July 18)
 - Review: Entry test
 - Lecture: Course overview
 - Discussion: Mutual introductions
-- Orientation: Data Science At The End Of Modern Time
 - Practice: course infrastructure
+- Orientation: Data Science At The End Of Modern Time
 - Homework: Assignments
 - Glossary
 
-** Prerequisites
+* Prerequisites
 
 #+attr_html: :width 300px
 #+caption: SPAM classic
@@ -60,10 +64,10 @@ underestimating spam (2014: above 70% of all emails sent, 2021: above
 45% of all emails sent).
 #+end_notes
 
-** Quick entry test analysis
+* Quick entry test analysis
 
 #+begin_src R :results output graphics file :file ../img/entry_hist.png
-  results <- c(7.17, 10.83, 9.67, 11.67, 14.42)
+  results <- c(10.67, 13.83, 7.83, 7.17, 11.67, 11.67, 10.83, 9.67, 11.67, 14.42)
   hist_results <- hist(results)
 #+end_src
 
@@ -71,14 +75,21 @@ underestimating spam (2014: above 70% of all emails sent, 2021: above
 [[file:../img/entry_hist.png]]
 
 #+begin_src R :results output graphics file :file ../img/entry_dens.png
-  results <- c(7.17, 10.83, 9.67, 11.67, 14.42)
+  results <- c(10.67, 13.83, 7.83, 7.17, 11.67, 11.67, 10.83, 9.67, 11.67, 14.42)
   plot(density(results))
 #+end_src
 
 #+RESULTS:
 [[file:../img/entry_dens.png]]
 
-** Group exercise: orientation
+* Group exercise: orientation
+
+#+begin_quote
+"Probability is the most important concept in modern science,
+especially as nobody has the slightest notion what it means."
+
+—Bertrand Russell, 1929 Lecture (cited in Bell 1945, 587)
+#+end_quote
 
 - *Group 1: Antiquity / Classical man*
   1. What historical time period are we talking about?
@@ -102,7 +113,7 @@ underestimating spam (2014: above 70% of all emails sent, 2021: above
 
 - Summary discussion / lecture
   
-** Practice - course infrastructure
+* Practice - course infrastructure
 
 *Useful:* take notes! Practice leads to mastery and the practice
 exercises will often come back to haunt you in the tests.
