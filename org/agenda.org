@@ -26,6 +26,7 @@
 
 * Week 1: introduction to the course
 
+- Review: Prerequisite (see my email on July 18)
 - Review: Entry test
 - Lecture: Course overview
 - Discussion: Mutual introductions
@@ -33,6 +34,31 @@
 - Practice: course infrastructure
 - Homework: Assignments
 - Glossary
+
+** Prerequisites
+
+#+attr_html: :width 300px
+#+caption: SPAM classic
+[[../img/spam.jpg]]
+
+#+begin_quote
+In DSC 482/MTH 445 (Applied maths for data science), I do NOT assume
+familiarity with R. We will learn the language as we go along. This
+will necessarily slow us down but this is a math/computing course, so
+concepts (in this case probability/statistics) are as important as
+coding. Textbook: Book of R, Part III (ch. 13-16), by T D Davies
+(NoStarch, 2016).
+#+end_quote
+
+- General preparation: [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-can-i-prepare-for-your-data-science-classes][see the FAQ]] - R, Emacs + ESS + Org-mode
+
+#+begin_notes
+Bill Gates committed what is called a statistical "Type II" error,
+when in 2004, he said "Two years from now, spam will be solved." Not
+rejecting this null hypothesis by Microsoft, arguably lead to
+underestimating spam (2014: above 70% of all emails sent, 2021: above
+45% of all emails sent).
+#+end_notes
 
 ** Quick entry test analysis
 
