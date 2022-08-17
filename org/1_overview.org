@@ -15,10 +15,9 @@ Gothic inscription reads: /Master, cut the stone out, fast. My name is
 Lubbert Das/. (Source: Wikipedia)
 #+end_notes
 * About me
-
 #+attr_html: :width 300px
 #+caption: Teddy Roosevelt at Harvard (ca. 1877)
-[[../img/Teddy.jpg]]
+[[../img/1_teddy.jpg]]
 
 - Math specialty: [[https://www.math.hkust.edu.hk/~mamu/courses/531/tutorial_with_corrections.pdf][multigrid methods]] (multilevel PD solvers)
 - Computer science: Linux (bash), Emacs (Lisp), OOP (C++)

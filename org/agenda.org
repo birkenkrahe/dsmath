@@ -30,16 +30,16 @@
 
 * Week 1: introduction to the course
 
-- Review: Prerequisites (see my email on July 18)
-- Review: Entry test
-- Lecture: Course overview
-- Discussion: Mutual introductions
-- Practice: course infrastructure
-- Orientation: Data Science At The End Of Modern Time
-- Homework: Assignments
-- Glossary
+- [X] Review: Prerequisites (see my email on July 18)
+- [X] Review: Entry test
+- [X] Discussion: Mutual introductions
+- [ ] Lecture: Course overview
+- [ ] Practice: course infrastructure
+- [ ] Orientation: Data Science At The End Of Modern Time
+- [ ] Homework: Assignments
+- [ ] Glossary
 
-* Prerequisites
+** Prerequisites
 
 #+attr_html: :width 300px
 #+caption: SPAM classic
@@ -64,7 +64,7 @@ underestimating spam (2014: above 70% of all emails sent, 2021: above
 45% of all emails sent).
 #+end_notes
 
-* Quick entry test analysis
+** Quick entry test analysis
 
 #+begin_src R :results output graphics file :file ../img/entry_hist.png
   results <- c(10.67, 9.67, 13.83, 7.83, 7.17, 11.67, 11.67, 10.83, 9.67, 11.67, 14.42)
@@ -131,6 +131,8 @@ exercises will often come back to haunt you in the tests.
 
 *Note:* Class room practice completion = 10 points each for active
 participation.
+
+([[https://github.com/birkenkrahe/dsmath/blob/main/org/1_practice.org][Link to practice file in GitHub]])
 
 * Week 2: getting started
 
