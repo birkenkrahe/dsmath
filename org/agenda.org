@@ -1,5 +1,5 @@
 #+TITLE:Agenda - DSC 482 / MTH 445
-#+AUTHOR:Marcus Birkenkrahe
+#+AUTHOR:Marcus Marcus Speh Birkenkrahe
 #+SUBTITLE:Agenda - DSC 482 - Applied Math for Data Science, Fall 2022
 #+STARTUP:overview hideblocks indent inlineimages
 #+OPTIONS: toc:nil num:nil ^:nil
@@ -67,7 +67,7 @@ underestimating spam (2014: above 70% of all emails sent, 2021: above
 * Quick entry test analysis
 
 #+begin_src R :results output graphics file :file ../img/entry_hist.png
-  results <- c(10.67, 13.83, 7.83, 7.17, 11.67, 11.67, 10.83, 9.67, 11.67, 14.42)
+  results <- c(10.67, 9.67, 13.83, 7.83, 7.17, 11.67, 11.67, 10.83, 9.67, 11.67, 14.42)
   hist_results <- hist(results)
 #+end_src
 
@@ -75,7 +75,7 @@ underestimating spam (2014: above 70% of all emails sent, 2021: above
 [[file:../img/entry_hist.png]]
 
 #+begin_src R :results output graphics file :file ../img/entry_dens.png
-  results <- c(10.67, 13.83, 7.83, 7.17, 11.67, 11.67, 10.83, 9.67, 11.67, 14.42)
+  results <- c(10.67, 9.67, 13.83, 7.83, 7.17, 11.67, 11.67, 10.83, 9.67, 11.67, 14.42)
   plot(density(results))
 #+end_src
 

@@ -4,7 +4,7 @@
 #+STARTUP:overview hideblocks indent inlineimages
 #+attr_html: :width 200px
 #+caption: Cutting the stone/cure of folly, Hieronymous Bosch (1494)
-[[../img/1_bosch.jpg]]
+_[[../img/1_bosch.jpg]]_
 #+begin_notes
 Cutting the Stone, also called The Extraction of the Stone of Madness,
 or The Cure of Folly, is a painting by Hieronymous Bosch
@@ -18,7 +18,7 @@ Lubbert Das/. (Source: Wikipedia)
 
 #+attr_html: :width 300px
 #+caption: Teddy Roosevelt at Harvard (ca. 1877)
-[[../img/Teddy.jpg]]
+[[../img/Teddy.jpg]]
 
 - Math specialty: [[https://www.math.hkust.edu.hk/~mamu/courses/531/tutorial_with_corrections.pdf][multigrid methods]] (multilevel PD solvers)
 - Computer science: Linux (bash), Emacs (Lisp), OOP (C++)

@@ -43,6 +43,10 @@ understand the fundamental concepts of statistics." (DataCamp, n.d.)
   conclusions about populations. (Schmuller, 2017)
   #+end_notes
 
+  #+begin_quote
+  "Statistics, the science of collecting, analyzing, presenting, and
+  interpreting data." (Britannica)
+  #+end_quote
 * Statistical variables
 * Numeric variables
 * Categorical variables
