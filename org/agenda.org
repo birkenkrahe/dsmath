@@ -39,7 +39,7 @@
 - [ ] Homework: Assignments
 - [ ] Glossary
 
-** Prerequisites
+* Prerequisites
 
 #+attr_html: :width 300px
 #+caption: SPAM classic
