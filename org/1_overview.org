@@ -23,7 +23,7 @@ Lubbert Das/. (Source: Wikipedia)
 - Computer science: Linux (bash), Emacs (Lisp), OOP (C++)
 - Data science: R, process mining, medical image recognition
 
-* DONE Mutual introductions
+* Mutual introductions
 #+attr_html: :width 500px
 #+caption: Detail from the Garden of Earthly Delights (Hell) by Bosch (1503)
 [[../img/1_hell.png]]
@@ -32,7 +32,7 @@ Lubbert Das/. (Source: Wikipedia)
 2. What would delight you?
 3. What would disappoint you?
 4. Where are you headed?
-* DONE Course syllabus (on GitHub and on Canvas)
+* Course syllabus (on GitHub and on Canvas)
 #+attr_html: :width 500px
 #+caption: DSC 302 Syllabus on GitHub
 [[../img/1_syllabus.png]]
@@ -43,7 +43,7 @@ Lubbert Das/. (Source: Wikipedia)
 - The [[https://github.com/birkenkrahe/dsmath][GitHub repo]] contains course material
 - Lecture /notes/ (from Emacs Org-mode) will not show in GitHub
 
-* TODO Course "learning" platform: Canvas
+* Course "learning" platform: Canvas
 
 #+attr_html: :width 500px
 #+caption: Course topics
@@ -54,7 +54,7 @@ Lubbert Das/. (Source: Wikipedia)
 - Important course [[https://lyon.instructure.com/courses/655/pages/links][links]] on a page
 - New CMS[fn:5] for me & for Lyon: bear with us
 
-* TODO Course topics (illustrated)
+* Course topics (illustrated)
 #+attr_html: :width 400px
 #+caption: xkcd 2652: Proxy Variable (explainxkcd.com, July 29, 2022)
 [[../img/1_xkcd_proxy_variable.png]]
@@ -72,7 +72,7 @@ whether it results in loss of bone density or damage to
 cells. Physicians use blood pressure as one of many proxies for
 cardiovascular health. Source: [[https://www.explainxkcd.com/wiki/index.php/2652:_Proxy_Variable][explanation]] (July 29, 2022)
 #+end_notes
-* TODO Course topics (spelled out)
+* Course topics (spelled out)
 #+attr_html: :width 500px
 #+caption: Pablo Picasso, Guernica (1937), grayscale painting
 [[../img/1_guernica.png]]
@@ -126,7 +126,7 @@ scientific advances of the Enlightenment." (Source: [[https://en.wikipedia.org/w
 - Prediction: spring '23 course /"Machine learning"/ (DSC 305)
 - Missing (among other things): /measure theory/ (project?)[fn:4]
 
-* TODO Agile team project (with "Scrum")
+* Agile team project (with "Scrum")
 #+attr_html: :width 600px
 #+caption: Agile (Scrum) project
 [[../img/1_scrum.png]]
@@ -154,7 +154,7 @@ review]]).
 
 ([[https://youtu.be/dip7UwZ3wUM][Video: Research Writing with IMRaD]])
 
-* TODO Many project opportunities
+* Many project opportunities
 
 #+attr_html: :width 200px
 #+caption: DataCamp competition announcement
@@ -171,7 +171,7 @@ review]]).
 9. If you can use, topics, experiments etc. from other courses!
 10. Come up with another idea and run it by me!
 
-* TODO Video lectures
+* Video lectures
 #+attr_html: :width 400px
 #+caption: La lecture Marie Therese (Picasso, 1932)
 [[../img/1_lecture.jpg]]
@@ -185,7 +185,7 @@ review]]).
 - [[https://www.youtube.com/playlist?list=PL6SfZh1-kWXnLB9cVQQKRxtAFFDfyGw0h][Plotting with ggplot2]]
 - [[https://www.youtube.com/playlist?list=PLwgb17bzeNyi9RjO0pL48am-Bk6XWol44][Data import]] with R
 - [[https://www.youtube.com/playlist?list=PL6SfZh1-kWXl3RimChL59F7lKSDGA97AZ][RStudio R Notebooks and literate programming]]
-* TODO Introduction to DataCamp
+* Introduction to DataCamp
 #+attr_html: :width 500px
 #+caption: DataCamp course "Introduction to statistics" start page
 [[../img/1_datacamp.png]]
@@ -201,7 +201,7 @@ review]]).
 - Complete them on time to get full points
 - Completed DataCamp courses can [[https://www.linkedin.com/in/birkenkrahe/][support your resume]]
 
-* TODO Introduction to the textbook
+* Introduction to the textbook
 #+attr_html: :width 200px
 #+caption: Cover of Book of R (Davies, 2016)
 [[../img/1_bookofR.png]]
@@ -211,7 +211,7 @@ review]]).
 - We will (hopefully) cover most of Part III (ca. 120 p.)
 - You don't have to read along but it might help
 
-* TODO Other sources
+* Other sources
 #+attr_html: :width 150px
 #+caption: Peter Dalgaard, Introductory Statistics with R (2008)
 [[../img/1_dalgaard.png]]
@@ -225,7 +225,7 @@ review]]).
 - Matloff, Probability & statistics for data science (2020) => library
 - Good (free) short online tutorial for R: [[https://github.com/matloff/fasteR][Matloff's "fasteR"]]
 - Beware of ideologies in science(cp. Matloff's "[[http://github.com/matloff/TidyverseSkeptic][TidyverseSceptic]]")
-* TODO Introduction to GNU Emacs + ESS + Org-mode
+* Introduction to GNU Emacs + ESS + Org-mode
 #+attr_html: :width 500px
 #+caption: GNU Emacs start page
 [[../img/1_emacs.png]]
@@ -234,7 +234,7 @@ review]]).
 - Process, file and package management (like an OS)
 - /Literate programming/ environment for 43 languages
 - /IDE/ for R programming and /REPL/ for interactive coding
-* TODO Literate programming
+* Literate programming
 #+attr_html: :width 600px
 #+caption: What is literate programming?
 [[../img/1_litprog.png]]
@@ -244,7 +244,7 @@ Source: "[[https://docs.google.com/presentation/d/1wA7sb41EjV6GP3oBEFsOiYnoe29WI
 - Common practice among data scientists
 - /Paradigm/ behind interactive computing notebooks
 - Useful when learning any programming language
-* TODO Home assignments
+* Home assignments
 
 There are 15 programming assignments altogether = 10 points each, or
 30% of your final grade.
@@ -263,7 +263,7 @@ There are 15 programming assignments altogether = 10 points each, or
    + Mean, median, standard deviation
    + Interpretation of statistical summaries
 
-* TODO Tests (not graded)
+* Tests (not graded)
 #+attr_html: :width 500px
 #+caption: Start page of the entry quiz on Canvas
 [[../img/1_entry_quiz.png]]
