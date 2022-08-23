@@ -106,10 +106,53 @@ participation.
 
 - [ ] Quiz 1: course infrastructure
 - [ ] About: home assignments
+- [ ] Getting started with projects
 - [ ] Group exercise: embedding probability
 - [ ] Running R in an Emacs Org-mode file
 - [ ] Lectures: Describing raw data
 - [ ] Practice: Getting started with R
+
+* Home assignments - how they work
+#+attr_html: :width 400px
+#+captions: course infrastructure
+[[../img/platforms.png]]
+
+- Assignment must be completed on time on [[https://app.datacamp.com/groups/lyon-college-data-science-fall-2022/assignments][DataCamp]]
+- Assignment is posted on [[https://lyon.instructure.com/courses/655/assignments][Canvas]] (includes the link)
+- You loose 1 point for every day of late submission
+- Canvas Gradebook is updated manually (with some delay)
+
+* Getting started with projects
+
+- Course has 14 participants!
+
+- You'll have to do the project in a team - 2 to 3 people
+
+- We can only accommodate at most 8 projects (last week of term)
+- Put your team/ideas into this table ([[https://lyon.instructure.com/courses/655/pages/enter-your-project-ideas-and-team-here][Canvas]]) by Thursday
+
+- [ ] *Who has not yet found a team?*
+
+- [ ] *Who has a team but no idea what to do?*
+
+- Reminder: plenty of project opportunities ([[https://github.com/birkenkrahe/dsmath/blob/main/org/1_overview.org#many-project-opportunities][overview]] / GitHub [[https://github.com/birkenkrahe/dsmath/issues][issues]])
+
+* Featured example  
+#+attr_html: :width 400px
+#+caption: text prompt = an armchair in the shape of an avocado.
+[[../img/avocado.png]]
+
+- GitHub issue: [[https://github.com/birkenkrahe/dsmath/issues/25][DALL-E math]]
+
+- Source: [[https://openai.com/blog/dall-e/][OpenAI - creating images from text]]) 
+
+- DALL-E is a so-called transformer language model ([[https://ml.berkeley.edu/blog/posts/dalle2/][explanation]])
+
+- Your project could consist in trying to understand what it is about,
+  place it in context, perhaps clarify some of the math, and relate
+  this to the class
+
+- [[https://openai.com/blog/dall-e/][Avocado example]] and others
 
 * Group exercise: orientation
 #+attr_html: :width 400px
@@ -145,6 +188,3 @@ especially as nobody has the slightest notion what it means."
 - Present your insights to the class (5 min per group)
 
 - Summary discussion / lecture
-  
-  
-  

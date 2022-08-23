@@ -343,7 +343,7 @@ and falling behind.
   |  1 |  1 | Tue-16-Aug | Entry Test |                              | 1. Emacs tutorial                  |
   |    |  2 | Thu-18-Aug |            |                              |                                    |
   |----+----+------------+------------+------------------------------+------------------------------------|
-  |  2 |  3 | Tue-23-Aug | Test 1     | 13. Elementary statistics    | 2. Introduction to statistics      |
+  |  2 |  3 | Tue-23-Aug | Test 1     | 13. Elementary statistics    | 2. Summary statistics              |
   |    |  4 | Thu-25-Aug |            |                              |                                    |
   |----+----+------------+------------+------------------------------+------------------------------------|
   |  3 |  5 | Tue-30-Aug | Test 2     |                              | 3. Probability and distributions   |
