@@ -15,10 +15,10 @@
 |-----------------------+-----|
 | Introduction (all)    |   5 |
 | Discussion (groups)   |  15 |
-| Kanban board (groups) |  15 |
+| Kanban board (groups) |  10 |
 | Presentation (all)    |  15 |
 |-----------------------+-----|
-| TOTAL                 |  50 |
+| TOTAL                 |  45 |
 #+TBLFM: @6$2=vsum(@2..@5)
 
 * Group questions
@@ -49,4 +49,4 @@
 
 - Present your insights to the class (5 min per group)
 
-- Summary discussion / [[https://github.com/birkenkrahe/dsmath/blob/main/org/2_orientation.org][lecture]] (25 min)
+- Summary discussion / [[https://github.com/birkenkrahe/dsmath/blob/main/org/2_orientation.org][lecture]] (15 min)
