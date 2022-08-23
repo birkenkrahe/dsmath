@@ -3,8 +3,7 @@
 #+SUBTITLE:Agenda - DSC 482 - Applied Math for Data Science, Fall 2022
 #+STARTUP:overview hideblocks indent inlineimages
 #+OPTIONS: toc:nil num:nil ^:nil
-
-#+attr_html: :width 500px
+#+attr_html: :width 200px
 [[../img/dice.jpg]]
 
 * README
@@ -39,7 +38,7 @@
 - [ ] Homework: Assignments
 - [ ] Glossary
 
-* Prerequisites
+** Prerequisites
 
 #+attr_html: :width 300px
 #+caption: SPAM classic
@@ -82,38 +81,7 @@ underestimating spam (2014: above 70% of all emails sent, 2021: above
 #+RESULTS:
 [[file:../img/entry_dens.png]]
 
-* Group exercise: orientation
-
-#+begin_quote
-"Probability is the most important concept in modern science,
-especially as nobody has the slightest notion what it means."
-
-—Bertrand Russell, 1929 Lecture (cited in Bell 1945, 587)
-#+end_quote
-
-- *Group 1: Antiquity / Classical man*
-  1. What historical time period are we talking about?
-  2. Do you know anyone from that time and what they said, wrote or did?
-  3. What were the world-views of people in antiquity?
-
-- *Group 2: Middle ages / Medieval man*
-  1. What historical time period are we talking about?
-  2. Do you know anyone from that time and what they said, wrote or did?
-  3. What were the world-views of people in the middle ages?
-
-- *Group 3: Modern world / Mass man*
-  1. What historical time period are we talking about?
-  2. Do you know anyone from that time and what they said, wrote or did?
-  3. What are the world-views of people in the modern era?
-  4. What is the importance of statistics and probability today?
-
-- Collect your insights [[https://ideaboardz.com/for/Data%20Science%20At%20The%20End%20Of%20Time/4595645][on this online board]] (10 min for all)
-
-- Present your insights to the class (5 min per group)
-
-- Summary discussion / lecture
-  
-* Practice - course infrastructure
+** Practice - course infrastructure
 
 *Useful:* take notes! Practice leads to mastery and the practice
 exercises will often come back to haunt you in the tests.
@@ -136,7 +104,43 @@ participation.
 
 * Week 2: getting started
 
-- Quiz 1: course infrastructure
-- Lectures: Describing raw data
-- Practice: Getting started with R
+- [ ] Quiz 1: course infrastructure
+- [ ] About: home assignments
+- [ ] Lectures: Describing raw data
+- [ ] Practice: Getting started with R
+
+* Group exercise: orientation
+#+attr_html: :width 400px
+[[../img/dog.jpg]]
+
+#+begin_quote
+"Probability is the most important concept in modern science,
+especially as nobody has the slightest notion what it means."
+—Bertrand Russell, 1929 Lecture (cited in Bell 1945, 587)
+#+end_quote
+
+- *Group 1: Antiquity / Classical man*
+  1. What historical time period are we talking about?
+  2. Do you know anyone from that time and what they said, wrote or did?
+  3. What were the world-views of people in antiquity?
+
+- *Group 2: Middle ages / Medieval man*
+  1. What historical time period are we talking about?
+  2. Do you know anyone from that time and what they said, wrote or did?
+  3. What were the world-views of people in the middle ages?
+
+- *Group 3: Modern world / Mass man*
+  1. What historical time period are we talking about?
+  2. Do you know anyone from that time and what they said, wrote or did?
+  3. What are the world-views of people in the modern era?
+  4. What is the importance of statistics and probability today?
+
+- Discuss answers & find examples (15 min)
+- Collect your insights [[https://ideaboardz.com/for/Data%20Science%20At%20The%20End%20Of%20Time/4595645][on this online board]] (15 min)
+
+- Present your insights to the class (5 min per group)
+
+- Summary discussion / lecture
+  
+  
   

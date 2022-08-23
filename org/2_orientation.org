@@ -55,7 +55,7 @@ altar stood in the ancient city of Troy (of Homer's [[https://en.wikipedia.org/w
 #+attr_html: :width 700px
 #+caption: Jacques-Louis David - Death of Socrates (1787)
 [[../img/2_socrates.jpg]]
-
+#+begin_notes
 1. From Ancient Greece, ca. 400 BC to the End of Rome, ca. 476 AD
 2. Socrates & Plato (philosophy), Aristotle (physics), Euclid (maths)
 3. The world is a (closed) ball or sphere within which the Gods live
@@ -98,7 +98,7 @@ down by the fundamental ethos of the Greek world. These limits could
 not be transgressed, and the trial of Socrates attest to the strnegth
 of this prohibition."
 #+end_quote
-
+#+end_notes
 * MIDDLE AGES - MEDIEVAL MAN
 #+attr_html: :width 700px
 #+caption: Annunciation of Cortona by Fran Angelico (1433)
