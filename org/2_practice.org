@@ -49,4 +49,4 @@
 
 - Present your insights to the class (5 min per group)
 
-- Summary discussion / lecture (25 min)
+- Summary discussion / [[https://github.com/birkenkrahe/dsmath/blob/main/org/2_orientation.org][lecture]] (25 min)
