@@ -32,8 +32,7 @@ I'm offering this section to you because the DSC 482 classes should also
 have a "senior spirit" of discourse and critical discussion, which one
 cannot get from topical (in this case: statistics) textbooks alone.
 #+end_quote
-
-* ANTIQUITY - CLASSICAL MAN
+* Antiquity - classical man
 #+attr_html: :width 700px
 #+caption: Jacques-Louis David (1748-1825) - Death of Socrates
 [[../img/2_pergamon.jpg]]
@@ -51,7 +50,7 @@ battle between the Giants and the Olympian gods
 altar stood in the ancient city of Troy (of Homer's [[https://en.wikipedia.org/wiki/Iliad][Iliad]]).
 #+end_quote
 
-* SUMMARY
+* Examples
 #+attr_html: :width 700px
 #+caption: Jacques-Louis David - Death of Socrates (1787)
 [[../img/2_socrates.jpg]]
@@ -99,7 +98,7 @@ not be transgressed, and the trial of Socrates attest to the strnegth
 of this prohibition."
 #+end_quote
 
-* MIDDLE AGES - MEDIEVAL MAN
+* Middle ages - medieval man
 #+attr_html: :width 700px
 #+caption: Annunciation of Cortona by Fran Angelico (1433)
 [[../img/2_annunciation.jpg]]
@@ -123,23 +122,22 @@ with elephants, can be seen from Cortona. Next to the town is a small
 convent, Le Celle, where St Francis of Assisi lived in a tiny cell.
 #+end_quote
 
-* SUMMARY
+* Examples
 #+attr_html: :width 500px
 #+caption: Richard of Wallingford, Abbot of St Albans
 [[../img/2_medieval.jpg]]
-
+#+begin_notes
 1. From the end of the Roman Empire (ca. 400 AD) to the 15th century
 2. Benedict of Nursia, Charlemagne, St Stephen, Thomas Aquinas, Gengis
    Khan, Jean d'Arc, Dante, Leonardo da Vinci, Michelangelo.
 3. Impatience with all limitations through Christian Faith; Germanic
    drive for transcendence; Truth through meditation
-
+#+end_notes
 #+begin_quote
 Image: [[https://en.wikipedia.org/wiki/Richard_of_Wallingford][Richard of Wallingford]], English mathematician, astronomer,
 horologist (the study of the measurement of time) and abbot of St
 Albans (1292-1336). Invented the most advanced clock of his time.
 #+end_quote
-
 #+begin_quote
 "The crucial truth for medieval man was the fact of Divine Revelation
 [...] set forth within the dogma of the Church [which] bound and
@@ -186,17 +184,16 @@ investigation. Medieval man was interested neither in pursuing nature
 and history empirically nor in mastering reality theoretically. He
 chose to plunge into truth by way of meditation."
 #+end_quote
-
-* MODERN WORLD - MODERN MAN
+* Modern world - modern man
 #+attr_html: :width 700px
 #+caption: Cross-section of the Large Hadron Collider
 [[../img/2_cern.png]]
-
+#+begin_notes
 1. What historical time period are we talking about?
 2. Do you know anyone from that time and what they said, wrote or did?
 3. What are the world-views of people in the modern era?
 4. What is the importance of statistics and probability today?
-
+#+end_notes
 #+begin_quote
 /Image:/ cross-section of the Large Hadron Collider (LHC) at CERN,
 Switzerland, where I spent a few good summers starting as a teenager,
@@ -210,17 +207,16 @@ billion sensors that create a data stream of more than 3.5 terabytes
 per second, or 300 petabytes per day, which is more than the estimated
 data created world-wide per day.
 #+end_quote
-
-* SUMMARY
+* Examples
 #+attr_html: :width 700px
 #+caption: Pablo Picasso, Guernica (1937), grayscale painting
 [[../img/1_guernica.png]]
-
+#+begin_notes
 1. Renaissance (1500s); Enlightenment (1700s); Modernism (1900s)
 2. Galileo (method), Newton (laws of motion), Einstein (relativity)
 3. Man vs. machine; Earth vs. universe; Nature/Science vs. God.
 4. Probability vs. certainty. Statistics vs. experiment.
-
+#+end_notes
 #+begin_quote
 /Image:/ The grayscale painting "Guernica" by Picasso (1937) depics the bombing
 on the Spanish city of Guernica during the Spanish Civil War. It is
@@ -228,7 +224,6 @@ also a typical cubist-surrealist painting where reality is dissolved
 in geometric patterns and symbols, distorted and disfigured to achieve
 a heightened effect.
 #+end_quote
-
 #+begin_quote
 "[In the modern age,] man's passion for knowledge began to lead him
 away from authority, pointing him directly toward real things. He
@@ -271,18 +266,16 @@ processes allowing man to posit ends in conformity with his own
 desires [...] and cut themselves away from an ethic which once had
 bound men universally."
 #+end_quote
-* DISSOLUTION OF THE MODERN WORLD
+* Dissolution of the modern world
 #+attr_html: :width 700px
 #+caption: Schematic presentation of Schumpeterian long waves
 [[../img/2_schumpeter.png]]
-
 #+begin_quote
 /Image:/ From 'The Ontology of Technology Beyond Anthropocentrism and
 Determinism: The Role of Technologies in the Constitution of the
 (post) Anthropocene World (Blok, 2022). [[https://h5p.org/node/1095582][See here]] for an attempt at
 analysing this visualization.)
 #+end_quote
-
 #+begin_quote
 - Uncertainty about the position of man in reality: “It is [now] taken
   increasingly for granted that man ought to be treated as an
@@ -311,8 +304,7 @@ analysing this visualization.)
 - The search for religion is alive and well among scientists, too: see
   e.g. "[[https://www-cs-faculty.stanford.edu/~knuth/things.html][Things a Computer Scientist Rarely Talks About]]", by Don Knuth.
 #+end_quote
-
-* LIKELIHOOD IS AT THE CORE OF SCIENCE
+* Likelihood is at the core of science
 
 Science is not about hard truths but about estimates of likelihood.
 
@@ -325,8 +317,7 @@ known, irrational characteristics of terrestrial intelligence rather
 than the unknown, rational efforts of extraterrestrial intelligence."
 ([[https://youtu.be/EYPapE-3FRw][Richard Feynman, 1964]])
 #+end_quote
-
-* REFERENCES
+* References
 
 - Encyclopedia Britannica (2022). Quantum Mechanics - Physics. [[https://www.britannica.com/science/quantum-mechanics-physics][URL:
   britannica.com]].
