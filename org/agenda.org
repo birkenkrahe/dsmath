@@ -32,10 +32,10 @@
 - [X] Review: Prerequisites (see my email on July 18)
 - [X] Review: Entry test
 - [X] Discussion: Mutual introductions
-- [ ] Lecture: Course overview
-- [ ] Practice: course infrastructure
-- [ ] Orientation: Data Science At The End Of Modern Time
-- [ ] Homework: Assignments
+- [X] Lecture: Course overview
+- [X] Practice: course infrastructure
+- [ ] Group work: Data Science At The End Of Modern Time
+- [X] Homework: Assignments
 - [ ] Glossary
 
 ** Prerequisites
@@ -107,7 +107,7 @@ participation.
 - [ ] Quiz 1: course infrastructure
 - [ ] About: home assignments
 - [ ] Getting started with projects
-- [ ] Group exercise: embedding probability
+- [ ] Group work: Data Science At The End Of Modern Time
 - [ ] Running R in an Emacs Org-mode file
 - [ ] Lectures: Describing raw data
 - [ ] Practice: Getting started with R
