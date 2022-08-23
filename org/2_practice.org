@@ -1,0 +1,52 @@
+#+TITLE: Practice: Orientation
+#+AUTHOR: Marcus Birkenkrahe
+#+SUBTITLE: "Data science at the end of the modern world" (DSC 482 / MTH 445)
+#+OPTIONS: toc:nil num:nil ^:nil
+#+startup: overview hideblocks indent inlineimages
+* README
+
+- Group work in class to clarify the evolution of probability and
+  statistics throughout history
+
+* Time table
+
+#+name: tab:2_practice
+| PRACTICE              | MIN |
+|-----------------------+-----|
+| Introduction (all)    |   5 |
+| Discussion (groups)   |  15 |
+| Kanban board (groups) |  15 |
+| Presentation (all)    |  15 |
+|-----------------------+-----|
+| TOTAL                 |  50 |
+#+TBLFM: @6$2=vsum(@2..@5)
+
+* Group questions
+
+- *Group 1: Antiquity / Classical man*
+  1. What historical time period are we talking about?
+  2. Do you know anyone from that time and what they said, wrote or did?
+  3. What were the world-views of people in antiquity?
+  4. What were their views towards statistics and probability?
+
+- *Group 2: Middle ages / Medieval man*
+  1. What historical time period are we talking about?
+  2. Do you know anyone from that time and what they said, wrote or did?
+  3. What were the world-views of people in the middle ages?
+  4. What were their views towards statistics and probability?
+
+- *Group 3: Modern world / Mass man*
+  1. What historical time period are we talking about?
+  2. Do you know anyone from that time and what they said, wrote or did?
+  3. What are the world-views of people in the modern era?
+  4. What is the importance of statistics and probability today?
+
+* Process
+
+- Discuss answers & find examples (15 min)
+
+- Collect your insights [[https://ideaboardz.com/for/Data%20Science%20At%20The%20End%20Of%20Time/4595645][on this online board]] (15 min)
+
+- Present your insights to the class (5 min per group)
+
+- Summary discussion / lecture (25 min)
