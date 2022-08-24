@@ -43,10 +43,14 @@
 
 * Process
 
-- Discuss answers & find examples (15 min)
-
-- Collect your insights [[https://ideaboardz.com/for/Data%20Science%20At%20The%20End%20Of%20Time/4595645][on this online board]] (15 min)
+- Discuss answers & find examples (15 min) - Questions:
+  https://tinyurl.com/2p93b4mj
+  
+- Collect your insights [[https://ideaboardz.com/for/Data%20Science%20At%20The%20End%20Of%20Time/4595645][on this online board]] (tinyurl.com/y4ys5vxu) (15 min)
 
 - Present your insights to the class (5 min per group)
 
 - Summary discussion / [[https://github.com/birkenkrahe/dsmath/blob/main/org/2_orientation.org][lecture]] (15 min)
+
+* Results
+
