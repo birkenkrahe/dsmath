@@ -52,11 +52,21 @@ understand the fundamental concepts of statistics." (DataCamp, n.d.)
 #+attr_html: :width 400px
 [[../img/3_creation.png]]
 
-- Lat. "datum" = that what is given
+- Lat. "/datum/" = that what is given
 
-- Raw data = records or observations that make up a /sample/
+- /Raw/ data = records or observations that make up a /sample/
 
-- Big data
+- /Big/ data = Volume + Velocity + Variety[fn:1]
+
+* What is data to R?
+
+
+
+- Data can be /read in/ from external files (e.g. ~read.table~)
+
+- Data can be /stored/ as R objects (e.g. ~data.frame~)
+
+- Data can be /summarized/ and /analyzed/ using R functions (e.g. ~summary~)
 
 * Statistical variables
 * Numeric variables
@@ -74,3 +84,9 @@ understand the fundamental concepts of statistics." (DataCamp, n.d.)
 |------------+---------|
 | Statistics |         |
 | Data       |         |
+
+* Footnotes
+
+[fn:1]This is the "3V" definition of big data. You'll find other
+attributes, like "value" or "veracity", which are not directly
+measurable, however.
