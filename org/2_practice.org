@@ -52,5 +52,5 @@
 
 - Summary discussion / [[https://github.com/birkenkrahe/dsmath/blob/main/org/2_orientation.org][lecture]] (15 min)
 
-* Results
+* [[https://github.com/birkenkrahe/dsmath/blob/main/pdf/2_orientation_practice.pdf][Results (PDF)]]
 

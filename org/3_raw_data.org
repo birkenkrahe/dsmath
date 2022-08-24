@@ -43,10 +43,21 @@ understand the fundamental concepts of statistics." (DataCamp, n.d.)
   conclusions about populations. (Schmuller, 2017)
   #+end_notes
 
-  #+begin_quote
+  #+begin_notes
   "Statistics, the science of collecting, analyzing, presenting, and
   interpreting data." (Britannica)
-  #+end_quote
+  #+end_notes
+  
+* What is data?
+#+attr_html: :width 400px
+[[../img/3_creation.png]]
+
+- Lat. "datum" = that what is given
+
+- Raw data = records or observations that make up a /sample/
+
+- Big data
+
 * Statistical variables
 * Numeric variables
 * Categorical variables
@@ -57,3 +68,9 @@ understand the fundamental concepts of statistics." (DataCamp, n.d.)
 - DataCamp (n.d.). Introduction to Statistics. URL: datacamp.com.
 - Davies TD (2016). Book of R. NoStarch Press. URL: nostarch.com
 - Schmuller J (2017) Statistical Analysis with R for Dummies. URL: wiley.com
+* Glossary
+
+| TERM       | MEANING |
+|------------+---------|
+| Statistics |         |
+| Data       |         |

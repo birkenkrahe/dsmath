@@ -167,6 +167,7 @@ especially as nobody has the slightest notion what it means."
 —Bertrand Russell, 1929 Lecture (cited in Bell 1945, 587)
 #+end_quote
 
+[[https://github.com/birkenkrahe/dsmath/blob/main/pdf/2_orientation_practice.pdf][(Results - PDF)]]
 
 * 1st sprint review - Wed 1-Sep
 
