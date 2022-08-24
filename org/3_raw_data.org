@@ -52,7 +52,10 @@ understand the fundamental concepts of statistics." (DataCamp, n.d.)
 #+attr_html: :width 400px
 [[../img/3_creation.png]]
 
-- Lat. "/datum/" = that what is given
+- Lat. "/datum/" = that what is given:
+  1) entity - for example a corporation or a school
+  2) event - for example an event like an election
+  3) process - for example a marketing campaign
 
 - /Raw/ data = records or observations that make up a /sample/
 
@@ -60,15 +63,86 @@ understand the fundamental concepts of statistics." (DataCamp, n.d.)
 
 * What is data to R?
 
+[[../img/3_data.jpg]]
 
-
-- Data can be /read in/ from external files (e.g. ~read.table~)
+- Data can be /read in/ from external files (e.g. ~read.table~[fn:2])
 
 - Data can be /stored/ as R objects (e.g. ~data.frame~)
 
 - Data can be /summarized/ and /analyzed/ using R functions (e.g. ~summary~)
+  
+* Variables
 
+- In statistics, /variables/ are characteristics of individuals in a population
+
+- An /individual/ and /population/ are (useful) abstractions (*Why?*)
+
+- First step: identify and categorize the available variables
+
+* Extended example: data frames
+
+  - We use the ~data.frame~ function to create a data frame from scratch
+
+  - Data are supplied as /vectors/ of the same length
+
+  - Data are grouped by variable
+
+  - R code:
+    #+name: mydata
+    #+begin_src R :session *R* :results output
+      mydata <- data.frame (
+        person = c("Peter", "Lois", "Meg", "Chris", "Stewie"),
+        age = c(42, 40, 17, 14, 1),
+        sex = factor( c("M", "F", "F", "M", "M")))
+    #+end_src
+
+  - R variables: vector of strings, numbers, ~factor~ vector
+
+  - To see the structure of an R object, use the function ~str~.
+    #+name: str
+    #+begin_src R :exports both :session :results output
+     str(mydata)
+    #+end_src
+
+  - To extract portions of the data, use index operators ~$~ and ~[]~.
+    #+name: subset
+    #+begin_src R :exports both :session :results output
+      ## extract row 2 in column 2
+      mydata[2,2] 
+
+      ## extract rows 2 to 5 in column 2
+      mydata[3:5,2]
+
+      ## extract age
+      mydata$age
+
+      ## extract Lois' age (row 2, column 2)
+      mydata$age[2]
+    #+end_src
+
+    #+RESULTS: subset
+    : [1] 40
+    : [1] 17 14  1
+    : [1] 42 40 17 14  1
+    : [1] 40
+
+  - To report size of data frames - number of records and variables,
+    or rows and columns, use ~nrow~, ~ncol~ and ~dim~.
+    #+name: size
+    #+begin_src R :exports both :session :results output
+      nrow(mydata) # retrieve number of rows or records
+
+      ncol(mydata) # retrieve number of columns or variables
+
+      dim(mydata)  # retrieve both number of rows and columns
+    #+end_src
+
+* TODO Practice: data frames
 * Statistical variables
+
+
+
+
 * Numeric variables
 * Categorical variables
 * Univariate and multivariate data
@@ -80,12 +154,22 @@ understand the fundamental concepts of statistics." (DataCamp, n.d.)
 - Schmuller J (2017) Statistical Analysis with R for Dummies. URL: wiley.com
 * Glossary
 
-| TERM       | MEANING |
-|------------+---------|
-| Statistics |         |
-| Data       |         |
+| TERM       | MEANING                                         |
+|------------+-------------------------------------------------|
+| Statistics | Data analysis techniques                        |
+| Data       | Entities, events, or processes                  |
+| Raw data   | Data originating from samples                   |
+| Big data   | Volume, Velocity, Variety                       |
+| ~read.table~ | R function to read tabular data                 |
+| ~data.frame~ | R function to create a data frame               |
+| ~summary~    | R function to get summary statistics            |
+| Variable   | Characteristic of an individual in a population |
+| vector     | n-tuple of values of the same type              |
+| factor     | vector of categorical variables                 |
 
 * Footnotes
+
+[fn:2]/You can get help on any of the examples with ~?~ or ~help()~.
 
 [fn:1]This is the "3V" definition of big data. You'll find other
 attributes, like "value" or "veracity", which are not directly
