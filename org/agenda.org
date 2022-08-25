@@ -107,14 +107,14 @@ participation.
 -*START BBB RECORDING*-
 
 - [X] Quiz 1: course infrastructure
-- [ ] About: home assignments
-- [ ] Getting started with projects
-- [ ] Group work: Data Science At The End Of Modern Time
-- [ ] Lecture: Data Science At The End Of Modern Time
-- [ ] Running R in an Emacs Org-mode file
-- [ ] Lectures: Describing raw data
-- [ ] Practice: Getting started with R
-- [ ] Home assignment: summary statistics
+- [X] About: home assignments
+- [X] Getting started with projects
+- [X] Group work: Data Science At The End Of Modern Time ([[https://github.com/birkenkrahe/dsmath/blob/main/org/2_orientation_practice.org][GitHub]])
+- [X] Lecture: Data Science At The End Of Modern Time
+- [ ] Practice: Running R in an Emacs Org-mode file ([[https://github.com/birkenkrahe/dsmath/blob/main/org/1_overview_practice.org#run-r-in-org-mode-file][GitHub]])
+- [ ] Lectures: Describing raw data with statistical variables
+- [ ] Practice: Raw data and statistical variables ([[https://github.com/birkenkrahe/dsmath/blob/main/org/3_raw_data_practice.org][GitHub]])
+- [ ] Home assignment: summary statistics ([[https://app.datacamp.com/learn/courses/introduction-to-statistics][DataCamp]])
 
 * Home assignments - how they work
 #+attr_html: :width 400px

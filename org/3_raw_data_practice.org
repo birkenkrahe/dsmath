@@ -4,72 +4,27 @@
 #+OPTIONS: toc:nil num:nil ^:nil
 * README
 
-  - Practice instructions for the data visualization lectures
+  - Practice for "[[https://github.com/birkenkrahe/dsmath/blob/main/org/3_raw_data.org][Raw data and statistical variables]]" ([[https://github.com/birkenkrahe/dsmath/blob/main/org/3_raw_data.org][GitHub]])
+  - Source: chapter 13.1 by Davies, 2016 (modified)
   - Emacs + ESS + Org-mode and R must be installed
-  - Upload the completed file as a class assignment ([[https://lyon.instructure.com/courses/571/assignments/1704][Canvas link]])
 
   #+name: tab:3_practice
-  | PRACTICE         | MIN |
-  |------------------+-----|
-  | Prerequisites    |  15 |
-  | Loading packages |  15 |
-  | Looking at data  |  15 |
-  | Factors vectors  |  15 |
-  | Summary stats    |  15 |
-  | Boxplots         |  10 |
-  | Scatterplots     |  10 |
-  | Bar charts       |  10 |
-  | Customization    |  15 |
-  |------------------+-----|
-  | TOTAL            | 120 |
-  #+TBLFM: @11$2=vsum(@2..@10)
+  | PRACTICE              | MIN |
+  |-----------------------+-----|
+  | Data frames           |  30 |
+  | Statistical variables |  30 |
+  |-----------------------+-----|
+  | TOTAL                 |  60 |
 
 * TODO Identify yourself
 
   - Update the ~#+AUTHOR:~ information in the header
   - Add this on a line to the header of this file :
-    ~#+STARTUP: overview hideblocks indent~
+    ~#+STARTUP: overview hideblocks indent inlineimages~
   - With the cursor on theline, activate the header line with ~C-c C-c~.
   - Put your cursor on the headline of this section, and type ~S <LEFT>~
     until you see ~DONE~ instead of ~TODO~ next to the title.
   - Perform this last step each time you complete a section.
-
-* TODO Prerequisites
-
-  1) Check that R is installed on your machine. All of these are
-     equivalent but lead to different interfaces:
-     - open Emacs and open an R session with ~M-x R~
-     - open the CMD line terminal and enter the command ~R~
-     - open the CMD line terminal and enter the command ~Rgui~
-
-  2) Check that you can execute R code blocks inside Emacs: execute the
-     following code block named [[version]] by moving the cursor anywhere on
-     the block - either on the metadata or on the line of code - and
-     enter ~C-c C-c~.
-
-     The ~result~ of [[version]] is R ~version~ information. Because of the
-     output size, it is automatically wrapped in an ~example~ block.
-
-     #+name: version
-     #+begin_src R :results output
-       version
-     #+end_src
-
-  3) Alternatively to executing the block in the Org-mode buffer, you
-     can move the cursor on the block and enter ~C-c '~. This will open
-     the source code in a new buffer where you can execute it or edit
-     it. This time, the output will appear in the ~*R*~ buffer instead of
-     the Org-mode file.
-
-  4) If R is not installed, you need to install it. If you cannot
-     execute R code blocks, you are probably missing the correct Emacs
-     init file ~/.emacs~: [[https://github.com/birkenkrahe/org/blob/master/emacs/.emacs][download the file from here]]. You might also miss
-     the ESS (Emacs Speaks Statistics) package. Try ~M-x load-library ESS
-     RET~.
-
-  5) If you're in an R session now, exit by entering ~q()~. R is
-     case-sensitive, so this must be lower-case. When asked if you want
-     to save the workspace, say *no*[fn:1].
 
 * TODO Practice: data frames
 
@@ -102,11 +57,11 @@
 
 1) For each of the following, identify the *type of variable* described:
    numeric-continuous, numeric-discrete, categorical-nominal,
-   categorical-ordinal
+   categorical-ordinal - put your answers in the table below.
 
    1. The number of blemishes on the hood of a car coming off a
       production line
-
+      
    2. A survey question that asks the participant to select from:
       "Strongly agree", "Agree", "Neutral", "Disagree", and "Strongly
       disagree"
@@ -117,7 +72,16 @@
 
    5. A choice of primary color
 
-   6. The distance between a cat and a mous
+   6. The distance between a cat and a mouse
+
+   | VAR | TYPE |
+   |-----+------|
+   |   1 |      |
+   |   2 |      |
+   |   3 |      |
+   |   4 |      |
+   |   5 |      |
+   |   6 |      |
 
 2) For each of the following, identify whether the quantity discussed
    is a population *parameter* or a sample *statistic*. If the latter,
@@ -136,10 +100,18 @@
       a year, based on data collected on three distinct days in that
       year.
 
+   | CHAR | TYPE | IF PAR |
+   |------+------+--------|
+   |    1 |      |        |
+   |    2 |      |        |
+   |    3 |      |        |
+   |    4 |      |        |
+   |    5 |      |        |
+
 * TODO Test questions
 
 You now should be able to answer these test questions. You can find
-short answers in the footnote[fn:2]:
+short answers in the footnote[fn:1]:
 
 1) What is a data frame? How can you create one?
 2) What is the difference between a vector and a factor?
@@ -153,11 +125,7 @@ short answers in the footnote[fn:2]:
 
 * Footnotes
 
-[fn:1]If you say yes, R will save a copy of all your commands in that
-session in a file ~.Rhistory~, and it will save all data in a file
-~.RData~ to recreate your work space the way you left it.
-
-[fn:2] 1) an R object that consists of vectors of the same length,
+[fn:1] 1) an R object that consists of vectors of the same length,
 created with the ~data.frame~ function. 2) factors are vectors of
 categorical values with ordered or unordered levels. 3) Using the
 accessor operator ~$~ or the index operator ~[]~, where the accessor
@@ -166,4 +134,3 @@ characteristic of interest in something in the world; a sample
 statistic is an estimate of the population parameter based on a
 sample, a subset drawn at random from the population. 5) Statistics
 allow to infer population characteristics from sample characteristics.
-

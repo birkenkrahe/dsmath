@@ -7,7 +7,6 @@
 
   - Practice instructions for data science course infrastructure
   - Emacs + ESS + Org-mode and R must be installed
-  - Upload the completed file as a class assignment
 
   #+name: tab:3_practice
   | PRACTICE                   | MIN |
