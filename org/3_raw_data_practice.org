@@ -51,7 +51,7 @@
 3) Show only the persons' names from the data frame.
 
 4) Write one line of code that shows only the women whose funniness is
-   at least ~Med~ or ~High~.
+   at least ~Med~ or ~High~. Use index operators or ~subset~.
 
 * TODO Practice: statistical variables
 

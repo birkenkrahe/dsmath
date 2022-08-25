@@ -142,15 +142,25 @@ understand the fundamental concepts of statistics." (DataCamp, n.d.)
   #+end_src
 
   #+RESULTS: subset
-  : [1] 40
-  : [1] 40 17 14
-  : [1] 42 40 17 14  1
-  : [1] 40
-  : [1] "Peter" "Lois"
-  : [1] 42 40
+  :   person age sex
+  : 1  Peter  42   M
+  : 2   Lois  40   F
 
 - In the last command, we extract from the column vector
   ~mydata$person~ only those values that are greater 40.
+
+- An alternative extraction method uses the ~subset~ function.
+  #+name: subset1
+  #+begin_src R :exports both :session :results output
+    old <- subset(x=mydata, mydata$age >= 40)
+    old$person
+    old_male <- subset(x=mydata, mydata$age >= 40 & mydata$sex == "M")
+    old_male$person
+  #+end_src
+
+  #+RESULTS: subset1
+  : [1] "Peter" "Lois"
+  : [1] "Peter"
 
 - To extract elements with multiple conditions, you need to build
   logical expressions.
