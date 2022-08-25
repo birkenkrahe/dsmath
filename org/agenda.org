@@ -116,7 +116,7 @@ participation.
 - [ ] Practice: Raw data and statistical variables ([[https://github.com/birkenkrahe/dsmath/blob/main/org/3_raw_data_practice.org][GitHub]])
 - [ ] Home assignment: summary statistics ([[https://app.datacamp.com/learn/courses/introduction-to-statistics][DataCamp]])
 
-* Home assignments - how they work
+** Home assignments - how they work
 #+attr_html: :width 400px
 #+captions: course infrastructure
 [[../img/platforms.png]]
@@ -126,7 +126,7 @@ participation.
 - You loose 1 point for every day of late submission
 - Canvas Gradebook is updated manually (with some delay)
 
-* Getting started with projects
+** Getting started with projects
 
 - Course has 14 participants!
 
@@ -142,7 +142,7 @@ participation.
 
 - Reminder: plenty of project opportunities ([[https://github.com/birkenkrahe/dsmath/blob/main/org/1_overview.org#many-project-opportunities][overview]] / GitHub [[https://github.com/birkenkrahe/dsmath/issues][issues]])
 
-* Featured example  
+** Featured example  
 #+attr_html: :width 400px
 #+caption: text prompt = an armchair in the shape of an avocado.
 [[../img/avocado.png]]
@@ -159,7 +159,7 @@ participation.
 
 - [[https://openai.com/blog/dall-e/][Avocado example]] and others
 
-* Group exercise: orientation
+** Group exercise: orientation
 #+attr_html: :width 400px
 [[../img/dog.jpg]]
 
@@ -171,7 +171,7 @@ especially as nobody has the slightest notion what it means."
 
 [[https://github.com/birkenkrahe/dsmath/blob/main/pdf/2_orientation_practice.pdf][(Results - PDF)]]
 
-* 1st sprint review - Wed 1-Sep
+** 1st sprint review - Wed 1-Sep
 
 - [[https://lyon.instructure.com/courses/655/assignments/2277][Canvas assignment with submission]]
 
@@ -179,4 +179,10 @@ especially as nobody has the slightest notion what it means."
 
 - If you are in > 1 course, you can use the same project idea!
 
+* Week 3: summary statistics
 
+* Recap: data frames
+
+* Projects: 1st sprint
+
+* 

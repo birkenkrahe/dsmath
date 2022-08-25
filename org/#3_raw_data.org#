@@ -385,6 +385,8 @@ US who own cats.
 | ~$~          | Accessor operator                      |
 | ~[]~         | Index operator                         |
 | ~subset~     | R function to extract subset of values |
+| ~nrow~       | R function to return no. of rows       |
+| ~ncol~       | R function to return no. of column     |
 
 * Footnotes
 
