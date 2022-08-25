@@ -104,6 +104,8 @@ participation.
 
 * Week 2: getting started
 
+-*START BBB RECORDING*-
+
 - [X] Quiz 1: course infrastructure
 - [ ] About: home assignments
 - [ ] Getting started with projects

@@ -71,6 +71,81 @@
      case-sensitive, so this must be lower-case. When asked if you want
      to save the workspace, say *no*[fn:1].
 
+* TODO Practice: data frames
+
+1) Create and store this data frame as ~dframe~ in your R workspace.
+
+   #+begin_example
+     person sex funny
+       Stan   M  High
+   Francine   F   Med
+      Steve   M   Low
+      Roger   M  High
+     Hayley   F   Med
+      Klaus   M   Med
+   #+end_example
+
+   The variables ~person~, ~sex~, and ~funny~ should be identical in nature
+   to the variables in the ~mydata~ example:
+   - ~person~ should be a *character* vector
+   - ~sex~ should be a *factor* with levels ~M~ and ~F~
+   - ~funny~ should be a *factor* with levels ~Low~, ~Med~, and ~High~. 
+
+2) Show that ~sex~ and ~funny~ are factors.
+
+3) Show only the persons' names from the data frame.
+
+4) Write one line of code that shows only the women whose funniness is
+   at least ~Med~ or ~High~.
+
+* TODO Practice: statistical variables
+
+1) For each of the following, identify the *type of variable* described:
+   numeric-continuous, numeric-discrete, categorical-nominal,
+   categorical-ordinal
+
+   1. The number of blemishes on the hood of a car coming off a
+      production line
+
+   2. A survey question that asks the participant to select from:
+      "Strongly agree", "Agree", "Neutral", "Disagree", and "Strongly
+      disagree"
+
+   3. The noise level (in decibels) at a concert
+
+   4. The noise level out of three possible choices: high, medium, low
+
+   5. A choice of primary color
+
+   6. The distance between a cat and a mous
+
+2) For each of the following, identify whether the quantity discussed
+   is a population *parameter* or a sample *statistic*. If the latter,
+   also identify what the corresponding population parameter is.
+
+   1. The percentage of 50 New Zealanders who own a gaming console.
+
+   2. The average number of times per day a vending machine is used in a year
+
+   3. The proportion of domestic cats in the United States that wear a collar
+
+   4. The average number of times per day a vending machine is used in
+      a year
+
+   5. The average number of times per day a vending machine is used in
+      a year, based on data collected on three distinct days in that
+      year.
+
+* TODO Test questions
+
+You now should be able to answer these test questions. You can find
+short answers in the footnote[fn:2]:
+
+1) What is a data frame? How can you create one?
+2) What is the difference between a vector and a factor?
+3) How can you extract a range of rows or columns from a data frame?
+4) What is a population, a parameter, a sample and a statistic?
+5) What is the purpose of statistics?
 
 * References
 
@@ -78,8 +153,17 @@
 
 * Footnotes
 
-[fn:2] 
-
 [fn:1]If you say yes, R will save a copy of all your commands in that
 session in a file ~.Rhistory~, and it will save all data in a file
 ~.RData~ to recreate your work space the way you left it.
+
+[fn:2] 1) an R object that consists of vectors of the same length,
+created with the ~data.frame~ function. 2) factors are vectors of
+categorical values with ordered or unordered levels. 3) Using the
+accessor operator ~$~ or the index operator ~[]~, where the accessor
+requires a named, non-atomic, vector. 4) A population parameter is a
+characteristic of interest in something in the world; a sample
+statistic is an estimate of the population parameter based on a
+sample, a subset drawn at random from the population. 5) Statistics
+allow to infer population characteristics from sample characteristics.
+
