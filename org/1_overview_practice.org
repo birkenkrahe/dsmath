@@ -101,8 +101,21 @@
   5) Close the R session with ~q()~. Confirm with ~n~. 
   
 * TODO Run R in Org-mode file
-
+** Get new .emacs file
 ---*Note: download new ~.emacs~ file [[https://github.com/birkenkrahe/org/blob/master/emacs/.emacs][from GitHub]]*---
+
+1) Get to https://github.com/birkenkrahe/org
+2) Open the repo emacs
+3) Open the file .emacs
+4) Open the RAW file
+5) Copy the file to clipboard
+6) ON your PC open Emacs
+7) In Emacs open a new file (C-x C-f) ~/.emacs
+8) Copy the clipboard content into this file
+9) Save the .emacs file
+10) Restart Emacs
+  
+** Exercise
 
   1) Close the terminal Emacs with ~C-x C-c~
   2) When prompted if you want to kill active processes, reply ~yes~
