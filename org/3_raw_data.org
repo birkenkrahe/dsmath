@@ -348,7 +348,7 @@ US who own cats.
 - Kabacoff (2017). Quick-R: Subsetting Data. URL: stamethods.net.
 - Schmuller J (2017). Statistical Analysis with R for Dummies. URL: wiley.com
 
-* Glossary of concepts and code
+* Glossary: concepts
 
 #+name: tab:terms
 | TERM                         | MEANING                                          |
@@ -373,6 +373,8 @@ US who own cats.
 | sample                       | some data from a population                      |
 | statistic                    | sample characteristic of interest                |
 
+* Glossary: code
+
 #+name: tab:code
 | CODE       | MEANING                                |
 |------------+----------------------------------------|
@@ -385,6 +387,9 @@ US who own cats.
 | ~$~          | Accessor operator                      |
 | ~[]~         | Index operator                         |
 | ~subset~     | R function to extract subset of values |
+| ~nrow~       | R function to return no. of rows       |
+| ~ncol~       | R function to return no. of columns    |
+| ~dim~        | R function to return object dimensions |
 
 * Footnotes
 
