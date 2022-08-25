@@ -100,13 +100,13 @@
       a year, based on data collected on three distinct days in that
       year.
 
-   | CHAR | TYPE | IF PAR |
-   |------+------+--------|
-   |    1 |      |        |
-   |    2 |      |        |
-   |    3 |      |        |
-   |    4 |      |        |
-   |    5 |      |        |
+   | CHAR | TYPE | CORRESPONDING PARAMETER |
+   |------+------+-------------------------|
+   |    1 |      |                         |
+   |    2 |      |                         |
+   |    3 |      |                         |
+   |    4 |      |                         |
+   |    5 |      |                         |
 
 * TODO Test questions
 
