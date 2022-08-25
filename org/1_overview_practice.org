@@ -102,6 +102,8 @@
   
 * TODO Run R in Org-mode file
 
+---*Note: download new ~.emacs~ file [[https://github.com/birkenkrahe/org/blob/master/emacs/.emacs][from GitHub]]*---
+
   1) Close the terminal Emacs with ~C-x C-c~
   2) When prompted if you want to kill active processes, reply ~yes~
   3) Open a Emacs GUI with the command: ~emacs~
