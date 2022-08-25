@@ -40,7 +40,7 @@ understand the fundamental concepts of statistics." (DataCamp, n.d.)
 
   #+begin_notes
   Statistics is all about using the data from samples to draw
-  conclusions about populations. (Schmuller, 2017)
+  conclusions about populations. (Schmuller , 2017)
   #+end_notes
 
   #+begin_notes
@@ -149,7 +149,8 @@ understand the fundamental concepts of statistics." (DataCamp, n.d.)
 - In the last command, we extract from the column vector
   ~mydata$person~ only those values that are greater 40.
 
-- An alternative extraction method uses the ~subset~ function.
+- An alternative extraction method uses the ~subset~ function
+  (Kabacoff, 2017).
   #+name: subset1
   #+begin_src R :exports both :session :results output
     old <- subset(x=mydata, mydata$age >= 40)
@@ -344,7 +345,9 @@ US who own cats.
 
 - DataCamp (n.d.). Introduction to Statistics. URL: datacamp.com.
 - Davies TD (2016). Book of R. NoStarch Press. URL: nostarch.com
-- Schmuller J (2017) Statistical Analysis with R for Dummies. URL: wiley.com
+- Kabacoff (2017). Quick-R: Subsetting Data. URL: stamethods.net.
+- Schmuller J (2017). Statistical Analysis with R for Dummies. URL: wiley.com
+
 * Glossary
 
 | TERM                         | MEANING                                          |
