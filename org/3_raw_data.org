@@ -142,9 +142,12 @@ understand the fundamental concepts of statistics." (DataCamp, n.d.)
   #+end_src
 
   #+RESULTS: subset
-  :   person age sex
-  : 1  Peter  42   M
-  : 2   Lois  40   F
+  : [1] 40
+  : [1] 40 17 14
+  : [1] 42 40 17 14  1
+  : [1] 40
+  : [1] "Peter" "Lois"
+  : [1] 42 40
 
 - In the last command, we extract from the column vector
   ~mydata$person~ only those values that are greater 40.

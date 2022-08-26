@@ -34,7 +34,7 @@
 - [X] Discussion: Mutual introductions
 - [X] Lecture: Course overview
 - [X] Practice: course infrastructure
-- [ ] Group work: Data Science At The End Of Modern Time
+- [X] Group work: Data Science At The End Of Modern Time
 - [X] Homework: Assignments
 - [ ] Glossary
 
@@ -103,8 +103,6 @@ participation.
 ([[https://github.com/birkenkrahe/dsmath/blob/main/org/1_practice.org][Link to practice file in GitHub]])
 
 * Week 2: getting started
-
--*START BBB RECORDING*-
 
 - [X] Quiz 1: course infrastructure
 - [X] About: home assignments
@@ -181,6 +179,16 @@ especially as nobody has the slightest notion what it means."
 
 * Week 3: summary statistics
 
+-*START BBB RECORDING*-
+
+- [ ] Due: Quiz 2: week 2
+- [ ] Due: DataCamp assignment "Summary Statistics"
+- [ ] Reminder: [[https://lyon.instructure.com/courses/655/assignments/2277][1st sprint review]] due September 1st
+- [ ] Practice: Running R in an Emacs Org-mode file ([[https://github.com/birkenkrahe/dsmath/blob/main/org/1_overview_practice.org#run-r-in-org-mode-file][GitHub]])
+- [ ] Lectures: Describing raw data with statistical variables
+- [ ] Practice: Raw data and statistical variables ([[https://github.com/birkenkrahe/dsmath/blob/main/org/3_raw_data_practice.org][GitHub]])
+- [ ] Home assignment: summary statistics ([[https://app.datacamp.com/learn/courses/introduction-to-statistics][DataCamp]])
+  
 * Recap: data frames
 
 * Projects: 1st sprint
