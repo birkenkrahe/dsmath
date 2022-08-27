@@ -189,8 +189,9 @@ especially as nobody has the slightest notion what it means."
 - [ ] Practice: Raw data and statistical variables ([[https://github.com/birkenkrahe/dsmath/blob/main/org/3_raw_data_practice.org][GitHub]])
 - [ ] Home assignment: summary statistics ([[https://app.datacamp.com/learn/courses/introduction-to-statistics][DataCamp]])
   
-* Recap: data frames
+* Recap and exercise: data frames
+
+ - [ ] [[file:~/Documents/R/dsmath/3_raw_data_practice.org][Complete practice file]]
 
 * Projects: 1st sprint
 
-* 
