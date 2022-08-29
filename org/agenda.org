@@ -179,7 +179,8 @@ especially as nobody has the slightest notion what it means."
 
 * Week 3: summary statistics
 
--*START BBB RECORDING*-
+#+attr_html: :width 600px
+[[../img/stats.jpg]]
 
 - [ ] Due: Quiz 2: week 2
 - [ ] Due: DataCamp assignment "Summary Statistics"
@@ -193,5 +194,11 @@ especially as nobody has the slightest notion what it means."
 
  - [ ] [[file:~/Documents/R/dsmath/3_raw_data_practice.org][Complete practice file]]
 
+* GNU Emacs: ref cards
+#+attr_html: :width 400px
+[[../img/gnu.jpg]]
+
+- [ ] The power of Dired on one page ([[https://github.com/birkenkrahe/org/blob/master/emacs/dired-ref.pdfhttps://www.gnu.org/software/emacs/refcards/pdf/dired-ref.pdf][v28]])
+- [ ] The power of Emacs on two pages ([[https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf][v27]])
 * Projects: 1st sprint
 
