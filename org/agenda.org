@@ -140,14 +140,14 @@ participation.
 
 - Reminder: plenty of project opportunities ([[https://github.com/birkenkrahe/dsmath/blob/main/org/1_overview.org#many-project-opportunities][overview]] / GitHub [[https://github.com/birkenkrahe/dsmath/issues][issues]])
 
-** Featured example  
+** Featured example
 #+attr_html: :width 400px
 #+caption: text prompt = an armchair in the shape of an avocado.
 [[../img/avocado.png]]
 
 - GitHub issue: [[https://github.com/birkenkrahe/dsmath/issues/25][DALL-E math]]
 
-- Source: [[https://openai.com/blog/dall-e/][OpenAI - creating images from text]]) 
+- Source: [[https://openai.com/blog/dall-e/][OpenAI - creating images from text]])
 
 - DALL-E is a so-called transformer language model ([[https://ml.berkeley.edu/blog/posts/dalle2/][explanation]])
 
@@ -195,7 +195,7 @@ statistics (e.g. averages) but otherwise they are closely tied to the
 domain of web traffic monitoring (or SEO - Search Engine Optimization)
 in order to increase Click-Through-Rate (CTR).
 #+end_notes
-  
+
 * Project: look at Google Analytics
 
 * DONE GNU Emacs: ref cards
@@ -208,9 +208,9 @@ in order to increase Click-Through-Rate (CTR).
 * DONE Review: DataCamp "Summary statistics"
 
 - [[https://www.bmj.com/content/373/bmj.n1088][Did you look at the article about COVID-19 vaccines?]]
-  #+attr_html: :width 400px   
+  #+attr_html: :width 400px
   [[../img/bmj.jpg]]
-  
+
 - What's a serious limitation of statistics?
 - What are "measures of center"? Which ones do you know?
 - What are "measures of spread?" Which ones do you know?
@@ -226,62 +226,68 @@ in order to increase Click-Through-Rate (CTR).
   + range or min/max distance
   + variance or average distance from mean
   + standard deviation or square root of variance
-#+end_notes  
+#+end_notes
 - Next assignment: "[[https://lyon.instructure.com/courses/655/assignments/2646][probability and distributions]]"
 
 #+begin_notes
-  Figure: "Adjusted odds ratios for confirmed cases of covid-19 by
-  interval after vaccination with Pfizer-BioNTech BNT162b2 before 4
-  January 2021 in those aged 80 years and older".
+Figure: "Adjusted odds ratios for confirmed cases of covid-19 by
+interval after vaccination with Pfizer-BioNTech BNT162b2 before 4
+January 2021 in those aged 80 years and older".
 
-  "Odds ratios are used to compare the relative odds of the occurrence
-  of the outcome of interest (e.g. disease or disorder), given
-  exposure to the variable of interest (e.g. health characteristic,
-  aspect of medical history). The odds ratio can also be used to
-  determine whether a particular exposure is a risk factor for a
-  particular outcome, and to compare the magnitude of various risk
-  factors for that outcome:
-  - OR=1 Exposure does not affect odds of outcome
-  - OR>1 Exposure associated with higher odds of outcome
-  - OR<1 Exposure associated with lower odds of outcome"
-  ([[https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2938757/][Source: nih.gov]])    
+"Odds ratios are used to compare the relative odds of the occurrence
+of the outcome of interest (e.g. disease or disorder), given
+exposure to the variable of interest (e.g. health characteristic,
+aspect of medical history). The odds ratio can also be used to
+determine whether a particular exposure is a risk factor for a
+particular outcome, and to compare the magnitude of various risk
+factors for that outcome:
+- OR=1 Exposure does not affect odds of outcome
+- OR>1 Exposure associated with higher odds of outcome
+- OR<1 Exposure associated with lower odds of outcome"
+  ([[https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2938757/][Source: nih.gov]])
 #+end_notes
-  
+
 * DONE Recap and exercise: data frames
 
- - [ ] R functions:
-   + ~data.frame~ - table, column vectors (like SQL)
-   + ~c~ - creating vectors, concatenation
-   + ~factor~ - vectors that hold categorical variables
-   + ~str~ - structure of any R object
-   + ~$~, ~[]~ - indexing operators
-   + *NEW*: [[file:3_raw_data.org][subset]]
+- [ ] R functions:
+  + ~data.frame~ - table, column vectors (like SQL)
+  + ~c~ - creating vectors, concatenation
+  + ~factor~ - vectors that hold categorical variables
+  + ~str~ - structure of any R object
+  + ~$~, ~[]~ - indexing operators
+  + *NEW*: [[file:3_raw_data.org][subset]]
 
- - Test questions:
-   + How can you extract a vector named ~bar~ from a data frame named ~foo~? R command: ~foo$bar~
-   + How can you extract elements with multiple conditions?
-   + How can you find out how many rows and columns a data frame has?
+- Test questions:
+  + How can you extract a vector named ~bar~ from a data frame named ~foo~? R command: ~foo$bar~
+  + How can you extract elements with multiple conditions?
+  + How can you find out how many rows and columns a data frame has?
 
-   #+begin_notes
-   1) ~foo$bar~ - if you know the column number ~N~: ~foo[,N]~,
-      e.g. ~mtcars[,1]~ for the ~mpg~ column (~N=1~).
-   2) By using logical expressions
-   3) ~dim~, ~nrow~ x ~ncol~, ~str~
-   #+end_notes
-   #+begin_src R :exports both :session :results output
-     ## head(mtcars)
-     mtcars$mpg
-     mtcars[,1]
-   #+end_src
+  #+begin_notes
+  1) ~foo$bar~ - if you know the column number ~N~: ~foo[,N]~,
+     e.g. ~mtcars[,1]~ for the ~mpg~ column (~N=1~).
+  2) By using logical expressions
+  3) ~dim~, ~nrow~ x ~ncol~, ~str~
+  #+end_notes
+  #+begin_src R :exports both :session :results output
+    ## head(mtcars)
+    mtcars$mpg
+    mtcars[,1]
+  #+end_src
 
-   #+RESULTS:
-   :  [1] 21.0 21.0 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 17.8 16.4 17.3 15.2 10.4
-   : [16] 10.4 14.7 32.4 30.4 33.9 21.5 15.5 15.2 13.3 19.2 27.3 26.0 30.4 15.8 19.7
-   : [31] 15.0 21.4
-   :  [1] 21.0 21.0 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 17.8 16.4 17.3 15.2 10.4
-   : [16] 10.4 14.7 32.4 30.4 33.9 21.5 15.5 15.2 13.3 19.2 27.3 26.0 30.4 15.8 19.7
-   : [31] 15.0 21.4
- 
- - [ ] [[file:~/Documents/R/dsmath/3_raw_data_practice.org][Continue completing the practice file]]
- 
-* NEXT Review: test 2
+  #+RESULTS:
+  :  [1] 21.0 21.0 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 17.8 16.4 17.3 15.2 10.4
+  : [16] 10.4 14.7 32.4 30.4 33.9 21.5 15.5 15.2 13.3 19.2 27.3 26.0 30.4 15.8 19.7
+  : [31] 15.0 21.4
+  :  [1] 21.0 21.0 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 17.8 16.4 17.3 15.2 10.4
+  : [16] 10.4 14.7 32.4 30.4 33.9 21.5 15.5 15.2 13.3 19.2 27.3 26.0 30.4 15.8 19.7
+  : [31] 15.0 21.4
+
+- [ ] [[file:~/Documents/R/dsmath/3_raw_data_practice.org][Continue completing the practice file]]
+
+* TODO Review: [[https://lyon.instructure.com/courses/655/assignments/2552][test 2]]
+
+* ~C-c C-c can do nothing useful here~ error
+
+  Try ~M-x org-mode-restart~. 
+
+  
