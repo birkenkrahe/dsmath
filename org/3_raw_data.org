@@ -13,7 +13,7 @@
 - Univariate and multivariate data
 - Parameter or statistic?
 - Exercises
-* What is statistics?
+* DONE What is statistics?
 
 #+begin_quote
 "Statistics are all around us, from marketing to sales to
@@ -48,7 +48,7 @@ understand the fundamental concepts of statistics." (DataCamp, n.d.)
   interpreting data." (Britannica)
   #+end_notes
 
-* What is data?
+* DONE What is data?
 #+attr_html: :width 400px
 [[../img/3_creation.png]]
 
@@ -61,7 +61,7 @@ understand the fundamental concepts of statistics." (DataCamp, n.d.)
 
 - /Big/ data = Volume + Velocity + Variety[fn:1]
 
-* What is data to R?
+* DONE What is data to R?
 
 [[../img/3_data.jpg]]
 
@@ -71,21 +71,22 @@ understand the fundamental concepts of statistics." (DataCamp, n.d.)
 
 - Data can be /summarized/ and /analyzed/ using R functions (e.g. ~summary~)
 
-* Statistical variables
+* DONE Statistical variables
 
-- In statistics, /variables/ are characteristics of individuals in a population
+- In statistics, /variables/ are characteristics of individuals in a
+  population
 
 - An /individual/ and /population/ are (useful) abstractions (*Why?*)
 
 - First step: identify and categorize the available variables
 
-* Example: data frames
+* DONE Example: data frames
 
 - We use the ~data.frame~ function to create a data frame from scratch
 
 - Data are supplied as /vectors/ of the same length
 
-- Data are grouped by variable
+- Data are grouped by /variable/ (column vector)
 
 - R code[fn:3]:
   #+name: mydata

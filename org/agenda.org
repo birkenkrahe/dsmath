@@ -178,32 +178,110 @@ especially as nobody has the slightest notion what it means."
 - If you are in > 1 course, you can use the same project idea!
 
 * Week 3: summary statistics
-
 #+attr_html: :width 600px
 [[../img/stats.jpg]]
 
-- [ ] Due: Quiz 2: week 2
-- [ ] Due: DataCamp assignment "Summary Statistics"
-- [ ] Reminder: [[https://lyon.instructure.com/courses/655/assignments/2277][1st sprint review]] due September 1st
-- [ ] Practice: Running R in an Emacs Org-mode file ([[https://github.com/birkenkrahe/dsmath/blob/main/org/1_overview_practice.org#run-r-in-org-mode-file][GitHub]])
+- [X] Due: Quiz 2: week 2
+- [X] Reminder: [[https://lyon.instructure.com/courses/655/assignments/2277][1st sprint review]] due September 1st
+- [X] Practice: Running R in an Emacs Org-mode file ([[https://github.com/birkenkrahe/dsmath/blob/main/org/1_overview_practice.org#run-r-in-org-mode-file][GitHub]])
+- [ ] Review: DataCamp assignment "Summary Statistics"
+- [ ] Home assignment: summary statistics ([[https://app.datacamp.com/learn/courses/introduction-to-statistics][DataCamp]])
 - [ ] Lectures: Describing raw data with statistical variables
 - [ ] Practice: Raw data and statistical variables ([[https://github.com/birkenkrahe/dsmath/blob/main/org/3_raw_data_practice.org][GitHub]])
-- [ ] Home assignment: summary statistics ([[https://app.datacamp.com/learn/courses/introduction-to-statistics][DataCamp]])
-  
-* Recap and exercise: data frames
 
 #+begin_notes
- - [ ] [[file:~/Documents/R/dsmath/3_raw_data_practice.org][Complete practice file]]
-
-   
-
+Figure: web page "performance". These are statistics that use summary
+statistics (e.g. averages) but otherwise they are closely tied to the
+domain of web traffic monitoring (or SEO - Search Engine Optimization)
+in order to increase Click-Through-Rate (CTR).
 #+end_notes
+  
+* Project: look at Google Analytics
 
-* GNU Emacs: ref cards
+* DONE GNU Emacs: ref cards
 #+attr_html: :width 400px
 [[../img/gnu.jpg]]
 
-- [ ] The power of Dired on one page ([[https://github.com/birkenkrahe/org/blob/master/emacs/dired-ref.pdfhttps://www.gnu.org/software/emacs/refcards/pdf/dired-ref.pdf][v28]])
+- [ ] The power of Dired on one page ([[https://www.gnu.org/software/emacs/refcards/pdf/dired-ref.pdf][v28]])
 - [ ] The power of Emacs on two pages ([[https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf][v27]])
 
+* DONE Review: DataCamp "Summary statistics"
 
+- [[https://www.bmj.com/content/373/bmj.n1088][Did you look at the article about COVID-19 vaccines?]]
+  #+attr_html: :width 400px   
+  [[../img/bmj.jpg]]
+  
+- What's a serious limitation of statistics?
+- What are "measures of center"? Which ones do you know?
+- What are "measures of spread?" Which ones do you know?
+
+#+begin_notes
+- *Limitation of statistics:* cannot be used to find out *why*
+  relationships exist, i.e. does not establish causation
+- *Measures of center:* summarize data
+  + mean or average
+  + median or middle value
+  + mode or most frequent value
+- *Measures of spread:* indicate variety or clustering
+  + range or min/max distance
+  + variance or average distance from mean
+  + standard deviation or square root of variance
+#+end_notes  
+- Next assignment: "[[https://lyon.instructure.com/courses/655/assignments/2646][probability and distributions]]"
+
+#+begin_notes
+  Figure: "Adjusted odds ratios for confirmed cases of covid-19 by
+  interval after vaccination with Pfizer-BioNTech BNT162b2 before 4
+  January 2021 in those aged 80 years and older".
+
+  "Odds ratios are used to compare the relative odds of the occurrence
+  of the outcome of interest (e.g. disease or disorder), given
+  exposure to the variable of interest (e.g. health characteristic,
+  aspect of medical history). The odds ratio can also be used to
+  determine whether a particular exposure is a risk factor for a
+  particular outcome, and to compare the magnitude of various risk
+  factors for that outcome:
+  - OR=1 Exposure does not affect odds of outcome
+  - OR>1 Exposure associated with higher odds of outcome
+  - OR<1 Exposure associated with lower odds of outcome"
+  ([[https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2938757/][Source: nih.gov]])    
+#+end_notes
+  
+* DONE Recap and exercise: data frames
+
+ - [ ] R functions:
+   + ~data.frame~ - table, column vectors (like SQL)
+   + ~c~ - creating vectors, concatenation
+   + ~factor~ - vectors that hold categorical variables
+   + ~str~ - structure of any R object
+   + ~$~, ~[]~ - indexing operators
+   + *NEW*: [[file:3_raw_data.org][subset]]
+
+ - Test questions:
+   + How can you extract a vector named ~bar~ from a data frame named ~foo~? R command: ~foo$bar~
+   + How can you extract elements with multiple conditions?
+   + How can you find out how many rows and columns a data frame has?
+
+   #+begin_notes
+   1) ~foo$bar~ - if you know the column number ~N~: ~foo[,N]~,
+      e.g. ~mtcars[,1]~ for the ~mpg~ column (~N=1~).
+   2) By using logical expressions
+   3) ~dim~, ~nrow~ x ~ncol~, ~str~
+   #+end_notes
+   #+begin_src R :exports both :session :results output
+     ## head(mtcars)
+     mtcars$mpg
+     mtcars[,1]
+   #+end_src
+
+   #+RESULTS:
+   :  [1] 21.0 21.0 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 17.8 16.4 17.3 15.2 10.4
+   : [16] 10.4 14.7 32.4 30.4 33.9 21.5 15.5 15.2 13.3 19.2 27.3 26.0 30.4 15.8 19.7
+   : [31] 15.0 21.4
+   :  [1] 21.0 21.0 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 17.8 16.4 17.3 15.2 10.4
+   : [16] 10.4 14.7 32.4 30.4 33.9 21.5 15.5 15.2 13.3 19.2 27.3 26.0 30.4 15.8 19.7
+   : [31] 15.0 21.4
+ 
+ - [ ] [[file:~/Documents/R/dsmath/3_raw_data_practice.org][Continue completing the practice file]]
+ 
+* NEXT Review: test 2
