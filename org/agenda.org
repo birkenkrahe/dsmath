@@ -192,7 +192,12 @@ especially as nobody has the slightest notion what it means."
   
 * Recap and exercise: data frames
 
+#+begin_notes
  - [ ] [[file:~/Documents/R/dsmath/3_raw_data_practice.org][Complete practice file]]
+
+   
+
+#+end_notes
 
 * GNU Emacs: ref cards
 #+attr_html: :width 400px
@@ -200,5 +205,5 @@ especially as nobody has the slightest notion what it means."
 
 - [ ] The power of Dired on one page ([[https://github.com/birkenkrahe/org/blob/master/emacs/dired-ref.pdfhttps://www.gnu.org/software/emacs/refcards/pdf/dired-ref.pdf][v28]])
 - [ ] The power of Emacs on two pages ([[https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf][v27]])
-* Projects: 1st sprint
+
 
