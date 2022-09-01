@@ -5,6 +5,8 @@
 #+subtitle: DSC 482 / MTH 445 - Applied math for data science - Syllabus Fall 2022
 * General Course Information
 
+- Course title: Applied Math for Data Science
+- Course number and section: DSC 482.01 and MTH 445.01
 - Meeting Times: Tuesday + Thursday from 8 AM - 9.15 AM
 - Meeting place: Lyon Building Computer Lab room 104
 - Professor: Marcus Birkenkrahe

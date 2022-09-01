@@ -198,6 +198,8 @@ in order to increase Click-Through-Rate (CTR).
 
 * Project: look at Google Analytics
 
+- You won't be able to access analytics.google.com
+
 * DONE GNU Emacs: ref cards
 #+attr_html: :width 400px
 [[../img/gnu.jpg]]
@@ -285,9 +287,74 @@ factors for that outcome:
 - [ ] [[file:~/Documents/R/dsmath/3_raw_data_practice.org][Continue completing the practice file]]
 
 * TODO Review: [[https://lyon.instructure.com/courses/655/assignments/2552][test 2]]
+** Match the statistical variable type and the variable.
+
+| VARIABLE                                                   | TYPE                |
+|------------------------------------------------------------+---------------------|
+| Weight in lbs.                                             | numeric-continuous  |
+| Number of apples on a tree                                 | numeric-discrete    |
+| Seniority ("freshman", "junior", "sophomore", "senior")    | categorical-ordinal |
+| Employment status ("full-time", "part-time", "unemployed") | categorical-nominal |
+ 
+** History of probability and statistics
+
+Match the dominant way of finding out truth, and the historical
+period.
+
+| WORLD-VIEW                          | PERIOD            |
+|-------------------------------------+-------------------|
+| Truth is in logic and numbers       | Classical period  |
+| Truth lies in meditation and in God | Medieval period   |
+| Truth is found through experiment   | Modern period     |
+| Truth is constructed by man         | Postmodern period |
+
+** Data frame value extraction
+
+~df~ is a data frame with four variables: ~person~, ~age~ in years, ~sex~ (~M~
+or ~F~), and ~height~ in cm. Complete the R command to extract the persons
+who are taller than 180 cm. 
+
+#+begin_example R
+  df$___ [ df$___ > 180]  
+#+end_example
+
+ - [X] ~person~ ~height~
+ - [ ] ~height~ ~person~
+ - [ ] ~persons~ ~height~
+ - [ ] ~sex~ ~height~ 
+
+*** Solution
+
+#+name: extract
+#+begin_src R :exports both :session :results output
+  df <- data.frame (
+    person = c("Peter", "Lois", "Meg", "Chris", "Stewie"),
+    age = c(42, 40, 17, 14, 1),
+    sex = factor(c("M", "F", "F", "M", "M")),
+    height = c(182, 177, 168, 179, 187))
+    df
+    subset(x=df,df$height>180)
+    df$person[df$height>180]
+#+end_src
+
+#+RESULTS: extract
+#+begin_example
+  person age sex height
+1  Peter  42   M    182
+2   Lois  40   F    177
+3    Meg  17   F    168
+4  Chris  14   M    179
+5 Stewie   1   M    187
+  person age sex height
+1  Peter  42   M    182
+5 Stewie   1   M    187
+[1] "Peter"  "Stewie"
+#+end_example
 
 * ~C-c C-c can do nothing useful here~ error
 
   Try ~M-x org-mode-restart~. 
 
   
+* TODO 1st sprint review
+
