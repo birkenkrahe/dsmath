@@ -165,7 +165,7 @@ administrative withdrawal and the assigning of an “F” grade at four
 weeks. Students who are administratively withdrawn from more than one
 course will be placed on probation or suspended.
 
-** Disabilities
+** Academic Support
 
 The Morrow Academic Center (MAC) helps students who want to improve
 grades by providing peer-led services including Supplemental
@@ -190,7 +190,6 @@ your student login.
 
 - For Canvas, login at lyon.instructure.com
 - For Schoology, login at lyon.schoology.com
-
 
 ** Disabilities
 
