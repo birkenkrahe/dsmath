@@ -184,10 +184,10 @@ especially as nobody has the slightest notion what it means."
 - [X] Due: Quiz 2: week 2
 - [X] Reminder: [[https://lyon.instructure.com/courses/655/assignments/2277][1st sprint review]] due September 1st
 - [X] Practice: Running R in an Emacs Org-mode file ([[https://github.com/birkenkrahe/dsmath/blob/main/org/1_overview_practice.org#run-r-in-org-mode-file][GitHub]])
-- [ ] Review: DataCamp assignment "Summary Statistics"
-- [ ] Home assignment: summary statistics ([[https://app.datacamp.com/learn/courses/introduction-to-statistics][DataCamp]])
-- [ ] Lectures: Describing raw data with statistical variables
-- [ ] Practice: Raw data and statistical variables ([[https://github.com/birkenkrahe/dsmath/blob/main/org/3_raw_data_practice.org][GitHub]])
+- [X] Review: DataCamp assignment "Summary Statistics"
+- [X] Home assignment: summary statistics ([[https://app.datacamp.com/learn/courses/introduction-to-statistics][DataCamp]])
+- [X] Lectures: Describing raw data with statistical variables
+- [X] Practice: Raw data and statistical variables ([[https://github.com/birkenkrahe/dsmath/blob/main/org/3_raw_data_practice.org][GitHub]])
 
 #+begin_notes
 Figure: web page "performance". These are statistics that use summary
@@ -196,18 +196,18 @@ domain of web traffic monitoring (or SEO - Search Engine Optimization)
 in order to increase Click-Through-Rate (CTR).
 #+end_notes
 
-* Project: look at Google Analytics
+** DONE Project: look at Google Analytics
 
 - You won't be able to access analytics.google.com
 
-* DONE GNU Emacs: ref cards
+** DONE GNU Emacs: ref cards
 #+attr_html: :width 400px
 [[../img/gnu.jpg]]
 
 - [ ] The power of Dired on one page ([[https://www.gnu.org/software/emacs/refcards/pdf/dired-ref.pdf][v28]])
 - [ ] The power of Emacs on two pages ([[https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf][v27]])
 
-* DONE Review: DataCamp "Summary statistics"
+** DONE Review: DataCamp "Summary statistics"
 
 - [[https://www.bmj.com/content/373/bmj.n1088][Did you look at the article about COVID-19 vaccines?]]
   #+attr_html: :width 400px
@@ -249,7 +249,7 @@ factors for that outcome:
   ([[https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2938757/][Source: nih.gov]])
 #+end_notes
 
-* DONE Recap and exercise: data frames
+** DONE Recap and exercise: data frames
 
 - [ ] R functions:
   + ~data.frame~ - table, column vectors (like SQL)
@@ -286,8 +286,8 @@ factors for that outcome:
 
 - [ ] [[file:~/Documents/R/dsmath/3_raw_data_practice.org][Continue completing the practice file]]
 
-* TODO Review: [[https://lyon.instructure.com/courses/655/assignments/2552][test 2]]
-** Match the statistical variable type and the variable.
+** DONE Review: [[https://lyon.instructure.com/courses/655/assignments/2552][test 2]]
+*** Match the statistical variable type and the variable.
 
 | VARIABLE                                                   | TYPE                |
 |------------------------------------------------------------+---------------------|
@@ -296,7 +296,7 @@ factors for that outcome:
 | Seniority ("freshman", "junior", "sophomore", "senior")    | categorical-ordinal |
 | Employment status ("full-time", "part-time", "unemployed") | categorical-nominal |
  
-** History of probability and statistics
+*** History of probability and statistics
 
 Match the dominant way of finding out truth, and the historical
 period.
@@ -308,7 +308,7 @@ period.
 | Truth is found through experiment   | Modern period     |
 | Truth is constructed by man         | Postmodern period |
 
-** Data frame value extraction
+*** Data frame value extraction
 
 ~df~ is a data frame with four variables: ~person~, ~age~ in years, ~sex~ (~M~
 or ~F~), and ~height~ in cm. Complete the R command to extract the persons
@@ -351,10 +351,54 @@ who are taller than 180 cm.
 [1] "Peter"  "Stewie"
 #+end_example
 
-* ~C-c C-c can do nothing useful here~ error
+** ~C-c C-c can do nothing useful here~ error
 
   Try ~M-x org-mode-restart~. 
 
-  
-* TODO 1st sprint review
+* Week 4: Summary stats continued
+* NEXT [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-do-emacs--org-mode--ess-work-work-together][How Emacs, Org-mode and ESS work together]]
+* TODO Test 3 - summary statistics
+
+1) What are descriptive vs. inferential statistics? (83%)
+2) What are the limitations of statistics? (67%)
+3) Which plots visualize measures of spread? (50%)
+
+* TODO Review: 1st sprint review
+#+attr_html: :width 500px
+[[../img/1_scrum.png]]
+
+* "Pride"
+
+- Pride according to the Oxford dictionary:
+  #+begin_quote
+   »A feeling of being pleased or satisfied that you get when you or
+   people who are connected with you have *done something well* or *own
+   something* that other people *admire*.«
+  #+end_quote
+  In other words: if you cannot identify what you're proud of, you either haven't done anything well, or you're not aware of it, which won't do.
+
+- Of course, /"pride comes before the fall"/ (Proverbs 16:18), but in
+  the context of Scrum, it is only one of several qualities to assess
+  the results of a sprint.
+
+* "References"
+
+- Some mentioned references, few provided 
+
+- To do this week: Literature Review with [[https://github.com/birkenkrahe/org/blob/master/pdf/LitReview.pdf][cheat sheet]].
+
+- [[https://github.com/birkenkrahe/org/blob/master/research/LitReview.docx][Download it from GitHub]], find at least 5 references, label them
+  according to the categories (esp. relevance and credibility), and
+  provide a complete, consistent set of citations.
+
+* Questions
+
+- You should always use an opportunity to ask the customer/product
+  owner anything, even if it's something simple. (*Why?*)
+
+*Only one team asked questions at all (Nikkolette/Wyatt):*
+- What was the hardest part so far for you?
+- What was the most interesting part you have found/want to find?
+
+* TODO Practice: raw data stats
 
