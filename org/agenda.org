@@ -356,8 +356,19 @@ who are taller than 180 cm.
   Try ~M-x org-mode-restart~. 
 
 * Week 4: Summary stats continued
-* NEXT [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-do-emacs--org-mode--ess-work-work-together][How Emacs, Org-mode and ESS work together]]
+
+- [ ] How Emacs, Org-mode and ESS work together
+- [ ] Review test 3 - summary statistics
+- [ ] 
+
+  
+* TODO [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-do-emacs--org-mode--ess-work-work-together][How Emacs, Org-mode and ESS work together]]
+#+attr_html: :width 600px
+[[../img/emacsorg.png]]
+
 * TODO Test 3 - summary statistics
+#+attr_html: :width 400px
+[[../img/boxplot1.png]]
 
 1) What are descriptive vs. inferential statistics? (83%)
 2) What are the limitations of statistics? (67%)
@@ -382,23 +393,41 @@ who are taller than 180 cm.
   the results of a sprint.
 
 * "References"
+#+attr_html: :width 600px
+[[../img/litref.png]]
 
-- Some mentioned references, few provided 
-
+- Some of you mentioned references, few provided any
 - To do this week: Literature Review with [[https://github.com/birkenkrahe/org/blob/master/pdf/LitReview.pdf][cheat sheet]].
-
 - [[https://github.com/birkenkrahe/org/blob/master/research/LitReview.docx][Download it from GitHub]], find at least 5 references, label them
   according to the categories (esp. relevance and credibility), and
   provide a complete, consistent set of citations.
 
-* Questions
+* "Questions"
+#+attr_html: :width 600px
+[[../img/meeting.jpg]]
 
 - You should always use an opportunity to ask the customer/product
   owner anything, even if it's something simple. (*Why?*)
 
 *Only one team asked questions at all (Nikkolette/Wyatt):*
-- What was the hardest part so far for you?
-- What was the most interesting part you have found/want to find?
+- /What was the hardest part so far for you?/
+- /What was the most interesting part you have found/want to find?/
 
-* TODO Practice: raw data stats
+* Better next time!
 
+[[../img/mountain.jpg]]
+
+1) Deliver more than the bare minimum generously
+2) Try to make your project great by working systematically
+3) If you have a team, split up the work meaningfully
+4) If you have any questions, ask others and me bravely
+5) Complete the (optional) literature review diligently
+
+* TODO Practice: raw data stats (30 min)
+
+[[../img/exercise.jpg]]
+
+ - Go to the practice file ([[https://raw.githubusercontent.com/birkenkrahe/dsmath/main/org/3_raw_data_practice.org][GitHub]]: [[https://tinyurl.com/23f9uz8s][tinyurl.com/23f9uz8s]])
+ - Complete the practice exercise on *data frames*
+ - You can find example code in the lecture ([[https://github.com/birkenkrahe/dsmath/blob/main/org/3_raw_data.org#example-data-frames][GitHub]]:
+   [[https://tinyurl.com/2am222mh][tinyurl.com/2am222mh]])
