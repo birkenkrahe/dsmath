@@ -356,17 +356,18 @@ who are taller than 180 cm.
   Try ~M-x org-mode-restart~. 
 
 * Week 4: Summary stats continued
+ [[../img/fall.jpg]]
 
 - [ ] How Emacs, Org-mode and ESS work together
 - [ ] Review test 3 - summary statistics
-- [ ] 
+- [ ] Review 1st sprint review - "pride comes before the fall"
+- [ ] Practice: data frames
 
-  
-* TODO [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-do-emacs--org-mode--ess-work-work-together][How Emacs, Org-mode and ESS work together]]
+* DONE [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-do-emacs--org-mode--ess-work-work-together][How Emacs, Org-mode and ESS work together]]
 #+attr_html: :width 600px
 [[../img/emacsorg.png]]
 
-* TODO Test 3 - summary statistics
+* DONE Review test 3 - summary statistics
 #+attr_html: :width 400px
 [[../img/boxplot1.png]]
 
@@ -374,11 +375,12 @@ who are taller than 180 cm.
 2) What are the limitations of statistics? (67%)
 3) Which plots visualize measures of spread? (50%)
 
-* TODO Review: 1st sprint review
+On (2): check Judeah Pearl "Book of Why"
+* DONE Review: 1st sprint review
 #+attr_html: :width 500px
 [[../img/1_scrum.png]]
 
-* "Pride"
+** "Pride"
 
 - Pride according to the Oxford dictionary:
   #+begin_quote
@@ -386,13 +388,13 @@ who are taller than 180 cm.
    people who are connected with you have *done something well* or *own
    something* that other people *admire*.«
   #+end_quote
-  In other words: if you cannot identify what you're proud of, you either haven't done anything well, or you're not aware of it, which won't do.
+ In other words: if you cannot identify what you're proud of, you either haven't done anything well, or you're not aware of it, which won't do.
 
 - Of course, /"pride comes before the fall"/ (Proverbs 16:18), but in
   the context of Scrum, it is only one of several qualities to assess
   the results of a sprint.
 
-* "References"
+** "References"
 #+attr_html: :width 600px
 [[../img/litref.png]]
 
@@ -402,28 +404,36 @@ who are taller than 180 cm.
   according to the categories (esp. relevance and credibility), and
   provide a complete, consistent set of citations.
 
-* "Questions"
+** "Questions"
 #+attr_html: :width 600px
 [[../img/meeting.jpg]]
 
 - You should always use an opportunity to ask the customer/product
   owner anything, even if it's something simple. (*Why?*)
 
+- Good question are specific, open (not closed as in yes/no), and use
+  the qualities (as in: variables!) that you're after, e.g. "What do
+  you like about me in terms of punctuality, systematic work,
+  appearance..."
+
+- A question is specific if you can immediately use it to take an
+  action!
+
 *Only one team asked questions at all (Nikkolette/Wyatt):*
 - /What was the hardest part so far for you?/
 - /What was the most interesting part you have found/want to find?/
 
-* Better next time!
+** Better next time!
 
 [[../img/mountain.jpg]]
 
-1) Deliver more than the bare minimum generously
-2) Try to make your project great by working systematically
-3) If you have a team, split up the work meaningfully
-4) If you have any questions, ask others and me bravely
-5) Complete the (optional) literature review diligently
+1) Deliver more than the bare minimum *generously*
+2) Try to make your project great by working *systematically*
+3) If you have a team, split up the work *meaningfully*
+4) If you have any questions, ask others and me *bravely*
+5) Complete the (optional) literature review *diligently*
 
-* TODO Practice: raw data stats (30 min)
+* DONE Practice: raw data stats (30 min)
 
 [[../img/exercise.jpg]]
 
