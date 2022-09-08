@@ -375,7 +375,7 @@ who are taller than 180 cm.
 2) What are the limitations of statistics? (67%)
 3) Which plots visualize measures of spread? (50%)
 
-On (2): check Judeah Pearl "Book of Why"
+On (2): check Judeah Pearl's [[https://en.wikipedia.org/wiki/The_Book_of_Why]["Book of Why"]]
 * DONE Review: 1st sprint review
 #+attr_html: :width 500px
 [[../img/1_scrum.png]]
@@ -441,3 +441,26 @@ On (2): check Judeah Pearl "Book of Why"
  - Complete the practice exercise on *data frames*
  - You can find example code in the lecture ([[https://github.com/birkenkrahe/dsmath/blob/main/org/3_raw_data.org#example-data-frames][GitHub]]:
    [[https://tinyurl.com/2am222mh][tinyurl.com/2am222mh]])
+
+* NEXT [[https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1010372][Ten simple rules for teaching yourself R (Lawlor et al, 2022)]]
+#+attr_html: :width 500px
+[[../img/twitter.png]]
+
+- Written for biologists, not computer scientists. Relevant community:
+  bio and health science stats ([[https://sph.umich.edu/biostat/programs/masters-hds.html][Prof Chapman sent me this yesterday]])
+
+- I support some but not all recommendations:
+  1) "Build skills with low-pressure projects" (i.e. play around)
+  2) Don't worry about style but worry about documentation
+  3) "Join the R community" - [[https://journals.plos.org/ploscompbiol/article/figure?id=10.1371/journal.pcbi.1010372.g002][I also use Twitter]]
+  4) "Read others' code, and share yours" - use GitHub
+  5) "Don't box yourself in" - use languages for what they're good at
+
+* TODO Raw data: statistical variables
+* References
+
+Lawlor J, Banville F, Forero-Muñoz N-R, Hébert K, Martínez-Lanfranco
+JA, Rogy P, et al. (2022) Ten simple rules for teaching yourself
+R. PLoS Comput Biol 18(9):
+e1010372. https://doi.org/10.1371/journal.pcbi.1010372
+
