@@ -177,7 +177,7 @@ especially as nobody has the slightest notion what it means."
 
 - If you are in > 1 course, you can use the same project idea!
 
-* Week 3: summary statistics
+* Week 3: elementary statistics
 #+attr_html: :width 600px
 [[../img/stats.jpg]]
 
@@ -355,7 +355,7 @@ who are taller than 180 cm.
 
   Try ~M-x org-mode-restart~. 
 
-* Week 4: Summary stats continued
+* Week 4: describing raw data
  [[../img/fall.jpg]]
 
 - [ ] How Emacs, Org-mode and ESS work together
@@ -363,11 +363,11 @@ who are taller than 180 cm.
 - [ ] Review 1st sprint review - "pride comes before the fall"
 - [ ] Practice: data frames
 
-* DONE [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-do-emacs--org-mode--ess-work-work-together][How Emacs, Org-mode and ESS work together]]
+** DONE [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-do-emacs--org-mode--ess-work-work-together][How Emacs, Org-mode and ESS work together]]
 #+attr_html: :width 600px
 [[../img/emacsorg.png]]
 
-* DONE Review test 3 - summary statistics
+** DONE Review test 3 - summary statistics
 #+attr_html: :width 400px
 [[../img/boxplot1.png]]
 
@@ -376,11 +376,11 @@ who are taller than 180 cm.
 3) Which plots visualize measures of spread? (50%)
 
 On (2): check Judeah Pearl's [[https://en.wikipedia.org/wiki/The_Book_of_Why]["Book of Why"]]
-* DONE Review: 1st sprint review
+** DONE Review: 1st sprint review
 #+attr_html: :width 500px
 [[../img/1_scrum.png]]
 
-** "Pride"
+*** "Pride"
 
 - Pride according to the Oxford dictionary:
   #+begin_quote
@@ -394,7 +394,7 @@ On (2): check Judeah Pearl's [[https://en.wikipedia.org/wiki/The_Book_of_Why]["B
   the context of Scrum, it is only one of several qualities to assess
   the results of a sprint.
 
-** "References"
+*** "References"
 #+attr_html: :width 600px
 [[../img/litref.png]]
 
@@ -404,7 +404,7 @@ On (2): check Judeah Pearl's [[https://en.wikipedia.org/wiki/The_Book_of_Why]["B
   according to the categories (esp. relevance and credibility), and
   provide a complete, consistent set of citations.
 
-** "Questions"
+*** "Questions"
 #+attr_html: :width 600px
 [[../img/meeting.jpg]]
 
@@ -423,7 +423,7 @@ On (2): check Judeah Pearl's [[https://en.wikipedia.org/wiki/The_Book_of_Why]["B
 - /What was the hardest part so far for you?/
 - /What was the most interesting part you have found/want to find?/
 
-** Better next time!
+*** Better next time!
 
 [[../img/mountain.jpg]]
 
@@ -433,7 +433,7 @@ On (2): check Judeah Pearl's [[https://en.wikipedia.org/wiki/The_Book_of_Why]["B
 4) If you have any questions, ask others and me *bravely*
 5) Complete the (optional) literature review *diligently*
 
-* DONE Practice: raw data stats (30 min)
+** DONE Practice: raw data stats (30 min)
 
 [[../img/exercise.jpg]]
 
@@ -442,7 +442,7 @@ On (2): check Judeah Pearl's [[https://en.wikipedia.org/wiki/The_Book_of_Why]["B
  - You can find example code in the lecture ([[https://github.com/birkenkrahe/dsmath/blob/main/org/3_raw_data.org#example-data-frames][GitHub]]:
    [[https://tinyurl.com/2am222mh][tinyurl.com/2am222mh]])
 
-* NEXT [[https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1010372][Ten simple rules for teaching yourself R (Lawlor et al, 2022)]]
+** NEXT [[https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1010372][Ten simple rules for teaching yourself R (Lawlor et al, 2022)]]
 #+attr_html: :width 500px
 [[../img/twitter.png]]
 
@@ -456,7 +456,11 @@ On (2): check Judeah Pearl's [[https://en.wikipedia.org/wiki/The_Book_of_Why]["B
   4) "Read others' code, and share yours" - use GitHub
   5) "Don't box yourself in" - use languages for what they're good at
 
-* TODO Raw data: statistical variables
+* Week 5: summary statistics
+** TODO Review: test 4
+** TODO Review: probability and distributions
+** IN PROGRESS Raw data: statistical variables
+** TODO Lecture/practice: summary statistics
 * References
 
 Lawlor J, Banville F, Forero-Muñoz N-R, Hébert K, Martínez-Lanfranco
