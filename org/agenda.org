@@ -457,9 +457,18 @@ On (2): check Judeah Pearl's [[https://en.wikipedia.org/wiki/The_Book_of_Why]["B
   5) "Don't box yourself in" - use languages for what they're good at
 
 * Week 5: summary statistics
+#+attr_html: :width 300px
+[[../img/queen.png]]
+
+- [ ] Featured: [[https://retractionwatch.com/retraction-watch-database-user-guide/retraction-watch-database-user-guide-appendix-b-reasons/][retraction watch]]
+- [ ] Review: test 4
+- [ ] Review: DataCamp lesson probability and distributions
+- [ ] Practice: statistical variables (continued)
+- [ ] Lecture/practice: summary statistics
+
 ** TODO Review: test 4
-** TODO Review: probability and distributions
-** IN PROGRESS Raw data: statistical variables
+** TODO Review: probability and distributions (DataCamp)
+** IN PROGRESS Raw data: statistical variables (practice)
 ** TODO Lecture/practice: summary statistics
 * References
 
