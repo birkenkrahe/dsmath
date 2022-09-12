@@ -458,13 +458,16 @@ On (2): check Judeah Pearl's [[https://en.wikipedia.org/wiki/The_Book_of_Why]["B
 
 * Week 5: summary statistics
 #+attr_html: :width 300px
-[[../img/queen.png]]
+#+caption: Charles II of England (1630-1685)
+[[../img/charlesII.jpg]]
 
+- [ ] 1654: [[https://web.universiteitleiden.nl/fsw/verduin/stathist/sh_17.htm][letters between Blaise Pascal and Pierre de Fermat]]
 - [ ] Featured: [[https://retractionwatch.com/retraction-watch-database-user-guide/retraction-watch-database-user-guide-appendix-b-reasons/][retraction watch]]
 - [ ] Review: test 4
 - [ ] Review: DataCamp lesson probability and distributions
 - [ ] Practice: statistical variables (continued)
 - [ ] Lecture/practice: summary statistics
+- [ ] Off-topic: [[https://github.com/birkenkrahe/dsmath/issues/38][Laporta algorithm (Feynman diagram evaluation)]]
 
 ** TODO Review: test 4
 ** TODO Review: probability and distributions (DataCamp)
