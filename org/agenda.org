@@ -473,6 +473,55 @@ On (2): check Judeah Pearl's [[https://en.wikipedia.org/wiki/The_Book_of_Why]["B
 
 ** TODO Review: probability and distributions (DataCamp)
 
+1) What is the probability for an event B given that an event A has
+   already happened? (E.g. selecting special orders over $150 from a
+   larger sample of orders.)
+
+2) How can you visualize the conditional probability formula for
+   events A and B?
+
+3) A men's soccer team plays soccer zero, one, or two days a week:
+   - the probability that they play zero days is .2,
+   - the probability that they play one day is .5, and
+   - the probability that they play two days is .3.
+
+     What is the long-term average or expected value, μ, of the number
+     of days per week that the men's soccer team plays soccer?
+
+   #+begin_notes
+   | x = DAYS | P(x) |
+   |----------+------|
+   |        0 |  0.2 |
+   |        1 |  0.5 |
+   |        2 |  0.3 |
+
+   Expected value:
+   E(DAYS) = μ = ∑ x P(x) = 0 * 0.2 + 1 * .5 + 2 * .3 = 1.1
+   #+end_notes
+
+   #+begin_src R 
+        ## number of days the team plays per week
+        x <- c(0,1,2)  # events
+        p_x <- c(0.2, 0.5, 0.3) # probability per event
+        mu <- sum(x * p_x) # expected value
+        paste("expected value: ", mu)
+   #+end_src
+
+4) What is the /law of large numbers/?
+
+   #+begin_notes
+     As the size of your sample increases, the sample mean will
+     approach the expected value (the population average).
+   #+end_notes
+
+   #+begin_src R :file ../img/sample.png :results output graphics file
+    x <- sample(rep(1:6),size=10,replace=TRUE)
+    hist(x, xlab="10 rolls, fair dice", main="die roll")
+    abline(v = mean(x), col="red",lwd=2)
+    abline(v = sum(x /6),col="blue",lwd=2)
+   #+end_src
+
+
 ** IN PROGRESS Raw data: statistical variables (practice)
 ** TODO Lecture/practice: summary statistics
 
