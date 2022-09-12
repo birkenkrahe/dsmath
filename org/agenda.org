@@ -469,10 +469,13 @@ On (2): check Judeah Pearl's [[https://en.wikipedia.org/wiki/The_Book_of_Why]["B
 - [ ] Lecture/practice: summary statistics
 - [ ] Off-topic: [[https://github.com/birkenkrahe/dsmath/issues/38][Laporta algorithm (Feynman diagram evaluation)]]
 
-** TODO Review: test 4
+** TODO Review: test 4 - raw data, probability and stats
+
 ** TODO Review: probability and distributions (DataCamp)
+
 ** IN PROGRESS Raw data: statistical variables (practice)
 ** TODO Lecture/practice: summary statistics
+
 * References
 
 Lawlor J, Banville F, Forero-Muñoz N-R, Hébert K, Martínez-Lanfranco

@@ -1,0 +1,103 @@
+#+TITLE: SUMMARY STATISTICS
+#+AUTHOR: MARCUS BIRKENKRAHE
+#+SUBTITLE: Applied math for data science (DSC 482/MTH 445) Fall 2022
+#+STARTUP:overview hideblocks indent inlineimages
+#+attr_html: :width 700px
+#+caption: 
+[[../img/3_poi.png]]
+
+- ...
+- Exercises
+
+* TODO Practice:
+
+[[../img/3_practice.jpg]]
+
+* References
+
+- DataCamp (n.d.). Introduction to Statistics. URL: datacamp.com.
+- Davies TD (2016). Book of R. NoStarch Press. URL: nostarch.com
+- Kabacoff (2017). Quick-R: Subsetting Data. URL: stamethods.net.
+- Schmuller J (2017). Statistical Analysis with R for Dummies. URL: wiley.com
+
+* Glossary: concepts
+
+#+name: tab:terms
+| TERM                         | MEANING                                          |
+|------------------------------+--------------------------------------------------|
+| Statistics                   | Data analysis techniques                         |
+| Data                         | Entities, events, or processes                   |
+| Raw data                     | Data originating from samples                    |
+| Big data                     | Volume, Velocity, Variety                        |
+| Variable                     | Characteristic of an individual in a population  |
+| vector                       | n-tuple of values of the same type               |
+| factor                       | vector of categorical variables                  |
+| numeric variable             | numbers                                          |
+| continuous numeric variable  | potentially infinite numbers, with decimal point |
+| discrete numeric variable    | finite set of integer values                     |
+| categorical variable         | finite set of non-numeric values                 |
+| nominal categorical variable | not naturally ordered categorical variable       |
+| ordinal categorical variable | naturally ordered categorical variable           |
+| univariate data              | single dimension (vector)                        |
+| multivariate data            | more than one dimension (array)                  |
+| population                   | individual or collective of interest             |
+| parameter                    | population characteristic of interest            |
+| sample                       | some data from a population                      |
+| statistic                    | sample characteristic of interest                |
+
+* Glossary: code
+
+#+name: tab:code
+| CODE       | MEANING                                |
+|------------+----------------------------------------|
+| ~read.table~ | R function to read tabular data        |
+| ~data.frame~ | R function to create a data frame      |
+| ~summary~    | R function to get summary statistics   |
+| ~c~          | R function to create vectors           |
+| ~<-~         | R assignment operator (right to left)  |
+| ~factor~     | R function to create factor vector     |
+| ~$~          | Accessor operator                      |
+| ~[]~         | Index operator                         |
+| ~subset~     | R function to extract subset of values |
+| ~nrow~       | R function to return no. of rows       |
+| ~ncol~       | R function to return no. of columns    |
+| ~dim~        | R function to return object dimensions |
+| ~head~, ~tail~ | display beginning/end of data set      |
+| ~str~        | display structure of data set          |
+
+* Footnotes
+
+[fn:5] Also interesting: the related function ~searchpath()~ which
+returns the path searched by R to find packages
+#+begin_src R
+  searchpaths()
+#+end_src
+
+#+RESULTS:
+| .GlobalEnv                                   |
+| C:/Program Files/R/R-4.1.2/library/stats     |
+| C:/Program Files/R/R-4.1.2/library/graphics  |
+| C:/Program Files/R/R-4.1.2/library/grDevices |
+| C:/Program Files/R/R-4.1.2/library/utils     |
+| C:/Program Files/R/R-4.1.2/library/datasets  |
+| C:/Program Files/R/R-4.1.2/library/methods   |
+| Autoloads                                    |
+| C:/PROGRA~1/R/R-41~1.2/library/base          |
+ 
+
+[fn:4]The ~head~ function prints 6 rows by default. To print only 5
+rows, you need to restrict its range with ~head(x=chickwts,n=5)~
+
+[fn:3] Recall that a data frame consists of vectors. It is created
+with the ~data.frame~ function - its arguments are vectors of any
+type. Numerical or character vectors are created with the ~c~
+function. Its arguments are values of any one type - characters or
+numbers. Factors are vectors, and they are created using the ~factor~
+function. The difference is that their levels can be ordered
+explicitly.
+
+[fn:2]/You can get help on any of the examples with ~?~ or ~help()~.
+
+[fn:1]This is the "3V" definition of big data. You'll find other
+attributes, like "value" or "veracity", which are not directly
+measurable, however.
