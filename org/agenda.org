@@ -461,24 +461,27 @@ On (2): check Judeah Pearl's [[https://en.wikipedia.org/wiki/The_Book_of_Why]["B
 #+caption: Charles II of England (1630-1685)
 [[../img/charlesII.jpg]]
 
-- [ ] 1654: [[https://web.universiteitleiden.nl/fsw/verduin/stathist/sh_17.htm][letters between Blaise Pascal and Pierre de Fermat]]
-- [ ] Featured application: [[https://retractionwatch.com/retraction-watch-database-user-guide/retraction-watch-database-user-guide-appendix-b-reasons/][retraction watch]]
+- [X] 1654: [[https://web.universiteitleiden.nl/fsw/verduin/stathist/sh_17.htm][letters between Blaise Pascal and Pierre de Fermat]]
+- [X] Featured application: [[https://retractionwatch.com/retraction-watch-database-user-guide/retraction-watch-database-user-guide-appendix-b-reasons/][retraction watch]]
+- [X] Off-topic: [[https://github.com/birkenkrahe/dsmath/issues/38][Laporta algorithm (Feynman diagram evaluation)]]
 - [ ] Review: test 4
 - [ ] Review: DataCamp lesson probability and distributions
 - [ ] Practice: statistical variables (continued)
 - [ ] Lecture/practice: summary statistics
-- [ ] Off-topic: [[https://github.com/birkenkrahe/dsmath/issues/38][Laporta algorithm (Feynman diagram evaluation)]]
 
-** TODO Review: test 4 - raw data, probability and stats
+* TODO Review: test 4 - raw data, probability and stats
 
-- [ ] Longitude/latitude are what kind of data?
-- [ ] When researching, do you always need a "literature review"?
-- [ ] Which activities connect "population" and "sample"?
+- [X] Longitude/latitude are what kind of data?
+- [X] When researching, do you always need a "literature review"?
+  - "Literature review" as a type of paper is the most useful
+    paper you can find as a beginner - look for one in your
+    project area!
+- [X] Which activities connect "population" and "sample"?
 
-** TODO Review: probability and distributions (DataCamp)
+* TODO Review: probability and distributions (DataCamp)
 
-1) What is the probability for an event B given that an event A has
-   already happened.
+1) What is the conditional probability for an event B given that an
+   event A has already happened (as a formula)
    #+begin_notes
      Formula: P(B|A) = P(A and B) / P(A)
    #+end_notes
@@ -519,6 +522,9 @@ On (2): check Judeah Pearl's [[https://en.wikipedia.org/wiki/The_Book_of_Why]["B
         paste("expected value: ", mu)
    #+end_src
 
+   #+RESULTS:
+   : expected value:  1.1
+
 4) What is the /law of large numbers/?
 
    #+begin_notes
@@ -530,9 +536,12 @@ On (2): check Judeah Pearl's [[https://en.wikipedia.org/wiki/The_Book_of_Why]["B
     x <- sample(rep(1:6),size=10,replace=TRUE)
     hist(x, xlab="10 rolls, fair dice", main="die roll")
     abline(v = mean(x), col="red",lwd=2)
-    abline(v = sum(x /6),col="blue",lwd=2)
+    abline(v = sum(x/6),col="blue",lwd=2)
    #+end_src
 
+   #+RESULTS:
+   [[file:../img/sample.png]]
+   
 5) What is the probability that a baby will be born between midnight
    and 8 am? (If all hours are equally probable.)
 
@@ -540,9 +549,8 @@ On (2): check Judeah Pearl's [[https://en.wikipedia.org/wiki/The_Book_of_Why]["B
      A day has 24 hours - midnight to 8 am is 8/24 or 1/3, so 33%. 
    #+end_notes
    
-** IN PROGRESS Raw data: statistical variables (practice)
-** TODO Lecture/practice: summary statistics
-
+* IN PROGRESS Raw data: statistical variables (practice)
+* TODO Lecture/practice: summary statistics
 * References
 
 Lawlor J, Banville F, Forero-Muñoz N-R, Hébert K, Martínez-Lanfranco
