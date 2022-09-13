@@ -3,16 +3,172 @@
 #+SUBTITLE: Applied math for data science (DSC 482/MTH 445) Fall 2022
 #+STARTUP:overview hideblocks indent inlineimages
 #+attr_html: :width 700px
-#+caption: 
-[[../img/3_poi.png]]
+#+caption: poster for "The Terminal List" (Amazon, 2022-).
+[[../img/4_terminallist.jpg]]
 
-- ...
+- Centrality: Mean, Median, Mode
+- Counts, Percentages, and Proportions
+- Quantiles, Percentiles, and 5-number-summary
+- Spread: Variance, Standard Deviation and Interquartile Range
 - Exercises
+* Measures of centrality
+#+attr_html: :width 600px
+[[../img/4_symmetry.jpg]]
 
-* TODO Practice:
+- Explain large collections of data
+- Describe where numeric observations are centered
+- Centrality measures suggest symmetries where none exist
 
-[[../img/3_practice.jpg]]
+* Mean or arithmetic average
 
+- For a set of n labeled numeric measurements, the sample mean is the
+  arithmetic average over all measurements:
+  [[../img/mean.png]]
+
+- If you observe 8 points 2, 4.4, 3, 3, 2, 2.2, 2, 4, the mean is:
+  #+name: mean
+  #+begin_src R :results output
+    x <- c(2,4.4,3,3,2,2.2,2,4) # store observations in vector
+    avg <- sum(x)/length(x)  # arithmetic mean
+    avg  # print mean
+  #+end_src
+
+* Median or middle magnitude
+
+- Sort your observations by magnitude
+- For an odd number of observations: take the middle value
+- For an even number of observations: average two middle values
+
+[[../img/median.png]]
+
+Where the upper index denotes the order statistics: x_i^(t) is the
+t-th smallest observation regardless of the observation index i.
+
+- If you observe 8 points 2, 4.4, 3, 3, 2, 2.2, 2, 4, you have n/2=4.
+  #+name: median
+  #+begin_src R :results output
+    x <- c(2,4.4,3,3,2,2.2,2,4) # store observations in vector
+    sorted_x <- sort(x)  # sort observations
+    sorted_x
+    # median by hand:
+    (sorted_x[length(x)/2] + sorted_x[length(x)/2+1])/2
+  #+end_src
+
+* Mode or most common observation
+
+- Used with numeric-discrete data than numeric-continuous
+- Used when discussing probability /density/ functions
+- Collection of numeric measurements may have no or > 1 mode
+
+- If you observe 8 points 2, 4.4, 3, 3, 2, 2.2, 2, 4, you can tabulate
+  the frequency of each measurement:
+
+  [[../img/table.png]]
+
+* TODO Mean and median with built-in functions
+
+- Create a new Org-mode file
+- Create a R code block with header: ~R :results output :session~
+- Store the eight observations as a numeric vector ~xdata~:
+
+  {2, 4.4, 3, 3, 2, 2.2, 2, 4}
+  #+name: xdata
+  #+begin_src R :results output :session
+    xdata <- c(2,4.4,3,3,2,2.2,2,4) # store observations in vector
+    xdata
+  #+end_src
+- Compute the ~mean~ and the ~median~ and store them in variables.
+  #+name: meanR  
+  #+begin_src R :results output :session
+    x.bar <- mean(xdata)
+    x.bar
+  #+end_src  
+  #+name: medianR
+  #+begin_src R :results output :session
+    m.bar <- median(xdata)
+    m.bar
+  #+end_src  
+* TODO Mode with contingency ~table~
+
+- To find a mode, compute the contingency ~table~ for ~xdata~.
+  #+name: modeR
+  #+begin_src R :results output :session
+    xtab <- table(xdata)
+    xtab
+  #+end_src  
+- To identify the most frequent values automatically, use ~range~ which
+  reports ~min~ and ~max~ of ~xdata~.
+  #+name: range
+  #+begin_src R :session :results output
+    sort(xdata) # sort vector values
+    min(xdata)
+    max(xdata)
+    range(xdata) # return min and max value
+  #+end_src
+- Applying these functions to a ~table~ operates on the frequencies:
+  #+name: xtabRange
+  #+begin_src R :session :results output
+    xtab # object that stores the contingency table
+    max(xtab) # max frequency in the table
+  #+end_src
+
+- Finally, use a logical index vector to get the mode:
+  #+name: logical
+  #+begin_src R :session :results output
+    d.bar <- xtab[xtab == max(xtab)]
+    d.bar  # prints the value and the frequency
+  #+end_src
+  
+* TODO Practice: measures of centrality
+#+attr_html: :width 400px
+[[../img/4_practice.jpg]]
+
+1) Calculate the mean and median weights of the chicks in ~chickwts~
+2) Identify the value and frequency of the most common earthquake
+   magnitude in ~quakes~
+
+** SOLUTION
+
+1) Calculate the mean and median weights of the chicks in ~chickwts~
+   
+   #+begin_src R :exports both :session :results output
+     str(chickwts)
+     mean(chickwts$weight)
+     median(chickwts$weight)
+   #+end_src
+
+   #+RESULTS:
+   : 'data.frame':	71 obs. of  2 variables:
+   :  $ weight: num  179 160 136 227 217 168 108 124 143 140 ...
+   :  $ feed  : Factor w/ 6 levels "casein","horsebean",..: 2 2 2 2 2 2 2 2 2 2 ...
+   : [1] 261.3099
+   : [1] 258
+
+   Answer: the average chick weight 261 grams, and the chicken in the
+   middle weighed 258 grams.
+
+2) Identify the value and frequency of the most common earthquake
+   magnitude in ~quakes~
+
+   #+begin_src R :exports both :session :results output
+     str(quakes)
+     Qtab <- table(quakes$mag)
+     Qtab[Qtab == max(Qtab)]
+   #+end_src
+
+   #+RESULTS:
+   : 'data.frame':	1000 obs. of  5 variables:
+   :  $ lat     : num  -20.4 -20.6 -26 -18 -20.4 ...
+   :  $ long    : num  182 181 184 182 182 ...
+   :  $ depth   : int  562 650 42 626 649 195 82 194 211 622 ...
+   :  $ mag     : num  4.8 4.2 5.4 4.1 4 4 4.8 4.4 4.7 4.3 ...
+   :  $ stations: int  41 15 43 19 11 12 43 15 35 19 ...
+   : 4.5 
+   : 107
+
+   Answer: the most common earthquakes were 107 occurrences of
+   magnitude 4.5.
+   
 * References
 
 - DataCamp (n.d.). Introduction to Statistics. URL: datacamp.com.
