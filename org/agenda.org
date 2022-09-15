@@ -562,23 +562,25 @@ On (2): check Judeah Pearl's [[https://en.wikipedia.org/wiki/The_Book_of_Why]["B
 
 * Review: logical flag vectors
 
-
-
 Can you name and explain the 9 elements of this expression?
 
 ~chickwts$weight[chickwts$feed == "soybean"]~
 
+#+attr_html: :width 600px
+[[../img/flag.png]]
+
+** R code
 #+begin_src R
-  str(chickwts)
+  str(chickwts) # structure of the chickwts data set
 #+end_src
 
 #+RESULTS:
-: 'data.frame':	71 obs. of  2 variables:
+: 'data.frame': 71 obs. of  2 variables:
 :  $ weight: num  179 160 136 227 217 168 108 124 143 140 ...
 :  $ feed  : Factor w/ 6 levels "casein","horsebean",..: 2 2 2 2 2 2 2 2 2 2 ...
 
 #+begin_src R
-  chickwts$weight
+  chickwts$weight # display numerical column vector
 #+end_src
 
 #+RESULTS:
@@ -588,27 +590,27 @@ Can you name and explain the 9 elements of this expression?
 : [58] 344 258 368 390 379 260 404 318 352 359 216 222 283 332
 
 #+begin_src R
-  chickwts$feed
+  chickwts$feed # display categorical-nominal factor vector
 #+end_src
 
 #+RESULTS:
 #+begin_example
  [1] horsebean horsebean horsebean horsebean horsebean horsebean horsebean
- [8] horsebean horsebean horsebean linseed   linseed   linseed   linseed  
-[15] linseed   linseed   linseed   linseed   linseed   linseed   linseed  
-[22] linseed   soybean   soybean   soybean   soybean   soybean   soybean  
-[29] soybean   soybean   soybean   soybean   soybean   soybean   soybean  
+ [8] horsebean horsebean horsebean linseed   linseed   linseed   linseed
+[15] linseed   linseed   linseed   linseed   linseed   linseed   linseed
+[22] linseed   soybean   soybean   soybean   soybean   soybean   soybean
+[29] soybean   soybean   soybean   soybean   soybean   soybean   soybean
 [36] soybean   sunflower sunflower sunflower sunflower sunflower sunflower
-[43] sunflower sunflower sunflower sunflower sunflower sunflower meatmeal 
-[50] meatmeal  meatmeal  meatmeal  meatmeal  meatmeal  meatmeal  meatmeal 
-[57] meatmeal  meatmeal  meatmeal  casein    casein    casein    casein   
-[64] casein    casein    casein    casein    casein    casein    casein   
-[71] casein   
+[43] sunflower sunflower sunflower sunflower sunflower sunflower meatmeal
+[50] meatmeal  meatmeal  meatmeal  meatmeal  meatmeal  meatmeal  meatmeal
+[57] meatmeal  meatmeal  meatmeal  casein    casein    casein    casein
+[64] casein    casein    casein    casein    casein    casein    casein
+[71] casein
 Levels: casein horsebean linseed meatmeal soybean sunflower
 #+end_example
 
 #+begin_src R
-  chickwts$feed == "soybean"
+  chickwts$feed == "soybean" # display the "soybean" level of feed
 #+end_src
 
 #+RESULTS:
@@ -620,15 +622,15 @@ Levels: casein horsebean linseed meatmeal soybean sunflower
 : [61] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
 
 #+begin_src R
-  chickwts$weight[chickwts$feed == "soybean"]
+  chickwts$weight[chickwts$feed == "soybean"] # show weight of chicks fed on soybean
 #+end_src
 
 #+RESULTS:
 :  [1] 243 230 248 327 329 250 193 271 316 267 199 171 158 248
 
 #+begin_src R
-  which(chickwts$feed == "soybean")
-  chickwts$weight[which(chickwts$feed == "soybean")]
+  which(chickwts$feed == "soybean")  # get index values for chicks fed on soybean
+  chickwts$weight[which(chickwts$feed == "soybean")] # show weight of chicks fed on soybean
 #+end_src
 
 #+RESULTS:
@@ -638,10 +640,10 @@ Levels: casein horsebean linseed meatmeal soybean sunflower
 #+begin_src R :results output
   str(chickwts) # data frame structure
   chickwts$feed # factor vector, categorical-nominal
-  chickwts$feed == "soybean" # logical vector 
+  chickwts$feed == "soybean" # logical vector
   which(chickwts$feed == "soybean") # numveric index vector
   chickwts$weight[chickwts$feed == "soybean"] # numeric vector
-  #+end_src
+#+end_src
 
 * TODO Lecture/practice: summary statistics
 #+attr_html: :width 500px
