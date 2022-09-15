@@ -102,7 +102,7 @@ t-th smallest observation regardless of the observation index i.
 
 [[../img/emacsprep.png]]
 
-- *Open* a new Org-mode file ~plot.org~ in Emacs
+- *Open* a new Org-mode file ~stats.org~ in Emacs
 
 - *Add* this line at the top of the file ~plot.org~:
 
@@ -120,7 +120,7 @@ t-th smallest observation regardless of the observation index i.
 - When you leave Emacs, you'll be warned that the session ~*R*~ is
   active: you can *ignore* this warning
 
-* NEXT Mode with contingency ~table~
+* Mode with contingency ~table~
 
 - To find a mode, compute the contingency ~table~ for ~xdata~.
   #+name: modeR
@@ -151,7 +151,7 @@ t-th smallest observation regardless of the observation index i.
     d.bar  # prints the value and the frequency
   #+end_src
   
-* TODO Practice: measures of centrality
+* DONE Practice: measures of centrality
 #+attr_html: :width 400px
 [[../img/4_practice.jpg]]
 
@@ -193,11 +193,7 @@ t-th smallest observation regardless of the observation index i.
     mean(c(1,4,NA))
     mean(c(1,4,NaN))
   #+end_src
-
-  #+RESULTS: missing
-  : [1] NA
-  : [1] NaN
-
+  
 - To prevent inclusion of these special values, switch on the ~na.rm~
   attribute.
   #+name: na.rm
@@ -209,19 +205,19 @@ t-th smallest observation regardless of the observation index i.
 - Anything that calculates a numeric statistic based on a numeric
   vector carries this attribute: ~sum~, ~mean~, ~median~, ~max~, ~min~, ~range~.
 
-* TODO Practice: missing values
+* Practice: missing values
 
-- Look at the ~Pima.tr~ dataset in the ~MASS~ package.
-- Use ~summary~ to find out how many values are missing in the
-  measurements of the body mass index.
-- What is the sample mean of the body mass index values?
+1) Look at the ~Pima.tr~ dataset in the ~MASS~ package.
+2) Use ~summary~ to find out how many values are missing in the
+   measurements of the body mass index.
+3) What is the sample mean of the body mass index values?
 
 ** Solution
 
 #+begin_src R
-  library(MASS)
-  str(Pima.tr2)
-  summary(Pima.tr2)
+  library(MASS)  # load MASS package
+  str(Pima.tr2)  # look at structure of Pima.tr2
+  summary(Pima.tr2) # summarize the stats of the data set
   mean(Pima.tr2$bmi) # this mean cannot be computed: NA
   mean(Pima.tr2$bmi, na.rm=TRUE) # the 3 NAs have been removed
   #+end_src
@@ -257,7 +253,9 @@ t-th smallest observation regardless of the observation index i.
 [1] 32.05286
 #+end_example
 
-* excuRsion category subsets with ~tapply~ ([[https://github.com/matloff/fasteR#--lesson-9--the-tapply-function][Matloff]])
+* NEXT excuRsion category subsets with ~tapply~ ([[https://github.com/matloff/fasteR#--lesson-9--the-tapply-function][Matloff]])
+
+- [[~/stats.org][*OPEN YOUR LAST SOLUTIONS FILE*]]
 
 - The built-in ~ToothGrowth~ data set contains the numeric variable ~len~
   (length of a tooth), and the categorical variable ~supp~ with two
