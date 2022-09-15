@@ -464,12 +464,12 @@ On (2): check Judeah Pearl's [[https://en.wikipedia.org/wiki/The_Book_of_Why]["B
 - [X] 1654: [[https://web.universiteitleiden.nl/fsw/verduin/stathist/sh_17.htm][letters between Blaise Pascal and Pierre de Fermat]]
 - [X] Featured application: [[https://retractionwatch.com/retraction-watch-database-user-guide/retraction-watch-database-user-guide-appendix-b-reasons/][retraction watch]]
 - [X] Off-topic: [[https://github.com/birkenkrahe/dsmath/issues/38][Laporta algorithm (Feynman diagram evaluation)]]
-- [ ] Review: test 4
-- [ ] Review: DataCamp lesson probability and distributions
+- [X] Review: test 4
+- [X] Review: DataCamp lesson probability and distributions
 - [ ] Practice: statistical variables (continued)
 - [ ] Lecture/practice: summary statistics
 
-* TODO Review: test 4 - raw data, probability and stats
+** DONE Review: test 4 - raw data, probability and stats
 
 - [X] Longitude/latitude are what kind of data?
 - [X] When researching, do you always need a "literature review"?
@@ -478,7 +478,7 @@ On (2): check Judeah Pearl's [[https://en.wikipedia.org/wiki/The_Book_of_Why]["B
     project area!
 - [X] Which activities connect "population" and "sample"?
 
-* TODO Review: probability and distributions (DataCamp)
+** DONE Review: probability and distributions (DataCamp)
 
 1) What is the conditional probability for an event B given that an
    event A has already happened (as a formula)
@@ -549,8 +549,12 @@ On (2): check Judeah Pearl's [[https://en.wikipedia.org/wiki/The_Book_of_Why]["B
      A day has 24 hours - midnight to 8 am is 8/24 or 1/3, so 33%. 
    #+end_notes
    
-* IN PROGRESS Raw data: statistical variables (practice)
-* TODO Lecture/practice: summary statistics
+** DONE Raw data: statistical variables (practice)
+** TODO Lecture/practice: summary statistics
+#+attr_html: :width 500px
+[[../img/4_terminallist.jpg]]
+
+** TODO Review: DataCamp - Central Limit Theorem
 * References
 
 Lawlor J, Banville F, Forero-Muñoz N-R, Hébert K, Martínez-Lanfranco

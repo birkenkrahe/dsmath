@@ -4,7 +4,7 @@
 #+OPTIONS: toc:nil num:nil ^:nil
 * README
 
-  - Practice for "[[https://github.com/birkenkrahe/dsmath/blob/main/org/3_raw_data.org][Raw data and statistical variables]]" ([[https://github.com/birkenkrahe/dsmath/blob/main/org/3_raw_data.org][GitHub]])
+  - Practice for "Raw data and statistical variables" ([[https://github.com/birkenkrahe/dsmath/blob/main/org/3_raw_data.org][GitHub]])
   - Source: chapter 13.1 by Davies, 2016 (modified)
   - Emacs + ESS + Org-mode and R must be installed
 

@@ -2,6 +2,7 @@
 #+AUTHOR: MARCUS BIRKENKRAHE
 #+SUBTITLE: Applied math for data science (DSC 482/MTH 445) Fall 2022
 #+STARTUP:overview hideblocks indent inlineimages
+#+PROPERTY: header-args:R :export both :results output :session *R*
 #+attr_html: :width 700px
 #+caption: poster for "The Terminal List" (Amazon, 2022-).
 [[../img/4_terminallist.jpg]]
@@ -30,9 +31,12 @@
   #+name: mean
   #+begin_src R :results output
     x <- c(2,4.4,3,3,2,2.2,2,4) # store observations in vector
-    avg <- sum(x)/length(x)  # arithmetic mean
-    avg  # print mean
+    x_mean <- sum(x)/length(x)  # arithmetic mean
+    x_mean  # print mean
   #+end_src
+
+  #+RESULTS: mean
+  : [1] 2.825
 
 * Median or middle magnitude
 
@@ -51,9 +55,13 @@ t-th smallest observation regardless of the observation index i.
     x <- c(2,4.4,3,3,2,2.2,2,4) # store observations in vector
     sorted_x <- sort(x)  # sort observations
     sorted_x
-    # median by hand:
+                                            # median by hand:
     (sorted_x[length(x)/2] + sorted_x[length(x)/2+1])/2
   #+end_src
+
+  #+RESULTS: median
+  : [1] 2.0 2.0 2.0 2.2 3.0 3.0 4.0 4.4
+  : [1] 2.6
 
 * Mode or most common observation
 
@@ -89,7 +97,30 @@ t-th smallest observation regardless of the observation index i.
     m.bar <- median(xdata)
     m.bar
   #+end_src  
-* Mode with contingency ~table~
+
+* TODO Preparations to code along
+
+[[../img/emacsprep.png]]
+
+- *Open* a new Org-mode file ~plot.org~ in Emacs
+
+- *Add* this line at the top of the file ~plot.org~:
+
+  ~#+PROPERTY: header-args:R :results output :session *R*~
+
+- *Activate* the code by putting your cursor on the line and entering
+  ~C-c C-c~. You should see the message ~Local setup has been refreshed~
+  in the minibuffer at the bottom of the editor.
+
+- When you execute your first R code block, you'll be asked where you
+  want the session named ~*R*~ to run: *enter* the path to ~plot.org~
+
+- For plots, *use* the header ~:results graphics file :file plot.png~
+  
+- When you leave Emacs, you'll be warned that the session ~*R*~ is
+  active: you can *ignore* this warning
+
+* NEXT Mode with contingency ~table~
 
 - To find a mode, compute the contingency ~table~ for ~xdata~.
   #+name: modeR
@@ -138,13 +169,6 @@ t-th smallest observation regardless of the observation index i.
      median(chickwts$weight)
    #+end_src
 
-   #+RESULTS:
-   : 'data.frame':	71 obs. of  2 variables:
-   :  $ weight: num  179 160 136 227 217 168 108 124 143 140 ...
-   :  $ feed  : Factor w/ 6 levels "casein","horsebean",..: 2 2 2 2 2 2 2 2 2 2 ...
-   : [1] 261.3099
-   : [1] 258
-
    Answer: the average chick weight 261 grams, and the chicken in the
    middle weighed 258 grams.
 
@@ -156,16 +180,6 @@ t-th smallest observation regardless of the observation index i.
      Qtab <- table(quakes$mag)
      Qtab[Qtab == max(Qtab)]
    #+end_src
-
-   #+RESULTS:
-   : 'data.frame':	1000 obs. of  5 variables:
-   :  $ lat     : num  -20.4 -20.6 -26 -18 -20.4 ...
-   :  $ long    : num  182 181 184 182 182 ...
-   :  $ depth   : int  562 650 42 626 649 195 82 194 211 622 ...
-   :  $ mag     : num  4.8 4.2 5.4 4.1 4 4 4.8 4.4 4.7 4.3 ...
-   :  $ stations: int  41 15 43 19 11 12 43 15 35 19 ...
-   : 4.5 
-   : 107
 
    Answer: the most common earthquakes were 107 occurrences of
    magnitude 4.5.
@@ -180,6 +194,10 @@ t-th smallest observation regardless of the observation index i.
     mean(c(1,4,NaN))
   #+end_src
 
+  #+RESULTS: missing
+  : [1] NA
+  : [1] NaN
+
 - To prevent inclusion of these special values, switch on the ~na.rm~
   attribute.
   #+name: na.rm
@@ -191,9 +209,229 @@ t-th smallest observation regardless of the observation index i.
 - Anything that calculates a numeric statistic based on a numeric
   vector carries this attribute: ~sum~, ~mean~, ~median~, ~max~, ~min~, ~range~.
 
-* TODO excuRsion: ~apply~ function family
-* TODO Counts, Percentages, and Proportions
+* TODO Practice: missing values
+
+- Look at the ~Pima.tr~ dataset in the ~MASS~ package.
+- Use ~summary~ to find out how many values are missing in the
+  measurements of the body mass index.
+- What is the sample mean of the body mass index values?
+
+** Solution
+
+#+begin_src R
+  library(MASS)
+  str(Pima.tr2)
+  summary(Pima.tr2)
+  mean(Pima.tr2$bmi) # this mean cannot be computed: NA
+  mean(Pima.tr2$bmi, na.rm=TRUE) # the 3 NAs have been removed
+  #+end_src
+
+#+RESULTS:
+#+begin_example
+'data.frame':	300 obs. of  8 variables:
+ $ npreg: int  5 7 5 0 0 5 3 1 3 2 ...
+ $ glu  : int  86 195 77 165 107 97 83 193 142 128 ...
+ $ bp   : int  68 70 82 76 60 76 58 50 80 78 ...
+ $ skin : int  28 33 41 43 25 27 31 16 15 37 ...
+ $ bmi  : num  30.2 25.1 35.8 47.9 26.4 35.6 34.3 25.9 32.4 43.3 ...
+ $ ped  : num  0.364 0.163 0.156 0.259 0.133 ...
+ $ age  : int  24 55 35 26 23 52 25 24 63 31 ...
+ $ type : Factor w/ 2 levels "No","Yes": 1 2 1 1 1 2 1 1 1 2 ...
+     npreg             glu              bp              skin      
+ Min.   : 0.000   Min.   : 56.0   Min.   : 38.00   Min.   : 7.00  
+ 1st Qu.: 1.000   1st Qu.:101.0   1st Qu.: 64.00   1st Qu.:21.00  
+ Median : 3.000   Median :121.0   Median : 72.00   Median :29.00  
+ Mean   : 3.787   Mean   :123.7   Mean   : 72.32   Mean   :29.15  
+ 3rd Qu.: 6.000   3rd Qu.:142.0   3rd Qu.: 80.00   3rd Qu.:36.00  
+ Max.   :14.000   Max.   :199.0   Max.   :114.00   Max.   :99.00  
+                                  NA's   :13       NA's   :98     
+      bmi             ped              age        type    
+ Min.   :18.20   Min.   :0.0780   Min.   :21.0   No :194  
+ 1st Qu.:27.10   1st Qu.:0.2367   1st Qu.:24.0   Yes:106  
+ Median :32.00   Median :0.3360   Median :29.0            
+ Mean   :32.05   Mean   :0.4357   Mean   :33.1            
+ 3rd Qu.:36.50   3rd Qu.:0.5867   3rd Qu.:40.0            
+ Max.   :52.90   Max.   :2.2880   Max.   :72.0            
+ NA's   :3
+[1] NA
+[1] 32.05286
+#+end_example
+
+* excuRsion category subsets with ~tapply~ ([[https://github.com/matloff/fasteR#--lesson-9--the-tapply-function][Matloff]])
+
+- The built-in ~ToothGrowth~ data set contains the numeric variable ~len~
+  (length of a tooth), and the categorical variable ~supp~ with two
+  levels, ~OJ~ and ~VC~ for "Orange juice" and "Vitamin C".
+  #+begin_src R
+    str(ToothGrowth)
+  #+end_src
+
+- Let's say we want to know the mean length for each of the two
+  levels.
+
+- The ~tapply~ function allows us to split the vector ~X =
+  ToothGrowth$len~ in two groups according to the values of ~INDEX =
+  Toothgrowth$supp~, and then apply the function ~FUN = mean~.
+
+  #+begin_src R
+    tapply(X=ToothGrowth$len, INDEX=ToothGrowth$supp, FUN=mean)
+  #+end_src
+
+  #+RESULTS:
+  :       OJ       VC 
+  : 20.66333 16.96333
+
+* TODO Practice: mean weight of chicks by feed type
+
+- If you want to find the mean weight of chicks grouped by feed type,
+  you could use ~mean~ on each specific subset:
+
+  #+begin_src R
+    mean(chickwts$weight[chickwts$feed == "casein"])
+    mean(chickwts$weight[chickwts$feed == "horsebean"])
+    mean(chickwts$weight[chickwts$feed == "linseed"])
+    mean(chickwts$weight[chickwts$feed == "meatmeal"])
+    mean(chickwts$weight[chickwts$feed == "soybean"])
+    mean(chickwts$weight[chickwts$feed == "sunflower"])
+  #+end_src
+
+- Instead, use ~tapply(X, INDEX, FUN)~ to calculate these values using
+  just one line of code! Remember: ~X~ is the vector, ~INDEX~ is the
+  splitting category (~factor~ level), and ~FUN~ is the function.
+  
+** Solution
+
+#+begin_src R
+  tapply(
+    X = chickwts$weight,
+    INDEX = chickwts$feed,
+    FUN = mean)
+#+end_src
+
+* Counts
+
+- Sometimes it's useful to summarize non-numerical data, e.g. the
+  number of observations that fall in a particular category
+
+- /Counts/ or /frequencies/ are summary statistics of categorical data
+
+- Again you can use the contingency ~table~ command for frequencies -
+  e.g. for the feed types in the ~chickwts~ data set.
+  #+begin_src R
+    table(chickwts$feed)
+  #+end_src
+
+  #+RESULTS:
+  : 
+  :    casein horsebean   linseed  meatmeal   soybean sunflower 
+  :        12        10        12        11        14        12
+
+* Proportions with ~table~
+
+- More information from counts includes the proportion of observations
+  that fall into each category.
+
+- Proportions represent the fraction of observations in each category,
+  usually as a decimal number between 0 and 1, and they add up to 1.
+
+- For numeric vectors like our sample vector, there is a function,
+  ~prop.table~.
+  #+begin_src R
+    x <- c(2,4.4,3,3,2,2.2,2,4) # store observations in vector
+    prop.table(x)  # prop.table works for numeric vectors
+    sum(prop.table(x)) # proportions add up to 1
+  #+end_src
+
+- For category vectors, or factors with levels, you need to divide the
+  count by the overall sample size, which is ~nrow(chickwts)~. 
+  #+begin_src R
+    table(chickwts$feed) / nrow(chickwts)
+  #+end_src
+
+* Proportions with logical flag vectors
+
+- You do not always need ~table~ - the sum over a logical flag vector
+  is just as good because such a vector of ~TRUE~ and ~FALSE~ is coded as
+  a vector of ~0~ and ~1~.
+
+- For example, to find the proportion of chicks fed ~soybean~:
+  #+begin_src R
+    sum(chickwts$feed == "soybean") / nrow(chickwts)
+  #+end_src
+
+  #+RESULTS:
+  : [1] 0.1971831
+
+- This is equivalent to averaging over the logical flag vector:
+  #+begin_src R
+    mean(chickwts$feed == "soybean")
+  #+end_src
+
+  #+RESULTS:
+  : [1] 0.1971831
+
+- You can use this approach to calculate the proportion of entities in
+  groups. E.g. the proportion of chicks fed either ~soybean~ or
+  ~horsebean~:
+  #+begin_src R
+    mean(chickwts$feed == "soybean" | chickwts$feed == "horsebean")
+  #+end_src
+
+  #+RESULTS:
+  : [1] 0.3380282
+
+* Proportions with ~tapply~
+
+-  You can also use ~tapply~ with the ~FUN~ argument to be an anonymous
+  (non-named) function that computes the mean for each ~feed~ level.
+  #+begin_src R
+    prop <- tapply(
+      X = chickwts$weight,
+      INDEX = chickwts$feed,
+      FUN = function(x) length(x)/nrow(chickwts))
+    prop
+    sum(prop)
+  #+end_src
+
+  #+RESULTS:
+  :    casein horsebean   linseed  meatmeal   soybean sunflower 
+  : 0.1690141 0.1408451 0.1690141 0.1549296 0.1971831 0.1690141
+  : [1] 1
+
+- Here, the function is defined with a dummy argument ~x~.
+
+* Rounding numeric data with ~round~
+
+- The ~round~ function rounds numeric data output to a certain number of
+  decimal places. It has only two arguments, input data and digits.
+  #+begin_src R
+    round(
+      table(chickwts$feed) / nrow(chickwts), # input data
+      digits = 3) # output digits
+  #+end_src
+
+* Percentages vs. proportion
+
+- Percentage and proportion represent the same thing.
+
+- They differ in scale - percentage is proportion multipled by 100.
+
+- The percentage of chicks on a soybean diet is approximately 19.7%
+  #+begin_src R
+      round(
+        x = mean(chickwts$feed == "soybean") * 100,
+        digits = 1)
+  #+end_src
+
+- Proportions always lie in [0,1] while percentages lie in [0,100].
+
+- Statisticians prefer percentages when discussing percentiles, and
+  proportions when discussing probabilities.
+
 * TODO Exercises
+
+See separate practice file to be submitted to Canvas.
+
 * TODO Glossary: concepts
 
 #+name: tab:terms
@@ -207,9 +445,27 @@ t-th smallest observation regardless of the observation index i.
 |------+---------|
 |      |         |
 
-
 * References
 
 - DataCamp (n.d.). Introduction to Statistics. URL: datacamp.com.
 - Davies TD (2016). Book of R. NoStarch Press. URL: nostarch.com
 
+* Footnotes
+
+[fn:3] ~MARGIN~ has to match ~dim(X)~ - higher integer values are for
+layers, blocks etc. of higher dimensional arrays.
+
+[fn:2] You should still know how to do this so that you're motivated
+to use implicit looping functions:
+#+begin_src R
+  row.totals <- rep(NA, times = nrow(foo)) # define row total object
+  for (i in 1:nrow(foo)) {
+    row.totals[i] <- sum(foo[i,])
+  }
+  row.totals
+#+end_src
+
+[fn:1] There's a useful DataCamp lesson on this family of functions in
+the course "[[https://campus.datacamp.com/courses/intermediate-r/chapter-4-the-apply-family?ex=1][Intermediate R]]". It covers ~lapply~, ~sapply~ and ~vapply~ but
+not ~tapply~. The ~tapply~ function is covered [[https://github.com/matloff/fasteR#--lesson-9--the-tapply-function][in a lesson]] of Matloff's
+fasteR tutorial.
