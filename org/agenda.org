@@ -552,7 +552,7 @@ On (2): check Judeah Pearl's [[https://en.wikipedia.org/wiki/The_Book_of_Why]["B
    #+end_notes
    
 ** DONE Raw data: statistical variables (practice)
-* Stats news: university ranking ([[https://github.com/birkenkrahe/dsmath/issues/39][issue]])
+** Stats news: university ranking ([[https://github.com/birkenkrahe/dsmath/issues/39][issue]])
 
 - Columbia U math professor uncovers stats lies
 - Columbia U moved up from 18th to 2nd between 1988 and 2022
@@ -560,7 +560,7 @@ On (2): check Judeah Pearl's [[https://en.wikipedia.org/wiki/The_Book_of_Why]["B
 #+attr_html: :width 600px
 [[../img/ascent.jpg]]
 
-* Review: logical flag vectors
+** Review: logical flag vectors
 
 Can you name and explain the 9 elements of this expression?
 
@@ -645,7 +645,7 @@ Levels: casein horsebean linseed meatmeal soybean sunflower
   chickwts$weight[chickwts$feed == "soybean"] # numeric vector
 #+end_src
 
-* TODO Lecture/practice: summary statistics
+** TODO Lecture/practice: summary statistics
 #+attr_html: :width 500px
 [[../img/4_terminallist.jpg]]
 
