@@ -467,9 +467,9 @@ On (2): check Judeah Pearl's [[https://en.wikipedia.org/wiki/The_Book_of_Why]["B
 - [X] Off-topic: [[https://github.com/birkenkrahe/dsmath/issues/38][Laporta algorithm (Feynman diagram evaluation)]]
 - [X] Review: test 4
 - [X] Review: DataCamp lesson probability and distributions
-- [ ] Review: logical flag vectors
-- [ ] Practice: statistical variables (continued)
-- [ ] Lecture/practice: summary statistics
+- [X] Review: logical flag vectors
+- [X] Practice: statistical variables (continued)
+- [X] Lecture/practice: summary statistics
 
 ** DONE Review: test 4 - raw data, probability and stats
 
