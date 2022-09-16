@@ -86,6 +86,10 @@ t-th smallest observation regardless of the observation index i.
     xdata <- c(2,4.4,3,3,2,2.2,2,4) # store observations in vector
     xdata
   #+end_src
+
+  #+RESULTS: xdata
+  : [1] 2.0 4.4 3.0 3.0 2.0 2.2 2.0 4.0
+
 - Compute the ~mean~ and the ~median~ and store them in variables.
   #+name: meanR  
   #+begin_src R :results output :session
@@ -128,6 +132,12 @@ t-th smallest observation regardless of the observation index i.
     xtab <- table(xdata)
     xtab
   #+end_src  
+
+  #+RESULTS: modeR
+  : xdata
+  :   2 2.2   3   4 4.4 
+  :   3   1   2   1   1
+
 - To identify the most frequent values automatically, use ~range~ which
   reports ~min~ and ~max~ of ~xdata~.
   #+name: range
@@ -150,6 +160,10 @@ t-th smallest observation regardless of the observation index i.
     d.bar <- xtab[xtab == max(xtab)]
     d.bar  # prints the value and the frequency
   #+end_src
+
+  #+RESULTS: logical
+  : 2 
+  : 3
   
 * DONE Practice: measures of centrality
 #+attr_html: :width 400px
