@@ -471,7 +471,7 @@ On (2): check Judeah Pearl's [[https://en.wikipedia.org/wiki/The_Book_of_Why]["B
 - [X] Practice: statistical variables (continued)
 - [X] Lecture/practice: summary statistics
 
-** DONE Review: test 4 - raw data, probability and stats
+** Review: test 4 - raw data, probability and stats
 
 - [X] Longitude/latitude are what kind of data?
 - [X] When researching, do you always need a "literature review"?
@@ -480,7 +480,7 @@ On (2): check Judeah Pearl's [[https://en.wikipedia.org/wiki/The_Book_of_Why]["B
     project area!
 - [X] Which activities connect "population" and "sample"?
 
-** DONE Review: probability and distributions (DataCamp)
+** Review: probability and distributions (DataCamp)
 
 1) What is the conditional probability for an event B given that an
    event A has already happened (as a formula)
@@ -551,7 +551,7 @@ On (2): check Judeah Pearl's [[https://en.wikipedia.org/wiki/The_Book_of_Why]["B
      A day has 24 hours - midnight to 8 am is 8/24 or 1/3, so 33%. 
    #+end_notes
    
-** DONE Raw data: statistical variables (practice)
+** Raw data: statistical variables (practice)
 
 [[../img/4_practice.jpg]]
 
@@ -648,12 +648,17 @@ Levels: casein horsebean linseed meatmeal soybean sunflower
   chickwts$weight[chickwts$feed == "soybean"] # numeric vector
 #+end_src
 
+* Week 6: 
 ** TODO Lecture/practice: summary statistics
 #+attr_html: :width 500px
 [[../img/4_terminallist.jpg]]
 
-* Week 6: 
 ** TODO Review: DataCamp - Central Limit Theorem
+** Featured
+
+- [[https://twitter.com/jburnmurdoch/status/1570832839318605824?t=A8nGlSN0QZpywzxfBu0__w&s=09][Investigation of income equality in US and UK using percentiles]]
+  
+
 * References
 
 Lawlor J, Banville F, Forero-Muñoz N-R, Hébert K, Martínez-Lanfranco
