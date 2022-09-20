@@ -382,8 +382,8 @@ t-th smallest observation regardless of the observation index i.
 
   [[../img/4_plot.png]]
 
-- *Bonus (10 pts):* find out why the last bar does not show the ~level~?
-  In the R console, the command works:
+- *Bonus (10 pts):* find out why the last graph does not show the ~level~
+  ~soybean~?  When executed in the R console, the command works:
   #+attr_html: :width 400px
   [[../img/4_bonus.png]]
   
