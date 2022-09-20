@@ -40,7 +40,11 @@ found on various agricultural units, as well as the type of spray
 used on each unit.
 
 Study the help file to get an idea of R's representation of the two
-variables.
+variables:
+
+- Variable ??? is a ??? variable
+
+- Variable ??? is a ??? variable ???
 
 * TODO Mode
 
