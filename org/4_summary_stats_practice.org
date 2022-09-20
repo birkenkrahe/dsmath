@@ -1,7 +1,7 @@
 #+TITLE:Practice: Summary statistics
 #+AUTHOR: [YourName]
 #+SUBTITLE: Applied math for data science (DSC 482/MTH 445) Fall 2022
-#+OPTIONS: toc:nil num:nil ^:nil
+#+OPTIONS: toc:nil num:1 ^:nil
 #+STARTUP: overview hideblocks indent inlineimages
 #+PROPERTY: header-args:R :session *R* :results output
 * README
@@ -20,18 +20,22 @@
 
 * TODO Proportions
 
+The built-in ~quakes~ data set gives the locations of 1000 seismic
+events of MB > 4.0. The events occurred in a cube near Fiji
+since 1964.
+
 Obtain, rounded to two decimal places, the proportion of seismic
 events in the ~quakes~ data frame that occurred at a depth of 300 km
 or deeper.
 
 * TODO Mean and median
 
-Calculate the mean and median magnitudes of the events that
-occurred at a depth of 300 km or deeper.
+From the ~quakes~ data set, calculate the mean and median magnitudes of
+the events that occurred at a depth of 300 km or deeper.
 
 * TODO Identify statistical variables
 
-The ~InsectSprays~ data set contains data on the number of insects
+The built-in ~InsectSprays~ data set contains data on the number of insects
 found on various agricultural units, as well as the type of spray
 used on each unit.
 
@@ -40,21 +44,11 @@ variables.
 
 * TODO Mode
 
-Calculate the modes of the distribution of insect counts,
-regardless of spray type.
+From the ~InsectSprays~ data set, calculate the modes of the
+distribution of insect counts, regardless of spray type.
 
 * TODO Counts
 
-Use ~tapply~ to report the total insect counts by each spray type.
+In the ~InsectSprays~ data set, use ~tapply~ to report the total insect
+counts by each spray type.
 
-* Footnotes
-
-[fn:1] 1) an R object that consists of vectors of the same length,
-created with the ~data.frame~ function. 2) factors are vectors of
-categorical values with ordered or unordered levels. 3) Using the
-accessor operator ~$~ or the index operator ~[]~, where the accessor
-requires a named, non-atomic, vector. 4) A population parameter is a
-characteristic of interest in something in the world; a sample
-statistic is an estimate of the population parameter based on a
-sample, a subset drawn at random from the population. 5) Statistics
-allow to infer population characteristics from sample characteristics.

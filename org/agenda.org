@@ -649,9 +649,8 @@ Levels: casein horsebean linseed meatmeal soybean sunflower
 #+end_src
 
 * Week 6: counts, proportions, percentages
-[[../img/w6_gnome.jpg]]
-
-([[https://g.co/kgs/8Emb7t][Image: celebrate the German garden gnome!]])
+#+attr_html: :width 600px
+[[../img/w6_cat.jpg]]
 
 - [ ] Featured applications
 - [ ] DataCamp deadline extended once more (22 Sept)
@@ -703,7 +702,9 @@ Levels: casein horsebean linseed meatmeal soybean sunflower
 
 * TODO Home assignment: summary statistics exercises
 #+attr_html: :width 500px
-[[../img/w6_gnome_exercising.jpg]]
+[[../img/w6_gnome.jpg]]
+([[https://g.co/kgs/8Emb7t][Image: celebrate the German garden gnome!]])
+
 * TODO DC Review: Central Limit Theorem (22 Sept)
 * References
 #+attr_html: :width 500px
