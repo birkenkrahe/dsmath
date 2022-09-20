@@ -653,11 +653,12 @@ Levels: casein horsebean linseed meatmeal soybean sunflower
 [[../img/w6_cat.jpg]]
 
 - [ ] Featured applications
-- [ ] DataCamp deadline extended once more (22 Sept)
+- [ ] DataCamp deadline extended once more (23 Sept 11:59pm)
 - [ ] Lecture/practice on summary statistics (continued)
-- [ ] DataCamp lesson review: central limit theorem
+- [ ] Home assignment until Thursday (Org-mode file)
+
   
-* TODO Featured applications: [[https://github.com/birkenkrahe/dsmath/issues][(issues)]]
+* Featured applications: [[https://github.com/birkenkrahe/dsmath/issues][(issues)]]
 
 - [[https://twitter.com/jburnmurdoch/status/1570832839318605824?t=A8nGlSN0QZpywzxfBu0__w&s=09][Investigation of income equality in US and UK using percentiles]]
   #+attr_html: :width 500px
@@ -705,7 +706,7 @@ Levels: casein horsebean linseed meatmeal soybean sunflower
 [[../img/w6_gnome.jpg]]
 ([[https://g.co/kgs/8Emb7t][Image: celebrate the German garden gnome!]])
 
-* TODO DC Review: Central Limit Theorem (22 Sept)
+* TODO DC Review: Central Limit Theorem (23 Sept)
 * References
 #+attr_html: :width 500px
 [[../img/books.jpg]]

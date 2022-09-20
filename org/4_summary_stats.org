@@ -276,7 +276,7 @@ t-th smallest observation regardless of the observation index i.
     str(ToothGrowth)
   #+end_src
 
-- Let's say we want to know the mean length ~ToothGrowth$len~~ for each
+- Let's say we want to know the mean length ~ToothGrowth$len~ for each
   of the two ~levels~.
 
 - The ~tapply~ function allows us to split the vector ~X =
@@ -291,7 +291,7 @@ t-th smallest observation regardless of the observation index i.
   :       OJ       VC
   : 20.66333 16.96333
 
-- [ ] Check out ~help(tapply~) - remember to enter system commands in
+- [X] Check out ~help(tapply~) - remember to enter system commands in
   the R console *(why is ~help~ a system command?)*
 
 * TODO Practice: mean weight of chicks by feed type
@@ -307,6 +307,14 @@ t-th smallest observation regardless of the observation index i.
     mean(chickwts$weight[chickwts$feed == "soybean"])
     mean(chickwts$weight[chickwts$feed == "sunflower"])
   #+end_src
+
+  #+RESULTS:
+  : [1] 323.5833
+  : [1] 160.2
+  : [1] 218.75
+  : [1] 276.9091
+  : [1] 246.4286
+  : [1] 328.9167
 
 - [ ] Instead, use ~tapply(X, INDEX, FUN)~ to calculate these values using
   just one line of code! Remember: ~X~ is the vector, ~INDEX~ is the
@@ -451,6 +459,11 @@ t-th smallest observation regardless of the observation index i.
     sum(prop)
   #+end_src
 
+  #+RESULTS:
+  :    casein horsebean   linseed  meatmeal   soybean sunflower 
+  : 0.1690141 0.1408451 0.1690141 0.1549296 0.1971831 0.1690141
+  : [1] 1
+
 - Here, the anonymous function is defined with a dummy argument ~x~.
 * Rounding numeric data with ~round~
 
@@ -473,6 +486,9 @@ t-th smallest observation regardless of the observation index i.
       x = mean(chickwts$feed == "soybean") * 100,
       digits = 1)
   #+end_src
+
+  #+RESULTS:
+  : [1] 19.7
 
 - Proportions always lie in [0,1] while percentages lie in [0,100].
 
