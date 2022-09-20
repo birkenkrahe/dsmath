@@ -361,7 +361,7 @@ t-th smallest observation regardless of the observation index i.
   #+end_src
 
   #+RESULTS:
-  [[file:../img/4_spikes.png]]
+  [[../img/4_spikes.png]]
 
 - "Thin frequencies" like this are better represented as dots in a
   so-called dot plot, with the ~dotchart~ function (is it generic?):
@@ -371,8 +371,7 @@ t-th smallest observation regardless of the observation index i.
              pch=21, bg="green", pt.cex=2)
   #+end_src
 
-  #+RESULTS:
-  [[file:../img/4_table.png]]
+  [[../img/4_table.png]]
 
 - Since the table contains just categories, you could also try and
   plug them directly into ~plot~, without going through ~table~:
@@ -381,8 +380,7 @@ t-th smallest observation regardless of the observation index i.
          main="Chicken feeds")
   #+end_src
 
-  #+RESULTS:
-  [[file:../img/4_plot.png]]
+  [[../img/4_plot.png]]
 
 - *Bonus (10 pts):* find out why the last bar does not show the ~level~?
   In the R console, the command works:
