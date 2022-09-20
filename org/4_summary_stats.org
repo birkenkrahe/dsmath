@@ -12,7 +12,7 @@
 - Quantiles, Percentiles, and 5-number-summary
 - Spread: Variance, Standard Deviation and Interquartile Range
 - 2 Practice exercises and 1 exercise session
-  
+
 * Measures of centrality
 #+attr_html: :width 600px
 [[../img/4_symmetry.jpg]]
@@ -20,6 +20,28 @@
 - Explain large collections of data
 - Describe where numeric observations are centered
 - Centrality measures suggest symmetries where none exist
+
+* DONE Preparations to code along
+
+[[../img/emacsprep.png]]
+
+- *Open* a new Org-mode file ~stats.org~ in Emacs
+
+- *Add* this line at the top of the file ~plot.org~:
+
+  ~#+PROPERTY: header-args:R :results output :session *R*~
+
+- *Activate* the code by putting your cursor on the line and entering
+  ~C-c C-c~. You should see the message ~Local setup has been refreshed~
+  in the minibuffer at the bottom of the editor.
+
+- When you execute your first R code block, you'll be asked where you
+  want the session named ~*R*~ to run: *enter* the path to ~plot.org~
+
+- For plots, *use* the header ~:results graphics file :file plot.png~
+
+- When you leave Emacs, you'll be warned that the session ~*R*~ is
+  active: you can *ignore* this warning
 
 * Mean or arithmetic average
 
@@ -91,38 +113,16 @@ t-th smallest observation regardless of the observation index i.
   : [1] 2.0 4.4 3.0 3.0 2.0 2.2 2.0 4.0
 
 - Compute the ~mean~ and the ~median~ and store them in variables.
-  #+name: meanR  
+  #+name: meanR
   #+begin_src R :results output :session
     x.bar <- mean(xdata)
     x.bar
-  #+end_src  
+  #+end_src
   #+name: medianR
   #+begin_src R :results output :session
     m.bar <- median(xdata)
     m.bar
-  #+end_src  
-
-* TODO Preparations to code along
-
-[[../img/emacsprep.png]]
-
-- *Open* a new Org-mode file ~stats.org~ in Emacs
-
-- *Add* this line at the top of the file ~plot.org~:
-
-  ~#+PROPERTY: header-args:R :results output :session *R*~
-
-- *Activate* the code by putting your cursor on the line and entering
-  ~C-c C-c~. You should see the message ~Local setup has been refreshed~
-  in the minibuffer at the bottom of the editor.
-
-- When you execute your first R code block, you'll be asked where you
-  want the session named ~*R*~ to run: *enter* the path to ~plot.org~
-
-- For plots, *use* the header ~:results graphics file :file plot.png~
-  
-- When you leave Emacs, you'll be warned that the session ~*R*~ is
-  active: you can *ignore* this warning
+  #+end_src
 
 * Mode with contingency ~table~
 
@@ -131,11 +131,11 @@ t-th smallest observation regardless of the observation index i.
   #+begin_src R :results output :session
     xtab <- table(xdata)
     xtab
-  #+end_src  
+  #+end_src
 
   #+RESULTS: modeR
   : xdata
-  :   2 2.2   3   4 4.4 
+  :   2 2.2   3   4 4.4
   :   3   1   2   1   1
 
 - To identify the most frequent values automatically, use ~range~ which
@@ -162,9 +162,9 @@ t-th smallest observation regardless of the observation index i.
   #+end_src
 
   #+RESULTS: logical
-  : 2 
+  : 2
   : 3
-  
+
 * DONE Practice: measures of centrality
 #+attr_html: :width 400px
 [[../img/4_practice.jpg]]
@@ -176,7 +176,7 @@ t-th smallest observation regardless of the observation index i.
 ** SOLUTION
 
 1) Calculate the mean and median weights of the chicks in ~chickwts~
-   
+
    #+begin_src R :exports both :session :results output
      str(chickwts)
      mean(chickwts$weight)
@@ -197,7 +197,7 @@ t-th smallest observation regardless of the observation index i.
 
    Answer: the most common earthquakes were 107 occurrences of
    magnitude 4.5.
-   
+
 * Missing or undefined values
 
 - Many of the standard stats functions in R will not run if the data
@@ -207,7 +207,7 @@ t-th smallest observation regardless of the observation index i.
     mean(c(1,4,NA))
     mean(c(1,4,NaN))
   #+end_src
-  
+
 - To prevent inclusion of these special values, switch on the ~na.rm~
   attribute.
   #+name: na.rm
@@ -234,11 +234,11 @@ t-th smallest observation regardless of the observation index i.
   summary(Pima.tr2) # summarize the stats of the data set
   mean(Pima.tr2$bmi) # this mean cannot be computed: NA
   mean(Pima.tr2$bmi, na.rm=TRUE) # the 3 NAs have been removed
-  #+end_src
+#+end_src
 
 #+RESULTS:
 #+begin_example
-'data.frame':	300 obs. of  8 variables:
+'data.frame':   300 obs. of  8 variables:
  $ npreg: int  5 7 5 0 0 5 3 1 3 2 ...
  $ glu  : int  86 195 77 165 107 97 83 193 142 128 ...
  $ bp   : int  68 70 82 76 60 76 58 50 80 78 ...
@@ -247,29 +247,27 @@ t-th smallest observation regardless of the observation index i.
  $ ped  : num  0.364 0.163 0.156 0.259 0.133 ...
  $ age  : int  24 55 35 26 23 52 25 24 63 31 ...
  $ type : Factor w/ 2 levels "No","Yes": 1 2 1 1 1 2 1 1 1 2 ...
-     npreg             glu              bp              skin      
- Min.   : 0.000   Min.   : 56.0   Min.   : 38.00   Min.   : 7.00  
- 1st Qu.: 1.000   1st Qu.:101.0   1st Qu.: 64.00   1st Qu.:21.00  
- Median : 3.000   Median :121.0   Median : 72.00   Median :29.00  
- Mean   : 3.787   Mean   :123.7   Mean   : 72.32   Mean   :29.15  
- 3rd Qu.: 6.000   3rd Qu.:142.0   3rd Qu.: 80.00   3rd Qu.:36.00  
- Max.   :14.000   Max.   :199.0   Max.   :114.00   Max.   :99.00  
-                                  NA's   :13       NA's   :98     
-      bmi             ped              age        type    
- Min.   :18.20   Min.   :0.0780   Min.   :21.0   No :194  
- 1st Qu.:27.10   1st Qu.:0.2367   1st Qu.:24.0   Yes:106  
- Median :32.00   Median :0.3360   Median :29.0            
- Mean   :32.05   Mean   :0.4357   Mean   :33.1            
- 3rd Qu.:36.50   3rd Qu.:0.5867   3rd Qu.:40.0            
- Max.   :52.90   Max.   :2.2880   Max.   :72.0            
+     npreg             glu              bp              skin
+ Min.   : 0.000   Min.   : 56.0   Min.   : 38.00   Min.   : 7.00
+ 1st Qu.: 1.000   1st Qu.:101.0   1st Qu.: 64.00   1st Qu.:21.00
+ Median : 3.000   Median :121.0   Median : 72.00   Median :29.00
+ Mean   : 3.787   Mean   :123.7   Mean   : 72.32   Mean   :29.15
+ 3rd Qu.: 6.000   3rd Qu.:142.0   3rd Qu.: 80.00   3rd Qu.:36.00
+ Max.   :14.000   Max.   :199.0   Max.   :114.00   Max.   :99.00
+                                  NA's   :13       NA's   :98
+      bmi             ped              age        type
+ Min.   :18.20   Min.   :0.0780   Min.   :21.0   No :194
+ 1st Qu.:27.10   1st Qu.:0.2367   1st Qu.:24.0   Yes:106
+ Median :32.00   Median :0.3360   Median :29.0
+ Mean   :32.05   Mean   :0.4357   Mean   :33.1
+ 3rd Qu.:36.50   3rd Qu.:0.5867   3rd Qu.:40.0
+ Max.   :52.90   Max.   :2.2880   Max.   :72.0
  NA's   :3
 [1] NA
 [1] 32.05286
 #+end_example
 
-* NEXT excuRsion category subsets with ~tapply~ ([[https://github.com/matloff/fasteR#--lesson-9--the-tapply-function][Matloff]])
-
-- [[~/stats.org][*OPEN YOUR LAST SOLUTIONS FILE*]]
+* NEXT excuRsion: category subsets with ~tapply~ ([[https://github.com/matloff/fasteR#--lesson-9--the-tapply-function][Matloff]])
 
 - The built-in ~ToothGrowth~ data set contains the numeric variable ~len~
   (length of a tooth), and the categorical variable ~supp~ with two
@@ -278,8 +276,8 @@ t-th smallest observation regardless of the observation index i.
     str(ToothGrowth)
   #+end_src
 
-- Let's say we want to know the mean length for each of the two
-  levels.
+- Let's say we want to know the mean length ~ToothGrowth$len~~ for each
+  of the two ~levels~.
 
 - The ~tapply~ function allows us to split the vector ~X =
   ToothGrowth$len~ in two groups according to the values of ~INDEX =
@@ -290,13 +288,16 @@ t-th smallest observation regardless of the observation index i.
   #+end_src
 
   #+RESULTS:
-  :       OJ       VC 
+  :       OJ       VC
   : 20.66333 16.96333
+
+- [ ] Check out ~help(tapply~) - remember to enter system commands in
+  the R console *(why is ~help~ a system command?)*
 
 * TODO Practice: mean weight of chicks by feed type
 
-- If you want to find the mean weight of chicks grouped by feed type,
-  you could use ~mean~ on each specific subset:
+- [ ] If you want to find the mean weight of chicks grouped by feed type,
+  you could use ~mean~ on each specific subset - how would this look like?
 
   #+begin_src R
     mean(chickwts$weight[chickwts$feed == "casein"])
@@ -307,20 +308,18 @@ t-th smallest observation regardless of the observation index i.
     mean(chickwts$weight[chickwts$feed == "sunflower"])
   #+end_src
 
-- Instead, use ~tapply(X, INDEX, FUN)~ to calculate these values using
+- [ ] Instead, use ~tapply(X, INDEX, FUN)~ to calculate these values using
   just one line of code! Remember: ~X~ is the vector, ~INDEX~ is the
   splitting category (~factor~ level), and ~FUN~ is the function.
-  
-** Solution
 
-#+begin_src R
-  tapply(
-    X = chickwts$weight,
-    INDEX = chickwts$feed,
-    FUN = mean)
-#+end_src
+  #+begin_src R
+    tapply(
+      X = chickwts$weight,
+      INDEX = chickwts$feed,
+      FUN = mean)
+  #+end_src
 
-* Counts
+* Counting chicks
 
 - Sometimes it's useful to summarize non-numerical data, e.g. the
   number of observations that fall in a particular category
@@ -338,6 +337,50 @@ t-th smallest observation regardless of the observation index i.
   :    casein horsebean   linseed  meatmeal   soybean sunflower 
   :        12        10        12        11        14        12
 
+* Visualizing contingency tables
+
+- [ ] *How would you visualize this table?* Think about the data and
+  about generic plotting in R. 
+
+** Solution
+
+- Plug the table into ~plot~ - it's a generic graphic function and it
+  does have a ~plot.table~ method. 
+  #+begin_src R :results graphics file :file ../img/4_spikes.png
+    plot(x=table(chickwts$feed),
+         main="Chicken feeds",
+         ylab="Frequencies")
+  #+end_src
+
+  #+RESULTS:
+  [[file:../img/4_spikes.png]]
+
+- "Thin frequencies" like this are better represented as dots in a
+  so-called dot plot, with the ~dotchart~ function (is it generic?):
+  #+begin_src R :results graphics file :file ../img/4_table.png
+    dotchart(x=table(chickwts$feed),
+             main="Chicken feeds",
+             pch=21, bg="green", pt.cex=2)
+  #+end_src
+
+  #+RESULTS:
+  [[file:../img/4_table.png]]
+
+- Since the table contains just categories, you could also try and
+  plug them directly into ~plot~, without going through ~table~:
+  #+begin_src R :results graphics file :file ../img/4_plot.png
+    plot(x=chickwts$feed,
+         main="Chicken feeds")
+  #+end_src
+
+  #+RESULTS:
+  [[file:../img/4_plot.png]]
+
+- *Bonus (10 pts):* find out why the last bar does not show the ~level~?
+  In the R console, the command works:
+  #+attr_html: :width 400px
+  [[../img/4_bonus.png]]
+  
 * Proportions with ~table~
 
 - More information from counts includes the proportion of observations
@@ -355,63 +398,60 @@ t-th smallest observation regardless of the observation index i.
   #+end_src
 
 - For category vectors, or factors with levels, you need to divide the
-  count by the overall sample size, which is ~nrow(chickwts)~. 
+  count by the overall sample size, which is ~nrow(chickwts)~.
   #+begin_src R
     table(chickwts$feed) / nrow(chickwts)
+    table(chickwts$feed)
+    sum(table(chickwts$feed)) # counts add up to total no. of records
+    nrow(chickwts) # number of rows in the data set
   #+end_src
-
 * Proportions with logical flag vectors
 
 - You do not always need ~table~ - the sum over a logical flag vector
   is just as good because such a vector of ~TRUE~ and ~FALSE~ is coded as
   a vector of ~0~ and ~1~.
 
+- Example: ~chickwts$feed == "soybean"~ lists all chicks fed wih ~soybean~
+  as ~TRUE~ (or 1):
+  #+begin_src R
+    chickwts$feed == "soybean"
+  #+end_src
+  
 - For example, to find the proportion of chicks fed ~soybean~:
   #+begin_src R
     sum(chickwts$feed == "soybean") / nrow(chickwts)
   #+end_src
-
-  #+RESULTS:
-  : [1] 0.1971831
 
 - This is equivalent to averaging over the logical flag vector:
   #+begin_src R
     mean(chickwts$feed == "soybean")
   #+end_src
 
-  #+RESULTS:
-  : [1] 0.1971831
-
 - You can use this approach to calculate the proportion of entities in
-  groups. E.g. the proportion of chicks fed either ~soybean~ or
-  ~horsebean~:
+  groups. E.g. the proportion of chicks fed ~soybean~ or ~horsebean~:
   #+begin_src R
     mean(chickwts$feed == "soybean" | chickwts$feed == "horsebean")
   #+end_src
 
-  #+RESULTS:
-  : [1] 0.3380282
-
+- This computation uses the following logical argument vector:
+  #+begin_src R
+    chickwts$feed == "soybean" | chickwts$feed == "horsebean"
+  #+end_src
 * Proportions with ~tapply~
 
 -  You can also use ~tapply~ with the ~FUN~ argument to be an anonymous
-  (non-named) function that computes the mean for each ~feed~ level.
+  (non-named) function that computes the mean for each ~feed~ level
   #+begin_src R
     prop <- tapply(
-      X = chickwts$weight,
-      INDEX = chickwts$feed,
-      FUN = function(x) length(x)/nrow(chickwts))
+      X = chickwts$weight,  # object that can be split by factor levels
+      INDEX = chickwts$feed, # list of factors
+      FUN = function(x) length(x)/nrow(chickwts)) # function to be applied
+                                            # to factors
     prop
     sum(prop)
   #+end_src
 
-  #+RESULTS:
-  :    casein horsebean   linseed  meatmeal   soybean sunflower 
-  : 0.1690141 0.1408451 0.1690141 0.1549296 0.1971831 0.1690141
-  : [1] 1
-
-- Here, the function is defined with a dummy argument ~x~.
-
+- Here, the anonymous function is defined with a dummy argument ~x~.
 * Rounding numeric data with ~round~
 
 - The ~round~ function rounds numeric data output to a certain number of
@@ -421,7 +461,6 @@ t-th smallest observation regardless of the observation index i.
       table(chickwts$feed) / nrow(chickwts), # input data
       digits = 3) # output digits
   #+end_src
-
 * Percentages vs. proportion
 
 - Percentage and proportion represent the same thing.
@@ -430,9 +469,9 @@ t-th smallest observation regardless of the observation index i.
 
 - The percentage of chicks on a soybean diet is approximately 19.7%
   #+begin_src R
-      round(
-        x = mean(chickwts$feed == "soybean") * 100,
-        digits = 1)
+    round(
+      x = mean(chickwts$feed == "soybean") * 100,
+      digits = 1)
   #+end_src
 
 - Proportions always lie in [0,1] while percentages lie in [0,100].
@@ -440,15 +479,19 @@ t-th smallest observation regardless of the observation index i.
 - Statisticians prefer percentages when discussing percentiles, and
   proportions when discussing probabilities.
 
-* TODO Exercises
+* TODO Exercises (for home)
+#+attr_html: :width 500px
+[[../img/w6_gnome_exercising.jpg]]
 
-See separate practice file to be submitted to Canvas.
+- Download practice file [[https://raw.githubusercontent.com/birkenkrahe/dsmath/main/org/4_summary_stats_practice.org][from GitHub]] and save as Org-mode file
+- Submit completed Org-mode file [[https://lyon.instructure.com/courses/655/assignments/2886][to Canvas]] by Thursday, 22-Sept, 8 am
 
 * TODO Glossary: concepts
 
 #+name: tab:terms
 | TERM | MEANING |
 |------+---------|
+|      |         |
 
 * TODO Glossary: code
 
@@ -461,6 +504,7 @@ See separate practice file to be submitted to Canvas.
 
 - DataCamp (n.d.). Introduction to Statistics. URL: datacamp.com.
 - Davies TD (2016). Book of R. NoStarch Press. URL: nostarch.com
+- Matloff N (2022). fasteR. URL: github.com/matloff/fasteR
 
 * Footnotes
 

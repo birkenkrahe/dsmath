@@ -555,7 +555,7 @@ On (2): check Judeah Pearl's [[https://en.wikipedia.org/wiki/The_Book_of_Why]["B
 
 [[../img/4_practice.jpg]]
 
-** Stats news: university ranking ([[https://github.com/birkenkrahe/dsmath/issues/39][issue]])
+** Featured: university ranking ([[https://github.com/birkenkrahe/dsmath/issues/39][issue]])
 
 - Columbia U math professor uncovers stats lies
 - Columbia U moved up from 18th to 2nd between 1988 and 2022
@@ -572,7 +572,7 @@ Can you name and explain the 9 elements of this expression?
 #+attr_html: :width 600px
 [[../img/flag.png]]
 
-** R code
+** R code - logical flag vector
 #+begin_src R
   str(chickwts) # structure of the chickwts data set
 #+end_src
@@ -648,17 +648,21 @@ Levels: casein horsebean linseed meatmeal soybean sunflower
   chickwts$weight[chickwts$feed == "soybean"] # numeric vector
 #+end_src
 
-* Week 6:
-** TODO Lecture/practice: summary statistics
-#+attr_html: :width 500px
-[[../img/4_terminallist.jpg]]
+* Week 6: counts, proportions, percentages
+[[../img/w6_gnome.jpg]]
 
-** TODO Review: DataCamp - Central Limit Theorem
-** Featured applications: [[https://github.com/birkenkrahe/dsmath/issues][(issues)]]
+([[https://g.co/kgs/8Emb7t][Image: celebrate the German garden gnome!]])
+
+- [ ] Featured applications
+- [ ] DataCamp deadline extended once more (22 Sept)
+- [ ] Lecture/practice on summary statistics (continued)
+- [ ] DataCamp lesson review: central limit theorem
+  
+* TODO Featured applications: [[https://github.com/birkenkrahe/dsmath/issues][(issues)]]
 
 - [[https://twitter.com/jburnmurdoch/status/1570832839318605824?t=A8nGlSN0QZpywzxfBu0__w&s=09][Investigation of income equality in US and UK using percentiles]]
   #+attr_html: :width 500px
-  [[../img/income.jpg]]
+  [[../img/w6_income.jpg]]
 
 - [[https://phys.org/news/2022-09-science-reveals-universal-cells-power.html][Data science reveals universal rules shaping cells' power stations]]
   #+begin_quote
@@ -672,10 +676,38 @@ Levels: casein horsebean linseed meatmeal soybean sunflower
   unseen data to check their power."
   #+end_quote
   #+attr_html: :width 500px
-  [[../img/organelles.jpg]]
+  [[../img/w6_organelles.jpg]]
   
+* TODO Lecture/practice: summary statistics (cont'd)
+#+attr_html: :width 500px
+[[../img/4_terminallist.jpg]]
 
+- Open your Emacs Org-mode practice file ~stats.org~
+
+- At the top, below the ~#+PROPERTY:~ line, add the line:
+  
+   ~#+STARTUP: overview hideblocks indent inlineimages~
+    
+- Now, in the body of the document, add headlines like this:
+  #+begin_example org
+    * Getting started
+    ** Getting bored
+  #+end_example
+- Go to the bottom of your file with ~M->~
+
+- Add another headline for the next section:
+  #+begin_example org
+    * Category subsets with ~tapply~
+  #+end_example
+- Additional code blocks should go below this headline
+
+* TODO Home assignment: summary statistics exercises
+#+attr_html: :width 500px
+[[../img/w6_gnome_exercising.jpg]]
+* TODO DC Review: Central Limit Theorem (22 Sept)
 * References
+#+attr_html: :width 500px
+[[../img/books.jpg]]
 
 Lawlor J, Banville F, Forero-Muñoz N-R, Hébert K, Martínez-Lanfranco
 JA, Rogy P, et al. (2022) Ten simple rules for teaching yourself
