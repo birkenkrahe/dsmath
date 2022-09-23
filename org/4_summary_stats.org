@@ -21,7 +21,7 @@
 - Describe where numeric observations are centered
 - Centrality measures suggest symmetries where none exist
 
-* DONE Preparations to code along
+* Preparations to code along
 
 [[../img/emacsprep.png]]
 
@@ -165,7 +165,7 @@ t-th smallest observation regardless of the observation index i.
   : 2
   : 3
 
-* DONE Practice: measures of centrality
+* Practice: measures of centrality
 #+attr_html: :width 400px
 [[../img/4_practice.jpg]]
 
@@ -267,7 +267,7 @@ t-th smallest observation regardless of the observation index i.
 [1] 32.05286
 #+end_example
 
-* NEXT excuRsion: category subsets with ~tapply~ ([[https://github.com/matloff/fasteR#--lesson-9--the-tapply-function][Matloff]])
+* excuRsion: category subsets with ~tapply~ ([[https://github.com/matloff/fasteR#--lesson-9--the-tapply-function][Matloff]])
 
 - The built-in ~ToothGrowth~ data set contains the numeric variable ~len~
   (length of a tooth), and the categorical variable ~supp~ with two
@@ -294,7 +294,7 @@ t-th smallest observation regardless of the observation index i.
 - [X] Check out ~help(tapply~) - remember to enter system commands in
   the R console *(why is ~help~ a system command?)*
 
-* TODO Practice: mean weight of chicks by feed type
+* Practice: mean weight of chicks by feed type
 
 - [ ] If you want to find the mean weight of chicks grouped by feed type,
   you could use ~mean~ on each specific subset - how would this look like?
@@ -493,7 +493,7 @@ t-th smallest observation regardless of the observation index i.
 - Statisticians prefer percentages when discussing percentiles, and
   proportions when discussing probabilities.
 
-* TODO Exercises (for home)
+* Exercises (for home)
 #+attr_html: :width 500px
 [[../img/w6_gnome_exercising.jpg]]
 
