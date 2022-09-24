@@ -17,7 +17,6 @@
     until you see ~DONE~ instead of ~TODO~ next to the title.
   - Perform this last step each time you complete a section.
 
-
 * TODO Proportions
 
 The built-in ~quakes~ data set gives the locations of 1000 seismic

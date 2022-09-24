@@ -1,0 +1,37 @@
+#+TITLE: MEASURES OF SPREAD, COVARIANCE, CORRELATION, OUTLIERS
+#+AUTHOR: MARCUS BIRKENKRAHE
+#+SUBTITLE: Applied math for data science (DSC 482/MTH 445) Fall 2022
+#+attr_html: :width 700px
+#+caption: John Wilder Tukey (1915-2000)
+[[../img/tukey.jpg]]
+
+1. [ ] Quantiles, percentiles, and the five-number-summary
+2. [ ] Measures of spread: variance, standard deviation and IQR
+3. [ ] Covariance and correlation
+4. [ ] Outliers
+  
+#+STARTUP:overview hideblocks indent inlineimages
+#+PROPERTY: header-args:R :export both :results output :session *R*
+* Quantiles, percentiles and five-number-summary
+
+
+* TODO Glossary: concepts
+
+#+name: tab:terms
+| TERM | MEANING |
+|------+---------|
+|      |         |
+
+* TODO Glossary: code
+
+#+name: tab:code
+| CODE | MEANING |
+|------+---------|
+|      |         |
+
+* References
+
+- DataCamp (n.d.). Introduction to Statistics. URL: datacamp.com.
+- Davies TD (2016). Book of R. NoStarch Press. URL: nostarch.com
+- Matloff N (2022). fasteR. URL: github.com/matloff/fasteR
+

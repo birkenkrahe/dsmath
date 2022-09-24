@@ -652,13 +652,12 @@ Levels: casein horsebean linseed meatmeal soybean sunflower
 #+attr_html: :width 600px
 [[../img/w6_cat.jpg]]
 
-- [ ] Featured applications
-- [ ] DataCamp deadline extended once more (23 Sept 11:59pm)
-- [ ] Lecture/practice on summary statistics (continued)
-- [ ] Home assignment until Thursday (Org-mode file)
-
+- [X] Featured applications
+- [X] DataCamp deadline extended once more (23 Sept 11:59pm)
+- [X] Lecture/practice on summary statistics (continued)
+- [X] Home assignment until Monday next week (Org-mode file)
   
-* Featured applications: [[https://github.com/birkenkrahe/dsmath/issues][(issues)]]
+** Featured applications: [[https://github.com/birkenkrahe/dsmath/issues][(issues)]]
 
 - [[https://twitter.com/jburnmurdoch/status/1570832839318605824?t=A8nGlSN0QZpywzxfBu0__w&s=09][Investigation of income equality in US and UK using percentiles]]
   #+attr_html: :width 500px
@@ -678,7 +677,7 @@ Levels: casein horsebean linseed meatmeal soybean sunflower
   #+attr_html: :width 500px
   [[../img/w6_organelles.jpg]]
   
-* TODO Lecture/practice: summary statistics (cont'd)
+** Lecture/practice: summary statistics (cont'd)
 #+attr_html: :width 500px
 [[../img/4_terminallist.jpg]]
 
@@ -701,12 +700,57 @@ Levels: casein horsebean linseed meatmeal soybean sunflower
   #+end_example
 - Additional code blocks should go below this headline
 
-* TODO Home assignment: summary statistics exercises
+** Home assignment: summary statistics exercises
 #+attr_html: :width 500px
 [[../img/w6_gnome.jpg]]
 ([[https://g.co/kgs/8Emb7t][Image: celebrate the German garden gnome!]])
 
-* TODO DC Review: Central Limit Theorem (23 Sept)
+* NEXT Week 7: measures of spread
+#+attr_html: :width 500px
+[[../img/tukey.jpg]]
+
+- [ ] Tukey's five-point summaries
+- [ ] Measures of spread
+- [ ] Covariance and correlation
+- [ ] Outliers
+- [ ] Test 6 review
+- [ ] 2nd sprint review
+
+#+begin_notes
+One of the most influential statisticians of the 20th century, John
+Wilder Tukey (1915–2000), played a key role in both the development
+and study of statistics. A prolific writer, his collected papers
+amount to eight volumes of work. Beyond his scientific work, his
+collection reveals two hobbies: reading pulp mysteries and science
+fiction, and square dancing. The above carefully posed picture shows
+his lighter side: sampled data comes in one ear and goes out the
+other, regularized. ([[https://www.amphilsoc.org/item-detail/photograph-john-wilder-tukey][Source]])
+#+end_notes
+
+* TODO About the 2nd sprint review
+#+attr_html: :width 600px
+[[../img/scrum.png]]
+
+- *Read* my comments carefully and respond to them
+- *Distinguish* your projects if your topic spans > 1 course
+- *Complete* your literature review to identify methods
+- *Highlight* your method(s) (how you want to do it)
+- *Ask* questions for customer/teams
+- *Read* the FAQ »[[https://github.com/birkenkrahe/org/blob/master/FAQ.org#what-should-we-do-in-the-second-sprint][What should we do in the 2nd sprint]]«
+- *Read* the FAQ »[[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-do-you-report-on-and-plan-a-research-method][How do you report on and plan a research “method”?]]«
+- *Submit* a text file or a PowerPoint presentation
+- *Meet* the deadline or lose all points
+
+- *What is special about a "math for data science" project?*
+  1) Emphasis on statistics as mathematical discipline
+  2) Emphasis on statistical and probabilistic functions in R
+  3) Emphasis on making inferences from samples
+
+- If you don't know what all this means - ASK ME!
+
+* TODO Lecture & practice: measures of spread
+* TODO Test 6 review
+* TODO DataCamp Reviews: Central Limit Theorem/Tests
 * References
 #+attr_html: :width 500px
 [[../img/books.jpg]]
