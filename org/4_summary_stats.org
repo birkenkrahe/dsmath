@@ -2,7 +2,7 @@
 #+AUTHOR: MARCUS BIRKENKRAHE
 #+SUBTITLE: Applied math for data science (DSC 482/MTH 445) Fall 2022
 #+STARTUP:overview hideblocks indent inlineimages
-#+PROPERTY: header-args:R :export both :results output :session *R*
+#+PROPERTY: header-args:R :exports both :results output :session *R*
 #+attr_html: :width 700px
 #+caption: poster for "The Terminal List" (Amazon, 2022-).
 [[../img/4_terminallist.jpg]]
