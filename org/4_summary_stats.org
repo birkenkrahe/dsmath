@@ -383,9 +383,30 @@ t-th smallest observation regardless of the observation index i.
   [[../img/4_plot.png]]
 
 - *Bonus (10 pts):* find out why the last graph does not show the ~level~
-  ~soybean~?  When executed in the R console, the command works:
+  ~soybean~? (The function ~barplot~ below shows the same anomaly.) When
+  executed in the R console, the command works:
   #+attr_html: :width 400px
   [[../img/4_bonus.png]]
+
+- You can also try to visualize the table as a histogram. This will
+  only tell you the counts without any information about the ~feed~.
+  #+begin_src R :results graphics file :file ../img/4_histchick.png
+    ftab <- table(chickwts$feed)
+  hist(ftab)
+  #+end_src
+
+  #+RESULTS:
+  [[file:../img/4_histchick.png]]
+
+- You can also try to visualize the table as a bar plot. This yields
+  the same result as the ~plot~ of the categorical ~feed~ values.
+  #+begin_src R :results graphics file :file ../img/4_barchick.png
+    ftab <- table(chickwts$feed)
+    barplot(ftab)
+  #+end_src
+
+  #+RESULTS:
+  [[file:../img/4_barchick.png]]
   
 * Proportions with ~table~
 
@@ -402,6 +423,11 @@ t-th smallest observation regardless of the observation index i.
     prop.table(x)  # prop.table works for numeric vectors
     sum(prop.table(x)) # proportions add up to 1
   #+end_src
+
+  #+RESULTS:
+  : [1] 0.08849558 0.19469027 0.13274336 0.13274336 0.08849558 0.09734513 0.08849558
+  : [8] 0.17699115
+  : [1] 1
 
 - For category vectors, or factors with levels, you need to divide the
   count by the overall sample size, which is ~nrow(chickwts)~.

@@ -749,7 +749,13 @@ other, regularized. ([[https://www.amphilsoc.org/item-detail/photograph-john-wil
 - If you don't know what all this means - ASK ME!
 
 * TODO Lecture & practice: measures of spread
+* TODO Practice 4 summary stats review
+#+attr_html: :width 300px
+[[../img/w6_gnome.jpg]]
 * TODO Test 6 review
+#+attr_html: :width 300px
+[[../img/4_barchick.png]]
+
 * TODO DataCamp Reviews: Central Limit Theorem/Tests
 * References
 #+attr_html: :width 500px
