@@ -380,11 +380,12 @@ t-th smallest observation regardless of the observation index i.
          main="Chicken feeds")
   #+end_src
 
-  [[../img/4_plot.png]]
+  #+RESULTS:
+  [[file:../img/4_plot.png]]
 
-- *Bonus (10 pts):* find out why the last graph does not show the ~level~
-  ~soybean~? (The function ~barplot~ below shows the same anomaly.) When
-  executed in the R console, the command works:
+- Why does the last graph does not show the ~level~ ~soybean~? (The
+  function ~barplot~ below shows the same anomaly.) When executed in the
+  R console, the command works[fn:4]:
   #+attr_html: :width 400px
   [[../img/4_bonus.png]]
 
@@ -547,6 +548,9 @@ t-th smallest observation regardless of the observation index i.
 - Matloff N (2022). fasteR. URL: github.com/matloff/fasteR
 
 * Footnotes
+
+[fn:4]Answer: To show, the names need to be scaled down with
+~cex.names=0.9~ - then the plot is complete.
 
 [fn:3] ~MARGIN~ has to match ~dim(X)~ - higher integer values are for
 layers, blocks etc. of higher dimensional arrays.
