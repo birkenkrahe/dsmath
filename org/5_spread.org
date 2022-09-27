@@ -200,20 +200,26 @@ quantile of ~foo <- c(100, 498.5, 22, 0, -33, 100.66, -2)~
    positively from the center to the right. The mean is dragged up by
    this skewedness. 
    #+end_quote
-   #+begin_src R :exports both :session :results output graphics file :file ../img/_quakebox.png
+   #+begin_src R :exports both :session :results output graphics file :file ../img/5_quakebox.png
      index <- quakes$depth<400
      y <- quakes$mag[index]
-     boxplot(y, data=quakes, horizontal=TRUE)
-   #+end_src
+     boxplot(y,
+             data=quakes,
+             xlab="Magnitude on the Richter scale",
+             main="Quakes < 400 km depth",
+             horizontal=TRUE)
+        #+end_src
    
    #+RESULTS:
-   [[file:5_quakebox.png]]
-   #+begin_src R :exports both :session :results output graphics file :file ../imt/5_quakehist.png
-     hist(y, data=quakes)
+   [[file:../img/5_quakebox.png]]
+   #+begin_src R :exports both :session :results output graphics file :file ../img/5_quakehist.png
+     hist(y,
+          main="Quakes < 400 km depth",
+          xlab="Magnitude on the Richter scale")
    #+end_src
 
    #+RESULTS:
-   [[file:5_quakehist.png]]
+   [[file:../img/5_quakehist.png]]
 * Spread: variance, standard deviation and IQR
 
 * TODO Glossary: concepts
