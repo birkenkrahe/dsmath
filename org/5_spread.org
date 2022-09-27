@@ -9,12 +9,212 @@
 2. [ ] Measures of spread: variance, standard deviation and IQR
 3. [ ] Covariance and correlation
 4. [ ] Outliers
-  
+
 #+STARTUP:overview hideblocks indent inlineimages
 #+PROPERTY: header-args:R :export both :results output :session *R*
+* Prequel: why distributions?
+
+- Statistics are derived from experimental observations, which form
+  values of variables stored in column vectors of data frames
+
+- As soon as you observe 1 value, you have a /distribution/. The more
+  values, the more interesting the distribution (for classification)
+
+- Example: a "normal" distribution (also Gaussian or Bell curve)
+  #+caption: Bell curve with sample mean and standard deviation
+  [[../img/5_normal.png]]
+
+- This can be reproduced in R with pseudo-random numbers from ~rnorm~.
+  #+begin_src R :session *R* :exports both :results output graphics file :file ../img/binom.png
+    par(mfrow=c(2,1))
+    hist(rnorm(1e+05))
+    plot(density(rnorm(1e+05)))
+  #+end_src
+
+  #+RESULTS:
+  [[file:../img/binom.png]]
+
+- The distribution as a pattern exhibits measures of centrality (like
+  \mu), and measures of spread (like \sigma).
+
 * Quantiles, percentiles and five-number-summary
 
+- A /quantile/ is a value that characterizes a distribution: it
+  characterizes the rank of an observation
 
+- The /median/ or middle magnitude is the 0.5th quantile: half of all
+  measurements lie below (and above) it
+  #+begin_src R :session *R* :exports both :results output graphics file :file ../img/5_median.png
+    plot(density(chickwts$weight))
+    abline(v=median(chickwts$weight), col="red")
+    abline(v=mean(chickwts$weight), col="blue")
+  #+end_src
+
+  #+RESULTS:
+  [[file:../img/5_median.png]]
+
+- Quantiles can be expressed as /percentiles/, on a scale of [0,100]
+  instead of [0,1]: the p-th quantile is the 100*p-th percentile
+
+- All algorithms to identify quantiles/percentiles sort observations,
+  and then compute a weighted average to find p numerically
+
+* Quantiles by hand
+
+Do it by hand! What is the 0th / 0.25th / 0.5th / .75th and 1th
+quantile of ~foo <- c(100, 498.5, 22, 0, -33, 100.66, -2)~
+#+begin_src R
+  foo <- c(100, 498.5, 22, 0, -33, 100.66, -2)
+  foo
+#+end_src
+1) Which number is smaller than any other (0th quantile/percentile -
+   0 numbers lie below it). *Minimum of the data*.
+   #+begin_src R
+     min(foo)
+   #+end_src
+2) The 25th percentile splits off the lowest 25% from the highest
+   75%. This number is the middle number between the smallest number
+   (minimum, 0th quantile) and the median (0.5th quantile), or the
+   *median of the lower half of the data*.
+   #+begin_src R
+     foo_s <- sort(foo)  # sort vector from smallest to largest
+     foo_s
+     median(foo_s) # compute median: (-2+1)/2 = -1
+     median(c(-33,-2,0,22)) # 1st quartile
+   #+end_src
+3) The 0.5th quartile or 50th percentile: half of the values are
+   smaller than it - *median of the data*.
+   #+begin_src R
+     median(foo)
+   #+end_src
+4) The 0.75th quartile or 75% percentile: 3/4 of all values are
+   smaller than it. This number is the middle number between the
+   largest number (maximum), or the *median of the upper half of the
+   data*.
+   #+begin_src R
+     foo_s <- sort(foo)  # sort vector from smallest to largest
+     foo_s
+     median(foo_s) # compute median: (-2+1)/2 = -1
+     median(c(22,100,100.66,498.50)) # 3rd quartile
+   #+end_src
+5) The 1.00th quartile or 100% percentile: all values are smaller than
+   it. This number is the *maximum value of the data*.
+   #+begin_src R
+     max(foo)
+   #+end_src
+   Compare the result with the ~quantile~ algorithm:
+   #+begin_src R
+     q <- quantile(foo)
+     names(q)<-NULL
+     identical(q,c(-33,-1,22,100.33,498.5))
+   #+end_src
+   Quantiles with ~quantile~
+- Using our old friend ~xdata <- c(2,4.4,3,3,2,2.2,2,4)~, we can use
+  ~quantile~ to compute the 0th to 4th quantile.
+  #+begin_src R
+    xdata <- c(2,4.4,3,3,2,2.2,2,4)
+    xdata
+    sort(xdata)
+    quantile(xdata)
+  #+end_src
+- With ~quantile~, we can also compute other quantiles, like the 0.8th
+  quantile (or 80th percentile): 80% of all values are smaller than it:
+  #+begin_src R
+    quantile(xdata, prob=0.8)
+  #+end_src
+- [ ] Does ~quantile~ allow removing ~NA~ values?
+  #+begin_src R
+    quantile(c(xdata, NA), prob=0.8, na.rm=TRUE)
+  #+end_src
+- ~quantile~ is a generic function and can take multiple input formats
+  #+begin_src R
+    methods(quantile)
+  #+end_src
+- ~quantile~ can also handle probability vectors.
+  #+begin_src R
+    quantile(xdata, prob=c(0, .25, 0.75, 1))
+  #+end_src
+- [ ] What happens if you choose ~prob > 1~
+  #+begin_src R
+    quantile(xdata, prob=1.5)
+  #+end_src
+- ~quantile~ supports *nine* different algorithms. The ~help(quantile)~
+  reveals that different statistical programming languages (S, SPSS,
+  SAS) use different algorithms.
+* ~summary~ function
+
+- ~quantile(x,prob=c(0,0.25,0.5,0.75,1)~ is the 5-number summary
+  consists of:
+  1) the minimum (0th quantile/percentile) or minimum
+  2) the 1st/lower quartile (0.25th quantile/25th percentile)
+  3) the 2nd quartile or median (0.5th quantile/50th percentile)
+  4) the 3rd or upper quartile (0.75th quantile/75th percentile)
+  5) the 4th quartile (1st quantile/100th percentile) or maximum
+
+- This summary is also computed by ~summary~
+  #+begin_src R
+    summary(xdata)
+  #+end_src
+
+  #+RESULTS:
+  :    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  :   2.000   2.000   2.600   2.825   3.250   4.400
+
+* TODO Practice: quantiles
+
+1) Compute the lower and upper quartiles of the weights of the chicks
+   in the built-in ~chickwts~ data frame.
+   #+begin_src R
+     quantile(chickwts$weight, prob=c(0.25,0.75))
+   #+end_src
+
+   #+RESULTS:
+   :   25%   75%
+   : 204.5 323.5
+
+2) What do these results mean?
+   #+begin_quote
+   25% of the chicks weights lie at or below 204.5 grams, and 75% of
+   the chick weights lie at or below 323.5 grams.
+   #+end_quote
+
+3) Compute the five-number summary and the sample mean of the
+   magnitude of the seismic events off the coast of Fiji that occurred
+   at a depth of less than 400 km, using the built-in ~quakes~ data
+   frame.
+   #+begin_src R
+     summary(quakes$mag[quakes$depth<400])
+   #+end_src
+
+   #+RESULTS:
+   :    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   :    4.00    4.40    4.60    4.67    4.90    6.40
+
+4) What do these results mean?
+   #+begin_quote
+   Most of the quakes below that depth of 400km lie around 4.6 on the
+   Richter scale. The maximum is much further away from the upper
+   quartile than the minimum is from the lower quartile. This suggests
+   that the distribution of quake magnitude vs. depth is skewed. More
+   specifically, it's skewed to the right - i.e. it stretches out more
+   positively from the center to the right. The mean is dragged up by
+   this skewedness. 
+   #+end_quote
+   #+begin_src R :exports both :session :results output graphics file :file 5_quakebox.png
+     index <- quakes$depth<400
+     y <- quakes$mag[index]
+     boxplot(y, data=quakes, horizontal=TRUE)
+   #+end_src
+   
+   #+RESULTS:
+   [[file:5_quakebox.png]]
+   #+begin_src R :exports both :session :results output graphics file :file 5_quakehist.png
+     hist(y, data=quakes)
+   #+end_src
+
+   #+RESULTS:
+   [[file:5_quakehist.png]]
+* Spread: variance, standard deviation and IQR
 
 * TODO Glossary: concepts
 
@@ -35,4 +235,3 @@
 - DataCamp (n.d.). Introduction to Statistics. URL: datacamp.com.
 - Davies TD (2016). Book of R. NoStarch Press. URL: nostarch.com
 - Matloff N (2022). fasteR. URL: github.com/matloff/fasteR
-
