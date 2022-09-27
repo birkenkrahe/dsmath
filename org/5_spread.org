@@ -141,7 +141,7 @@ quantile of ~foo <- c(100, 498.5, 22, 0, -33, 100.66, -2)~
 - ~quantile~ supports *nine* different algorithms. The ~help(quantile)~
   reveals that different statistical programming languages (S, SPSS,
   SAS) use different algorithms.
-* ~summary~ function
+* Quantiles and summary with functions
 
 - ~quantile(x,prob=c(0,0.25,0.5,0.75,1)~ is the 5-number summary
   consists of:
@@ -220,24 +220,26 @@ quantile of ~foo <- c(100, 498.5, 22, 0, -33, 100.66, -2)~
 
    #+RESULTS:
    [[file:../img/5_quakehist.png]]
-* Spread: variance, standard deviation and IQR
-
-* TODO Glossary: concepts
+* TODO Spread: variance, standard deviation and IQR
+* TODO Covariance and correlation
+* TODO Outliers
+* IN PROGRESS Glossary: concepts
 
 #+name: tab:terms
-| TERM | MEANING |
-|------+---------|
-|      |         |
+| TERM                    | MEANING |
+|-------------------------+---------|
+| Quantile                |         |
+| Quartile                |         |
+| Tukey's 5-point summary |         |
 
-* TODO Glossary: code
+* IN PROGRESS Glossary: code
 
 #+name: tab:code
-| CODE | MEANING |
-|------+---------|
-|      |         |
+| CODE     | MEANING |
+|----------+---------|
+| ~quantile~ |         |
+| ~summary~  |         |
 
 * References
 
-- DataCamp (n.d.). Introduction to Statistics. URL: datacamp.com.
 - Davies TD (2016). Book of R. NoStarch Press. URL: nostarch.com
-- Matloff N (2022). fasteR. URL: github.com/matloff/fasteR
