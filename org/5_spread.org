@@ -25,14 +25,14 @@
   [[../img/5_normal.png]]
 
 - This can be reproduced in R with pseudo-random numbers from ~rnorm~.
-  #+begin_src R :session *R* :exports both :results output graphics file :file ../img/binom.png
+  #+begin_src R :session *R* :exports both :results output graphics file :file ../img/5_binom.png
     par(mfrow=c(2,1))
     hist(rnorm(1e+05))
     plot(density(rnorm(1e+05)))
   #+end_src
 
   #+RESULTS:
-  [[file:../img/binom.png]]
+  [[file:../img/5_binom.png]]
 
 - The distribution as a pattern exhibits measures of centrality (like
   \mu), and measures of spread (like \sigma).
@@ -200,7 +200,7 @@ quantile of ~foo <- c(100, 498.5, 22, 0, -33, 100.66, -2)~
    positively from the center to the right. The mean is dragged up by
    this skewedness. 
    #+end_quote
-   #+begin_src R :exports both :session :results output graphics file :file 5_quakebox.png
+   #+begin_src R :exports both :session :results output graphics file :file ../img/_quakebox.png
      index <- quakes$depth<400
      y <- quakes$mag[index]
      boxplot(y, data=quakes, horizontal=TRUE)
@@ -208,7 +208,7 @@ quantile of ~foo <- c(100, 498.5, 22, 0, -33, 100.66, -2)~
    
    #+RESULTS:
    [[file:5_quakebox.png]]
-   #+begin_src R :exports both :session :results output graphics file :file 5_quakehist.png
+   #+begin_src R :exports both :session :results output graphics file :file ../imt/5_quakehist.png
      hist(y, data=quakes)
    #+end_src
 
