@@ -550,7 +550,7 @@ t-th smallest observation regardless of the observation index i.
 * Footnotes
 
 [fn:4]Answer: To show, the names need to be scaled down with
-~cex.names=0.9~ - then the plot is complete.
+~cex.names=0.9~ - then the plot is complete ([[https://stackoverflow.com/questions/58759916/how-to-fix-missing-labels-in-base-r-barplot][Source]]).
 
 [fn:3] ~MARGIN~ has to match ~dim(X)~ - higher integer values are for
 layers, blocks etc. of higher dimensional arrays.
