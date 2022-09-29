@@ -80,7 +80,7 @@ quantile of ~foo <- c(100, 498.5, 22, 0, -33, 100.66, -2)~
      foo_s <- sort(foo)  # sort vector from smallest to largest
      foo_s
      median(foo_s) # compute median: (-2+1)/2 = -1
-     median(c(-33,-2,0,22)) # 1st quartile
+     median(c(-33,-2,0,22)) # 0.25th quartile
    #+end_src
 3) The 0.5th quartile or 50th percentile: half of the values are
    smaller than it - *median of the data*.
@@ -95,7 +95,7 @@ quantile of ~foo <- c(100, 498.5, 22, 0, -33, 100.66, -2)~
      foo_s <- sort(foo)  # sort vector from smallest to largest
      foo_s
      median(foo_s) # compute median: (-2+1)/2 = -1
-     median(c(22,100,100.66,498.50)) # 3rd quartile
+     median(c(22,100,100.66,498.50)) # 75th percentile
    #+end_src
 5) The 1.00th quartile or 100% percentile: all values are smaller than
    it. This number is the *maximum value of the data*.
@@ -108,7 +108,8 @@ quantile of ~foo <- c(100, 498.5, 22, 0, -33, 100.66, -2)~
      names(q)<-NULL
      identical(q,c(-33,-1,22,100.33,498.5))
    #+end_src
-   Quantiles with ~quantile~
+* Quantiles with ~quantile~
+
 - Using our old friend ~xdata <- c(2,4.4,3,3,2,2.2,2,4)~, we can use
   ~quantile~ to compute the 0th to 4th quantile.
   #+begin_src R
@@ -160,17 +161,13 @@ quantile of ~foo <- c(100, 498.5, 22, 0, -33, 100.66, -2)~
   :    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
   :   2.000   2.000   2.600   2.825   3.250   4.400
 
-* TODO Practice: quantiles
+* NEXT Practice: quantiles
 
 1) Compute the lower and upper quartiles of the weights of the chicks
    in the built-in ~chickwts~ data frame.
    #+begin_src R
      quantile(chickwts$weight, prob=c(0.25,0.75))
    #+end_src
-
-   #+RESULTS:
-   :   25%   75%
-   : 204.5 323.5
 
 2) What do these results mean?
    #+begin_quote
@@ -185,10 +182,6 @@ quantile of ~foo <- c(100, 498.5, 22, 0, -33, 100.66, -2)~
    #+begin_src R
      summary(quakes$mag[quakes$depth<400])
    #+end_src
-
-   #+RESULTS:
-   :    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-   :    4.00    4.40    4.60    4.67    4.90    6.40
 
 4) What do these results mean?
    #+begin_quote
@@ -208,7 +201,7 @@ quantile of ~foo <- c(100, 498.5, 22, 0, -33, 100.66, -2)~
              xlab="Magnitude on the Richter scale",
              main="Quakes < 400 km depth",
              horizontal=TRUE)
-        #+end_src
+   #+end_src
    
    #+RESULTS:
    [[file:../img/5_quakebox.png]]
@@ -221,6 +214,10 @@ quantile of ~foo <- c(100, 498.5, 22, 0, -33, 100.66, -2)~
    #+RESULTS:
    [[file:../img/5_quakehist.png]]
 * TODO Spread: variance, standard deviation and IQR
+
+- Measures of centrality indicate where your observations are /massed/,
+  but they say nothing about the degree of /dispersion/ or /spread/
+
 * TODO Covariance and correlation
 * TODO Outliers
 * IN PROGRESS Glossary: concepts

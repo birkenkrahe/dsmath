@@ -350,7 +350,7 @@ t-th smallest observation regardless of the observation index i.
 - [ ] *How would you visualize this table?* Think about the data and
   about generic plotting in R. 
 
-** Solution
+** Solutions
 
 - Plug the table into ~plot~ - it's a generic graphic function and it
   does have a ~plot.table~ method. 
