@@ -118,11 +118,23 @@ quantile of ~foo <- c(100, 498.5, 22, 0, -33, 100.66, -2)~
     sort(xdata)
     quantile(xdata)
   #+end_src
+
+  #+RESULTS:
+  : [1] 2.0 4.4 3.0 3.0 2.0 2.2 2.0 4.0
+  : [1] 2.0 2.0 2.0 2.2 3.0 3.0 4.0 4.4
+  :   0%  25%  50%  75% 100% 
+  : 2.00 2.00 2.60 3.25 4.40
+
 - With ~quantile~, we can also compute other quantiles, like the 0.8th
   quantile (or 80th percentile): 80% of all values are smaller than it:
   #+begin_src R
     quantile(xdata, prob=0.8)
   #+end_src
+
+  #+RESULTS:
+  : 80% 
+  : 3.6
+
 - [ ] Does ~quantile~ allow removing ~NA~ values?
   #+begin_src R
     quantile(c(xdata, NA), prob=0.8, na.rm=TRUE)
@@ -161,13 +173,18 @@ quantile of ~foo <- c(100, 498.5, 22, 0, -33, 100.66, -2)~
   :    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
   :   2.000   2.000   2.600   2.825   3.250   4.400
 
-* NEXT Practice: quantiles
+* NEXT Practice: ~quantile~ and ~summary~
 
-1) Compute the lower and upper quartiles of the weights of the chicks
-   in the built-in ~chickwts~ data frame.
+1) Compute the lower and upper quartiles (25th and 75th percentile or
+   0.25th and 0.75th quantile) of the weights of the chicks in the
+   built-in ~chickwts~ data frame.
    #+begin_src R
      quantile(chickwts$weight, prob=c(0.25,0.75))
    #+end_src
+
+   #+RESULTS:
+   :   25%   75% 
+   : 204.5 323.5
 
 2) What do these results mean?
    #+begin_quote
@@ -182,6 +199,10 @@ quantile of ~foo <- c(100, 498.5, 22, 0, -33, 100.66, -2)~
    #+begin_src R
      summary(quakes$mag[quakes$depth<400])
    #+end_src
+
+   #+RESULTS:
+   :    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+   :    4.00    4.40    4.60    4.67    4.90    6.40
 
 4) What do these results mean?
    #+begin_quote
