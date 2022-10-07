@@ -753,13 +753,13 @@ other, regularized. ([[https://www.amphilsoc.org/item-detail/photograph-john-wil
 #+attr_html: :width 300px
 [[../img/w6_gnome.jpg]]
 * Lecture & practice: measures of spread
-* NEXT Assignments due this week (30 Sept, 23:59 pm)
+* Assignments due this week (30 Sept, 23:59 pm)
 
 1) [X] Complete all of "[[https://app.datacamp.com/learn/courses/introduction-to-statistics][Introduction to statistics]]" @DataCamp
 2) [X] Upload completed "[[https://github.com/birkenkrahe/dsmath/blob/main/org/4_summary_stats_practice.org][Practice 4 - summary statistics]]" assignment
 3) [X] Upload [[https://lyon.instructure.com/courses/655/assignments/2279][3rd sprint review]] - focus on "methods" (with lit review)
 
-* TODO (Thu) Test 6 review
+* Test 6 review
 #+attr_html: :width 300px
 [[file:../img/lp.png]]
 
@@ -856,7 +856,7 @@ other, regularized. ([[https://www.amphilsoc.org/item-detail/photograph-john-wil
    #+RESULTS:
    [[file:../demo.png]]
 
-* TODO Lab session / project review
+* Lab session / project review
 
 - [X] Review quantiles, quartiles, five-point summary
 
@@ -864,7 +864,7 @@ other, regularized. ([[https://www.amphilsoc.org/item-detail/photograph-john-wil
 
 - [Informal] Round robin: where are you at with your projects?
   
-* TODO What did you learn so far?
+* What did you learn so far?
 
 *What did you learnt in the first 1/2 of the term?*
 
@@ -889,6 +889,54 @@ other, regularized. ([[https://www.amphilsoc.org/item-detail/photograph-john-wil
   #+end_quote
 
 * NEXT Week 8: measures of spread (cont'd)
+* TODO Review of the 2nd sprint review
+#+attr_html: :width 500px
+[[../img/scrum.png]]
+#+begin_quote
+Dear students! I've looked at your sprint review reports. Some are
+good, others are not so good, and a few are *missing* altogether.
+
+We'll spend tomorrow's session reviewing the status of your results so
+far, especially your *methods*. Please be prepared to *present* your
+review in person (5 min) followed by a short *discussion* (5 min). That
+is, you get my comments orally rather than in writing.
+
+Please make sure you have *questions* not just for the other teams but
+also for me.
+
+If your topic is shared across different courses, make sure that you
+are able to explain how exactly your research question / method /
+results / presentation are going to *differ* from one course to the
+next.
+
+If you did not submit a separate *literature review* (only 2 teams did
+that) including data and other secondary sources, please make sure you
+are able to *cite* your references.
+#+end_quote
+
+1) Why sprint reviews?
+   - meet and talk to the customer
+   - check progress
+   - prevent procrastination
+   - manage your time
+
+2) What's the most important aspect?
+   - getting feedback from the customer (product owner)
+   - present your prototype
+   - check in with other teams
+
+3) What comes after the sprint review?
+   - reflect on what you learnt from the sprint review
+   - prepare for the next sprint
+
+4) How do you feel about sprint reviews?
+   - I feel nothing
+   - I am worry
+   - I feel good about (it pushes me along)
+   - I sometimes feel demotivated because of the progress of others
+
+
+
 * TODO DataCamp Reviews: Central Limit Theorem/Tests
 * References
 #+attr_html: :width 500px
