@@ -1,6 +1,8 @@
 #+TITLE: MEASURES OF SPREAD AND CORRELATION
 #+AUTHOR: MARCUS BIRKENKRAHE
 #+SUBTITLE: Applied math for data science (DSC 482/MTH 445) Fall 2022
+#+PROPERTY: :session *R* :results output :exports both
+#+STARTUP: overview hideblocks indent inlineimages entitiespretty
 #+attr_html: :width 700px
 #+caption: John Wilder Tukey (1915-2000)
 [[../img/tukey.jpg]]
@@ -34,7 +36,7 @@
   #+RESULTS:
   [[file:../img/5_binom.png]]
 
-- The distribution as a pattern exhibits measures of centrality (like
+  The distribution as a pattern exhibits measures of centrality (like
   \mu), and measures of spread (like \sigma).
 
 * Quantiles, percentiles and five-number-summary
@@ -173,7 +175,7 @@ quantile of ~foo <- c(100, 498.5, 22, 0, -33, 100.66, -2)~
   :    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
   :   2.000   2.000   2.600   2.825   3.250   4.400
 
-* NEXT Practice: ~quantile~ and ~summary~
+* DONE Practice: ~quantile~ and ~summary~
 
 1) Compute the lower and upper quartiles (25th and 75th percentile or
    0.25th and 0.75th quantile) of the weights of the chicks in the
