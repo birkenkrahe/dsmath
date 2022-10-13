@@ -15,7 +15,7 @@
 - For details on objectives, audience, grading, schedule, check the
   [[https://github.com/birkenkrahe/dsmath/blob/main/org/syllabus.org][syllabus]] or the [[https://github.com/birkenkrahe/org/blob/master/FAQ.org][FAQ]] on GitHub.
 - This file contains a (dynamically updated) agenda for each session
-  as well as some content.
+  as well as some content, mostly review of the lectures
 - You can also look at [[https://github.com/birkenkrahe/dsmath/blob/main/org/agenda.org][the agenda on GitHub]].
 
 * FAQ - Frequently Asked Questions
@@ -940,12 +940,12 @@ are able to *cite* your references.
 #+caption: Nash and Nirenberg receive the 2015 Abel Prize from King Harald V of Norway
 [[../img/dresscode.png]]
 
-- [ ] *Attend* the Lyon College Career Fair 13 October
-- [ ] *Review by Test 7*: DataCamp review (Oct 13)
-- [ ] *Lecture/Practice 5*: Measures of spread II
-- [ ] *Home Assignment*: Measures of spread (by Oct 20)
+- [X] *Attend* the Lyon College Career Fair 13 October
+- [X] *Review by Test 7*: DataCamp review (Oct 25)
+- [X] *Lecture/Practice 5*: Measures of spread II
+- [X] *Home Assignment*: Measures of spread (by Oct 25)
 
-* DONE Lyon College Career Expo
+** Lyon College Career Expo
 #+attr_html: :width 300px
 [[../img/recruit.jpg]]
 
@@ -964,7 +964,7 @@ are able to *cite* your references.
   #+attr_html: :width 200px
   [[../img/dress-for-success.png]]
   [[https://uca.edu/career/files/2017/09/dress-for-success.png][Source: uca.edu]]
-* DONE Review: Tukey's Five-Point Stats Summary
+** Review: Tukey's Five-Point Stats Summary
 #+attr_html: :width 300px
 [[../img/review.jpg]]
 
@@ -1025,7 +1025,7 @@ are able to *cite* your references.
    :    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
    :   69.00   77.00   81.00   81.02   84.00   96.00
 
-* TODO Basketball players
+** Example: Basketball players
 
 - Here is a diagram for two basketball players A and B:
   1) What kind of diagram is this?
@@ -1060,7 +1060,7 @@ are able to *cite* your references.
      he plays more consistently and usually scores higher than B.
   #+end_notes
   
-* IN PROGRESS Lecture/practice: measures of spread
+** Lecture/practice: measures of spread
 #+attr_html: :width 400px
 [[../img/lecture.jpeg]]
 
@@ -1077,11 +1077,28 @@ are able to *cite* your references.
     emacs --file ../../spread.org
   #+end_example
 
-* NEXT [[https://lyon.instructure.com/courses/655/assignments/3246/edit?quiz_lti][Test: Central limit theorem/statistical tests]] 
-* NEXT [[https://lyon.instructure.com/courses/655/assignments/3247/edit?quiz_lti][Test: Measures of spread]]
+** [[https://lyon.instructure.com/courses/655/assignments/3207][Assignment 6: Measures of spread]] (Oct 25)
+** [[https://lyon.instructure.com/courses/655/assignments/3247/edit?quiz_lti][Test 7: Measures of spread]] (Oct 18)
+** [[https://lyon.instructure.com/courses/655/assignments/3246/edit?quiz_lti][Test 8: Central limit theorem/statistical tests]] (Oct 25)
 * Week 10: correlations, outliers
 ** Review: standard deviation
 
+** Lecture/practice: measures of spread
+#+attr_html: :width 400px
+[[../img/lecture.jpeg]]
+
+- Open a Windows command line terminal (pin it to the taskbar)
+
+- Using the ~cd~ command, go to the directory with the ~spread.org~ file
+  that you used for the last set of practice exercises
+
+- Open Emacs from the command line with ~emacs --file spread.org~
+
+- Alternatively, enter the absolute or relative path to the file, e.g.
+  #+begin_example shell
+    emacs --file "c:\Users\birkenkrahe\spread.org"
+    emacs --file ../../spread.org
+  #+end_example
 * Week 11-15: plotting, probability, distributions
 * References
 #+attr_html: :width 500px
