@@ -252,11 +252,19 @@ quantile of ~foo <- c(100, 498.5, 22, 0, -33, 100.66, -2)~
     (ydata <- c(1, 4.4, 1, 3, 2, 2.2, 2, 7))
   #+end_src
 
+  #+RESULTS:
+  : [1] 2.0 4.4 3.0 3.0 2.0 2.2 2.0 4.0
+  : [1] 1.0 4.4 1.0 3.0 2.0 2.2 2.0 7.0
+
 - These vectors have the same arithmetic mean
   #+begin_src R
     mean(xdata)
     mean(ydata)
   #+end_src
+
+  #+RESULTS:
+  : [1] 2.825
+  : [1] 2.825
 
 - Let's plot the vectors on top of one another using some base R
   plotting functions: ~plot~, ~abline~, ~text~, ~points~, and ~jitter~.
@@ -268,7 +276,7 @@ quantile of ~foo <- c(100, 498.5, 22, 0, -33, 100.66, -2)~
 
 - The first code block only plots some guiding lines and labels
   #+name: DrawFrame
-  #+begin_src R :results graphics file :file ../5_xy.png
+  #+begin_src R :results graphics file :file ../img/5_xy.png
     plot(x=xdata,    # data to plot - one vector only
          type="n",   # don't plot anything actually (n='nothing')
          xlab="",    # empty x-axis label
@@ -295,15 +303,12 @@ quantile of ~foo <- c(100, 498.5, 22, 0, -33, 100.66, -2)~
   #+end_src
 
   #+RESULTS: DrawFrame
-  [[file:../5_xy.png]]
-
-  #+RESULTS:
-  [[file:../5_xy.png]]
+  [[file:../img/5_xy.png]]
 
 - The second code block contains all of the above and plots the points
   in "jittered" fashion, because some of the vector data are
   identical:
-  #+begin_src R :results graphics file :file ../5_xypoints.png :noweb yes
+  #+begin_src R :results graphics file :file ../img/5_xypoints.png :noweb yes
     <<DrawFrame>>
 
     points(                       # draw points
@@ -315,7 +320,7 @@ quantile of ~foo <- c(100, 498.5, 22, 0, -33, 100.66, -2)~
   #+end_src
 
   #+RESULTS:
-  [[file:../5_xypoints.png]]
+  [[file:../img/5_xypoints.png]]
 
 - The observations in ~ydata~ (upper horizontal line) are more spread
   out around the measure of centrality (dotted vertical line) than the
