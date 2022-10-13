@@ -124,7 +124,7 @@ quantile of ~foo <- c(100, 498.5, 22, 0, -33, 100.66, -2)~
   #+RESULTS:
   : [1] 2.0 4.4 3.0 3.0 2.0 2.2 2.0 4.0
   : [1] 2.0 2.0 2.0 2.2 3.0 3.0 4.0 4.4
-  :   0%  25%  50%  75% 100% 
+  :   0%  25%  50%  75% 100%
   : 2.00 2.00 2.60 3.25 4.40
 
 - With ~quantile~, we can also compute other quantiles, like the 0.8th
@@ -134,7 +134,7 @@ quantile of ~foo <- c(100, 498.5, 22, 0, -33, 100.66, -2)~
   #+end_src
 
   #+RESULTS:
-  : 80% 
+  : 80%
   : 3.6
 
 - [ ] Does ~quantile~ allow removing ~NA~ values?
@@ -185,7 +185,7 @@ quantile of ~foo <- c(100, 498.5, 22, 0, -33, 100.66, -2)~
    #+end_src
 
    #+RESULTS:
-   :   25%   75% 
+   :   25%   75%
    : 204.5 323.5
 
 2) What do these results mean?
@@ -203,7 +203,7 @@ quantile of ~foo <- c(100, 498.5, 22, 0, -33, 100.66, -2)~
    #+end_src
 
    #+RESULTS:
-   :    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+   :    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
    :    4.00    4.40    4.60    4.67    4.90    6.40
 
 4) What do these results mean?
@@ -214,7 +214,7 @@ quantile of ~foo <- c(100, 498.5, 22, 0, -33, 100.66, -2)~
    that the distribution of quake magnitude vs. depth is skewed. More
    specifically, it's skewed to the right - i.e. it stretches out more
    positively from the center to the right. The mean is dragged up by
-   this skewedness. 
+   this skewedness.
    #+end_quote
    #+begin_src R :exports both :session :results output graphics file :file ../img/5_quakebox.png
      index <- quakes$depth<400
@@ -225,7 +225,7 @@ quantile of ~foo <- c(100, 498.5, 22, 0, -33, 100.66, -2)~
              main="Quakes < 400 km depth",
              horizontal=TRUE)
    #+end_src
-   
+
    #+RESULTS:
    [[file:../img/5_quakebox.png]]
    #+begin_src R :exports both :session :results output graphics file :file ../img/5_quakehist.png
@@ -240,6 +240,257 @@ quantile of ~foo <- c(100, 498.5, 22, 0, -33, 100.66, -2)~
 
 - Measures of centrality indicate where your observations are /massed/,
   but they say nothing about the degree of /dispersion/ or /spread/
+
+- The measures of spread include: variance, standard deviation, and
+  IQR
+
+* Example: same centrality, different spread
+
+- Define two vectors of hypothetical observations, ~xdata~ and ~ydata~
+  #+begin_src R
+    (xdata <- c(2, 4.4, 3, 3, 2, 2.2, 2, 4))
+    (ydata <- c(1, 4.4, 1, 3, 2, 2.2, 2, 7))
+  #+end_src
+
+- These vectors have the same arithmetic mean
+  #+begin_src R
+    mean(xdata)
+    mean(ydata)
+  #+end_src
+
+- Let's plot the vectors on top of one another using some base R
+  plotting functions: ~plot~, ~abline~, ~text~, ~points~, and ~jitter~.
+
+- Remember that, for plots in Org-mode, you need additional header
+  arguments after the ~#+begin_src R~ - to store a graph in ~plot.png~:
+
+  ~:results graphics file :file plot.png~
+
+- The first code block only plots some guiding lines and labels
+  #+name: DrawFrame
+  #+begin_src R :results graphics file :file ../5_xy.png
+    plot(x=xdata,    # data to plot - one vector only
+         type="n",   # don't plot anything actually (n='nothing')
+         xlab="",    # empty x-axis label
+         ylab="data vector", # y-axis label
+         yaxt="n",   # suppress y-axis
+         bty="n",    # remove box around plot
+         main="Comparing two data vectors with identical mean"
+         )
+
+    abline(h=c(3,3.5), # draw horizontal line at y=3 and y=3.5
+           lty=2,      # draw a dashed line
+           col="gray"  # draw a gray line
+           )
+
+    abline(v=2.825, # draw vertical line at x=2.825 (the mean)
+           lwd=2,   # draw a thick line
+           lty=3    # draw a dotted line
+           )
+
+    text(x=c(0.8,0.8),     # location of text boxes
+         y=c(3,3.5),
+         labels=c("x","y")
+         )
+  #+end_src
+
+  #+RESULTS: DrawFrame
+  [[file:../5_xy.png]]
+
+  #+RESULTS:
+  [[file:../5_xy.png]]
+
+- The second code block contains all of the above and plots the points
+  in "jittered" fashion, because some of the vector data are
+  identical:
+  #+begin_src R :results graphics file :file ../5_xypoints.png :noweb yes
+    <<DrawFrame>>
+
+    points(                       # draw points
+      jitter(c(xdata,ydata)),     # jitter the data points
+      c(rep(3, length(xdata)),    # plot xdata over lower line
+        rep(3.5, length(ydata))), # plot ydata over upper line
+      cex=1.5                     # scale point size by 1.2
+    )
+  #+end_src
+
+  #+RESULTS:
+  [[file:../5_xypoints.png]]
+
+- The observations in ~ydata~ (upper horizontal line) are more spread
+  out around the measure of centrality (dotted vertical line) than the
+  observations in ~xdata~.
+
+- To quantify these differences, you need exact measures of spread
+  like variance, standard deviation, and interquartile range (IQR)
+* TODO Variance
+
+- The /sample variance/ measures the degree of the spread of numeric
+  observations around their arithmetic mean via average squared
+  distance
+
+- Shown here for a set of n numeric measurements x = {x_1, x_2,..., x_n}
+  #+attr_html: :width 500px
+  [[../img/5_variance.png]]
+
+- For example, for ~xdata~
+  #+attr_html: :width 500px
+  [[../img/5_variance1.png]]
+
+* TODO Standard deviation (~sd~)
+
+- The /standard deviation/ is simply the square root of the variance
+  #+attr_html: :width 300px
+  [[../img/5_sd.png]]
+
+- For example, for ~xdata~
+  #+attr_html: :width 200px
+  [[../img/5_sd1.png]]
+
+- Roughly speaking, 0.953 represents the average distance of each
+  observation from the mean.
+
+- The use of ~n-1~ vs. ~n~ in the denominator of the formula for the
+  variance and, consequentially, for the standard deviation, is the
+  subject of much discussion among statisticians. It is called Bessel
+  correction to correct the bias in the estimation of population
+  variance. At the same time, it increases the mean squared error in
+  the same estimations. With ~n-1~, you are not exactly calculating the
+  average squared distance, but it is approached as the sample size ~n~
+  increases.
+
+* TODO Ideal and real spread
+
+- For numerical data, we expect values to conform to the normal or
+  Gaussian distribution described by a "bell curve".
+
+- The plot shows a 'bell curve' of Gaussian density generated from
+  random points.
+  #+begin_src R :file ../img/5_gaussian.png :results graphics file
+    par(mfrow=c(1,1))
+    x <- seq(from=-4,to=4,by=0.02)
+    y <- dnorm(x, mean = 0, sd = 1)
+    plot(x,y, type="p", pch=1,
+         main="The 'bell curve' of Gaussian density",
+         xlab="Observed x value",
+         ylab="Probability density p(x)")
+    abline(v=mean(x), col="red", lty=1)
+    abline(v=1, col="green", lty=2)
+    abline(v=-1, col="green", lty=2)
+    abline(v=2, col="gold", lty=2)
+    abline(v=-2, col="gold", lty=2)
+    abline(v=3, col="blue", lty=2)
+    abline(v=-3, col="blue", lty=2)
+  #+end_src
+
+- Base R has many different tools to characterize such data, e.g.
+  1) Simulated Gaussian data values scatterplot
+  2) Histogram of random numbers
+  3) Density estimate
+  4) Normal QQ-plot
+
+- Here is how this looks like for real data, the ~geyser~ data set of
+  299 eruptions of the Old Faithful geyser in Yellowstone National
+  Park, WY.
+  #+begin_src R :file ../img/5_geyser.png :results graphics file
+    library("car")
+    library("MASS")
+    par(mfrow=c(2,2))
+    x <- geyser$duration
+    plot(x, type="p", pch=1,
+         main="Simulated Gaussian data values",
+         xlab="Observation number",
+         ylab="Observed value")
+    hist(x,
+         main="Histogram",
+         xlab="Range of observed values",
+         ylab="Number of cases in interval")
+    plot(density(x),
+         main="Density estimate")
+    qqPlot(x, col="red",
+           main="Normal QQ-plot",
+           xlab="Norm quantiles",
+           ylab="Sorted data value")
+  #+end_src
+* TODO Interquartile Range (~IQR~)
+
+- The interquartile range (IQR) is not computed with respect to the
+  sample mean
+
+- It measures the "middle 50%" of the data - the range of values that
+  lie within a 25% quartile on either side of the median
+
+- It is computed as the difference between the upper and lower
+  quartiles of the data. For example for ~xdata~ these values were:
+  #+begin_src R
+    quantile(xdata, prob=c(0.25,0.75))
+  #+end_src
+- If Q_x() denotes the quartile function, then IQR_x =
+  Q_x(0.75)-Q_x(0.25), and IQR_xdata=3.25-2.00=1.25
+
+* TODO R functions
+
+- Let's compute spread stats in R:
+  #+begin_src R
+    var(xdata)   # variance
+    sd(xdata)    # standard deviation
+    IQR(xdata)   # interquartile range
+  #+end_src
+- Confirm the definitory relationship between variance and standard
+  deviation numerically:
+  #+begin_src R
+    identical(sqrt(var(xdata)),sd(xdata))
+  #+end_src
+- Let's confirm the definition of the IQR numerically:
+  #+begin_src R
+    as.numeric(quantile(xdata,0.75)-quantile(xdata,0.25))
+  #+end_src
+- Note that ~as.numeric~ strips away the percentile annotations of
+  ~quartile~ results
+
+- Compute standard variation and IQR for ~ydata~:
+  #+begin_src R
+    sd(ydata)
+    IQR(ydata)
+  #+end_src
+
+- Confirm that ~ydata~ are more spread out than ~xdata~
+  #+begin_src R
+    paste("Are ydata more spread out than xdata?")
+    paste("Standard deviation: ", sd(ydata) > sd(xdata))
+    paste("Interquartile range: ",IQR(ydata) > IQR(xdata))
+  #+end_src
+  
+* TODO Practice: chick weights and quakes
+
+- Let's return to chicks and quakes
+
+- We computed the mean ~weight~ of all chicks in the ~chickwts~ data set
+  #+begin_src R
+    weights <- chickwts$weight
+    mean(weights)
+  #+end_src
+
+- How far is the weight of each chick on average away from the mean?
+  #+begin_src R
+    sd(weights)
+  #+end_src
+
+- Technically, this value is the square root of a function of the
+  squared distances of all observations in the sample
+
+- We computed the five-point summary of the magnitudes of some of the
+  earthquakes in the ~quakes~ data set
+  #+begin_src R
+    magnitudes <- quakes$mag[quakes$depth < 400]
+    summary(magnitudes)
+  #+end_src
+
+- What is the width, in units of the Richter scale, of the middle 50%
+  of these observations?
+  #+begin_src R
+    IQR(magnitudes)
+  #+end_src
 
 * TODO Covariance and correlation
 * TODO Outliers

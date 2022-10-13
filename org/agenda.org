@@ -941,17 +941,13 @@ are able to *cite* your references.
 [[../img/dresscode.png]]
 
 - [ ] *Attend* the Lyon College Career Fair 13 October
-- [ ] *Don't go to class* on Thursday October 13 - instead:
-- [ ] *Complete Test 7*: DataCamp review (Oct 13)
+- [ ] *Review by Test 7*: DataCamp review (Oct 13)
 - [ ] *Lecture/Practice 5*: Measures of spread II
 - [ ] *Home Assignment*: Measures of spread (by Oct 20)
 
 * NEXT Lyon College Career Expo
 #+attr_html: :width 300px
 [[../img/recruit.jpg]]
-
-- Special incentive: *no class on Thursday morning* (test instead) so
-  that you can be there at least from 9-9.30 AM if you have no class
 
 - Do mathematicians need career fairs? Do they need career support?
 
@@ -977,10 +973,16 @@ are able to *cite* your references.
    /compute Tukey's 5-point summary/ in R and what results do you expect?
    #+begin_src R
      summary(ToothGrowth$supp)
+     length(ToothGrowth$supp)/2
    #+end_src
 
-2) A data scientist runs the code below on the ~faithful~ data set. What
-   is this data scientist likely /interested in/?
+   #+RESULTS:
+   : OJ VC 
+   : 30 30
+   : [1] 30
+
+2) A data scientist runs the code below on the ~faithful~ data set of
+   the ~MASS~ package. What is this data scientist likely /interested in/?
    #+begin_src R
      index <- faithful$eruptions > 4
      mean(faithful$waiting[index])
@@ -1019,7 +1021,30 @@ are able to *cite* your references.
      summary(faithful$waiting[index])
    #+end_src
 
+   #+RESULTS:
+   :    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+   :   69.00   77.00   81.00   81.02   84.00   96.00
+
+* TODO Lecture/practice: measures of spread
+#+attr_html: :width 400px
+[[../img/lecture.jpeg]]
+
+- Open a Windows command line terminal (pin it to the taskbar)
+
+- Using the ~cd~ command, go to the directory with the ~spread.org~ file
+  that you used for the last set of practice exercises
+
+- Open Emacs from the command line with ~emacs --file spread.org~
+
+- Alternatively, enter the absolute or relative path to the file, e.g.
+  #+begin_example shell
+    emacs --file "c:\Users\birkenkrahe\spread.org"
+    emacs --file ../../spread.org
+  #+end_example
+
 * TODO Review: Central Limit Theorem/Stats Tests
+* Week 10: correlations, outliers
+* Week 11-15: plotting, probability, distributions
 * References
 #+attr_html: :width 500px
 [[../img/books.jpg]]
