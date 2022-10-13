@@ -1,7 +1,7 @@
 #+TITLE:Agenda - DSC 482 / MTH 445
 #+AUTHOR:Marcus Marcus Speh Birkenkrahe
 #+SUBTITLE:Agenda - DSC 482 - Applied Math for Data Science, Fall 2022
-#+STARTUP:overview hideblocks indent inlineimages
+#+STARTUP:overview hideblocks indent inlineimages entitiespretty
 #+OPTIONS: toc:nil num:nil ^:nil
 #+property: header-args:R :session *R* :results output
 #+attr_html: :width 200px
@@ -945,7 +945,7 @@ are able to *cite* your references.
 - [ ] *Lecture/Practice 5*: Measures of spread II
 - [ ] *Home Assignment*: Measures of spread (by Oct 20)
 
-* NEXT Lyon College Career Expo
+* DONE Lyon College Career Expo
 #+attr_html: :width 300px
 [[../img/recruit.jpg]]
 
@@ -964,7 +964,7 @@ are able to *cite* your references.
   #+attr_html: :width 200px
   [[../img/dress-for-success.png]]
   [[https://uca.edu/career/files/2017/09/dress-for-success.png][Source: uca.edu]]
-* TODO Review: Tukey's Five-Point Stats Summary
+* DONE Review: Tukey's Five-Point Stats Summary
 #+attr_html: :width 300px
 [[../img/review.jpg]]
 
@@ -986,7 +986,7 @@ are able to *cite* your references.
    #+begin_src R
      index <- faithful$eruptions > 4
      mean(faithful$waiting[index])
-     #+end_src
+   #+end_src
    #+begin_notes
    The data scientist wanted to know how long he'd have to wait on
    average for an eruption of more than 4 minutes length of the Old
@@ -1025,7 +1025,42 @@ are able to *cite* your references.
    :    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
    :   69.00   77.00   81.00   81.02   84.00   96.00
 
-* TODO Lecture/practice: measures of spread
+* TODO Basketball players
+
+- Here is a diagram for two basketball players A and B:
+  1) What kind of diagram is this?
+  2) What is plotted here exactly?
+  3) How many observations were made?
+  4) Is the average score a good measure to compare the players?
+  5) What drives the length of the whiskers?
+  6) If you had to choose between having player A or player B on the
+     team, which one would you pick and why?
+  #+attr_html: :width 500px
+  [[../img/basketball.png]]
+  #+begin_notes
+  1) The diagram contains two boxplots, also called box-and-whisker
+     diagrams.
+  2) Plotted are ~Score~ - a numeric-discrete counter variable, and
+     ~Player~ - a categorical-nominal variable.
+  3) The plot does not contain this information!
+  4) The mean is influenced by the sample size and variability. For
+     larger samples, the mean and the median generally converge. We
+     don't know anything about the sample size. The average score of
+     Player B is distorted by the great variability of the score,
+     therefore the average score is not a good basis of comparison.
+  5) The length of the whiskers indicates variability outside of the
+     lower and upper quartiles (the data smaller than 25% and larger
+     than 75% of the data).
+     #+attr_html: :width 500px
+     [[../img/boxplotdiagram.jpg]]
+  6) Player A has a relatively small range (difference between maximum
+     and minimum sample value), and his median score is a little
+     higher. Player B has a very large range - he sometimes scores a
+     lot higher, but sometimes a lot lower. We pick player A because
+     he plays more consistently and usually scores higher than B.
+  #+end_notes
+  
+* IN PROGRESS Lecture/practice: measures of spread
 #+attr_html: :width 400px
 [[../img/lecture.jpeg]]
 
@@ -1042,8 +1077,10 @@ are able to *cite* your references.
     emacs --file ../../spread.org
   #+end_example
 
-* TODO Review: Central Limit Theorem/Stats Tests
+* TODO Review: Central Limit Theorem/Stats (as Test)
 * Week 10: correlations, outliers
+** Review: standard deviation
+
 * Week 11-15: plotting, probability, distributions
 * References
 #+attr_html: :width 500px

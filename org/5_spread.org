@@ -175,7 +175,7 @@ quantile of ~foo <- c(100, 498.5, 22, 0, -33, 100.66, -2)~
   :    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
   :   2.000   2.000   2.600   2.825   3.250   4.400
 
-* DONE Practice: ~quantile~ and ~summary~
+* Practice: ~quantile~ and ~summary~
 
 1) Compute the lower and upper quartiles (25th and 75th percentile or
    0.25th and 0.75th quantile) of the weights of the chicks in the
@@ -236,7 +236,7 @@ quantile of ~foo <- c(100, 498.5, 22, 0, -33, 100.66, -2)~
 
    #+RESULTS:
    [[file:../img/5_quakehist.png]]
-* TODO Spread: variance, standard deviation and IQR
+* Spread: variance, standard deviation and IQR
 
 - Measures of centrality indicate where your observations are /massed/,
   but they say nothing about the degree of /dispersion/ or /spread/
@@ -323,7 +323,7 @@ quantile of ~foo <- c(100, 498.5, 22, 0, -33, 100.66, -2)~
 
 - To quantify these differences, you need exact measures of spread
   like variance, standard deviation, and interquartile range (IQR)
-* TODO Variance
+* NEXT Variance
 
 - The /sample variance/ measures the degree of the spread of numeric
   observations around their arithmetic mean via average squared
@@ -337,27 +337,54 @@ quantile of ~foo <- c(100, 498.5, 22, 0, -33, 100.66, -2)~
   #+attr_html: :width 500px
   [[../img/5_variance1.png]]
 
-* TODO Standard deviation (~sd~)
+- Why do we use the square to measure average distance? Because the
+  average distance of values from the mean is always 0.
 
-- The /standard deviation/ is simply the square root of the variance
-  #+attr_html: :width 300px
-  [[../img/5_sd.png]]
+- The arithmetic/sample average of 1,2,9 is 4.
+  #+begin_src R
+    mean(c(1,2,9))
+  #+end_src
 
-- For example, for ~xdata~
-  #+attr_html: :width 200px
-  [[../img/5_sd1.png]]
+- Positive and negative  distances cancel each other:
+  #+attr_html: :width 700px
+  [[../img/avgdist.png]]
 
-- Roughly speaking, 0.953 represents the average distance of each
-  observation from the mean.
-
-- The use of ~n-1~ vs. ~n~ in the denominator of the formula for the
+- Why is the denominator for the variance ~n-1~ and not ~n~?
+  #+begin_notes
+  The use of ~n-1~ vs. ~n~ in the denominator of the formula for the
   variance and, consequentially, for the standard deviation, is the
   subject of much discussion among statisticians. It is called Bessel
   correction to correct the bias in the estimation of population
   variance. At the same time, it increases the mean squared error in
   the same estimations. With ~n-1~, you are not exactly calculating the
   average squared distance, but it is approached as the sample size ~n~
-  increases.
+  increases. It is used when calculating spread for samples rather
+  than for (ideal) populations - so in practice it is mostly used.
+  #+end_notes
+
+* TODO Standard deviation (~sd~)
+
+- Thinking about "average of the distance from the mean squared" is
+  not very intuitive. To fix that, we can take the square root.
+  
+- The /standard deviation/ is the square root of the variance
+  #+attr_html: :width 300px
+  [[../img/5_sd.png]]
+
+- For example, for ~xdata <- c(2, 4.4, 3, 3, 2, 2.2, 2, 4)~
+  #+attr_html: :width 200px
+  [[../img/5_sd1.png]]
+
+- Roughly speaking, 0.953 represents the average distance of each
+  observation from the mean. 
+
+- [ ] Is it better if the standard deviation is large or small?
+  #+begin_notes
+  It depends. If you manufacture machine parts, you want \sigma to be small
+  so that you can be sure that all pieces are about the same. If
+  you're looking at wages in a large company, I'll naturally be large,
+  because there is a large spread between low and high earners.
+  #+end_notes
 
 * TODO Ideal and real spread
 
@@ -382,6 +409,11 @@ quantile of ~foo <- c(100, 498.5, 22, 0, -33, 100.66, -2)~
     abline(v=3, col="blue", lty=2)
     abline(v=-3, col="blue", lty=2)
   #+end_src
+
+- One use of this distributio: when comparing standard deviation and
+  mean across different data sets, we have to transform each set of
+  data into a more generic distribution with a mean of 0 and a
+  standard deviation of 1.
 
 - Base R has many different tools to characterize such data, e.g.
   1) Simulated Gaussian data values scatterplot
@@ -460,7 +492,7 @@ quantile of ~foo <- c(100, 498.5, 22, 0, -33, 100.66, -2)~
     paste("Standard deviation: ", sd(ydata) > sd(xdata))
     paste("Interquartile range: ",IQR(ydata) > IQR(xdata))
   #+end_src
-  
+
 * TODO Practice: chick weights and quakes
 
 - Let's return to chicks and quakes
@@ -492,8 +524,8 @@ quantile of ~foo <- c(100, 498.5, 22, 0, -33, 100.66, -2)~
     IQR(magnitudes)
   #+end_src
 
-* TODO Covariance and correlation
-* TODO Outliers
+* WAITING Covariance and correlation
+* WAITING Outliers
 * IN PROGRESS Glossary: concepts
 
 #+name: tab:terms
