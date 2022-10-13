@@ -276,7 +276,7 @@ quantile of ~foo <- c(100, 498.5, 22, 0, -33, 100.66, -2)~
 
 - The first code block only plots some guiding lines and labels
   #+name: DrawFrame
-  #+begin_src R :results graphics file :file ../img/5_xy.png
+  #+begin_src R :results graphics file :file ../img/5_xy.png :exports both
     plot(x=xdata,    # data to plot - one vector only
          type="n",   # don't plot anything actually (n='nothing')
          xlab="",    # empty x-axis label
@@ -308,7 +308,7 @@ quantile of ~foo <- c(100, 498.5, 22, 0, -33, 100.66, -2)~
 - The second code block contains all of the above and plots the points
   in "jittered" fashion, because some of the vector data are
   identical:
-  #+begin_src R :results graphics file :file ../img/5_xypoints.png :noweb yes
+  #+begin_src R :exports both :results graphics file :file ../img/5_xypoints.png :noweb yes
     <<DrawFrame>>
 
     points(                       # draw points
