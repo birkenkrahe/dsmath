@@ -1077,7 +1077,8 @@ are able to *cite* your references.
     emacs --file ../../spread.org
   #+end_example
 
-* TODO Review: Central Limit Theorem/Stats (as Test)
+* NEXT [[https://lyon.instructure.com/courses/655/assignments/3246/edit?quiz_lti][Test: Central limit theorem/statistical tests]] 
+* NEXT [[https://lyon.instructure.com/courses/655/assignments/3247/edit?quiz_lti][Test: Measures of spread]]
 * Week 10: correlations, outliers
 ** Review: standard deviation
 

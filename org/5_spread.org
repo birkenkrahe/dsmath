@@ -7,8 +7,8 @@
 #+caption: John Wilder Tukey (1915-2000)
 [[../img/tukey.jpg]]
 
-1. [ ] Quantiles, percentiles, and the five-number-summary
-2. [ ] Measures of spread: variance, standard deviation and IQR
+1. [X] Quantiles, percentiles, and the five-number-summary
+2. [X] Measures of spread: variance, standard deviation and IQR
 3. [ ] Covariance and correlation
 4. [ ] Outliers
 
@@ -323,7 +323,7 @@ quantile of ~foo <- c(100, 498.5, 22, 0, -33, 100.66, -2)~
 
 - To quantify these differences, you need exact measures of spread
   like variance, standard deviation, and interquartile range (IQR)
-* NEXT Variance
+* DONE Variance
 
 - The /sample variance/ measures the degree of the spread of numeric
   observations around their arithmetic mean via average squared
@@ -345,6 +345,9 @@ quantile of ~foo <- c(100, 498.5, 22, 0, -33, 100.66, -2)~
     mean(c(1,2,9))
   #+end_src
 
+  #+RESULTS:
+  : [1] 4
+  
 - Positive and negative  distances cancel each other:
   #+attr_html: :width 700px
   [[../img/avgdist.png]]
@@ -362,7 +365,7 @@ quantile of ~foo <- c(100, 498.5, 22, 0, -33, 100.66, -2)~
   than for (ideal) populations - so in practice it is mostly used.
   #+end_notes
 
-* TODO Standard deviation (~sd~)
+* DONE Standard deviation (~sd~)
 
 - Thinking about "average of the distance from the mean squared" is
   not very intuitive. To fix that, we can take the square root.
@@ -378,7 +381,7 @@ quantile of ~foo <- c(100, 498.5, 22, 0, -33, 100.66, -2)~
 - Roughly speaking, 0.953 represents the average distance of each
   observation from the mean. 
 
-- [ ] Is it better if the standard deviation is large or small?
+- [X] Is it better if the standard deviation is large or small?
   #+begin_notes
   It depends. If you manufacture machine parts, you want \sigma to be small
   so that you can be sure that all pieces are about the same. If
@@ -386,7 +389,8 @@ quantile of ~foo <- c(100, 498.5, 22, 0, -33, 100.66, -2)~
   because there is a large spread between low and high earners.
   #+end_notes
 
-* TODO Ideal and real spread
+- Interesting: the conflict between model-centric vs. data-centric data science (ref. Andrew Ng, Stanford U)
+* DONE Ideal and real spread
 
 - For numerical data, we expect values to conform to the normal or
   Gaussian distribution described by a "bell curve".
@@ -410,13 +414,16 @@ quantile of ~foo <- c(100, 498.5, 22, 0, -33, 100.66, -2)~
     abline(v=-3, col="blue", lty=2)
   #+end_src
 
-- One use of this distributio: when comparing standard deviation and
+  #+RESULTS:
+  [[file:../img/5_gaussian.png]]
+
+- One use of this distribution: when comparing standard deviation and
   mean across different data sets, we have to transform each set of
   data into a more generic distribution with a mean of 0 and a
   standard deviation of 1.
 
 - Base R has many different tools to characterize such data, e.g.
-  1) Simulated Gaussian data values scatterplot
+  1) Scatterplot
   2) Histogram of random numbers
   3) Density estimate
   4) Normal QQ-plot
@@ -430,7 +437,7 @@ quantile of ~foo <- c(100, 498.5, 22, 0, -33, 100.66, -2)~
     par(mfrow=c(2,2))
     x <- geyser$duration
     plot(x, type="p", pch=1,
-         main="Simulated Gaussian data values",
+         main="Observed data values",
          xlab="Observation number",
          ylab="Observed value")
     hist(x,
@@ -444,7 +451,11 @@ quantile of ~foo <- c(100, 498.5, 22, 0, -33, 100.66, -2)~
            xlab="Norm quantiles",
            ylab="Sorted data value")
   #+end_src
-* TODO Interquartile Range (~IQR~)
+
+  #+RESULTS:
+  [[file:../img/5_geyser.png]]
+
+* DONE Interquartile Range (~IQR~)
 
 - The interquartile range (IQR) is not computed with respect to the
   sample mean
@@ -455,12 +466,18 @@ quantile of ~foo <- c(100, 498.5, 22, 0, -33, 100.66, -2)~
 - It is computed as the difference between the upper and lower
   quartiles of the data. For example for ~xdata~ these values were:
   #+begin_src R
+    xdata <- c(2, 4.4, 3, 3, 2, 2.2, 2, 4)
     quantile(xdata, prob=c(0.25,0.75))
   #+end_src
+
+  #+RESULTS:
+  :  25%  75% 
+  : 2.00 3.25
+
 - If Q_x() denotes the quartile function, then IQR_x =
   Q_x(0.75)-Q_x(0.25), and IQR_xdata=3.25-2.00=1.25
 
-* TODO R functions
+* DONE R functions
 
 - Let's compute spread stats in R:
   #+begin_src R
@@ -493,7 +510,7 @@ quantile of ~foo <- c(100, 498.5, 22, 0, -33, 100.66, -2)~
     paste("Interquartile range: ",IQR(ydata) > IQR(xdata))
   #+end_src
 
-* TODO Practice: chick weights and quakes
+* DONE Practice: chick weights and quakes
 
 - Let's return to chicks and quakes
 
@@ -545,4 +562,5 @@ quantile of ~foo <- c(100, 498.5, 22, 0, -33, 100.66, -2)~
 
 * References
 
-- Davies TD (2016). Book of R. NoStarch Press. URL: nostarch.com
+- [[https://nostarch.com/bookofr][Davies TD (2016). Book of R. NoStarch Press. URL: nostarch.com]]
+- [[https://www.seismosoc.org/inside/eastern-section/jesuit-contribution-seismology/][Udias A (1996). The Jesuit Contribution to Seismology. URL: seismosoc.org]]
