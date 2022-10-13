@@ -402,7 +402,7 @@ quantile of ~foo <- c(100, 498.5, 22, 0, -33, 100.66, -2)~
 
 - The plot shows a 'bell curve' of Gaussian density generated from
   random points.
-  #+begin_src R :file ../img/5_gaussian.png :results graphics file
+  #+begin_src R :file ../img/5_gaussian.png :results graphics file :exports both
     par(mfrow=c(1,1))
     x <- seq(from=-4,to=4,by=0.02)
     y <- dnorm(x, mean = 0, sd = 1)
@@ -436,7 +436,7 @@ quantile of ~foo <- c(100, 498.5, 22, 0, -33, 100.66, -2)~
 - Here is how this looks like for real data, the ~geyser~ data set of
   299 eruptions of the Old Faithful geyser in Yellowstone National
   Park, WY.
-  #+begin_src R :file ../img/5_geyser.png :results graphics file
+  #+begin_src R :file ../img/5_geyser.png :results graphics file  :exports both
     library("car")
     library("MASS")
     par(mfrow=c(2,2))
