@@ -351,19 +351,19 @@ and falling behind.
   |  3 |  5 | Tue-30-Aug | +Test 2+     | 3. +Probability and distributions+   |                              |
   |    |  6 | Thu-01-Sep |            | +1st Sprint Review+                  |                              |
   |----+----+------------+------------+------------------------------------+------------------------------|
-  |  4 |  7 | Tue-06-Sep | +Test 3+     | 4. Central Limit Theorem           |                              |
+  |  4 |  7 | Tue-06-Sep | +Test 3+     | 4. +Central Limit Theorem+         |                              |
   |    |  8 | Thu-08-Sep |            |                                    |                              |
   |----+----+------------+------------+------------------------------------+------------------------------|
-  |  5 |  9 | Tue-13-Sep | +Test 4+     | 5. Correlation/experiments         | 14. Basic data visualization |
+  |  5 |  9 | Tue-13-Sep | +Test 4+     | 5. +Correlation/experiments+       | 14. Basic data visualization |
   |    | 10 | Thu-15-Sep |            |                                    |                              |
   |----+----+------------+------------+------------------------------------+------------------------------|
-  |  6 | 11 | Tue-20-Sep | Test 5     | 6. Summary statistics in R         |                              |
+  |  6 | 11 | Tue-20-Sep | +Test 5+     | 6. Summary statistics in R         |                              |
   |    | 12 | Thu-22-Sep |            |                                    |                              |
   |----+----+------------+------------+------------------------------------+------------------------------|
-  |  7 | 13 | Tue-27-Sep | Test 6     | 7. Random numbers/probability in R |                              |
+  |  7 | 13 | Tue-27-Sep | +Test 6+     | 7. Random numbers/probability in R |                              |
   |    | 14 | Thu-29-Sep |            | 2nd Sprint Review                  |                              |
   |----+----+------------+------------+------------------------------------+------------------------------|
-  |  8 | 15 | Thu-06-Oct | Test 7     | 8. Central limit theorem in R      | 15. Probability              |
+  |  8 | 15 | Thu-06-Oct | +Test 7+     | 8. Central limit theorem in R      | 15. Probability              |
   |----+----+------------+------------+------------------------------------+------------------------------|
   |  9 | 16 | Tue-11-Oct | Test 8     | 9. Correlation/experiments in R    |                              |
   |    | 17 | Thu-13-Oct |            |                                    |                              |
