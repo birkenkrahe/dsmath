@@ -1,0 +1,65 @@
+#+TITLE:Assignment: Measures of Spread
+#+AUTHOR: [YourName] (pledged)
+#+SUBTITLE: Applied math for data science (DSC 482/MTH 445) Fall 2022
+#+OPTIONS: toc:nil num:1 ^:nil
+#+STARTUP: overview hideblocks indent inlineimages
+#+PROPERTY: header-args:R :session *R* :results output
+* README
+
+  - Practice for "Measures of Spread" ([[https://github.com/birkenkrahe/dsmath/blob/main/org/5_spread.org][GitHub]])
+  - Source: chapter 13.3 by Davies, 2016 (modified)
+  - Emacs + ESS + Org-mode and R must be installed
+    
+* TODO Identify yourself
+
+  - Update the ~#+AUTHOR:~ information in the header
+  - Put your cursor on the headline of this section, and type ~S <LEFT>~
+    until you see ~DONE~ instead of ~TODO~ next to the title.
+  - Perform this last step each time you complete a section.
+
+* TODO Problems
+
+1) Using the built-in, pre-loaded ~chickwts~ data frame, compute the
+   10th, 30th, and 90th percentiles of all the chick weights.
+
+2) Use ~tapply~ to determine which feed type in the ~chickwts~ data set is
+   associated with the highest sample variance of weights.
+
+3) For the built-in ~quakes~ data set, find the interquartile range of
+   the recorded depths.
+
+4) For the built-in ~quakes~ data set, find the five-number summary of
+   all magnitudes of seismic events that occur at a depth of 400 km or
+   /deeper/.
+
+5) Compare your findings of the statistic summary of magnitudes of
+   seismic events at a depth of 400 km or deeper with the summary of
+   events occurring at less than 400 km.
+   of both data sets.)
+
+6) Use the function ~cut~ to create a new factor vector called ~depthcat~
+   that identifies four evenly spaced categories of ~quakes$depth~. You
+   can see these levels with ~levels(depthcat)~. Run the code block
+   below to proceed. Check the documentation for ~cut~ if you wish.
+
+   #+begin_src R
+     depthcat <- cut(x=quakes$depth,
+                     breaks=c(40,200,360,520,680),
+                     right=F,
+                     include.lowest=T)
+     levels(depthcat)
+   #+end_src
+
+7) Find the sample mean and standard deviation of the magnitudes of
+   the events associated with each category of depth according to
+   ~depthcat~. /Tip: split the magnitudes by ~depthcat~ using ~tapply~./
+
+8) Use ~tapply~ to compute the 0.8th quantile of the magnitudes of the
+   seismic events in ~quakes~, split by ~depthcat~.
+
+   Tip: you can pass parameters to functions in ~tapply~, e.g. for the
+   ~mean~ function and its parameter ~na.rm~ this would look like this:
+   #+begin_example R
+     tapply(X = vector, INDEX = factor, FUN=mean, na.rm=TRUE)
+   #+end_example
+

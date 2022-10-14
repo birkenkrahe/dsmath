@@ -1077,8 +1077,8 @@ are able to *cite* your references.
     emacs --file ../../spread.org
   #+end_example
 
-** [[https://lyon.instructure.com/courses/655/assignments/3207][Assignment 6: Measures of spread]] (Oct 25)
 ** [[https://lyon.instructure.com/courses/655/assignments/3247/edit?quiz_lti][Test 7: Measures of spread]] (Oct 18)
+** [[https://lyon.instructure.com/courses/655/assignments/3207][Assignment 6: Measures of spread]] (Oct 25)
 ** [[https://lyon.instructure.com/courses/655/assignments/3246/edit?quiz_lti][Test 8: Central limit theorem/statistical tests]] (Oct 25)
 * Week 10: correlations, outliers
 ** Review: standard deviation
