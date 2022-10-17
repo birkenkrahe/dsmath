@@ -574,4 +574,6 @@ quantile of ~foo <- c(100, 498.5, 22, 0, -33, 100.66, -2)~
 * References
 
 - [[https://nostarch.com/bookofr][Davies TD (2016). Book of R. NoStarch Press. URL: nostarch.com]]
-- [[https://www.seismosoc.org/inside/eastern-section/jesuit-contribution-seismology/][Udias A (1996). The Jesuit Contribution to Seismology. URL: seismosoc.org]]
+- [[https://www.seismosoc.org/inside/eastern-section/jesuit-contribution-seismology/][Udias
+  A (1996). The Jesuit Contribution to Seismology. URL:
+  seismosoc.org]]
