@@ -19,6 +19,10 @@
 - Two linked measures are used to express this quality: covariance and
   correlation, quantifying degree and direction of joint change
 
+- Their link is comparable to variance vs. standard deviation in the
+  sense that the correlation coefficient is the more commonly used
+  measure to (quickly) assess the relationship
+
 * Example: mileage and weight in ~mtcars~
 
 - Example: mileage (~mpg~) and weight (~wt~) in ~mtcars~
@@ -226,6 +230,34 @@
   [[../img/6_corexample.png]]
 
 * TODO Practice: ~quakes~
+* TODO The Strangeness of Outliers
+#+attr_html: :width 300px
+[[../img/PeopleAreStrange.jpg]]
+
+#+begin_quote
+»People are strange
+When you're a stranger
+Faces look ugly
+When you're alone
+
+Women seem wicked
+When you're unwanted
+Streets are uneven
+When you're down
+
+When you're strange
+Faces come out of the rain
+When you're strange
+No one remembers your name
+When you're strange
+When you're strange
+When you're strange
+People are strange
+All right, yeah«
+
+[[https://youtu.be/j0Mz_IqpZX8][THE DOORS]]
+#+end_quote
+
 * TODO Glossary: concepts
 
 #+name: tab:terms
