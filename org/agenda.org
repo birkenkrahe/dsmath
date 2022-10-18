@@ -1084,10 +1084,10 @@ are able to *cite* your references.
 #+attr_html: :width 400px
 [[../img/milgram.jpg]]
 
-- [ ] Current assignments ([[https://lyon.instructure.com/courses/655/discussion_topics/968][Canvas]])
+- [X] Current assignments ([[https://lyon.instructure.com/courses/655/discussion_topics/968][Canvas]])
 - [ ] Review: measures of spread
 - [ ] The power (and weakness) of correlations
-- [ ] Covariance - variables changing in concert
+- [ ] Covariance/correlation - variables changing in concert
 - [ ] Outliers - values who "don't fit the narrative"
 
 * Review: measures of spread
@@ -1104,7 +1104,7 @@ are able to *cite* your references.
    #+begin_quote
    The IQR is more robust against outliers than the standard deviation
    because the latter is defined as average distance from the mean or
-   sample average, which is vulnerable against outliers.
+   sample average, which is more vulnerable against outliers.
    #+end_quote
 
 3) Use ~tapply~ to compute the interquartile range of the ~len~ variable
@@ -1112,10 +1112,6 @@ are able to *cite* your references.
    #+begin_src R
      tapply(X=ToothGrowth$len, INDEX=ToothGrowth$supp, FUN=IQR)
    #+end_src
-
-   #+RESULTS:
-   :   OJ   VC
-   : 10.2 11.9
 
 4) How would you compute the IQR of ~len~ for both values of ~supp~
    without ~tapply~?
@@ -1134,8 +1130,8 @@ are able to *cite* your references.
      juice show a slightly greater spread of recorded tooth length.
    #+end_quote
 
-6) How would you create a box-and-whiskers plot of for both values of
-   ~supp~?
+6) How would you create a box-and-whiskers (aka box plot) plot for
+   both values of ~supp~?
    #+begin_src R :results graphics file :file ../img/supp.png :exports both
      supply <- ToothGrowth$supp
      tg_len <- ToothGrowth$len
@@ -1154,10 +1150,13 @@ are able to *cite* your references.
 
 Preview of assignment 7: using ~cut~ to create categories from a numeric
 variable:
+
 - You can use ~tapply~ to apply any function ~FUN~ to a data set ~X~ using a
   factor variable as the ~INDEX~
+
 - With ~cut~, you can create such an ~INDEX~ factor vector from any
   numeric variable in your data set ~X~
+
 - Example: the ~Nile~ data set
   
   1. Check the range of values and choose breaks
@@ -1175,10 +1174,6 @@ variable:
                       include.lowest=TRUE)
        levels(nilecat)
      #+end_src
-
-     #+RESULTS:
-     : [1] "[456,656)"           "[656,856)"           "[856,1.06e+03)"     
-     : [4] "[1.06e+03,1.26e+03]"
   3. Use ~tapply~ to split the data set according to the ~nilecat~
      categories and compute the sample mean and standard deviation
      on each segment:
@@ -1204,7 +1199,7 @@ variable:
        truehist(Nile)
        title("True histogram of Nile")
      #+end_src    
-
+     
      #+RESULTS:
      [[file:../img/nilehist.png]]
 
