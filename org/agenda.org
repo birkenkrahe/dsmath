@@ -1208,7 +1208,7 @@ variable:
      #+RESULTS:
      [[file:../img/nilehist.png]]
 
-* The power of correlations
+* Group exercise: the power of correlations
 #+attr_html: :width 400px
 [[../img/milgram.png]]
 

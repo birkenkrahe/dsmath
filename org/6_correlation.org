@@ -1,0 +1,252 @@
+#+TITLE: COVARIANCE, CORRELATION AND OUTLIERS
+#+AUTHOR: MARCUS BIRKENKRAHE
+#+SUBTITLE: Applied math for data science (DSC 482/MTH 445) Fall 2022
+#+PROPERTY: :session *R* :results output :exports both
+#+STARTUP: overview hideblocks indent inlineimages entitiespretty
+#+attr_html: :width 700px
+#+caption: Photo from one of Milgram's experiments 1961-63, Yale U.
+[[../img/milgram.jpg]]
+
+1. Covariance
+2. Correlation
+3. Outliers
+
+* Measures of joint variability
+
+- To identify trends, you can assess the /relationship/ between two
+  numeric variables: do they increase or decrease together, and how?
+
+- Two linked measures are used to express this quality: covariance and
+  correlation, quantifying degree and direction of joint change
+
+* Example: mileage and weight in ~mtcars~
+
+- Example: mileage (~mpg~) and weight (~wt~) in ~mtcars~
+  #+name: plot
+  #+begin_src R :results graphics file :file ../img/6_mtcars.png
+    plot(mtcars$mpg ~ mtcars$wt,
+         xlab="weight",
+         ylab="mileage",
+         main="Mileage vs. weight in mtcars")
+  #+end_src
+
+  #+RESULTS: plot
+  [[file:../img/6_mtcars.png]]
+
+- We can easily fit a linear model ~lm~ through the sample:
+  #+begin_src R :results graphics file :file ../img/6_mtcars1.png :noweb yes
+    <<plot>>
+    abline(lm(mpg~wt,data=mtcars),      # the model
+           lty=3,lwd=2,col="steelblue") # layout details
+    legend(x="topright",                # plot legend
+           legend="linear model",
+           lty=3,lwd=2,col="steelblue")
+  #+end_src
+
+  #+RESULTS:
+  [[file:../img/6_mtcars1.png]]
+
+- We can read some qualities of the joint change straight from the
+  plot or the associated numbers:
+  #+begin_src R
+    lm(mpg~wt,data=mtcars)
+  #+end_src
+
+  #+RESULTS:
+  : 
+  : Call:
+  : lm(formula = mpg ~ wt, data = mtcars)
+  : 
+  : Coefficients:
+  : (Intercept)           wt  
+  :       37.29        -5.34
+
+* Covariance
+
+- The covariance expresses how much two variables change together and
+  the nature of this change (positive or negative)
+
+- Positive change means that both variables increase together
+
+- Negative change means that both variables decrease together
+
+- Covariance for a sample of ~n~ observations for two variables ~x~ and ~y~
+  in relation to the respective sample mean values[fn:2]:
+  #+attr_html: :width 300px
+  [[../img/6_covariance.png]]
+
+- Positive r_{xy} indicates a positive relationship
+
+- Negative r_{xy} indicates a negative relationship
+
+- r_{xy}= 0 indicates that there is no linear relationship
+
+- Also, not that r_{xy} \equiv r_{yx} i.e. the order of variables is irrelevant
+
+- The variance is a special case of the covariance, in which the two
+  variables are identical - i.e. it measures "covariance with itself"
+
+- What is the unit of measurement of the covariance? 
+  #+begin_quote
+    If ~x~ was measured in u_x, and ~y~ in u_y, then the unit of measurement
+    of the bivariate covariance of these variables would be u_x* u_y -
+    e.g. if we measure the joint variability of dollars and years, the
+    covariance is measured in "dollar-years".
+  #+end_quote
+  
+* Example
+
+- Let's go back to ~xdata~ and ~ydata~ considered before to illustrate
+  measures of spread:
+  #+begin_src R
+    xdata <- c(2, 4.4, 3, 3, 2, 2.2, 2, 4)
+    ydata <- c(1, 4.4, 1, 3, 2, 2.2, 2, 7)
+    sd(xdata)  # small spread
+    sd(ydata)  # large spread
+    mean(xdata-ydata) # identical mean
+  #+end_src
+
+  #+RESULTS:
+  : [1] 0.9528
+  : [1] 2.013
+  : [1] 0
+
+- Computing the sample covariance (~digits=4~):
+  #+attr_html: :width 400px
+  [[../img/6_covariance1.png]]
+
+- [ ] Compute this using R "by hand":
+  #+begin_src R
+    m <- mean(xdata)
+    ((2-m)*(1-m)+
+    (4.4-m)*(4.4-m)+
+    (3-m)*(1-m)+
+    (3-m)*(3-m)+
+    (2-m)*(2-m)+
+    (2.2-m)*(2.2-m)+
+    (2-m)*(2-m)+
+    (4-m)*(7-m))/(length(xdata)-1)
+  #+end_src
+
+  #+RESULTS:
+  : [1] 1.479
+
+- Using the ~cov~ function:
+  #+begin_src R
+    options(digits=4)
+    cov(xdata,ydata)
+  #+end_src
+
+  #+RESULTS:
+  : [1] 1.479
+
+- This suggests that there is a positive relationship based on the
+  observations
+
+- Plotting the vectors:
+  #+begin_src R :results graphics file :file ../img/6_cov.png
+    plot(ydata ~ xdata, pch=13, cex=2)
+  #+end_src
+
+  #+RESULTS:
+  [[file:../img/6_cov.png]]
+
+* Correlation
+
+- Correlation allows you to interpret the covariance further by
+  identifying both /direction/ and /strength/ of any association
+
+- Correlation measures association well under controlled
+  conditions but it does not ever measure causation[fn:1]
+  
+- The most common correlation coefficient is Pearson's product-moment
+  correlation coefficient (the default in R) \rho_{xy} \in (-1,1) computed
+  with the respective standard deviations s_x and s_y:
+  #+attr_html: :width 200px
+  [[../img/6_pearson.png]]
+  
+- When \rho_xy = -1 the relationship is perfectly negative
+
+- The closer \rho_xy gets to 0, the weaker the relationship
+
+- \rho_xy = 0 shows no relationship at all
+
+- \rho_xy = +1 indicates a perfectly positive relationship
+
+- Again, \rho_xy \equiv \rho_yx
+
+- Computing \rho_{xdata,ydata} by hand using s_x = 0.953 and s_y = 2.013:
+  #+begin_src R
+    cov(xdata,ydata)/(sd(xdata)*sd(ydata))
+  #+end_src
+
+  #+RESULTS:
+  : [1] 0.7714
+
+- The result indicates a moderate to strong positive association
+  between the observations in ~xdata~ and ~ydata~
+
+- Using the ~cor~ function:
+  #+begin_src R
+    cor(xdata,ydata)
+  #+end_src
+
+  #+RESULTS:
+  : [1] 0.7714
+
+- [ ] Check out the ~help~ for ~cor~ or ~cov~ (same vignette), and run the
+  ~example(cor)~ programs
+
+* Checking the relationship with a linear model
+
+- We can attempt to fit a line through the points using ~lm~
+  #+begin_src R :results graphics file :file ../img/6_lmcor.png
+    line <- lm(ydata ~ xdata)
+    plot(ydata ~ xdata)
+    abline(line, lty=3, lwd=2, col="red")
+    legend(x="topleft",
+           legend="perfectly linear",
+           lty=3,lwd=2,col="red")
+  #+end_src
+
+  #+RESULTS:
+  [[file:../img/6_lmcor.png]]
+
+- The correlation coefficient estimates the nature of the /linear/
+  relationship between these variables: points closer to a perfect
+  straight line have a value \rho_xy close to either -1 or 1.
+
+* Different values of \rho_xy
+
+- The figure displays different scatterplots, each showing 100 points
+
+- Observations have been generated randomly and artificially to follow
+  the preset values of \rho_xy labeled above each plot
+  #+attr_html: :width 600px
+  [[../img/6_corexample.png]]
+
+* TODO Practice: ~quakes~
+* TODO Glossary: concepts
+
+#+name: tab:terms
+| TERM | MEANING |
+|------+---------|
+|      |         |
+
+* TODO Glossary: code
+
+#+name: tab:code
+| CODE | MEANING |
+|------+---------|
+|      |         |
+
+* References
+
+- [[https://nostarch.com/bookofr][Davies TD (2016). Book of R. NoStarch Press. URL: nostarch.com]]
+
+* Footnotes
+
+[fn:2]The covariance formula carries the same correction in the
+denominator n-1 for samples vs. n for populations as the variance.
+
+[fn:1]This begs the question: how can you measure causation?  

@@ -1,4 +1,4 @@
-#+TITLE: MEASURES OF SPREAD AND CORRELATION
+#+TITLE: MEASURES OF SPREAD
 #+AUTHOR: MARCUS BIRKENKRAHE
 #+SUBTITLE: Applied math for data science (DSC 482/MTH 445) Fall 2022
 #+PROPERTY: :session *R* :results output :exports both
@@ -574,6 +574,5 @@ quantile of ~foo <- c(100, 498.5, 22, 0, -33, 100.66, -2)~
 * References
 
 - [[https://nostarch.com/bookofr][Davies TD (2016). Book of R. NoStarch Press. URL: nostarch.com]]
-- [[https://www.seismosoc.org/inside/eastern-section/jesuit-contribution-seismology/][Udias
-  A (1996). The Jesuit Contribution to Seismology. URL:
+- [[https://www.seismosoc.org/inside/eastern-section/jesuit-contribution-seismology/][Udias  A (1996). The Jesuit Contribution to Seismology. URL:
   seismosoc.org]]
