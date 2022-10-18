@@ -53,7 +53,7 @@
 
 7) Find the sample mean and standard deviation of the magnitudes of
    the events associated with each category of depth according to
-   ~depthcat~. /Tip: split the magnitudes by ~depthcat~ using ~tapply~./
+   ~depthcat~. Tip: split the magnitudes by ~depthcat~ using ~tapply~.
 
 8) Use ~tapply~ to compute the 0.8th quantile of the magnitudes of the
    seismic events in ~quakes~, split by ~depthcat~.

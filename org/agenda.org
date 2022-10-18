@@ -1081,24 +1081,95 @@ are able to *cite* your references.
 ** [[https://lyon.instructure.com/courses/655/assignments/3207][Assignment 6: Measures of spread]] (Oct 25)
 ** [[https://lyon.instructure.com/courses/655/assignments/3246/edit?quiz_lti][Test 8: Central limit theorem/statistical tests]] (Oct 25)
 * Week 10: correlations, outliers
-** Review: standard deviation
-
-** Lecture/practice: measures of spread
 #+attr_html: :width 400px
-[[../img/lecture.jpeg]]
+[[../img/milgram.jpg]]
 
-- Open a Windows command line terminal (pin it to the taskbar)
+- [ ] Current assignments ([[https://lyon.instructure.com/courses/655/discussion_topics/968][Canvas]])
+- [ ] Review: measures of spread
+- [ ] The power (and weakness) of correlations
+- [ ] Covariance - variables changing in concert
+- [ ] Outliers - values who "don't fit the narrative"
 
-- Using the ~cd~ command, go to the directory with the ~spread.org~ file
-  that you used for the last set of practice exercises
+* Review: measures of spread
 
-- Open Emacs from the command line with ~emacs --file spread.org~
+1) Which measure of centrality corresponds to the IQR?
+   #+begin_quote
+   The median is the corresponding measure of central tendency. 
+   #+end_quote
 
-- Alternatively, enter the absolute or relative path to the file, e.g.
-  #+begin_example shell
-    emacs --file "c:\Users\birkenkrahe\spread.org"
-    emacs --file ../../spread.org
-  #+end_example
+2) Is the IQR more or less robust as a measure of spread than the
+   standard deviation?
+   #+begin_quote
+   The IQR is more robust against outliers than the standard deviation
+   because the latter is defined as average distance from the mean or
+   sample average, which is vulnerable against outliers.
+   #+end_quote
+
+2) Use ~tapply~ to compute the interquartile range of the ~len~ variable
+   of the pre-loaded ~ToothGrowth~ data set for both values of ~supp~.
+   #+begin_src R
+     tapply(X=ToothGrowth$len, INDEX=ToothGrowth$supp, FUN=IQR)
+   #+end_src
+
+3) How would you compute the IQR of ~len~ for both values of ~supp~
+   without ~tapply~?
+   #+begin_src R
+     IQR(ToothGrowth$len[ToothGrowth$supp=="OJ"])
+     IQR(ToothGrowth$len[ToothGrowth$supp=="VC"])
+   #+end_src
+
+4) 
+
+
+* The power of correlations
+#+attr_html: :width 400px
+[[../img/milgram.png]]
+
+#+begin_quote
+"How the 1961 Milgram Experiment Showed That Everyday People Could
+Commit Monstrous Acts"
+#+end_quote
+
+- [ ] What do you think: "Do situational variables play a larger
+  factor than personality types when determining obedience?"
+
+- [ ] Put more simply: can people be made to do anything, no matter
+  how monstrous? What is the evidence? What about yourself?
+
+- [ ] Which aspects of ethical decisions are missing from the
+  experiment and from the interpretation?
+
+- *Discuss with your neighbor(s) and prepare short statements* 
+
+#+begin_notes
+- Some limitations include: sample, time pressure, fake setup
+- Missing aspect: faith as the basis of ethical decisions. Along the
+  lines of behavioral psychology, people are reduced to bio feedback
+  machines (mechanistic/posititvist model of humans).
+- How often does it happen that people want to believe a story so much
+  that they're willing to overlook the limitations of experiments?
+#+end_notes
+
+/References:/
+- 7 Famous Psychology Experiments (Oct 16, 2018). [[https://online.king.edu/news/psychology-experiments/][online.king.edu]]
+- Decades later, still asking: would I pull that switch? (Carey,
+  2008). [[https://www.nytimes.com/2008/07/01/health/research/01mind.html][nytimes.com]]
+- How The Milgram Experiment Showed That Everyday People Could Commit
+  Monstrous Acts (Stockton, Sept 12, 2021). [[https://allthatsinteresting.com/milgram-experiment][allthatsinteresting.com]]
+- Milgram's Experiments Explained (Dec 10, 2018). [[https://moderntherapy.online/blog-2/millgrams-experiments-explained][moderntherapy.online]]
+* Lecture/practice: Covariance/correlation/outliers
+#+attr_html: :width 400px
+[[../img/lecture1.jpg]]
+
+- Open a practice file from the Windows (or MacOS) command line
+  (terminal): ~emacs --file correlation.org~
+
+- If you don't have the header arguments, import them from another
+  Org-mode file with ~C-x i~ and remove the remainder of the file:
+  ~#+PROPERTY: header-args:R :session *R* :results output~
+
+- Start the file proper with a new headline using ~*~
+  
 * Week 11-15: plotting, probability, distributions
 * References
 #+attr_html: :width 500px
@@ -1108,3 +1179,5 @@ Lawlor J, Banville F, Forero-Muñoz N-R, Hébert K, Martínez-Lanfranco
 JA, Rogy P, et al. (2022) Ten simple rules for teaching yourself
 R. PLoS Comput Biol 18(9):
 e1010372. https://doi.org/10.1371/journal.pcbi.1010372
+
+  
