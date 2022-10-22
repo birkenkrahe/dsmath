@@ -11,7 +11,7 @@
 
 - DSC 482 focuses on statistics, probability and distributions
 - We use R as a language, GNU Emacs as editor, ESS as statistics
-  extension, and Org-mode for literate programming
+  extension, and Org-mode for [[http://www.literateprogramming.com/][literate programming]]
 - For details on objectives, audience, grading, schedule, check the
   [[https://github.com/birkenkrahe/dsmath/blob/main/org/syllabus.org][syllabus]] or the [[https://github.com/birkenkrahe/org/blob/master/FAQ.org][FAQ]] on GitHub.
 - This file contains a (dynamically updated) agenda for each session
@@ -876,7 +876,7 @@ other, regularized. ([[https://www.amphilsoc.org/item-detail/photograph-john-wil
 - My list: Here's my list - 3 x infrastructure + 8 x content
   #+begin_quote
   1. /Principles and practice of agile project management (Scrum)/
-  2. /Principles and practice of literate programming/
+  2. /Principles and practice of [[http://www.literateprogramming.com/][literate programming]]/
   3. /Introduction to GNU Emacs + ESS + Org-mode infrastructure/
   4. Central purpose of data science (pattern identification)
   5. Difference of population dynamics vs. sample structure
@@ -1079,7 +1079,7 @@ are able to *cite* your references.
 
 ** [[https://lyon.instructure.com/courses/655/assignments/3247/edit?quiz_lti][Test 7: Measures of spread]] (Oct 18)
 ** [[https://lyon.instructure.com/courses/655/assignments/3207][Assignment 6: Measures of spread]] (Oct 25)
-** [[https://lyon.instructure.com/courses/655/assignments/3246/edit?quiz_lti][Test 8: Central limit theorem/statistical tests]] (Oct 25)
+** [[https://lyon.instructure.com/courses/655/assignments/3246/edit?quiz_lti][Test 8: Central limit theorem/statistical tests]] (Oct 27)
 * Week 10: correlations and outliers
 #+attr_html: :width 400px
 [[../img/milgram.jpg]]
