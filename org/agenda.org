@@ -1090,7 +1090,7 @@ are able to *cite* your references.
 - [ ] Covariance/correlation - variables changing in concert
 - [ ] Outliers - values who "don't fit the narrative"
 
-* Review: measures of spread
+** Review: measures of spread
 
 *Think about your answer or compute in R*
 
@@ -1146,7 +1146,7 @@ are able to *cite* your references.
    #+RESULTS:
    [[file:../img/supp.png]]
 
-* "Cutting through the crap" with ~cut~
+** "Cutting through the crap" with ~cut~
 
 Preview of assignment 7: using ~cut~ to create categories from a numeric
 variable:
@@ -1203,6 +1203,18 @@ variable:
      #+RESULTS:
      [[file:../img/nilehist.png]]
 
+* Week 11-15: plotting, probability, distributions
+#+attr_html: :width 400px
+[[../img/certificate.png]]
+
+- [ ] Home assignment: Measures of Spread ([[https://lyon.instructure.com/courses/655/assignments/3207][Canvas]], Oct 25)
+- [ ] Test 8: DataCamp revision ([[https://lyon.instructure.com/courses/655/assignments/3246/edit?quiz_lti][Canvas]], Dec 2)
+- [ ] Group exercise: Milgram Experiment 
+- [ ] Lecture/practice: covariance/correlation/outliers ([[https://github.com/birkenkrahe/dsmath/blob/main/org/6_correlation.org][GitHub]],
+  [[https://lyon.instructure.com/courses/655/assignments/3261][Canvas upload]])
+- [ ] 3rd sprint review: write an abstract [[https://github.com/birkenkrahe/org/blob/master/img/template.jpg][à la Nature magazine]] (here
+  is an example from my current research project)
+
 * Group exercise: the power of correlations
 #+attr_html: :width 400px
 [[../img/milgram.png]]
@@ -1252,7 +1264,6 @@ Commit Monstrous Acts"
 
 - Start the file proper with a new headline using ~*~
 
-* Week 11-15: plotting, probability, distributions
 * References
 #+attr_html: :width 500px
 [[../img/books.jpg]]
