@@ -1207,11 +1207,11 @@ variable:
 #+attr_html: :width 400px
 [[../img/certificate.png]]
 
-- [ ] Home assignment: Measures of Spread ([[https://lyon.instructure.com/courses/655/assignments/3207][Canvas]], Oct 25)
-- [ ] Test 8: DataCamp revision ([[https://lyon.instructure.com/courses/655/assignments/3246/edit?quiz_lti][Canvas]], Dec 2)
+- [X] Home assignment: Measures of Spread ([[https://lyon.instructure.com/courses/655/assignments/3207][Canvas]], Oct 25)
+- [X] 3rd sprint review: write an abstract [[https://github.com/birkenkrahe/org/blob/master/img/template.jpg][à la Nature magazine]] 
+- [X] Test 8: DataCamp revision ([[https://lyon.instructure.com/courses/655/assignments/3246/edit?quiz_lti][Canvas]], Dec 2)
 - [ ] Group exercise: Milgram Experiment 1961
 - [ ] Lecture:covariance/correlation/outliers ([[https://github.com/birkenkrahe/dsmath/blob/main/org/6_correlation.org][GitHub]], [[https://lyon.instructure.com/courses/655/assignments/3261][Canvas]] upload)
-- [ ] 3rd sprint review: write an abstract [[https://github.com/birkenkrahe/org/blob/master/img/template.jpg][à la Nature magazine]] 
 
 * 3rd sprint review - write an abstract
 
@@ -1343,7 +1343,6 @@ Commit Monstrous Acts"
   that they're willing to overlook the limitations of experiments? Can
   you think of examples?
 #+end_notes
-
 - References:
   - 7 Famous Psychology Experiments (Oct 16, 2018). [[https://online.king.edu/news/psychology-experiments/][online.king.edu]]
   - Decades later, still asking: would I pull that switch? (Carey,
@@ -1355,7 +1354,35 @@ Commit Monstrous Acts"
     2021). [[https://allthatsinteresting.com/milgram-experiment][allthatsinteresting.com]]
   - Milgram's Experiments Explained (Dec 10,
     2018). [[https://moderntherapy.online/blog-2/millgrams-experiments-explained][moderntherapy.online]]
-    
+
+* Discussion results
+ 
+1) Can people be made to do anything no matter how monstrous?
+   - Right set of situational variables, then yes
+   - Not because some situations are too personal or extreme
+   
+2) What is the evidence?
+
+3) Personal experience or views?
+
+4) What are some limitations of this experiment?
+   - Setup is not real: strangers, story dependency, deception
+   - Sample is extremely narrow (changing demographics)
+   
+5) Which real life situations do you know to which this experiment
+   might apply?
+   - Autonomous cars
+   - Pandemic - masks and vaccination
+
+
+
+
+
+
+
+
+
+
 * Lecture/practice: Covariance/correlation/outliers
 #+attr_html: :width 400px
 [[../img/lecture1.jpg]]
