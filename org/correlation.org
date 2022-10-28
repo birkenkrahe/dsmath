@@ -1,0 +1,151 @@
+#+PROPERTY: header-args:R :session *R* :results output :exports both
+#+STARTUP: overview hideblocks indent inlineimages entitiespretty
+
+* ~mtcars~ example
+#+begin_src R
+str(mtcars)
+#+end_src
+
+#+RESULTS:
+#+begin_example
+'data.frame':	32 obs. of  11 variables:
+ $ mpg : num  21 21 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 ...
+ $ cyl : num  6 6 4 6 8 6 8 4 4 6 ...
+ $ disp: num  160 160 108 258 360 ...
+ $ hp  : num  110 110 93 110 175 105 245 62 95 123 ...
+ $ drat: num  3.9 3.9 3.85 3.08 3.15 2.76 3.21 3.69 3.92 3.92 ...
+ $ wt  : num  2.62 2.88 2.32 3.21 3.44 ...
+ $ qsec: num  16.5 17 18.6 19.4 17 ...
+ $ vs  : num  0 0 1 1 0 1 0 1 1 1 ...
+ $ am  : num  1 1 1 0 0 0 0 0 0 0 ...
+ $ gear: num  4 4 4 3 3 3 3 4 4 4 ...
+ $ carb: num  4 4 1 1 2 1 4 2 2 4 ...
+#+end_example
+
+#+begin_src R
+  model <- lm(data=mtcars, mtcars$mpg ~  mtcars$wt) # f(y~x) := y=f(x)
+  model
+#+end_src
+
+#+RESULTS:
+: 
+: Call:
+: lm(formula = mtcars$mpg ~ mtcars$wt, data = mtcars)
+: 
+: Coefficients:
+: (Intercept)    mtcars$wt  
+:      37.285       -5.344
+
+#+begin_src R :results graphics file :file mtcars1.png
+    plot(
+      x = mtcars$wt,
+      y = mtcars$mpg,
+      xlab = "Weight of car",
+      ylab = "Mileage of car",
+      main = "Mileage vs. weight in mtcars")
+    abline(model,
+           lty=3,
+           lwd=2,
+           col="steelblue")
+    legend(
+    x = "topright",
+    legend="linear model",
+    lty=3, lwd=2,col="steelblue")
+#+end_src
+
+#+RESULTS:
+[[file:mtcars1.png]]
+
+* Covariance example
+
+Sample vectors to check covariance and correlation
+#+begin_src R
+  xdata <- c(2, 4.4, 3, 3, 2, 2.2, 2, 4)
+  ydata <- c(1, 4.4, 1, 3, 2, 2.2, 2, 7)
+  sd(xdata)
+  sd(ydata)
+  mean(xdata)
+  mean(ydata)
+#+end_src
+
+#+RESULTS:
+: [1] 0.9528154
+: [1] 2.012639
+: [1] 2.825
+: [1] 2.825
+
+#+begin_src R
+  options(digits=4)
+  m <- mean(xdata)
+  ((2-m)*(1-m)+
+  (4.4-m)*(4.4-m)+
+  (3-m)*(1-m)+
+  (3-m)*(3-m)+
+  (2-m)*(2-m)+
+  (2.2-m)*(2.2-m)+
+  (2-m)*(2-m)+
+  (4-m)*(7-m))/(length(xdata)-1)
+#+end_src
+
+#+RESULTS:
+: [1] 1.479
+
+#+begin_src R
+  cov(xdata,ydata)
+#+end_src
+
+#+RESULTS:
+: [1] 1.479
+
+#+begin_src R :results graphics file :file xdata.png
+  plot(
+    x = xdata,
+    y = ydata,
+    pch = 16,  # change point character type
+    cex = 2)   # double point size
+#+end_src
+
+#+RESULTS:
+[[file:xdata.png]]
+
+* Correlation coefficient
+
+Compute correlation coeff by hand using ~cov~ and ~sd~ functions
+#+begin_src R
+cov(xdata,ydata)/(sd(xdata) * sd(ydata))
+#+end_src
+
+#+RESULTS:
+: [1] 0.7714
+
+#+begin_src R
+  cor(xdata,ydata)
+#+end_src
+
+#+RESULTS:
+: [1] 0.7714
+
+#+begin_src R
+  line <- lm(ydata ~ xdata)
+  line
+#+end_src
+
+#+RESULTS:
+: 
+: Call:
+: lm(formula = ydata ~ xdata)
+: 
+: Coefficients:
+: (Intercept)        xdata  
+:       -1.78         1.63
+
+#+begin_src R :results graphics file :file corplot.png
+  line <- lm(ydata ~ xdata)
+  plot(ydata ~ xdata)
+  abline(line, lty=3, lwd=2, col="red")
+  legend(x='topleft', legend="perfectly linear",
+       lty=3,lwd=2,col="red")
+#+end_src
+
+#+RESULTS:
+[[file:corplot.png]]

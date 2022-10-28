@@ -33,7 +33,7 @@
          ylab="mileage",
          main="Mileage vs. weight in mtcars")
   #+end_src
-
+  
   #+RESULTS: plot
   [[file:../img/6_mtcars.png]]
 
@@ -46,7 +46,7 @@
            legend="linear model",
            lty=3,lwd=2,col="steelblue")
   #+end_src
-
+  
   #+RESULTS:
   [[file:../img/6_mtcars1.png]]
 
@@ -133,7 +133,6 @@
   #+end_src
 
   #+RESULTS:
-  : [1] 1.479
 
 - Using the ~cov~ function:
   #+begin_src R

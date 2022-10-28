@@ -1085,8 +1085,8 @@ are able to *cite* your references.
 [[../img/milgram.jpg]]
 
 - [X] Current assignments ([[https://lyon.instructure.com/courses/655/discussion_topics/968][Canvas]])
-- [ ] Review: measures of spread
-- [ ] The power (and weakness) of correlations
+- [X] Review: measures of spread
+- [X] The power (and weakness) of correlations
 - [ ] Covariance/correlation - variables changing in concert
 - [ ] Outliers - values who "don't fit the narrative"
 
@@ -1210,10 +1210,10 @@ variable:
 - [X] Home assignment: Measures of Spread ([[https://lyon.instructure.com/courses/655/assignments/3207][Canvas]], Oct 25)
 - [X] 3rd sprint review: write an abstract [[https://github.com/birkenkrahe/org/blob/master/img/template.jpg][à la Nature magazine]] 
 - [X] Test 8: DataCamp revision ([[https://lyon.instructure.com/courses/655/assignments/3246/edit?quiz_lti][Canvas]], Dec 2)
-- [ ] Group exercise: Milgram Experiment 1961
-- [ ] Lecture:covariance/correlation/outliers ([[https://github.com/birkenkrahe/dsmath/blob/main/org/6_correlation.org][GitHub]], [[https://lyon.instructure.com/courses/655/assignments/3261][Canvas]] upload)
+- [X] Group exercise: Milgram Experiment 1961
+- [X] Lecture:covariance/correlation/outliers ([[https://github.com/birkenkrahe/dsmath/blob/main/org/6_correlation.org][GitHub]], [[https://lyon.instructure.com/courses/655/assignments/3261][Canvas]] upload)
 
-* 3rd sprint review - write an abstract
+** 3rd sprint review - write an abstract
 
 Here is an example from my current publication project - you're the
 research participants!
@@ -1248,7 +1248,7 @@ to 300. [[https://github.com/birkenkrahe/org/blob/master/research/Abstract.org][
    #+end_quote
 
 3) "One sentence clearly stating the general *problem* being addressed
-   by this particular study." (And how it was addressed.)
+   by this particular study." (And how it was addressed = method.)
 
    #+begin_quote
    The problem is how to get enough of an overview of all of these
@@ -1291,7 +1291,7 @@ to 300. [[https://github.com/birkenkrahe/org/blob/master/research/Abstract.org][
    can show if this hope will pan out.
    #+end_quote
 
-* Group exercise: the power of correlations
+** Group exercise: the power of correlations
 #+attr_html: :width 400px
 [[../img/milgram.png]]
 
@@ -1355,7 +1355,7 @@ Commit Monstrous Acts"
   - Milgram's Experiments Explained (Dec 10,
     2018). [[https://moderntherapy.online/blog-2/millgrams-experiments-explained][moderntherapy.online]]
 
-* Discussion results
+** Discussion results
  
 1) Can people be made to do anything no matter how monstrous?
    - Right set of situational variables, then yes
@@ -1374,16 +1374,7 @@ Commit Monstrous Acts"
    - Autonomous cars
    - Pandemic - masks and vaccination
 
-
-
-
-
-
-
-
-
-
-* Lecture/practice: Covariance/correlation/outliers
+** Lecture/practice: Covariance/correlation
 #+attr_html: :width 400px
 [[../img/lecture1.jpg]]
 
