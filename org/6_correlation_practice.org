@@ -1,0 +1,65 @@
+#+TITLE: Practice: Summary statistics
+#+AUTHOR: [YourName] (pledged)
+#+SUBTITLE: Applied math for data science (DSC 482/MTH 445) Fall 2022
+#+STARTUP: overview hideblocks indent inlineimages
+#+PROPERTY: header-args:R :session *R* :results output
+
+1) Download a data set from the Internet and turn it straightaway into
+   a data frame named ~df~ using ~read.csv~. For the ~file~, use the URL,
+   and set ~header~ and ~stringsAsFactors~ to ~TRUE~.
+
+   #+begin_src R :results silent
+
+   #+end_src
+
+2) Check the data out: what's the structure?
+   #+begin_src R
+     
+   #+end_src
+
+   How does the data frame look like? Print it.
+   #+begin_src R
+     
+   #+end_src
+
+3) Create a plot of ~Height~ vs. ~Weight~.
+   #+begin_src R :results graphics file :file scatter.png
+     
+   #+end_src
+
+4) Compute the correlation coefficient of ~Height~ with ~Weight~.
+   #+begin_src R
+     
+   #+end_src
+
+5) What do you conclude regarding the correlation of these features?
+   #+begin_quote
+   My conclusion: ...
+   #+end_quote
+
+6) Inspect the built-in data set ~mtcars~ and look at the ~help~,
+   too. Identify two variables:
+   - The vehicle's horsepower (in hp)
+   - The shortest time taken to travel a quarter-mile distance (in sec)
+
+   #+begin_src R
+
+   #+end_src
+
+7) Plot these last two variables with horsepower on the x-axis.
+
+   #+begin_src R :results graphics file :file mtcars.png
+
+   #+end_src
+
+8) Compute the correlation coefficient for these last two variables.
+
+   #+begin_src R
+
+   #+end_src
+
+9) Compute the correlation coefficient after removing the two outliers
+   visible in the plot:
+   #+begin_src R
+
+   #+end_src
