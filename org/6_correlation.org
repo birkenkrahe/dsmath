@@ -234,6 +234,11 @@
 
 * NEXT Practice: ~quakes~
 
+*OPEN YOUR ORG-MODE PRACTICE FILE IN EMACS AND START R*
+
+We are interested in the correlation between the number of detecting
+earthquake stations and the magnitude of earthquakes detected by them.
+
 1) *Look* at the built-in ~quakes~ data set
    #+begin_src R
      str(quakes)
@@ -346,8 +351,8 @@ All right, yeah«
 #+attr_html: :width 500px
 [[../img/outliers_quote.png]]
 
-- An /outlier/ is an anomalous observation that does not appear to "fit"
-  with the bulk of the data
+- An /outlier/ is an /anomalous/ observation that does not appear to "fit"
+  with the bulk of the data (and that may be hard to explain)
 
 - Outliers correspond to extreme values but there is no numeric rule
   as to what constitutes an 'extreme' event
@@ -543,19 +548,45 @@ All right, yeah«
 - Complete the practice file in Emacs
 - Upload the completed practice file to Canvas
 
-* TODO Glossary: concepts
+* Glossary: concepts
 
 #+name: tab:terms
-| TERM | MEANING |
-|------+---------|
-|      |         |
+| TERM         | MEANING                           |
+|--------------+-----------------------------------|
+| Linearity    | Functions of the form y = ax + b  |
+| Model        | Abstraction after removing detail |
+| Fit/trend    | Aligning data with a curve        |
+| Intercept    | Intercept with the y-axis         |
+| Slope        | Gradient of a curve               |
+| Covariance   | Measure of point variability      |
+| Univariate   | Single variable                   |
+| Bivariate    | Two variables                     |
+| Multivariate | Multiple variables                |
+| Outlier      | Anomaly or extreme value          |
+| Causation    | Causal mechanism                  |
+| Correlation  | cov_{xy} / sd_x* sd_y                  |
 
-* TODO Glossary: code
+* Glossary: code
 
 #+name: tab:code
-| CODE | MEANING |
-|------+---------|
-|      |         |
+| CODE     | MEANING                 |
+|----------+-------------------------|
+| ~lm~       | linear model            |
+| ~formula~  | e.g. ~y ~ x~              |
+| ~cov(x,y)~ | covariance of x with y  |
+| ~cor(x,y)~ | correlation of x with y |
+| ~cex~      | point scale             |
+| ~cex.axis~ | axis label scale        |
+| ~cex.lab~  | label scale             |
+| ~axes~     | Draw axes or not (T/F)  |
+| ~bty~      | box type (no box: ~"n"~)  |
+| ~yaxt~     | y-axis type             |
+| ~arrows~   | place arrow             |
+| ~text~     | place textbook          |
+| ~labels~   | text in ~text~            |
+| ~adj~      | textbox justification   |
+| ~las~      | axis label orientation  |
+| ~boxplot~  | box-and-whiskers plot   |
 
 * References
 
