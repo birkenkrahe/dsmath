@@ -540,14 +540,17 @@ All right, yeah«
 
 - The correlation is much stronger without that outlier.
 
-* Glossary: concepts
+* Practice: covariance, correlation, outliers
+
+
+* TODO Glossary: concepts
 
 #+name: tab:terms
 | TERM | MEANING |
 |------+---------|
 |      |         |
 
-* Glossary: code
+* TODO Glossary: code
 
 #+name: tab:code
 | CODE | MEANING |

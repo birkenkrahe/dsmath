@@ -1388,7 +1388,7 @@ Commit Monstrous Acts"
 - Start the file proper with a new headline using ~*~
 
 * Week 12: Outliers, probability
-#+attr_html: :width 300px
+#+attr_html: :width 200px
 [[../img/outliers.jpg]]
 #+begin_notes
 »Outliers« (Gladwell, 2008) explains why “the self-made man” is a myth
@@ -1397,7 +1397,8 @@ field, which is often a series of lucky events, rare opportunities and
 other external factors, which are out of our control, but also the
 '10,000-hour'-rule, which is within our control to achieve.
 #+end_notes
-- [ ] Outliers: "People are strange when you're a stranger"
+- [ ] Outliers: *"People are strange when you're a stranger"*
+- [ ] Upload the completed practice 6 Org-mode file [[https://lyon.instructure.com/courses/655/assignments/3261][to Canvas]]
 - [ ] Frequentist/classical/naive vs. Bayesian probability
 - [ ] Intersection, Union and Complement
 - [ ] Exercises with ~sample~ and ~replicate~
