@@ -542,7 +542,7 @@ All right, yeah«
 
 * Practice: covariance, correlation, outliers
 
-- Download the practice file from 
+- Download the practice file from [[https://tinyurl.com/45fjmyxy][tinyurl.com/45fjmyxy]]
 - Complete the practice file in Emacs
 - Upload the completed practice file to Canvas
 
