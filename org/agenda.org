@@ -1397,12 +1397,20 @@ field, which is often a series of lucky events, rare opportunities and
 other external factors, which are out of our control, but also the
 '10,000-hour'-rule, which is within our control to achieve.
 #+end_notes
+- [ ] Finish "correlation and covariance" (practice)
 - [ ] Outliers: *"People are strange when you're a stranger"*
 - [ ] Upload the completed practice 6 Org-mode file [[https://lyon.instructure.com/courses/655/assignments/3261][to Canvas]]
 - [ ] Frequentist/classical/naive vs. Bayesian probability
 - [ ] Intersection, Union and Complement
 - [ ] Exercises with ~sample~ and ~replicate~
+* Finish "correlation and covariance"
+#+attr_html: :width 400px
+[[../img/nosepicking.png]]
 
+- Covariance ~cov~: measure of variability
+- Correlation coefficient ~cor(x,y)~: \rho_{xy} = ~cov(x,y)~ / \sigma_{x} \sigma_{y}
+- Pearson's coefficient only measures /linear/ relationships
+  
 * A world of change
 
 [[https://twitter.com/historydefined/status/1586953757824356352?s=20&t=WXVh5nGDFHf536Tqqt3PPg\]\]]["We live in a world of change." (1929)]]

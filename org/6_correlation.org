@@ -481,7 +481,7 @@ All right, yeah«
   or unnaturally (as the result of a contamination or false input)
 
 - To check this, look at both plots in one image:
-  #+begin_src R :results graphics file :file outliers.png
+  #+begin_src R :results graphics file :file ../img/outliers.png
     par(mfrow=c(1,2), pty='s')  # set up two square plots side by side
 
     plot(foo,rep(0,10),yaxt="n",ylab="",bty="n")
@@ -494,9 +494,6 @@ All right, yeah«
     text(-0.5,-74,labels="outlier?",adj=0) 
     title("Plot no. 2")
   #+end_src
-
-  #+RESULTS:
-  [[file:outliers.png]]
 
 - Compute the sample mean and the mean once the outlier has been
   removed for ~foo~ in the left plot. Tip: use ~which~ to get the
