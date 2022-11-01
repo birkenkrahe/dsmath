@@ -1080,7 +1080,7 @@ are able to *cite* your references.
 ** [[https://lyon.instructure.com/courses/655/assignments/3247/edit?quiz_lti][Test 7: Measures of spread]] (Oct 18)
 ** [[https://lyon.instructure.com/courses/655/assignments/3207][Assignment 6: Measures of spread]] (Oct 25)
 ** [[https://lyon.instructure.com/courses/655/assignments/3246/edit?quiz_lti][Test 8: Central limit theorem/statistical tests]] (Oct 27)
-* Week 10: correlations and outliers
+* Week 10: Review measures of spread
 #+attr_html: :width 400px
 [[../img/milgram.jpg]]
 
@@ -1203,12 +1203,12 @@ variable:
      #+RESULTS:
      [[file:../img/nilehist.png]]
 
-* Week 11-15: plotting, probability, distributions
+* Week 11: Covariance, correlations
 #+attr_html: :width 400px
 [[../img/certificate.png]]
 
 - [X] Home assignment: Measures of Spread ([[https://lyon.instructure.com/courses/655/assignments/3207][Canvas]], Oct 25)
-- [X] 3rd sprint review: write an abstract [[https://github.com/birkenkrahe/org/blob/master/img/template.jpg][à la Nature magazine]] 
+- [X] 3rd sprint review: write an abstract [[https://github.com/birkenkrahe/org/blob/master/img/template.jpg][à la Nature magazine]]
 - [X] Test 8: DataCamp revision ([[https://lyon.instructure.com/courses/655/assignments/3246/edit?quiz_lti][Canvas]], Dec 2)
 - [X] Group exercise: Milgram Experiment 1961
 - [X] Lecture:covariance/correlation/outliers ([[https://github.com/birkenkrahe/dsmath/blob/main/org/6_correlation.org][GitHub]], [[https://lyon.instructure.com/courses/655/assignments/3261][Canvas]] upload)
@@ -1244,7 +1244,7 @@ to 300. [[https://github.com/birkenkrahe/org/blob/master/research/Abstract.org][
    data science is highly fragmented - it involves different
    programming languages, data visualization techniques, mathematical
    and process modeling, and knowledge of computing infrastructure
-   (???). 
+   (???).
    #+end_quote
 
 3) "One sentence clearly stating the general *problem* being addressed
@@ -1356,11 +1356,11 @@ Commit Monstrous Acts"
     2018). [[https://moderntherapy.online/blog-2/millgrams-experiments-explained][moderntherapy.online]]
 
 ** Discussion results
- 
+
 1) Can people be made to do anything no matter how monstrous?
    - Right set of situational variables, then yes
    - Not because some situations are too personal or extreme
-   
+
 2) What is the evidence?
 
 3) Personal experience or views?
@@ -1368,7 +1368,7 @@ Commit Monstrous Acts"
 4) What are some limitations of this experiment?
    - Setup is not real: strangers, story dependency, deception
    - Sample is extremely narrow (changing demographics)
-   
+
 5) Which real life situations do you know to which this experiment
    might apply?
    - Autonomous cars
@@ -1387,11 +1387,59 @@ Commit Monstrous Acts"
 
 - Start the file proper with a new headline using ~*~
 
+* Week 12: Outliers, probability
+#+attr_html: :width 300px
+[[../img/outliers.jpg]]
+#+begin_notes
+»Outliers« (Gladwell, 2008) explains why “the self-made man” is a myth
+and what truly lies behind the success of the best people in their
+field, which is often a series of lucky events, rare opportunities and
+other external factors, which are out of our control, but also the
+'10,000-hour'-rule, which is within our control to achieve.
+#+end_notes
+- [ ] Outliers: "People are strange when you're a stranger"
+- [ ] Frequentist/classical/naive vs. Bayesian probability
+- [ ] Intersection, Union and Complement
+- [ ] Exercises with ~sample~ and ~replicate~
+
+* A world of change
+
+[[https://twitter.com/historydefined/status/1586953757824356352?s=20&t=WXVh5nGDFHf536Tqqt3PPg\]\]]["We live in a world of change." (1929)]]
+#+attr_html: :width 5
+[[../img/CHANGE.png]]
+
+- Which types of statements are verifiable?
+  #+begin_notes
+  1) Falsifiable: sunset, telephone, electricity
+  2) Not falsifiable: safety, good old days, improvements
+  #+end_notes
+- How can statements be verified?
+  #+begin_quote
+  1) By experimentation to show the statement's truth or falsehood
+  2) Experiments have to be repeated, in principle forever
+  #+end_quote
+- What's better, falsification or verification?
+  #+begin_quote
+  - Falsification is the refutation of statements
+  - Verification refers to statements that are shown to be true
+  - The goal of science is to create knowledge by identifying true
+    statements as true (verified) and false statements as false
+    (falsified).
+  - None is better, verification implies better specificity
+  #+end_quote
+- Which statements can you attach probabilities to?
+  #+begin_quote
+  - Statements whose claims can be measured or quantified
+  - Statements about events that have not happened yet
+  #+end_quote
+
 * References
 #+attr_html: :width 500px
 [[../img/books.jpg]]
 
-Lawlor J, Banville F, Forero-Muñoz N-R, Hébert K, Martínez-Lanfranco
-JA, Rogy P, et al. (2022) Ten simple rules for teaching yourself
-R. PLoS Comput Biol 18(9):
-e1010372. https://doi.org/10.1371/journal.pcbi.1010372
+- Davies, TD (2016). The Book of R. NoStarch Press.
+- Lawlor J, Banville F, Forero-Muñoz N-R, Hébert K, Martínez-Lanfranco
+  JA, Rogy P, et al. (2022) Ten simple rules for teaching yourself
+  R. PLoS Comput Biol 18(9):
+  e1010372. https://doi.org/10.1371/journal.pcbi.1010372
+- Ziqing et al (n.d.). Bayesian vs. Frequentist. [[https://indico.cern.ch/event/568904/contributions/2651065/attachments/1487369/2310671/BvsF.pdf][URL: cern.ch]].

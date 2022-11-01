@@ -1,0 +1,17 @@
+#+TITLE: Probability
+#+AUTHOR: MARCUS BIRKENKRAHE
+x#+SUBTITLE: Applied math for data science (DSC 482/MTH 445) Fall 2022
+#+PROPERTY: :session *R* :results output :exports both
+#+STARTUP: overview hideblocks indent inlineimages entitiespretty
+#+attr_html: :width 400px
+#+caption: Did the Sun just explode? (It's night, so we're not sure) by xkcd
+[[../img/7_xkcd.png]]
+
+1. Frequentist vs. Bayesian Probability
+2. Intersection, Union and Complement
+3. Exercises with ~sample~ and ~replicate~
+
+* References
+
+- [[https://nostarch.com/bookofr][Davies TD (2016). Book of R. NoStarch Press. URL: nostarch.com]]
+
