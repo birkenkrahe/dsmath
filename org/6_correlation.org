@@ -232,7 +232,7 @@
   detect linear relationships: the two last plots show distinct
   patterns but no linear correlation
 
-* NEXT Practice: ~quakes~
+* Practice: ~quakes~
 
 *OPEN YOUR ORG-MODE PRACTICE FILE IN EMACS AND START R*
 
@@ -265,7 +265,7 @@ earthquake stations and the magnitude of earthquakes detected by them.
    #+end_example
 
 2) *Plot* the observation ~stations~ against the earthquake magnitude ~mag~,
-   label the axis using the ~xlab~ and ~ylab~ parameters, and ~title~ it.
+   label the axes using the ~xlab~ and ~ylab~ parameters, and ~title~ it.
    #+begin_src R :results graphics file :file ../img/6_stations.png
      plot(stations ~ magnitudes,
           xlab = "Earthquake magnitude (Richter scale)",
@@ -359,7 +359,17 @@ All right, yeah«
 
 - Observing human "outliers" (or eccentrics) also leads to a lot of
   extreme qualitative values (what do you think they are?)
-
+  1) extreme kindness
+  2) extreme work ethics (+/-)
+  3) extremely talented
+  4) extreme intelligence
+  5) extreme hoarder
+  6) extreme height
+  7) extreme wealth
+  8) extreme occupation
+  9) extremely funny
+  10) extremely consistent
+     
 - *Whom do you know who would qualify as a "human outlier"? Why?*
 
 * Univariate example
@@ -478,7 +488,7 @@ All right, yeah«
   #+RESULTS:
   [[file:../img/outlier5.png]]
 
-* Removing outliers
+* NEXT Removing outliers
 
 - Data scientist will try to remove outliers before computing results
 
