@@ -68,6 +68,10 @@
   world. Its applications (like the laser, nuclear power etc.) are
   still real.
 
+- In particle physics experiments, measuring the outcome of big data
+  events relies on probabilistic simulations like Monte Carlo, which
+  are also common place in risk analysis and investment data science.
+
 * Example 3: Bayesian marriage
 #+attr_html: :width 400px
 [[../img/7_marriage.jpg]]
@@ -89,7 +93,7 @@
 - This is known as /Bayesian/ probability, which uses prior knowledge or
   subjective belief to inform the computation (smaller samples needed)
 
-* Conditional probability (Bayes' rule)
+* Conditional probability and Bayes' rule
 #+attr_html: :width 200px
 #+caption: Thomas Bayes, statistician and Presbyterian minister (1701-1761)
 [[../img/7_Thomas_Bayes.gif]]
@@ -114,9 +118,55 @@ Event B: "you roll an even number" - Pr(B) = 1/2
   chance to roll an even number is Pr(B|A) = Pr(A|B) = 2/3 \ne Pr(B) =
   1/2.
 
+- In R, you can use the ~sample~ function to roll a die (or a set of
+  dice) with or without replacement, with or without set probability:
+  #+begin_src R
+    n <- 1
+    sample(1:6, n) # default: replace = FALSE, prob = NULL
+  #+end_src
+
+  #+RESULTS:
+  : 6
+
+* Practice: probability
+* TODO Intersection
+* TODO Union
+* TODO Complement
+* IN PROGRESS Computational probability
+
+- The common mathematical approach to probability is a /sample space/,
+  the space of all possible events. For example, for two dice rolls:
+  #+attr_html: :width 300px
+  [[../img/7_samplespace.png]]
+
+- In a theoretical treatment (independent dice rolls), we place
+  weights of 1/36 = 1/6 x 1/6 on each of the points in the sample
+  space.
+
+- Let X and Y denote the number of dots we get on two dice, one /blue/
+  and one /yellow/, and consider the meaning of Pr(X + Y = 6),
+  i.e. rolling a total of 6 with two dice rolls.
+
+- The possible outcomes with Pr(X+Y=6) are: (1,5), (2,4), (3,3),
+  (4,2), (5,1), i.e. Pr(X+Y=6) = 5/36.
+
+- Unfortunately, the notion of sample space becomes mathematically
+  very tricky for more complex models, requiring /measure theory/ (Tao,
+  2011), and one looses all intuition.
+
+  | NOTEBOOK LINE | OUTCOME | BLUE + YELLOW = 6? |
+  |---------------+---------+--------------------|
+  |               |         |                    |
+  
+* Practice: set theory operators
 * References
 
 - [[https://nostarch.com/bookofr][Davies TD (2016). Book of R. NoStarch Press. URL: nostarch.com]]
+
+- Matloff N (2019). Probability and Statistics for Data Science. CRC
+  Press.
+  
+- [[https://terrytao.files.wordpress.com/2012/12/gsm-126-tao5-measure-book.pdf][Tao T (2011). An introduction to measure theory. Am Math Soc.]]
 
 * Footnotes
 
