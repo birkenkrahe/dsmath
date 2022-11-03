@@ -1,17 +1,129 @@
 #+TITLE: Probability
 #+AUTHOR: MARCUS BIRKENKRAHE
-x#+SUBTITLE: Applied math for data science (DSC 482/MTH 445) Fall 2022
+#+SUBTITLE: Applied math for data science (DSC 482/MTH 445) Fall 2022
 #+PROPERTY: :session *R* :results output :exports both
 #+STARTUP: overview hideblocks indent inlineimages entitiespretty
-#+attr_html: :width 400px
+#+attr_html: :width 300px
 #+caption: Did the Sun just explode? (It's night, so we're not sure) by xkcd
 [[../img/7_xkcd.png]]
+(Source: [[https://www.explainxkcd.com/wiki/index.php/1132:_Frequentists_vs._Bayesians][xkcd cartoon 1132: Frequentists vs. Bayesians]])
 
 1. Frequentist vs. Bayesian Probability
 2. Intersection, Union and Complement
 3. Exercises with ~sample~ and ~replicate~
 
+* What is a 'probability'?
+[[../img/7_probability_and_statistics.png]]
+
+- A number that describes the magnitude of chance associated with
+  making a particular observation or statement.
+
+- Probability is always a continuous number p \in [0,1].
+
+- This abstract-mathematical notion becomes tangible only in context
+  with an (observable) event that can be predicted
+
+- Probability theory predicts event data based on models (e.g. CLT)
+
+- Statistics predicts models (e.g. ~mean~) given event data
+
+* Events and probability
+#+attr_html: :width 400px
+[[../img/7_probability.png]]
+([[https://www.explainxkcd.com/wiki/index.php/881:_Probability][Source: xkcd explained - cancer comics]][fn:2])
+
+- An event A refers to a specific outcome that can occur.
+
+- The chance that A occurs is denoted as Pr(A). Pr(A) = 1 means that
+  an event will occur with absolute certainty, Pr(A) = 0 means that it
+  cannot occur ever.
+
+- Pr(A) is known as a /frequentist/ or /classical/ probability. It is the
+  relative frequency with which an event occurs over many identical,
+  objective trials.
+
+- Chance computations always are models that live and die on their
+  assumptions, i.e. reality is modeled as an abstraction.
+
+* Example 1: fair die
+#+attr_html: :width 400px
+[[../img/7_fairdie.png]]
+
+- Example: the six-sided, "fair" die, which does not exist, has Pr(A)
+  = 1/6 for every one of its outcomes A \in {1,2,3,4,5,6}. The die roll
+  is assumed to be identical and objective, though it never really is.
+
+- The (empirical) law of large numbers guarantees that a large enough
+  number of observations will yield the ideal Pr(A).
+
+* Example 2: quantum particle
+#+attr_html: :width 400px
+[[../img/7_cat.png]]
+
+- In quantum physics, particles no longer have a definite position but
+  instead a probability distribution ("Heisenberg uncertainty
+  principle"[fn:1])
+
+- Quantum physics is also a model-based abstraction of the real
+  world. Its applications (like the laser, nuclear power etc.) are
+  still real.
+
+* Example 3: Bayesian marriage
+#+attr_html: :width 400px
+[[../img/7_marriage.jpg]]
+
+- Say you're married and arrive home much later than usual.
+
+- Let B be the event "your partner is angry" because you're late.
+
+- B cannot easily /objectively/ observed or computed.
+
+- Instead, you might assign a value to Pr(B) based on experience: "I
+  think Pr(B) = 0.5" because your experience tells you that your
+  chances are 50-50.
+
+- Instead of an impartial experiment, your chance computation is based
+  on personal impression and knowledge of your spouse or mood, and it
+  is not easily /reproducable/.
+
+- This is known as /Bayesian/ probability, which uses prior knowledge or
+  subjective belief to inform the computation (smaller samples needed)
+
+* Conditional probability (Bayes' rule)
+#+attr_html: :width 200px
+#+caption: Thomas Bayes, statistician and Presbyterian minister (1701-1761)
+[[../img/7_Thomas_Bayes.gif]]
+
+Die example: 
+#+begin_quote
+Event A: "you roll a 4 or more" - Pr(A) = 1/2
+Event B: "you roll an even number" - Pr(B) = 1/2
+#+end_quote
+- A /conditional/ probability is the probability of one event occurring
+  after taking into account the occurrence of another event.
+
+- P(A|B) is the probability that A occurs /given/ that B has occurred.
+- If Pr(A|B) = Pr(A) then A and B are /independent/
+- If Pr(A|B) \ne Pr(A) then A and B are /dependent/
+- Generally, Pr(A|B) \ne Pr(B|A)
+
+- If B has occurred already, an even number {2,4,6} has been rolled,
+  and the chance to roll a 4 or more is Pr(A|B) = 2/3 \ne Pr(A) = 1/2.
+
+- If A has occurred already, one of {4,5,6} has been rolled, and the
+  chance to roll an even number is Pr(B|A) = Pr(A|B) = 2/3 \ne Pr(B) =
+  1/2.
+
 * References
 
 - [[https://nostarch.com/bookofr][Davies TD (2016). Book of R. NoStarch Press. URL: nostarch.com]]
 
+* Footnotes
+
+[fn:2]Apparently, Randall Munroe's, the author of the xkcd cartoon's
+fianceé had cancer and passed away a few days after this comic was
+posted. Its subtitle is: "My normal approach is useless here, too".
+
+[fn:1]One of these paradoxes is the [[https://en.wikipedia.org/wiki/Uncertainty_principle][Heisenberg uncertainty principle]]:
+"We cannot know both the position and the speed of a particle, such as
+a photon or electron, with perfect accuracy": \Delta x \Delta y \sim h

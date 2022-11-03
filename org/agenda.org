@@ -1397,25 +1397,42 @@ field, which is often a series of lucky events, rare opportunities and
 other external factors, which are out of our control, but also the
 '10,000-hour'-rule, which is within our control to achieve.
 #+end_notes
-- [ ] Finish "correlation and covariance" (w/practice)
-- [ ] Outliers: *"People are strange when you're a stranger"*
-- [ ] Upload the completed practice 6 Org-mode file [[https://lyon.instructure.com/courses/655/assignments/3261][to Canvas]]
+- [X] Finish "correlation and covariance" (w/practice)
+- [X] Outliers: *"People are strange when you're a stranger"*
+- [ ] Complete and upload the practice 6 Org-mode file [[https://lyon.instructure.com/courses/655/assignments/3261][to Canvas]]
 - [ ] Frequentist/classical/naive vs. Bayesian probability
 - [ ] Intersection, Union and Complement
 - [ ] Exercises with ~sample~ and ~replicate~
-* Finish "correlation and covariance"
+
+* TODO Review "correlation and covariance"
 #+attr_html: :width 400px
 [[../img/nosepicking.png]]
 
 - Covariance ~cov~: measure of variability
 - Correlation coefficient ~cor(x,y)~: \rho_{xy} = ~cov(x,y)~ / \sigma_{x} \sigma_{y}
 - Pearson's coefficient only measures /linear/ relationships
+
+- Removing outliers (6_correlation.org)
+- Practice exercise (6_correlation_practice.org)
   
-* A world of change
+* TODO A cartoon-based test question
+#+attr_html: :width 250px
+[[../img/null.png]]
+(Source: [[https://www.explainxkcd.com/wiki/index.php/892:_Null_Hypothesis][xkcd "Null Hypothesis" explained]])
+
+What is the null hypothesis? 
+#+begin_notes
+There is no one "/the/ null hypothesis". A null hypothesis is a specific
+statement relative to the current study. It refers to the hypothesis
+in a statistical analysis that the investigated effect does /not/ occur,
+as in /zero/ effect ("Null" is the German word for zero).
+#+end_notes
+
+* TODO Probability: a world of change
 
 [[https://twitter.com/historydefined/status/1586953757824356352?s=20&t=WXVh5nGDFHf536Tqqt3PPg\]\]]["We live in a world of change." (1929)]]
-#+attr_html: :width 5
-[[../img/CHANGE.png]]
+#+attr_html: :width 500px
+[[../img/change.png]]
 
 - Which types of statements are verifiable?
   #+begin_notes
@@ -1441,6 +1458,10 @@ other external factors, which are out of our control, but also the
   - Statements whose claims can be measured or quantified
   - Statements about events that have not happened yet
   #+end_quote
+
+
+* Week 13-15: Probability distributions
+* Week 16: final sprint reviews
 
 * References
 #+attr_html: :width 500px
