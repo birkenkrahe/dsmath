@@ -1,7 +1,7 @@
-#+TITLE: Probability
+n#+TITLE: Probability
 #+AUTHOR: MARCUS BIRKENKRAHE
 #+SUBTITLE: Applied math for data science (DSC 482/MTH 445) Fall 2022
-#+PROPERTY: :session *R* :results output :exports both
+#+PROPERTY: :session *R* :results output :exports both :session *R*
 #+STARTUP: overview hideblocks indent inlineimages entitiespretty
 #+attr_html: :width 300px
 #+caption: Did the Sun just explode? (It's night, so we're not sure) by xkcd
@@ -126,7 +126,7 @@ Event B: "you roll an even number" - Pr(B) = 1/2
   #+end_src
 
   #+RESULTS:
-  : 6
+  : 1
 
 * Practice: probability
 * TODO Intersection

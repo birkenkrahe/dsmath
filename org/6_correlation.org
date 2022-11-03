@@ -369,7 +369,7 @@ All right, yeah«
   8) extreme occupation
   9) extremely funny
   10) extremely consistent
-     
+
 - *Whom do you know who would qualify as a "human outlier"? Why?*
 
 * Univariate example
@@ -428,7 +428,7 @@ All right, yeah«
   save the plot in ~outlier2.png~
   #+begin_src R :results graphics file :file ../img/outlier2.png
     plot(
-      x = bar,      
+      x = bar,
       y = baz)
   #+end_src
 
@@ -436,10 +436,10 @@ All right, yeah«
   [[file:../img/outlier2.png]]
 
 - Add the commands to double the point size ~cex~ and increase axis and
-  label size, ~cex.axis~ and ~cex.lab~ by ~1.5~. 
+  label size, ~cex.axis~ and ~cex.lab~ by ~1.5~.
   #+begin_src R :results graphics file :file ../img/outlier3.png
     plot(
-      x = bar,      
+      x = bar,
       y = baz,
       cex = 2,
       cex.axis = 1.5,
@@ -453,7 +453,7 @@ All right, yeah«
   plot using the function ~arrows~. Double the line width ~lwd~.
   #+begin_src R :results graphics file :file ../img/outlier4.png
     plot(
-      x = bar,      
+      x = bar,
       y = baz,
       cex = 2,
       cex.axis = 1.5,
@@ -461,17 +461,17 @@ All right, yeah«
 
     arrows(x0=-0.5,y0=-80,
            x1=-0.95,y1=-97,
-           lwd=2) 
+           lwd=2)
   #+end_src
 
   #+RESULTS:
   [[file:../img/outlier4.png]]
-  
+
 - Add the text ~"outlier?"~ at the start of the arrow using ~text~. Triple
   the text size ~cex~. To left-justify the textbook, add ~adj=0~.
   #+begin_src R :results graphics file :file ../img/outlier5.png
     plot(
-      x = bar,      
+      x = bar,
       y = baz,
       cex = 2,
       cex.axis = 1.5,
@@ -482,13 +482,13 @@ All right, yeah«
     text(x=-0.5,y=-74,
          labels="outlier?",
          cex=3,
-         adj=0) 
+         adj=0)
   #+end_src
 
   #+RESULTS:
   [[file:../img/outlier5.png]]
 
-* NEXT Removing outliers
+* Removing outliers
 
 - Data scientist will try to remove outliers before computing results
 
@@ -496,6 +496,14 @@ All right, yeah«
   or unnaturally (as the result of a contamination or false input)
 
 - To check this, look at both plots in one image:
+
+  #+begin_src R
+    ls()  # check which variables are in the work environment
+  #+end_src
+
+  #+RESULTS:
+  : [1] "bar" "baz" "foo"
+
   #+begin_src R :results graphics file :file ../img/outliers.png
     par(mfrow=c(1,2), pty='s')  # set up two square plots side by side
 
@@ -506,9 +514,12 @@ All right, yeah«
 
     plot(bar,baz)
     arrows(-0.5,-80,-0.95,-97)
-    text(-0.5,-74,labels="outlier?",adj=0) 
+    text(-0.5,-74,labels="outlier?",adj=0)
     title("Plot no. 2")
   #+end_src
+
+  #+RESULTS:
+  [[file:../img/outliers.png]]
 
 - Compute the sample mean and the mean once the outlier has been
   removed for ~foo~ in the left plot. Tip: use ~which~ to get the
@@ -525,7 +536,7 @@ All right, yeah«
 
 - The sample ~mean~ is greatly affected. It is not "robust" against
   outliers.
-  
+
 - The boxplot of both vectors shows that the 5-point-summary is little
   affected - these measures are considered "robust" against outliers
   #+begin_src R :results graphics file :file foobox.png
@@ -535,26 +546,31 @@ All right, yeah«
   #+RESULTS:
   [[file:foobox.png]]
 
+- In the ~boxplot~, the outliers are identified as IQR * 1.5 (can be
+  changed, see ~help(boxplot)~
+  
 - Without additional information, it is impossible to say if removing
   the outlier is sensible or not.
 
 - Compute the correlation coeffient of ~bar~ with ~baz~ shown in the right
-  plot.
+  plot:
   #+begin_src R
     cor(bar,baz)
     outlier_baz <- which(baz==min(baz))
-    cor(bar[-outlier_baz], baz[-outlier_baz])
+    outlier_bar <- which(bar==min(bar))
+    cor(bar[-outlier_bar], baz[-outlier_baz])
   #+end_src
 
   #+RESULTS:
   : [1] 0.4566361
-  : [1] 0.8898639
+  : [1] -0.01536533
 
 - The correlation is much stronger without that outlier.
 
 * Practice: covariance, correlation, outliers
 
 - Download the practice file from [[https://tinyurl.com/45fjmyxy][tinyurl.com/45fjmyxy]]
+- Get the dataset from [[https://tinyurl.com/494vdr56][tinyurl.com/494vdr56]]
 - Complete the practice file in Emacs
 - Upload the completed practice file to Canvas
 
