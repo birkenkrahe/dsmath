@@ -35,7 +35,7 @@
   #+end_src
 
   #+RESULTS: plot
-  [[file:../img/outlier2.png]]
+  [[file:../img/6_mtcars.png]]
 
 - We can easily fit a linear model ~lm~ through the sample:
   #+begin_src R :results graphics file :file ../img/6_mtcars1.png :noweb yes
@@ -57,13 +57,13 @@
   #+end_src
 
   #+RESULTS:
-  :
+  : 
   : Call:
   : lm(formula = mpg ~ wt, data = mtcars)
-  :
+  : 
   : Coefficients:
-  : (Intercept)           wt
-  :       37.29        -5.34
+  : (Intercept)           wt  
+  :      37.285       -5.344
 
 * Covariance
 
@@ -111,8 +111,8 @@
   #+end_src
 
   #+RESULTS:
-  : [1] 0.9528
-  : [1] 2.013
+  : [1] 0.9528154
+  : [1] 2.012639
   : [1] 0
 
 - Computing the sample covariance (~digits=4~):
@@ -133,6 +133,7 @@
   #+end_src
 
   #+RESULTS:
+  : [1] 1.479286
 
 - Using the ~cov~ function:
   #+begin_src R
@@ -249,19 +250,19 @@ earthquake stations and the magnitude of earthquakes detected by them.
 
    #+RESULTS:
    #+begin_example
-   'data.frame':        1000 obs. of  5 variables:
+   'data.frame':	1000 obs. of  5 variables:
     $ lat     : num  -20.4 -20.6 -26 -18 -20.4 ...
     $ long    : num  182 181 184 182 182 ...
     $ depth   : int  562 650 42 626 649 195 82 194 211 622 ...
     $ mag     : num  4.8 4.2 5.4 4.1 4 4 4.8 4.4 4.7 4.3 ...
     $ stations: int  41 15 43 19 11 12 43 15 35 19 ...
-        lat   long depth mag stations
-   1 -20.42 181.62   562 4.8       41
-   2 -20.62 181.03   650 4.2       15
-   3 -26.00 184.10    42 5.4       43
-   4 -17.97 181.66   626 4.1       19
-   5 -20.42 181.96   649 4.0       11
-   6 -19.68 184.31   195 4.0       12
+        lat  long depth mag stations
+   1 -20.42 181.6   562 4.8       41
+   2 -20.62 181.0   650 4.2       15
+   3 -26.00 184.1    42 5.4       43
+   4 -17.97 181.7   626 4.1       19
+   5 -20.42 182.0   649 4.0       11
+   6 -19.68 184.3   195 4.0       12
    #+end_example
 
 2) *Plot* the observation ~stations~ against the earthquake magnitude ~mag~,
@@ -297,7 +298,7 @@ earthquake stations and the magnitude of earthquakes detected by them.
    #+end_src
 
    #+RESULTS:
-   : [1] 7.508181
+   : [1] 7.508
 
 5) *Compute* Pearson's linear correlation coefficient.
    #+begin_src R
@@ -305,7 +306,7 @@ earthquake stations and the magnitude of earthquakes detected by them.
    #+end_src
 
    #+RESULTS:
-   : [1] 0.8511824
+   : [1] 0.8512
 
 * Correlation and causation
 #+attr_html: :width 600px
@@ -502,7 +503,8 @@ All right, yeah«
   #+end_src
 
   #+RESULTS:
-  : [1] "bar" "baz" "foo"
+  : [1] "bar"        "baz"        "foo"        "line"       "m"         
+  : [6] "magnitudes" "stations"   "xdata"      "ydata"
 
   #+begin_src R :results graphics file :file ../img/outliers.png
     par(mfrow=c(1,2), pty='s')  # set up two square plots side by side
@@ -532,7 +534,7 @@ All right, yeah«
 
   #+RESULTS:
   : [1] 0.49
-  : [1] -0.1222222
+  : [1] -0.1222
 
 - The sample ~mean~ is greatly affected. It is not "robust" against
   outliers.
@@ -562,10 +564,26 @@ All right, yeah«
   #+end_src
 
   #+RESULTS:
-  : [1] 0.4566361
-  : [1] -0.01536533
+  : [1] 0.4566
+  : [1] -0.01537
 
 - The correlation is much stronger without that outlier.
+
+- Check via plot that the outliers were actually removed:
+  #+begin_src R :results graphics file :file ../img/outliers_removed.png
+    par(mfrow=c(1,2), pty='s')  # set up two square plots side by side
+
+    plot(foo[-outlier_foo],rep(0,length(foo)-1),yaxt="n",ylab="",bty="n")
+    arrows(5,0.5,5.9,0.1)
+    title("Plot no. 1 (outlier removed)")
+
+    plot(bar[-outlier_bar],baz[-outlier_baz])
+    arrows(-0.5,-80,-0.95,-97)
+    title("Plot no. 2 (outlier removed)")
+  #+end_src
+
+  #+RESULTS:
+  [[file:../img/outliers_removed.png]]
 
 * Practice: covariance, correlation, outliers
 

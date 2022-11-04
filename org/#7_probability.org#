@@ -119,6 +119,7 @@ Event B: "you roll an even number" - Pr(B) = 1/2
   chance to roll an even number is Pr(B|A) = Pr(A|B) = 2/3 \ne Pr(B) =
   1/2.
 
+  
 - In R, you can use the ~sample~ function to roll a die (or a set of
   dice) with or without replacement, with or without set probability:
   #+begin_src R
