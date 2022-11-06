@@ -66,6 +66,9 @@
   :      37.285       -5.344
 
 * Covariance
+:PROPERTIES:
+:ORDERED:  t
+:END:
 
 - The covariance expresses how much two variables change together and
   the nature of this change (positive or negative)

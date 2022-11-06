@@ -1399,7 +1399,7 @@ other external factors, which are out of our control, but also the
 #+end_notes
 - [X] Finish "correlation and covariance" (w/practice)
 - [X] Outliers: *"People are strange when you're a stranger"*
-- [ ] Complete and upload the practice 6 Org-mode file [[https://lyon.instructure.com/courses/655/assignments/3261][to Canvas]]
+- [X] Complete and upload the practice 6 Org-mode file [[https://lyon.instructure.com/courses/655/assignments/3261][to Canvas]]
 - [ ] Frequentist/classical/naive vs. Bayesian probability
 - [ ] Intersection, Union and Complement
 - [ ] Exercises with ~sample~ and ~replicate~
@@ -1416,8 +1416,9 @@ other external factors, which are out of our control, but also the
 - Practice exercise (6_correlation_practice.org)
   
 * TODO A cartoon-based test question
+
 #+attr_html: :width 250px
-[[../img/null.png]]
+[[../img/null_hypothesis.png]]
 (Source: [[https://www.explainxkcd.com/wiki/index.php/892:_Null_Hypothesis][xkcd "Null Hypothesis" explained]])
 
 What is the null hypothesis? 
@@ -1458,7 +1459,6 @@ as in /zero/ effect ("Null" is the German word for zero).
   - Statements whose claims can be measured or quantified
   - Statements about events that have not happened yet
   #+end_quote
-
 
 * Week 13-15: Probability distributions
 * Week 16: final sprint reviews
