@@ -1404,7 +1404,7 @@ other external factors, which are out of our control, but also the
 - [ ] Intersection, Union and Complement
 - [ ] Exercises with ~sample~ and ~replicate~
 
-* TODO Review "correlation and covariance"
+** Review "correlation and covariance"
 #+attr_html: :width 400px
 [[../img/nosepicking.png]]
 
@@ -1415,7 +1415,9 @@ other external factors, which are out of our control, but also the
 - Removing outliers (6_correlation.org)
 - Practice exercise (6_correlation_practice.org)
   
-* TODO A cartoon-based test question
+* Week 13: Foundations of Probability
+** TODO New test available
+** A cartoon-based test question
 
 #+attr_html: :width 250px
 [[../img/null_hypothesis.png]]
@@ -1429,7 +1431,7 @@ in a statistical analysis that the investigated effect does /not/ occur,
 as in /zero/ effect ("Null" is the German word for zero).
 #+end_notes
 
-* TODO Probability: a world of change
+** TODO Probability: a world of change
 
 [[https://twitter.com/historydefined/status/1586953757824356352?s=20&t=WXVh5nGDFHf536Tqqt3PPg\]\]]["We live in a world of change." (1929)]]
 #+attr_html: :width 500px
