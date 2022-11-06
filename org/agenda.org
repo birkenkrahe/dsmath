@@ -1400,9 +1400,6 @@ other external factors, which are out of our control, but also the
 - [X] Finish "correlation and covariance" (w/practice)
 - [X] Outliers: *"People are strange when you're a stranger"*
 - [X] Complete and upload the practice 6 Org-mode file [[https://lyon.instructure.com/courses/655/assignments/3261][to Canvas]]
-- [ ] Frequentist/classical/naive vs. Bayesian probability
-- [ ] Intersection, Union and Complement
-- [ ] Exercises with ~sample~ and ~replicate~
 
 ** Review "correlation and covariance"
 #+attr_html: :width 400px
@@ -1416,14 +1413,24 @@ other external factors, which are out of our control, but also the
 - Practice exercise (6_correlation_practice.org)
   
 * Week 13: Foundations of Probability
+- [ ] Frequentist/classical/naive vs. Bayesian probability
+- [ ] Intersection, Union and Complement
+- [ ] Exercises with ~sample~ and ~replicate~
 ** TODO New test available
-** A cartoon-based test question
+#+attr_html: :width 400px
+[[../img/lookahead.jpg]]
 
+- Two tests currently [[https://lyon.instructure.com/courses/655/quizzes][available in Canvas]]
+- Don't wait until shortly before the final exam
+- The deadline "December 2nd" is a formal deadline only
+- Use the opportunity to build knowledge non-bulimically
+
+** TODO A cartoon-based test question
 #+attr_html: :width 250px
 [[../img/null_hypothesis.png]]
 (Source: [[https://www.explainxkcd.com/wiki/index.php/892:_Null_Hypothesis][xkcd "Null Hypothesis" explained]])
 
-What is the null hypothesis? 
+"What is the null hypothesis?"
 #+begin_notes
 There is no one "/the/ null hypothesis". A null hypothesis is a specific
 statement relative to the current study. It refers to the hypothesis
@@ -1462,8 +1469,14 @@ as in /zero/ effect ("Null" is the German word for zero).
   - Statements about events that have not happened yet
   #+end_quote
 
-* Week 13-15: Probability distributions
 * Week 16: final sprint reviews
+#+attr_html: :width 500px
+[[../img/botticelli.jpg]]
+[[https://en.wikipedia.org/wiki/Primavera_(Botticelli)][Image: Botticelli's Primavera (1482), Florence]][fn:1]
+
+- *Present* final project prototype in no particular order!
+- *Submit* all material prior to the presentation!
+- *Read* *[[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-should-we-prepare-for-the-final-presentation][the FAQ]]* with the checklist carefully *now*!
 
 * References
 #+attr_html: :width 500px
@@ -1475,3 +1488,8 @@ as in /zero/ effect ("Null" is the German word for zero).
   R. PLoS Comput Biol 18(9):
   e1010372. https://doi.org/10.1371/journal.pcbi.1010372
 - Ziqing et al (n.d.). Bayesian vs. Frequentist. [[https://indico.cern.ch/event/568904/contributions/2651065/attachments/1487369/2310671/BvsF.pdf][URL: cern.ch]].
+
+* Footnotes
+
+[fn:1]Can you figure out the connection between the three paintings
+selected for this term's final presentation announcement? 
