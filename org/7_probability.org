@@ -1,12 +1,12 @@
 n#+TITLE: Probability
 #+AUTHOR: MARCUS BIRKENKRAHE
 #+SUBTITLE: Applied math for data science (DSC 482/MTH 445) Fall 2022
-#+PROPERTY: :session *R* :results output :exports both :session *R*
+#+PROPERTY: header-args:R :session *R* :results output :exports both
 #+STARTUP: overview hideblocks indent inlineimages entitiespretty
 #+attr_html: :width 300px
 #+caption: Did the Sun just explode? (It's night, so we're not sure) by xkcd
 [[../img/7_xkcd.png]]
-(Source: [[https://www.explainxkcd.com/wiki/index.php/1132:_Frequentists_vs._Bayesians][xkcd cartoon 1132: Frequentists vs. Bayesians]])
+Source: [[https://www.explainxkcd.com/wiki/index.php/1132:_Frequentists_vs._Bayesians][xkcd cartoon 1132: Frequentists vs. Bayesians]]
 
 1. Frequentist vs. Bayesian Probability
 2. Intersection, Union and Complement
@@ -18,43 +18,103 @@ n#+TITLE: Probability
 - A number that describes the magnitude of chance associated with
   making a particular observation or statement.
 
-- Probability is always a continuous number p \in [0,1].
+- Probability is always a continuous number ~p \in [0,1]~.
 
 - This abstract-mathematical notion becomes tangible only in context
   with an (observable) event that can be predicted
 
-- Probability theory predicts event data based on models (e.g. CLT)
+- Probability theory predicts event data based on models - e.g. "each
+  /outcome/ on a fair die has a probability of 1/6 in any given roll"
 
-- Statistics predicts models (e.g. ~mean~) given event data
+- Statistics predicts models given event data, e.g. "the /average/ of a
+  series of ~n~ observations is the sum of their values over ~n~."
 
 * Events and probability
-#+attr_html: :width 400px
-[[../img/7_probability.png]]
-([[https://www.explainxkcd.com/wiki/index.php/881:_Probability][Source: xkcd explained - cancer comics]][fn:2])
 
 - An event A refers to a specific outcome that can occur.
 
-- The chance that A occurs is denoted as Pr(A). Pr(A) = 1 means that
-  an event will occur with absolute certainty, Pr(A) = 0 means that it
+- The chance that A occurs is denoted as ~Pr(A)~. ~Pr(A) = 1~ means that
+  an event will occur with absolute certainty, ~Pr(A) = 0~ means that it
   cannot occur ever.
 
-- Pr(A) is known as a /frequentist/ or /classical/ probability. It is the
+- ~Pr(A)~ is known as a /frequentist/ or /classical/ probability. It is the
   relative frequency with which an event occurs over many identical,
   objective trials.
 
-- Chance computations always are models that live and die on their
+- /Chance/ computations are /always/ models that live and die on their
   assumptions, i.e. reality is modeled as an abstraction.
+
+- Remember: real life is not an abstraction but a mess of details:
+  #+attr_html: :width 600px
+  [[../img/7_probability.png]]
+  [[https://www.explainxkcd.com/wiki/index.php/881:_Probability][Source: xkcd explained - cancer comics]][fn:2]
 
 * Example 1: fair die
 #+attr_html: :width 400px
 [[../img/7_fairdie.png]]
 
-- Example: the six-sided, "fair" die, which does not exist, has Pr(A)
-  = 1/6 for every one of its outcomes A \in {1,2,3,4,5,6}. The die roll
-  is assumed to be identical and objective, though it never really is.
+- Example: the six-sided, "fair" die, which does not exist, has ~Pr(A)
+  = 1/6~ for every one of its outcomes ~A \in {1,2,3,4,5,6}~. The die
+  roll is assumed to be /identical/ and /objective/, though it never
+  really is.
 
 - The (empirical) law of large numbers guarantees that a large enough
-  number of observations will yield the ideal Pr(A).
+  number of observations will yield the ideal ~Pr(A)~.
+
+- We can simulate this using R:
+  1) define a standard, six-sided, fair die
+  2) roll die once (with replacement)
+  #+begin_src R
+    die <- rep(x=1:6)  # define a standard die
+    sample(
+      x = die, # vector to sample from
+      size = 1)  # size of sample - "roll die once"
+  #+end_src
+
+  #+RESULTS:
+  : [1] 4
+
+* "Monte Carlo Simulation"
+
+- We want to repeat the die roll an infinite number of times
+
+- Instead we repeat the experiment a large enough number of times ~N~ to
+  make the results /practically equivalent/ to repeating forever
+
+- We use the ~replicate~ function (from the ~apply~ family)
+  1) define number of repetitions ~N~
+  2) define event vector ~event~
+  3) print frequencies of each side with ~table~
+  4) print proportions with ~prop.table~
+  5) print sample average with ~mean~
+  #+name: roll_die
+  #+begin_src R
+    N <- 10                                #1
+    events <- replicate(N, sample(die,1))     #2
+    table(events) -> tbl                      #3
+    tbl
+    prop.table(table(events)) -> proportions  #4
+    proportions
+    mean(proportions)                         #5
+  #+end_src
+
+  #+RESULTS: roll_die
+  : events
+  : 2 3 4 5 6
+  : 1 1 2 5 1
+  : events
+  :   2   3   4   5   6
+  : 0.1 0.1 0.2 0.5 0.1
+  : [1] 0.2
+
+- The law of large number is visible in the barplot:
+  #+begin_src R :results graphics file :file ../img/dieroll.png :noweb yes
+    <<roll_die>>
+    barplot(height=proportions)
+  #+end_src
+
+  #+RESULTS:
+  [[file:../img/dieroll.png]]
 
 * Example 2: quantum particle
 #+attr_html: :width 400px
@@ -92,48 +152,98 @@ n#+TITLE: Probability
 
 - This is known as /Bayesian/ probability, which uses prior knowledge or
   subjective belief to inform the computation (smaller samples needed)
+#+attr_html: :width 300px
+#+caption: Did the Sun just explode? (It's night, so we're not sure) by xkcd
+[[../img/7_xkcd.png]]
+Source: [[https://www.explainxkcd.com/wiki/index.php/1132:_Frequentists_vs._Bayesians][xkcd cartoon 1132: Frequentists vs. Bayesians]]
 
-* Conditional probability and Bayes' rule
-#+attr_html: :width 200px
-#+caption: Thomas Bayes, statistician and Presbyterian minister (1701-1761)
-[[../img/7_Thomas_Bayes.gif]]
+* Conditional probability
 
-Die example: 
+Die example:/
 #+begin_quote
-Event A: "you roll a 4 or more" - Pr(A) = 1/2
-Event B: "you roll an even number" - Pr(B) = 1/2
+Event A: "you roll a 4 or more" - Pr(A) = Pr({4,5,6}) = 3/6 = 1/2
+Event B: "you roll an even number" - Pr(B) = Pr({2,4,6}) = 3/6 = 1/2
 #+end_quote
 
 - A /conditional/ probability is the probability of one event occurring
   after taking into account the occurrence of another event.
 
-- P(A|B) is the probability that A occurs /given/ that B has occurred.
-- If Pr(A|B) = Pr(A) then A and B are /independent/
-- If Pr(A|B) \ne Pr(A) then A and B are /dependent/
-- Generally, Pr(A|B) \ne Pr(B|A)
+- ~P(A|B)~ is the probability that A occurs /given/ that B has occurred.
+- If ~Pr(A|B) = Pr(A)~ then A and B are (stochastically) /independent/
+- If ~Pr(A|B) \ne Pr(A)~ then A and B are (stochastically) /dependent/
+- Generally, ~Pr(A|B) \ne Pr(B|A)~
 
+/Die example:/
 - If B has occurred already, an even number {2,4,6} has been rolled,
-  and the chance to roll a 4 or more is Pr(A|B) = 2/3 \ne Pr(A) = 1/2.
+  and the chance to roll a 4 or more is ~Pr(A|B) = 2/3~ ({4} or {6} out
+  of {2,4,6})
 
-- If A has occurred already, one of {4,5,6} has been rolled, and the
-  chance to roll an even number is Pr(B|A) = Pr(A|B) = 2/3 \ne Pr(B) =
-  1/2.
+- Consequently, A and B are dependent: "the chance to roll a 4 or more
+  is greater if an even number has already been rolled"[fn:3]
 
-  
-- In R, you can use the ~sample~ function to roll a die (or a set of
-  dice) with or without replacement, with or without set probability:
+* Intersection
+#+attr_html: :width 300px
+[[../img/7_intersection.png]]
+
+- The intersection of two events A and B, ~Pr(A \cap B)~ is the
+  probability that both A and B occur simultaneously
+
+- ~Pr(A \cap B) = Pr(A|B) \times Pr(B)~ or ~Pr(B|A) \times Pr(A)~
+
+- ~Pr(A \cap B) = 0~ means A and B are /mutually exclusive/ and cannot occur
+  simultaneously
+
+- If A and B are independent, ~Pr(A|B) = Pr(A)~ or ~Pr(B|A) = Pr(B)~ and
+  ~Pr(A \cap B) = Pr(A) \times Pr(B)~
+
+- Die example: what's the probability that on a single toss you roll
+  an even number (B) /and/ it's a 4 or more (A)?
+
+- Since ~Pr(A|B) = 2/3~ and ~Pr(B) = 1/2~, ~Pr(A \cap B) = 2/3 \times 1/2 = 1/3~
+
+- A and B are /not/ mutually exclusive since ~Pr(A \cap B) \ne 0~: it's
+  possible to roll a number that's both even and at least 4.
+
+* Union
+#+attr_html: :width 300px
+[[../img/7_union.png]]
+
+- ~Pr(A \cup B)~ is the probability that either A or B occurs.
+
+- ~Pr(A \cup B) = Pr(A) + Pr(B) - Pr(A \cap B)~
+
+- The intersection needs to be subtracted not to count it twice
+
+- If A and B are mutually exclusive then ~Pr(A \cup B) = Pr(A) + Pr(B)~
+
+- Die example: the probability that you observe an even number or one
+  that is at least 4 is ~Pr(A \cup B) = 1/2 + 1/2 - 1/3 = 4/6 = 2/3~
   #+begin_src R
-    n <- 1
-    sample(1:6, n) # default: replace = FALSE, prob = NULL
+    all.equal(1/2+1/2-1/3,2/3)
   #+end_src
 
-  #+RESULTS:
-  : 1
+* Complement
+#+attr_html: :width 300px
+[[../img/7_complement.png]]
 
-* Practice: probability
-* TODO Intersection
-* TODO Union
-* TODO Complement
+- The complement of ~Pr(A)~ is the probability that A does not occur
+  (usually written with an overline), or ~1 - Pr(A)~
+
+- Die example: the probability that you do not roll a 4 or greater (A)
+  is ~1 - 1/2 = 1/2~. If none of {4,5,6} is obtained, you must have
+  rolled a {1,2,3}.
+
+* IN PROGRESS Practice: probability with a deck of cards
+
+
+
+
+
+* IN PROGRESS Bayes' theorem
+#+attr_html: :width 200px
+#+caption: Thomas Bayes, statistician and Presbyterian minister (1701-1761)
+[[../img/7_Thomas_Bayes.gif]]
+
 * IN PROGRESS Computational probability
 
 - The common mathematical approach to probability is a /sample space/,
@@ -159,7 +269,8 @@ Event B: "you roll an even number" - Pr(B) = 1/2
   | NOTEBOOK LINE | OUTCOME | BLUE + YELLOW = 6? |
   |---------------+---------+--------------------|
   |               |         |                    |
-  
+
+
 * Practice: set theory operators
 * References
 
@@ -167,10 +278,14 @@ Event B: "you roll an even number" - Pr(B) = 1/2
 
 - Matloff N (2019). Probability and Statistics for Data Science. CRC
   Press.
-  
+
 - [[https://terrytao.files.wordpress.com/2012/12/gsm-126-tao5-measure-book.pdf][Tao T (2011). An introduction to measure theory. Am Math Soc.]]
 
 * Footnotes
+
+[fn:3]In this example, ~Pr(A|B) = Pr(B|A)~ - if A has occurred already,
+one of {4,5,6} has been rolled, and the chance to roll an even number
+is also ~Pr(B|A) = 2/3~ ({4} or {6} out of {4,5,6}).
 
 [fn:2]Apparently, Randall Munroe's, the author of the xkcd cartoon's
 fianceé had cancer and passed away a few days after this comic was

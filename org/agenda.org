@@ -1413,9 +1413,14 @@ other external factors, which are out of our control, but also the
 - Practice exercise (6_correlation_practice.org)
   
 * Week 13: Foundations of Probability
+#+attr_html: :width 500px
+[[../img/venn.png]]
+
+- [ ] Review of DataCamp "The Binomial Distribution"
 - [ ] Frequentist/classical/naive vs. Bayesian probability
 - [ ] Intersection, Union and Complement
 - [ ] Exercises with ~sample~ and ~replicate~
+
 ** TODO New test available
 #+attr_html: :width 400px
 [[../img/lookahead.jpg]]
@@ -1468,6 +1473,8 @@ as in /zero/ effect ("Null" is the German word for zero).
   - Statements whose claims can be measured or quantified
   - Statements about events that have not happened yet
   #+end_quote
+
+** TODO DataCamp review: the binomial distribution
 
 * Week 16: final sprint reviews
 #+attr_html: :width 500px
