@@ -22,7 +22,7 @@
 5) What are the possible outcomes of ~rbinom(1,1,0.5)~?
    #+begin_src R
    
-
+   #+end_src
 6) What are the possible outcomes of ~rbinom(1,10,0.5)~?
    #+begin_src R
 
