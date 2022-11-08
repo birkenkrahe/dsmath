@@ -1479,134 +1479,48 @@ as in /zero/ effect ("Null" is the German word for zero).
 
 *Some of these questions will show up in the tests/final exam*
 
-*Get the file from 
+*Get the file from [[https://tinyurl.com/mr77ned7][tinyurl.com/mr77ned7]] to code/note along*
 
 1) What is the main theme of this lesson?
-   #+begin_notes
-   - Probability simulation vs. exact computation of probabilities
-   - Generating data from a given distribution ~X = Binomial(size,p)~
-   #+end_notes
+
 2) What is "inference" vs. "probability"? Why is this important?
-   #+begin_notes
-   - Inference means using observed data to build an underlying model
-     (an abstraction from reality) - e.g. the /sample average/.
-   - Probability means predicting data (events )from a model -
-     e.g. /outcomes/ of rolling a die with a probability of 1/6.
-   - High tension between "data-centric" vs. "model-centric" people
-     right now (resource struggle): e.g. "one-shot" vs. deep learning.
-   - I've lately moved from the algorithmic/modeling into the
-     data-first camp, against "black-box" algorithms.
-   #+end_notes
+
 3) What is a coin flip before you look at the outcome?
-   #+begin_notes
-   Before looking at the outcome, the coin flip represents a random
-   variable - i.e. the outcome of a single draw is not fixed (or is
-   it?)
-   #+end_notes
+
 4) What is a coin flip once you've looked at the outcome?
-   #+begin_notes
-   An event that is no longer random, or an observation that can be
-   recorded.
-   #+end_notes
+
 5) What are the possible outcomes of ~rbinom(1,1,0.5)~?
-   #+begin_src R
-     ## outcomes: 0 (tails) or 1 (heads)
-     rbinom(n=1,  # number of coin flips
-            size=1, # number of coins
-            prob=0.5)  # probability of "heads"
-   #+end_src
+
 6) What are the possible outcomes of ~rbinom(1,10,0.5)~?
-   #+begin_src R
-     ## outcomes = no. of heads when flipping 10 coins
-     rbinom(1,10,0.5)
-   #+end_src
+
 7) What are the possible outcomes of ~rbinom(10,10,0.5)~?
-   #+begin_src R
-     ## no. of heads when flipping 10 coins 10 times in a row
-     r <- rbinom(10,10,0.5)
-     r
-     mean(r)
-   #+end_src
+
 8) What data structure is ~rbinom~? What about ~rbinom(1,1,0.5)~?
-   #+begin_src R
-     str(rbinom)
-     is.vector(rbinom(1,1,0.5))
-   #+end_src
+
 9) What is an 'unfair' coin? How is this simulated in R?
-   #+begin_src R
-     ## unfair coin = biased with prob \ne 0.5
-     rbinom(10,1,0.05)
-   #+end_src
+
 10) What does "coin flip with probability 25%" mean? How to show this?
-    #+begin_src R
-      ## prob = 0.25: only 25% of flips are expected to be 'heads'
-      flips <- rbinom(100000,1,0.25)
-      mean(flips)
-    #+end_src
+
 11) Which plot type is used to visualize many coin flips?
-    #+begin_notes
-    - The histogram - it plots counts/frequency of events against the
-      event categories, e.g. for 10 coins the events ~N \in {0,...,10}~.
-    - The result is a distribution of probabilities ~Pr(X=N)~ - the
-      random values are drawn from a binomial distribution
-    #+end_notes
+
 12) Plot 100,000 simultaneous flips of 10 fair coins!
-    #+begin_src R :results graphics file :file ./img/ds_7_hist.png
-      flips <- rbinom(100000,10,.5)
-      hist(flips,
-           main="100,000 flips of 10 fair coins",
-           xlab="Number of heads",
-           ylab="Flip count")
-    #+end_src
+
 13) How can you inspect the frequencies without plotting them?
-    #+begin_src R
-      table(rbinom(100000,10,0.5))  ## see also prop.table
-    #+end_src
+
 14) What is the simulated density of the binomial distribution at ~X=5~?
-    #+begin_src R
-      ## density = 'degree of compactness' of information
-      flips <- rbinom(100000,10,0.5)
-      mean(flips==5)
-    #+end_src
+
 15) What is the exact binomial probability density at ~X=5~?
-    #+begin_src R
-      ## probability of getting 5 heads when flipping 10 fair coins
-      dbinom(x = 5, size = 10, prob = 0.5) # Pr(X=5)
-      mean(rbinom(100000,10,.5)==5) # simulation
-    #+end_src
+
 16) What is cumulative density? How do you simulate/compute it?
-    #+begin_src R
-      ## Pr(X \le 4) - simulation
-      flips <- rbinom(100000, 10, .5)
-      mean(flips <= 4)
-      ## Pr(X \le 4) - computation
-      pbinom(4, 10, .5)
-    #+end_src
+
 17) What is the relationship between ~Pr(X \ge 5)~ and ~Pr(X < 4)~?
-    #+begin_src R
-      ##  Pr(X \ge 5) = 1 - Pr(X < 4)
-      1 - pbinom(4,10,.5) # Pr(X \ge 5)
-      pbinom(4,10,.5)     # Pr(X < 4)
-      1 - pbinom(4,10,.5) + pbinom(4,10,.5)
-    #+end_src
+
 18) What's the relationship between sample average and expected value?
-    #+begin_notes
-    - The expected value E[X] is the center of the distribution
-    - The sample average is the arithmetic mean of all observations
-    - As the sample size goes up, the mean approaches the expected
-      value (= Law of large numbers).
-    #+end_notes
+
 19) What's the formula for the expected value, and how does it relate
     to the definition of the ~binom~ family of functions?
-    #+begin_notes
-    E[X] = sample ~size~ \times ~prob~ ability
-    #+end_notes
+
 20) What's the definition of the variance of a distribution?
-    #+begin_notes
-    - The variance is the average squared distance of each value from
-      the mean of the sample
-    - ~var(X) = ~size~ \times ~prob~ (1 - ~prob~)
-    #+end_notes
 
 * Week 14: Bayesian statistics
 * Week 15: Probability distributions
