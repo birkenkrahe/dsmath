@@ -1479,6 +1479,8 @@ as in /zero/ effect ("Null" is the German word for zero).
 
 *Some of these questions will show up in the tests/final exam*
 
+*Get the file from 
+
 1) What is the main theme of this lesson?
    #+begin_notes
    - Probability simulation vs. exact computation of probabilities

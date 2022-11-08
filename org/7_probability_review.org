@@ -1,0 +1,87 @@
+#+TITLE:DataCamp review: The Binomial Distribution 
+#+AUTHOR: [yourname]
+#+SUBTITLE: Applied math for data science, fall 2022
+#+STARTUP:overview hideblocks indent
+#+PROPERTY: header-args:R :results output :session *R*
+1) What is the main theme of this lesson?
+   #+begin_notes
+
+   #+end_notes
+2) What is "inference" vs. "probability"? Why is this important?
+   #+begin_notes
+
+   #+end_notes
+3) What is a coin flip before you look at the outcome?
+   #+begin_notes
+
+   #+end_notes
+4) What is a coin flip once you've looked at the outcome?
+   #+begin_notes
+
+   #+end_notes
+5) What are the possible outcomes of ~rbinom(1,1,0.5)~?
+   #+begin_src R
+   
+
+6) What are the possible outcomes of ~rbinom(1,10,0.5)~?
+   #+begin_src R
+
+   #+end_src
+7) What are the possible outcomes of ~rbinom(10,10,0.5)~?
+   #+begin_src R
+
+   #+end_src
+
+8) What data structure is ~rbinom~? What about ~rbinom(1,1,0.5)~?
+   #+begin_src R
+
+   #+end_src
+9) What is an 'unfair' coin? How is this simulated in R?
+   #+begin_src R
+
+   #+end_src
+10) What does "coin flip with probability 25%" mean? How to show this?
+    #+begin_src R
+
+    #+end_src
+11) Which plot type is used to visualize many coin flips?
+    #+begin_notes
+
+    #+end_notes
+12) Plot 100,000 simultaneous flips of 10 fair coins!
+    #+begin_src R :results graphics file :file ./img/ds_7_hist.png
+
+    #+end_src
+13) How can you inspect the frequencies without plotting them?
+    #+begin_src R
+
+    #+end_src
+14) What is the simulated density of the binomial distribution at ~X=5~?
+    #+begin_src R
+
+    #+end_src
+15) What is the exact binomial probability density at ~X=5~?
+    #+begin_src R
+
+    #+end_src
+16) What is cumulative density? How do you simulate/compute it?
+    #+begin_src R
+
+    #+end_src
+17) What is the relationship between ~Pr(X \ge 5)~ and ~Pr(X < 4)~?
+    #+begin_src R
+
+    #+end_src
+18) What's the relationship between sample average and expected value?
+    #+begin_notes
+
+    #+end_notes
+19) What's the formula for the expected value, and how does it relate
+    to the definition of the ~binom~ family of functions?
+    #+begin_notes
+
+    #+end_notes
+20) What's the definition of the variance of a distribution?
+    #+begin_notes
+
+    #+end_notes
