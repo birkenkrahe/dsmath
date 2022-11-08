@@ -2,7 +2,7 @@
 #+AUTHOR: [yourname]
 #+SUBTITLE: Applied math for data science, fall 2022
 #+STARTUP:overview hideblocks indent
-#+PROPERTY: header-args:R :results output :session *R*
+#+PROPERTY: header-args:R :results output :session *R* :exports both
 1) What is the main theme of this lesson?
    #+begin_notes
 
