@@ -544,12 +544,12 @@ All right, yeah«
 
 - The boxplot of both vectors shows that the 5-point-summary is little
   affected - these measures are considered "robust" against outliers
-  #+begin_src R :results graphics file :file foobox.png
+  #+begin_src R :results graphics file :file ../img/foobox.png
     boxplot(foo, foo[-outlier_foo])
   #+end_src
 
   #+RESULTS:
-  [[file:foobox.png]]
+  [[file:../img/foobox.png]]
 
 - In the ~boxplot~, the outliers are identified as IQR * 1.5 (can be
   changed, see ~help(boxplot)~

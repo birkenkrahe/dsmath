@@ -1,4 +1,4 @@
-n#+TITLE: Probability
+#+TITLE: Probability
 #+AUTHOR: MARCUS BIRKENKRAHE
 #+SUBTITLE: Applied math for data science (DSC 482/MTH 445) Fall 2022
 #+PROPERTY: header-args:R :session *R* :results output :exports both
@@ -8,9 +8,12 @@ n#+TITLE: Probability
 [[../img/7_xkcd.png]]
 Source: [[https://www.explainxkcd.com/wiki/index.php/1132:_Frequentists_vs._Bayesians][xkcd cartoon 1132: Frequentists vs. Bayesians]]
 
-1. Frequentist vs. Bayesian Probability
-2. Intersection, Union and Complement
-3. Exercises with ~sample~ and ~replicate~
+- Frequentist vs. Bayesian Probability
+- Intersection, Union and Complement
+- Monte Carlo Simulations
+- Simulating a deck of playing cars
+- The ~gtools~ R combinatorics and utilities package
+- ~sample~, ~replicate~, ~expand.grid~, ~combn~, ~combinations~, ~permutations~
 
 * What is a 'probability'?
 [[../img/7_probability_and_statistics.png]]
@@ -234,11 +237,6 @@ Event B: "you roll an even number" - Pr(B) = Pr({2,4,6}) = 3/6 = 1/2
   rolled a {1,2,3}.
 
 * IN PROGRESS Practice: probability with a deck of cards
-
-
-
-
-
 * IN PROGRESS Bayes' theorem
 #+attr_html: :width 200px
 #+caption: Thomas Bayes, statistician and Presbyterian minister (1701-1761)
@@ -270,8 +268,7 @@ Event B: "you roll an even number" - Pr(B) = Pr({2,4,6}) = 3/6 = 1/2
   |---------------+---------+--------------------|
   |               |         |                    |
 
-
-* Practice: set theory operators
+* TODO Practice: set theory operators
 * References
 
 - [[https://nostarch.com/bookofr][Davies TD (2016). Book of R. NoStarch Press. URL: nostarch.com]]
