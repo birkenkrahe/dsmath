@@ -1417,12 +1417,17 @@ other external factors, which are out of our control, but also the
 [[../img/venn.png]]
 
 - [ ] Review of DataCamp "The Binomial Distribution"
+- [ ] Easter egg: what do the paintings have in common?
+  - Goya, The Clothed Maja
+  - Da Vinci, The Last Supper
+  - van Gogh, Sunflowers 
+  - Botticelli, La Primavera
 - [ ] Frequentist/classical/naive vs. Bayesian probability
-- [ ] Intersection, Union and Complement
+- [ ] Intersection, Union and Complement of probabilities
 - [ ] Exercises: Monte Carlo Simulations (~sample~, ~replicate~)
 - [ ] Simulating a deck of playing cards (~expand.grid~, ~combn~)
 
-** TODO New test available
+* IN PROGRESS New test available
 #+attr_html: :width 400px
 [[../img/lookahead.jpg]]
 
@@ -1431,7 +1436,194 @@ other external factors, which are out of our control, but also the
 - The deadline "December 2nd" is a formal deadline only
 - Use the opportunity to build knowledge non-bulimically
 
-** TODO A cartoon-based test question
+* DONE DataCamp review: the binomial distribution
+
+*Some of these questions will show up in the tests/final exam*
+
+*Get the file from [[https://tinyurl.com/mr77ned7][tinyurl.com/mr77ned7]] to code/note along*
+
+1) What is the main message of this lesson?
+
+   - probability simulation vs. exact computation
+
+   - generating data from a probability distribution, in this   case ~X = Binomial(size,p)~
+
+2) What is "inference" vs. "probability"? Why is this important?
+
+   - inference \equiv from observed sample data to model to predict truths about a population
+
+   - probability \equiv from stochastic model to sample data to predict the future
+
+3) What is a coin flip before you look at the outcome?
+
+   - random variable (not fixed?)
+
+4) What is a coin flip once you've looked at the outcome?
+
+   - event that can be observed and recorded => sample
+
+5) What are the possible outcomes of ~rbinom(1,1,0.5)~?
+
+   Outcome = 0 or 1 for heads or tails of flipping a fair coin
+   #+begin_src R
+     rbinom(n = 1, # number of coin flips = vector length
+            size = 1, # number of coins = sample size
+            prob = 0.5) # probability of "heads"
+   #+end_src
+
+   #+RESULTS:
+   : [1] 0
+
+6) What are the possible outcomes of ~rbinom(1,10,0.5)~?
+
+   Number of heads when flipping 10 fair coins at once
+   #+begin_src R
+     rbinom(1,10,0.5)
+   #+end_src
+
+   #+RESULTS:
+   : [1] 4
+   
+7) What are the possible outcomes of ~rbinom(10,10,0.5)~?
+
+   #+begin_src R
+     rbinom(10,10,0.5)
+   #+end_src
+
+   #+RESULTS:
+   :  [1] 4 5 9 7 5 8 4 7 4 1
+
+8) What data structure is ~rbinom~? What about ~rbinom(1,1,0.5)~?
+
+   #+begin_src R
+     str(rbinom)
+     class(rbinom)
+     is.vector(rbinom(1,1,0.5))
+   #+end_src
+
+   #+RESULTS:
+   : function (n, size, prob)
+   : [1] "function"
+   : [1] TRUE
+   
+9) What is an 'unfair' coin? How is this simulated in R?
+
+   - Coin is unfairly weighted
+   - Flipping probability is no longer exactly 50%
+   #+begin_src R
+     rbinom(10,1,0.05)  
+   #+end_src
+
+   #+RESULTS:
+   :  [1] 0 0 0 0 1 0 0 0 0 0
+
+10) What does "coin flip with probability 25%" mean? How to show this?
+
+    - only 25% of the flips are expected to be 'heads'
+    #+begin_src R
+      flips <- rbinom(n=100000,
+             size=1,
+             prob=0.25)
+      mean(flips)
+    #+end_src
+
+    #+RESULTS:
+    : [1] 0.25013
+
+11) Which plot type is used to visualize many coin flips?
+
+    - A histogram, which plots counts/frequency of events against the event category - for 10 coins N \in {0,...10}
+    - The result visualizes a distribution of probabilities  
+
+12) Plot 100,000 simultaneous flips of 10 fair coins!
+
+    #+begin_src R :results graphics file :file histogram.png
+      flips <- rbinom(100000, 10, .5) # N=10^5, 10 fair coins
+      hist(flips,
+           main="100,000 flips of 10 fair coins",
+           xlab="Number of heads",
+           ylab="Flip count")
+     #+end_src
+
+     #+RESULTS:
+     [[file:histogram.png]]
+    
+13) How can you inspect the frequencies without plotting them?
+
+    #+begin_src R
+      table(flips)
+      names(table(flips))
+     #+end_src
+
+     #+RESULTS:
+     : flips
+     :     0     1     2     3     4     5     6     7     8     9    10 
+     :    99   981  4408 11634 20543 24670 20522 11741  4343   970    89
+     :  [1] "0"  "1"  "2"  "3"  "4"  "5"  "6"  "7"  "8"  "9"  "10"
+
+     Create a barplot of this simulation:
+     #+begin_src R :results graphics file :file barplot.png
+       barplot(table(rbinom(10,1,0.5)),
+               main="10 flips of 1 fair coins",
+               xlab="Number of heads",
+               ylab="Flip count")
+     #+end_src
+
+     #+RESULTS:
+     [[file:barplot.png]]
+
+14) What is the simulated density of the binomial distribution at ~X=5~?
+
+    Density expresses "compactness" of our data
+   #+begin_src R
+     flips <- rbinom(100000,10,0.5)
+     mean(flips==5)
+    #+end_src
+
+    #+RESULTS:
+    : [1] 0.24642
+
+15) What is the exact binomial probability density at ~X=5~?
+
+    Prob of getting 5 heads when flipping 10 fair coins
+    #+begin_src R
+      dbinom(x = 5, size = 10, prob = 0.5)  # Pr(X=5)
+      mean(rbinom(100000,10,0.5) == 5) # simulation result
+    #+end_src
+
+    #+RESULTS:
+    : [1] 0.2460938
+    : [1] 0.24722
+
+16) What is cumulative density? How do you simulate/compute it?
+
+    Probability of geting less or equal than 4 heads Pr(X\le4)
+    #+begin_src R
+      pbinom(4,10,0.5)
+    #+end_src
+    
+17) What is the relationship between ~Pr(X \ge 5)~ and ~Pr(X < 4)~?
+
+    #+begin_src R
+      1 - pbinom(4,10,0.5)
+      pbinom(4,10,0.5)
+      1 - pbinom(4,10,0.5) + pbinom(4,10,0.5)
+    #+end_src
+
+    #+RESULTS:
+    : [1] 0.6230469
+    : [1] 0.3769531
+    : [1] 1
+    
+18) What's the relationship between sample average and expected
+     value?
+
+19) What's the formula for the expected value, and how does it relate
+    to the definition of the ~binom~ family of functions?
+
+20) What's the definition of the variance of a distribution?
+
+* TODO A cartoon-based test question
 #+attr_html: :width 250px
 [[../img/null_hypothesis.png]]
 (Source: [[https://www.explainxkcd.com/wiki/index.php/892:_Null_Hypothesis][xkcd "Null Hypothesis" explained]])
@@ -1444,7 +1636,7 @@ in a statistical analysis that the investigated effect does /not/ occur,
 as in /zero/ effect ("Null" is the German word for zero).
 #+end_notes
 
-** TODO Probability: a world of change
+* TODO Probability: a world of change
 
 [[https://twitter.com/historydefined/status/1586953757824356352?s=20&t=WXVh5nGDFHf536Tqqt3PPg\]\]]["We live in a world of change." (1929)]]
 #+attr_html: :width 500px
@@ -1474,53 +1666,6 @@ as in /zero/ effect ("Null" is the German word for zero).
   - Statements whose claims can be measured or quantified
   - Statements about events that have not happened yet
   #+end_quote
-
-** TODO DataCamp review: the binomial distribution
-
-*Some of these questions will show up in the tests/final exam*
-
-*Get the file from [[https://tinyurl.com/mr77ned7][tinyurl.com/mr77ned7]] to code/note along*
-
-1) What is the main theme of this lesson?
-
-2) What is "inference" vs. "probability"? Why is this important?
-
-3) What is a coin flip before you look at the outcome?
-
-4) What is a coin flip once you've looked at the outcome?
-
-5) What are the possible outcomes of ~rbinom(1,1,0.5)~?
-
-6) What are the possible outcomes of ~rbinom(1,10,0.5)~?
-
-7) What are the possible outcomes of ~rbinom(10,10,0.5)~?
-
-8) What data structure is ~rbinom~? What about ~rbinom(1,1,0.5)~?
-
-9) What is an 'unfair' coin? How is this simulated in R?
-
-10) What does "coin flip with probability 25%" mean? How to show this?
-
-11) Which plot type is used to visualize many coin flips?
-
-12) Plot 100,000 simultaneous flips of 10 fair coins!
-
-13) How can you inspect the frequencies without plotting them?
-
-14) What is the simulated density of the binomial distribution at ~X=5~?
-
-15) What is the exact binomial probability density at ~X=5~?
-
-16) What is cumulative density? How do you simulate/compute it?
-
-17) What is the relationship between ~Pr(X \ge 5)~ and ~Pr(X < 4)~?
-
-18) What's the relationship between sample average and expected value?
-
-19) What's the formula for the expected value, and how does it relate
-    to the definition of the ~binom~ family of functions?
-
-20) What's the definition of the variance of a distribution?
 
 * Week 14: Bayesian statistics
 * Week 15: Probability distributions
