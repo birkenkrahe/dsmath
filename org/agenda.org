@@ -1427,7 +1427,7 @@ other external factors, which are out of our control, but also the
 - [ ] Exercises: Monte Carlo Simulations (~sample~, ~replicate~)
 - [ ] Simulating a deck of playing cards (~expand.grid~, ~combn~)
 
-* IN PROGRESS New test available
+* DONE New test available
 #+attr_html: :width 400px
 [[../img/lookahead.jpg]]
 
@@ -1669,6 +1669,15 @@ as in /zero/ effect ("Null" is the German word for zero).
 
 * Week 14: Bayesian statistics
 * Week 15: Probability distributions
+** TODO Course evaluation now! Hit me! Hard!
+#+attr_html: :width 480px
+[[../img/eval.png]]
+
+- *If you'd like for me to stick around, please evaluate (fairly) now*
+- *Extra credit (5 pts) for completing this in class today!*
+- *A couple of examples of useful feedback for me from past surveys:*
+#+attr_html: :width 700px
+[[../img/eval1.png]]
 * Week 16: final sprint reviews
 #+attr_html: :width 500px
 [[../img/botticelli.jpg]]
