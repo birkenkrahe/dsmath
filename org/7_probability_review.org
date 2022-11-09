@@ -31,7 +31,6 @@
    #+begin_src R
 
    #+end_src
-
 8) What data structure is ~rbinom~? What about ~rbinom(1,1,0.5)~?
    #+begin_src R
 

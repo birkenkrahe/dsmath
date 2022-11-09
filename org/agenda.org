@@ -1416,7 +1416,7 @@ other external factors, which are out of our control, but also the
 #+attr_html: :width 500px
 [[../img/venn.png]]
 
-- [ ] Review of DataCamp "The Binomial Distribution"
+- [X] Review of DataCamp "The Binomial Distribution"
 - [ ] Easter egg: what do the paintings have in common?
   - Goya, The Clothed Maja
   - Da Vinci, The Last Supper
@@ -1666,6 +1666,14 @@ as in /zero/ effect ("Null" is the German word for zero).
   - Statements whose claims can be measured or quantified
   - Statements about events that have not happened yet
   #+end_quote
+
+* TODO Review of the 3rd sprint review
+#+attr_html: :width 600px
+[[../img/poppy.jpg]]
+
+Are you comfy? Poppy is.
+
+
 
 * Week 14: Bayesian statistics
 * Week 15: Probability distributions
