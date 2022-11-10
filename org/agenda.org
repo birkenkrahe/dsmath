@@ -1635,6 +1635,7 @@ Are you comfy? Poppy is!
 
 3) Would you characterize your project as explanatory or exploratory?
 
+4) Would you say you were "creative" during this project? Why (not)?
 #+attr_html: :width 500px
 [[../img/topics.png]]
 
@@ -1656,6 +1657,10 @@ Nov 29 and Dec 1.
 [[../img/change.png]]
 [[https://twitter.com/historydefined/status/1586953757824356352?s=20&t=WXVh5nGDFHf536Tqqt3PPg\]\]][Source: "We live in a world of change." (1929)]]
 
+#+begin_quote
+»The very meaning of /expertness/ is acquired /courage/ to brace one's self for the cruel crisis from the moment one sees it grimly loom.« Henry James (1907)
+#+end_quote
+
 - Which types of statements are verifiable?
   #+begin_notes
   1) Falsifiable: sunset, telephone, electricity
@@ -1665,6 +1670,8 @@ Nov 29 and Dec 1.
   #+begin_quote
   1) By experimentation to show the statement's truth or falsehood
   2) Experiments have to be repeated, in principle forever
+  3) The data need to be validated, transparent and accessible
+  4) Format statements can be formally proven or disproven
   #+end_quote
 - What's better, falsification or verification?
   #+begin_quote
@@ -1684,13 +1691,14 @@ Nov 29 and Dec 1.
   #+begin_quote
   - Yes, but the interesting question is what this means
   - Usually presented in terms of scenarios or problems
-  - Math/stats is presented using event/state spaces
+  - Math/stats is presented using event/state spaces 
   - Data science prefers simulations and observations
   #+end_quote
 - *Get your Emacs knife out now so that you can code along with me!*
   #+begin_example bash
     $ emacs --file prob.org
   #+end_example
+
 
 * Week 14: Bayesian statistics
 * Week 15: Probability distributions
@@ -1708,6 +1716,7 @@ Nov 29 and Dec 1.
 [[../img/books.jpg]]
 
 - Davies, TD (2016). The Book of R. NoStarch Press.
+- James, H (1909). The Art of the Novel. Scribner.
 - Lawlor J, Banville F, Forero-Muñoz N-R, Hébert K, Martínez-Lanfranco
   JA, Rogy P, et al. (2022) Ten simple rules for teaching yourself
   R. PLoS Comput Biol 18(9):
