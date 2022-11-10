@@ -18,7 +18,7 @@
   as well as some content, mostly review of the lectures
 - You can also look at [[https://github.com/birkenkrahe/dsmath/blob/main/org/agenda.org][the agenda on GitHub]].
 
-* FAQ - Frequently Asked Questions
+** FAQ - Frequently Asked Questions
 
 #+attr_html: :width 300px
 #+caption: Three Spheres II, M.C. Escher (1946)
@@ -28,7 +28,7 @@
 - First place to go to with a general question
 - FAQ is regularly updated with new content
 
-* Week 1: introduction to the course
+* Week 1: Introduction to the course
 
 - [X] Review: Prerequisites (see my email on July 18)
 - [X] Review: Entry test
@@ -103,7 +103,7 @@ participation.
 
 ([[https://github.com/birkenkrahe/dsmath/blob/main/org/1_practice.org][Link to practice file in GitHub]])
 
-* Week 2: getting started
+* Week 2: Getting started
 
 - [X] Quiz 1: course infrastructure
 - [X] About: home assignments
@@ -178,7 +178,7 @@ especially as nobody has the slightest notion what it means."
 
 - If you are in > 1 course, you can use the same project idea!
 
-* Week 3: elementary statistics
+* Week 3: Elementary statistics
 #+attr_html: :width 600px
 [[../img/stats.jpg]]
 
@@ -356,7 +356,7 @@ who are taller than 180 cm.
 
 Try ~M-x org-mode-restart~.
 
-* Week 4: describing raw data
+* Week 4: Describing raw data
 [[../img/fall.jpg]]
 
 - [ ] How Emacs, Org-mode and ESS work together
@@ -457,7 +457,7 @@ On (2): check Judeah Pearl's [[https://en.wikipedia.org/wiki/The_Book_of_Why]["B
   4) "Read others' code, and share yours" - use GitHub
   5) "Don't box yourself in" - use languages for what they're good at
 
-* Week 5: summary statistics
+* Week 5: Summary statistics
 #+attr_html: :width 300px
 #+caption: Charles II of England (1630-1685)
 [[../img/charlesII.jpg]]
@@ -648,7 +648,7 @@ Levels: casein horsebean linseed meatmeal soybean sunflower
   chickwts$weight[chickwts$feed == "soybean"] # numeric vector
 #+end_src
 
-* Week 6: counts, proportions, percentages
+* Week 6: Counts, proportions, percentages
 #+attr_html: :width 600px
 [[../img/w6_cat.jpg]]
 
@@ -1623,6 +1623,34 @@ other external factors, which are out of our control, but also the
 
 20) What's the definition of the variance of a distribution?
 
+* NEXT Review of the 3rd sprint review
+#+attr_html: :width 600px
+[[../img/poppy.jpg]]
+
+Are you comfy? Poppy is!
+
+1) How are the course topics relevant to your project?
+
+2) Which topics are important to your project that we did not cover?
+
+3) Would you characterize your project as explanatory or exploratory?
+
+#+attr_html: :width 500px
+[[../img/topics.png]]
+
+* TODO Final sprint reviews (Nov 29, Dec 1)
+#+attr_html: :width 500px
+[[../img/botticelli.jpg]]
+[[https://en.wikipedia.org/wiki/Primavera_(Botticelli)][Image: Botticelli's Primavera (1482), Florence]][fn:1]
+
+- *Present* final project prototype in no particular order!
+- *Submit* all material prior to the presentation!
+- *Read* *[[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-should-we-prepare-for-the-final-presentation][the FAQ]]* with the checklist carefully *now*!
+
+*Timing:* We have 6 teams + 1 solo presenter and a total of 150 minutes
+available - i.e. ca. 20 min per team on Tuesday + Thursday, Nov 29 and
+Dec 1.
+
 * TODO A cartoon-based test question
 #+attr_html: :width 250px
 [[../img/null_hypothesis.png]]
@@ -1667,14 +1695,6 @@ as in /zero/ effect ("Null" is the German word for zero).
   - Statements about events that have not happened yet
   #+end_quote
 
-* TODO Review of the 3rd sprint review
-#+attr_html: :width 600px
-[[../img/poppy.jpg]]
-
-Are you comfy? Poppy is.
-
-
-
 * Week 14: Bayesian statistics
 * Week 15: Probability distributions
 ** TODO Course evaluation now! Hit me! Hard!
@@ -1686,15 +1706,6 @@ Are you comfy? Poppy is.
 - *A couple of examples of useful feedback for me from past surveys:*
 #+attr_html: :width 700px
 [[../img/eval1.png]]
-* Week 16: final sprint reviews
-#+attr_html: :width 500px
-[[../img/botticelli.jpg]]
-[[https://en.wikipedia.org/wiki/Primavera_(Botticelli)][Image: Botticelli's Primavera (1482), Florence]][fn:1]
-
-- *Present* final project prototype in no particular order!
-- *Submit* all material prior to the presentation!
-- *Read* *[[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-should-we-prepare-for-the-final-presentation][the FAQ]]* with the checklist carefully *now*!
-
 * References
 #+attr_html: :width 500px
 [[../img/books.jpg]]

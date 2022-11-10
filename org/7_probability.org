@@ -56,9 +56,9 @@ Source: [[https://www.explainxkcd.com/wiki/index.php/1132:_Frequentists_vs._Baye
 #+attr_html: :width 400px
 [[../img/7_fairdie.png]]
 
-  - Example: the six-sided, "fair" die, which does not exist, has ~Pr(A)
-    = 1/6~ for every one of its outcomes ~A \in {1,2,3,4,5,6}~. The die
-    roll is assumed to be /identical/ and /objective/, though it never
+  - Example: the six-sided, "fair" die, which does not exist, has
+    ~Pr(A) = 1/6~ for every one of its outcomes ~A \in {1,2,3,4,5,6}~. The
+    die roll is assumed to be /identical/ and /objective/, though it never
     really is.
 
   - The (empirical) law of large numbers guarantees that a large enough
@@ -80,30 +80,8 @@ Source: [[https://www.explainxkcd.com/wiki/index.php/1132:_Frequentists_vs._Baye
   - ~sample~ takes a sample of the specified ~size~ from the elements of ~x~
     either with or without replacement (~replace~).
 
-  - How is ~sample~ different from ~rbinom(n,size,prob)~?
-    #+begin_src R
-      n <- 10; size = 6; prob = 1/6
-      roll <- rbinom(n, size, prob)
-      paste("n =",n,
-            "size =",size,
-            "prob =",format(prob,digits=4),
-            "roll =",roll)
-      hist(roll,ylim=c(1,6))
-    #+end_src
-
-    #+RESULTS:
-    #+begin_example
-     [1] "n = 10 size = 6 prob = 0.1667 roll = 0"
-     [2] "n = 10 size = 6 prob = 0.1667 roll = 1"
-     [3] "n = 10 size = 6 prob = 0.1667 roll = 0"
-     [4] "n = 10 size = 6 prob = 0.1667 roll = 0"
-     [5] "n = 10 size = 6 prob = 0.1667 roll = 1"
-     [6] "n = 10 size = 6 prob = 0.1667 roll = 1"
-     [7] "n = 10 size = 6 prob = 0.1667 roll = 0"
-     [8] "n = 10 size = 6 prob = 0.1667 roll = 0"
-     [9] "n = 10 size = 6 prob = 0.1667 roll = 1"
-    [10] "n = 10 size = 6 prob = 0.1667 roll = 1"
-    #+end_example
+  - How is ~sample~ different from ~rbinom(n,size,prob)~? The ~r*~ functions
+    generate random variables from their respective distributions.
 
 * "Monte Carlo Simulation"
 
