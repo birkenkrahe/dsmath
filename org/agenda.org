@@ -1647,28 +1647,14 @@ Are you comfy? Poppy is!
 - *Submit* all material prior to the presentation!
 - *Read* *[[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-should-we-prepare-for-the-final-presentation][the FAQ]]* with the checklist carefully *now*!
 
-*Timing:* We have 6 teams + 1 solo presenter and a total of 150 minutes
-available - i.e. ca. 20 min per team on Tuesday + Thursday, Nov 29 and
-Dec 1.
-
-* TODO A cartoon-based test question
-#+attr_html: :width 250px
-[[../img/null_hypothesis.png]]
-(Source: [[https://www.explainxkcd.com/wiki/index.php/892:_Null_Hypothesis][xkcd "Null Hypothesis" explained]])
-
-"What is the null hypothesis?"
-#+begin_notes
-There is no one "/the/ null hypothesis". A null hypothesis is a specific
-statement relative to the current study. It refers to the hypothesis
-in a statistical analysis that the investigated effect does /not/ occur,
-as in /zero/ effect ("Null" is the German word for zero).
-#+end_notes
+*Timing:* We have 5-6 teams + 1 solo presenter and a total of 150
+minutes available - i.e. ca. 20 min per team on Tuesday + Thursday,
+Nov 29 and Dec 1.
 
 * TODO Probability: a world of change
-
-[[https://twitter.com/historydefined/status/1586953757824356352?s=20&t=WXVh5nGDFHf536Tqqt3PPg\]\]]["We live in a world of change." (1929)]]
 #+attr_html: :width 500px
 [[../img/change.png]]
+[[https://twitter.com/historydefined/status/1586953757824356352?s=20&t=WXVh5nGDFHf536Tqqt3PPg\]\]][Source: "We live in a world of change." (1929)]]
 
 - Which types of statements are verifiable?
   #+begin_notes
@@ -1694,6 +1680,17 @@ as in /zero/ effect ("Null" is the German word for zero).
   - Statements whose claims can be measured or quantified
   - Statements about events that have not happened yet
   #+end_quote
+- Can I multiply, divide, add and subtract probabilities?
+  #+begin_quote
+  - Yes, but the interesting question is what this means
+  - Usually presented in terms of scenarios or problems
+  - Math/stats is presented using event/state spaces
+  - Data science prefers simulations and observations
+  #+end_quote
+- *Get your Emacs knife out now so that you can code along with me!*
+  #+begin_example bash
+    $ emacs --file prob.org
+  #+end_example
 
 * Week 14: Bayesian statistics
 * Week 15: Probability distributions
