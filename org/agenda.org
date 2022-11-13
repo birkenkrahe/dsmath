@@ -1,13 +1,18 @@
 #+TITLE:Agenda - DSC 482 / MTH 445
-#+AUTHOR:Marcus Marcus Speh Birkenkrahe
+#+AUTHOR:Marcus Speh Birkenkrahe
 #+SUBTITLE:Agenda - DSC 482 - Applied Math for Data Science, Fall 2022
 #+STARTUP:overview hideblocks indent inlineimages entitiespretty
 #+OPTIONS: toc:nil num:nil ^:nil
 #+property: header-args:R :session *R* :results output
-#+attr_html: :width 200px
-[[../img/dice.jpg]]
-
+:REVEAL_PROPERTIES:
+#+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js
+#+REVEAL_REVEAL_JS_VERSION: 4
+#+REVEAL_THEME: black
+#+REVEAL_INIT_OPTIONS: transition: 'cube'
+:END:
 * README
+#+attr_html: :width 300px
+[[../img/dice.jpg]]
 
 - DSC 482 focuses on statistics, probability and distributions
 - We use R as a language, GNU Emacs as editor, ESS as statistics
@@ -29,6 +34,8 @@
 - FAQ is regularly updated with new content
 
 * Week 1: Introduction to the course
+#+attr_html: :width 600px
+[[../img/wager.jpg]]
 
 - [X] Review: Prerequisites (see my email on July 18)
 - [X] Review: Entry test
@@ -104,6 +111,8 @@ participation.
 ([[https://github.com/birkenkrahe/dsmath/blob/main/org/1_practice.org][Link to practice file in GitHub]])
 
 * Week 2: Getting started
+#+attr_html: :width 600px
+[[../img/2_cern.png]]
 
 - [X] Quiz 1: course infrastructure
 - [X] About: home assignments
@@ -197,18 +206,18 @@ domain of web traffic monitoring (or SEO - Search Engine Optimization)
 in order to increase Click-Through-Rate (CTR).
 #+end_notes
 
-** DONE Project: look at Google Analytics
+** Project: look at Google Analytics
 
 - You won't be able to access analytics.google.com
 
-** DONE GNU Emacs: ref cards
+** GNU Emacs: ref cards
 #+attr_html: :width 400px
 [[../img/gnu.jpg]]
 
 - [ ] The power of Dired on one page ([[https://www.gnu.org/software/emacs/refcards/pdf/dired-ref.pdf][v28]])
 - [ ] The power of Emacs on two pages ([[https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf][v27]])
 
-** DONE Review: DataCamp "Summary statistics"
+** Review: DataCamp "Summary statistics"
 
 - [[https://www.bmj.com/content/373/bmj.n1088][Did you look at the article about COVID-19 vaccines?]]
   #+attr_html: :width 400px
@@ -250,7 +259,7 @@ factors for that outcome:
   ([[https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2938757/][Source: nih.gov]])
 #+end_notes
 
-** DONE Recap and exercise: data frames
+** Recap and exercise: data frames
 
 - [ ] R functions:
   + ~data.frame~ - table, column vectors (like SQL)
@@ -287,7 +296,7 @@ factors for that outcome:
 
 - [ ] [[file:~/Documents/R/dsmath/3_raw_data_practice.org][Continue completing the practice file]]
 
-** DONE Review: [[https://lyon.instructure.com/courses/655/assignments/2552][test 2]]
+** Review: [[https://lyon.instructure.com/courses/655/assignments/2552][test 2]]
 *** Match the statistical variable type and the variable.
 
 | VARIABLE                                                   | TYPE                |
@@ -357,6 +366,7 @@ who are taller than 180 cm.
 Try ~M-x org-mode-restart~.
 
 * Week 4: Describing raw data
+#+attr_html: :width 600px
 [[../img/fall.jpg]]
 
 - [ ] How Emacs, Org-mode and ESS work together
@@ -458,9 +468,8 @@ On (2): check Judeah Pearl's [[https://en.wikipedia.org/wiki/The_Book_of_Why]["B
   5) "Don't box yourself in" - use languages for what they're good at
 
 * Week 5: Summary statistics
-#+attr_html: :width 300px
-#+caption: Charles II of England (1630-1685)
-[[../img/charlesII.jpg]]
+#+attr_html: :width 600px
+[[../img/feynman.png]]
 
 - [X] 1654: [[https://web.universiteitleiden.nl/fsw/verduin/stathist/sh_17.htm][letters between Blaise Pascal and Pierre de Fermat]]
 - [X] Featured application: [[https://retractionwatch.com/retraction-watch-database-user-guide/retraction-watch-database-user-guide-appendix-b-reasons/][retraction watch]]
@@ -889,6 +898,8 @@ other, regularized. ([[https://www.amphilsoc.org/item-detail/photograph-john-wil
   #+end_quote
 
 * Week 8: 2nd sprint review - method
+#+attr_html: :width 600px
+[[../img/scrum.png]]
 ** DONE Review of the 2nd sprint review
 #+attr_html: :width 500px
 [[../img/scrum.png]]
@@ -1081,7 +1092,7 @@ are able to *cite* your references.
 ** [[https://lyon.instructure.com/courses/655/assignments/3207][Assignment 6: Measures of spread]] (Oct 25)
 ** [[https://lyon.instructure.com/courses/655/assignments/3246/edit?quiz_lti][Test 8: Central limit theorem/statistical tests]] (Oct 27)
 * Week 10: Review measures of spread
-#+attr_html: :width 400px
+#+attr_html: :width 450px
 [[../img/milgram.jpg]]
 
 - [X] Current assignments ([[https://lyon.instructure.com/courses/655/discussion_topics/968][Canvas]])
@@ -1203,8 +1214,8 @@ variable:
      #+RESULTS:
      [[file:../img/nilehist.png]]
 
-* Week 11: Covariance, correlations
-#+attr_html: :width 400px
+* Week 11: Covariance and correlation
+#+attr_html: :width 500px
 [[../img/certificate.png]]
 
 - [X] Home assignment: Measures of Spread ([[https://lyon.instructure.com/courses/655/assignments/3207][Canvas]], Oct 25)
@@ -1387,7 +1398,7 @@ Commit Monstrous Acts"
 
 - Start the file proper with a new headline using ~*~
 
-* Week 12: Outliers, probability
+* Week 12: Outliers
 #+attr_html: :width 200px
 [[../img/outliers.jpg]]
 #+begin_notes
@@ -1412,9 +1423,9 @@ other external factors, which are out of our control, but also the
 - Removing outliers (6_correlation.org)
 - Practice exercise (6_correlation_practice.org)
 
-* Week 13: Foundations of Probability
-#+attr_html: :width 500px
-[[../img/venn.png]]
+* Week 13: The binomial distribution
+#+attr_html: :width 450px
+[[../img/easteregg.jpg]]
 
 - [X] Review of DataCamp "The Binomial Distribution"
 - [ ] Easter egg: what do the paintings have in common?
@@ -1427,7 +1438,7 @@ other external factors, which are out of our control, but also the
 - [ ] Exercises: Monte Carlo Simulations (~sample~, ~replicate~)
 - [ ] Simulating a deck of playing cards (~expand.grid~, ~combn~)
 
-* DONE New test available
+** New test available
 #+attr_html: :width 400px
 [[../img/lookahead.jpg]]
 
@@ -1436,7 +1447,7 @@ other external factors, which are out of our control, but also the
 - The deadline "December 2nd" is a formal deadline only
 - Use the opportunity to build knowledge non-bulimically
 
-* DONE DataCamp review: the binomial distribution
+** DataCamp review: the binomial distribution
 
 *Some of these questions will show up in the tests/final exam*
 
@@ -1623,7 +1634,7 @@ other external factors, which are out of our control, but also the
 
 20) What's the definition of the variance of a distribution?
 
-* NEXT Review of the 3rd sprint review
+** Review of the 3rd sprint review
 #+attr_html: :width 600px
 [[../img/poppy.jpg]]
 
@@ -1639,20 +1650,7 @@ Are you comfy? Poppy is!
 #+attr_html: :width 500px
 [[../img/topics.png]]
 
-* TODO Final sprint reviews (Nov 29, Dec 1)
-#+attr_html: :width 500px
-[[../img/botticelli.jpg]]
-[[https://en.wikipedia.org/wiki/Primavera_(Botticelli)][Image: Botticelli's Primavera (1482), Florence]][fn:1]
-
-- *Present* final project prototype in no particular order!
-- *Submit* all material prior to the presentation!
-- *Read* *[[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-should-we-prepare-for-the-final-presentation][the FAQ]]* with the checklist carefully *now*!
-
-*Timing:* We have 5-6 teams + 1 solo presenter and a total of 150
-minutes available - i.e. ca. 20 min per team on Tuesday + Thursday,
-Nov 29 and Dec 1.
-
-* TODO Probability: a world of change
+** Probability: a world of change
 #+attr_html: :width 500px
 [[../img/change.png]]
 [[https://twitter.com/historydefined/status/1586953757824356352?s=20&t=WXVh5nGDFHf536Tqqt3PPg\]\]][Source: "We live in a world of change." (1929)]]
@@ -1699,9 +1697,21 @@ Nov 29 and Dec 1.
     $ emacs --file prob.org
   #+end_example
 
-
 * Week 14: Bayesian statistics
+#+attr_html: :width 500px
+[[../img/venn.png]]
+
+** TODO Presenting in Emacs: [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-can-i-present-in-emacs][new FAQ]]
+
+#+attr_html: :width 250px
+[[../img/paratrooper.png]]
+
+~present-demo.org~ ([[https://github.com/birkenkrahe/org/blob/master/emacs/present_demo.org][GitHub]] - [[https://raw.githubusercontent.com/birkenkrahe/org/master/emacs/present_demo.org][raw Org-mode file]]: [[https://tinyurl.com/556k452p][tinyurl.com/556k452p]])
+
 * Week 15: Probability distributions
+#+attr_html: :width 500px
+[[../img/normal.png]]
+
 ** TODO Course evaluation now! Hit me! Hard!
 #+attr_html: :width 480px
 [[../img/eval.png]]
@@ -1711,6 +1721,67 @@ Nov 29 and Dec 1.
 - *A couple of examples of useful feedback for me from past surveys:*
 #+attr_html: :width 700px
 [[../img/eval1.png]]
+* TODO Final sprint reviews (Nov 29, Dec 1)
+#+attr_html: :width 500px
+[[../img/botticelli.jpg]]
+
+[[https://en.wikipedia.org/wiki/Primavera_(Botticelli)][Image: Botticelli's Primavera (1482), Florence]][fn:1]
+
+- *Present* final project prototype in no particular order!
+- *Submit* all material prior to the presentation!
+- *Read* *[[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-should-we-prepare-for-the-final-presentation][the FAQ]]* with the checklist carefully *now*!
+
+*Timing:* We have 5-6 teams + 1 solo presenter and a total of 150
+minutes available - i.e. ca. 20 min per team on Tuesday + Thursday,
+Nov 29 and Dec 1.
+
+** TODO Probability: a world of change
+#+attr_html: :width 500px
+[[../img/change.png]]
+[[https://twitter.com/historydefined/status/1586953757824356352?s=20&t=WXVh5nGDFHf536Tqqt3PPg\]\]][Source: "We live in a world of change." (1929)]]
+
+#+begin_quote
+»The very meaning of /expertness/ is acquired /courage/ to brace one's self for the cruel crisis from the moment one sees it grimly loom.« Henry James (1907)
+#+end_quote
+
+- Which types of statements are verifiable?
+  #+begin_notes
+  1) Falsifiable: sunset, telephone, electricity
+  2) Not falsifiable: safety, good old days, improvements
+  #+end_notes
+- How can statements be verified?
+  #+begin_quote
+  1) By experimentation to show the statement's truth or falsehood
+  2) Experiments have to be repeated, in principle forever
+  3) The data need to be validated, transparent and accessible
+  4) Format statements can be formally proven or disproven
+  #+end_quote
+- What's better, falsification or verification?
+  #+begin_quote
+  - Falsification is the refutation of statements
+  - Verification refers to statements that are shown to be true
+  - The goal of science is to create knowledge by identifying true
+    statements as true (verified) and false statements as false
+    (falsified).
+  - None is better, verification implies better specificity
+  #+end_quote
+- Which statements can you attach probabilities to?
+  #+begin_quote
+  - Statements whose claims can be measured or quantified
+  - Statements about events that have not happened yet
+  #+end_quote
+- Can I multiply, divide, add and subtract probabilities?
+  #+begin_quote
+  - Yes, but the interesting question is what this means
+  - Usually presented in terms of scenarios or problems
+  - Math/stats is presented using event/state spaces 
+  - Data science prefers simulations and observations
+  #+end_quote
+- *Get your Emacs knife out now so that you can code along with me!*
+  #+begin_example bash
+    $ emacs --file prob.org
+  #+end_example
+
 * References
 #+attr_html: :width 500px
 [[../img/books.jpg]]

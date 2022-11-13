@@ -3,9 +3,17 @@
 #+SUBTITLE: Applied math for data science (DSC 482/MTH 445) Fall 2022
 #+PROPERTY: header-args:R :session *R* :results output :exports both
 #+STARTUP: overview hideblocks indent inlineimages entitiespretty
+:REVEAL_PROPERTIES:
+#+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js
+#+REVEAL_REVEAL_JS_VERSION: 4
+#+REVEAL_THEME: black
+#+REVEAL_INIT_OPTIONS: transition: 'cube'
+:END:
+* What's in this lecture?
 #+attr_html: :width 300px
 #+caption: Did the Sun just explode? (It's night, so we're not sure) by xkcd
 [[../img/7_xkcd.png]]
+
 Source: [[https://www.explainxkcd.com/wiki/index.php/1132:_Frequentists_vs._Bayesians][xkcd cartoon 1132: Frequentists vs. Bayesians]]
 
 - Frequentist vs. Bayesian Probability
@@ -21,7 +29,7 @@ Source: [[https://www.explainxkcd.com/wiki/index.php/1132:_Frequentists_vs._Baye
 - A number that describes the magnitude of chance associated with
   making a particular observation or statement.
 
-- Probability is always a continuous number ~p \in [0,1]~.
+- Probability is always a continuous number p \in [0,1].
 
 - This abstract-mathematical notion becomes tangible only in context
   with an (observable) event that can be predicted
