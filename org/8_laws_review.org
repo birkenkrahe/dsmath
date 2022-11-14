@@ -1,0 +1,9 @@
+#+TITLE:DataCamp review: Laws of probability
+#+AUTHOR: [yourname]
+#+SUBTITLE: Applied math for data science, fall 2022
+#+STARTUP:overview hideblocks indent
+#+PROPERTY: header-args:R :results output :session *R* :exports both
+
+  *You can find the solutions to these questions in GitHub*
+
+  1) 

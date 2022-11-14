@@ -207,7 +207,7 @@ Event B: "you roll an even number" - Pr(B) = Pr({2,4,6}) = 3/6 = 1/2
 [[../img/7_intersection.png]]
 
 - The intersection of two events A and B, ~Pr(A \cap B)~ is the
-  probability that both A and B occur simultaneously
+  probability that both A and B occur "simultaneously"
 
 - ~Pr(A \cap B) = Pr(A|B) \times Pr(B)~ or ~Pr(B|A) \times Pr(A)~
 
@@ -318,7 +318,7 @@ Event B: "you roll an even number" - Pr(B) = Pr({2,4,6}) = 3/6 = 1/2
   |---------------+---------+--------------------|
   |               |         |                    |
 
-* TODO Practice: set theory operators
+* TODO Practice: probability theory operations 
 * References
 
 - [[https://nostarch.com/bookofr][Davies TD (2016). Book of R. NoStarch Press. URL: nostarch.com]]

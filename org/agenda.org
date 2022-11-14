@@ -1431,7 +1431,7 @@ other external factors, which are out of our control, but also the
 - [ ] Easter egg: what do the paintings have in common?
   - Goya, The Clothed Maja
   - Da Vinci, The Last Supper
-  - van Gogh, Sunflowers 
+  - van Gogh, Sunflowers
   - Botticelli, La Primavera
 - [ ] Frequentist/classical/naive vs. Bayesian probability
 - [ ] Intersection, Union and Complement of probabilities
@@ -1449,7 +1449,7 @@ other external factors, which are out of our control, but also the
 
 ** DataCamp review: the binomial distribution
 
-*Some of these questions will show up in the tests/final exam*
+*Some of these questions may show up in the tests/final exam*
 
 *Get the file from [[https://tinyurl.com/mr77ned7][tinyurl.com/mr77ned7]] to code/note along*
 
@@ -1494,7 +1494,7 @@ other external factors, which are out of our control, but also the
 
    #+RESULTS:
    : [1] 4
-   
+
 7) What are the possible outcomes of ~rbinom(10,10,0.5)~?
 
    #+begin_src R
@@ -1516,13 +1516,13 @@ other external factors, which are out of our control, but also the
    : function (n, size, prob)
    : [1] "function"
    : [1] TRUE
-   
+
 9) What is an 'unfair' coin? How is this simulated in R?
 
    - Coin is unfairly weighted
    - Flipping probability is no longer exactly 50%
    #+begin_src R
-     rbinom(10,1,0.05)  
+     rbinom(10,1,0.05)
    #+end_src
 
    #+RESULTS:
@@ -1533,8 +1533,8 @@ other external factors, which are out of our control, but also the
     - only 25% of the flips are expected to be 'heads'
     #+begin_src R
       flips <- rbinom(n=100000,
-             size=1,
-             prob=0.25)
+                      size=1,
+                      prob=0.25)
       mean(flips)
     #+end_src
 
@@ -1544,7 +1544,7 @@ other external factors, which are out of our control, but also the
 11) Which plot type is used to visualize many coin flips?
 
     - A histogram, which plots counts/frequency of events against the event category - for 10 coins N \in {0,...10}
-    - The result visualizes a distribution of probabilities  
+    - The result visualizes a distribution of probabilities
 
 12) Plot 100,000 simultaneous flips of 10 fair coins!
 
@@ -1554,41 +1554,41 @@ other external factors, which are out of our control, but also the
            main="100,000 flips of 10 fair coins",
            xlab="Number of heads",
            ylab="Flip count")
-     #+end_src
+    #+end_src
 
-     #+RESULTS:
-     [[file:histogram.png]]
-    
+    #+RESULTS:
+    [[file:histogram.png]]
+
 13) How can you inspect the frequencies without plotting them?
 
     #+begin_src R
       table(flips)
       names(table(flips))
-     #+end_src
+    #+end_src
 
-     #+RESULTS:
-     : flips
-     :     0     1     2     3     4     5     6     7     8     9    10 
-     :    99   981  4408 11634 20543 24670 20522 11741  4343   970    89
-     :  [1] "0"  "1"  "2"  "3"  "4"  "5"  "6"  "7"  "8"  "9"  "10"
+    #+RESULTS:
+    : flips
+    :     0     1     2     3     4     5     6     7     8     9    10
+    :    99   981  4408 11634 20543 24670 20522 11741  4343   970    89
+    :  [1] "0"  "1"  "2"  "3"  "4"  "5"  "6"  "7"  "8"  "9"  "10"
 
-     Create a barplot of this simulation:
-     #+begin_src R :results graphics file :file barplot.png
-       barplot(table(rbinom(10,1,0.5)),
-               main="10 flips of 1 fair coins",
-               xlab="Number of heads",
-               ylab="Flip count")
-     #+end_src
+    Create a barplot of this simulation:
+    #+begin_src R :results graphics file :file barplot.png
+      barplot(table(rbinom(10,1,0.5)),
+              main="10 flips of 1 fair coins",
+              xlab="Number of heads",
+              ylab="Flip count")
+    #+end_src
 
-     #+RESULTS:
-     [[file:barplot.png]]
+    #+RESULTS:
+    [[file:barplot.png]]
 
 14) What is the simulated density of the binomial distribution at ~X=5~?
 
     Density expresses "compactness" of our data
-   #+begin_src R
-     flips <- rbinom(100000,10,0.5)
-     mean(flips==5)
+    #+begin_src R
+      flips <- rbinom(100000,10,0.5)
+      mean(flips==5)
     #+end_src
 
     #+RESULTS:
@@ -1612,7 +1612,7 @@ other external factors, which are out of our control, but also the
     #+begin_src R
       pbinom(4,10,0.5)
     #+end_src
-    
+
 17) What is the relationship between ~Pr(X \ge 5)~ and ~Pr(X < 4)~?
 
     #+begin_src R
@@ -1625,9 +1625,9 @@ other external factors, which are out of our control, but also the
     : [1] 0.6230469
     : [1] 0.3769531
     : [1] 1
-    
+
 18) What's the relationship between sample average and expected
-     value?
+    value?
 
 19) What's the formula for the expected value, and how does it relate
     to the definition of the ~binom~ family of functions?
@@ -1689,7 +1689,7 @@ Are you comfy? Poppy is!
   #+begin_quote
   - Yes, but the interesting question is what this means
   - Usually presented in terms of scenarios or problems
-  - Math/stats is presented using event/state spaces 
+  - Math/stats is presented using event/state spaces
   - Data science prefers simulations and observations
   #+end_quote
 - *Get your Emacs knife out now so that you can code along with me!*
@@ -1697,9 +1697,15 @@ Are you comfy? Poppy is!
     $ emacs --file prob.org
   #+end_example
 
-* Week 14: Bayesian statistics
+* Week 14: Laws of probability
 #+attr_html: :width 500px
 [[../img/venn.png]]
+
+- [ ] Presenting in Emacs (FAQ + examples)
+- [ ] DataCamp lesson review
+- [ ] Monte Carlo Simulation
+- [ ] Intersection, Union, Complement
+- [ ] Simulating a deck of 52 standard playing cards
 
 ** TODO Presenting in Emacs: [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-can-i-present-in-emacs][new FAQ]]
 
@@ -1707,6 +1713,61 @@ Are you comfy? Poppy is!
 [[../img/paratrooper.png]]
 
 ~present-demo.org~ ([[https://github.com/birkenkrahe/org/blob/master/emacs/present_demo.org][GitHub]] - [[https://raw.githubusercontent.com/birkenkrahe/org/master/emacs/present_demo.org][raw Org-mode file]]: [[https://tinyurl.com/556k452p][tinyurl.com/556k452p]])
+
+** TODO DataCamp lesson review & extension
+
+*Some of these questions may show up in the final exam in December*
+
+*Practice file at [[https://tinyurl.com/mr77ned7][tinyurl.com/mr77ned7]] to code/note along at will*
+
+- What does this figure illustrate?
+  #+attr_html: :width 500px
+  [[../img/dc_prob.png]]
+  #+begin_notes
+  - The "simultaneous" flip of two fair coins ~rbinom(1,2,0.5)~
+  - Flipping one fair coin twice
+  - Probabilities of an event A and an event B
+  - ~Pr(A=0) + Pr(A=1) = Pr(B=0) + Pr(B=1) = 1~
+  - ~Pr(A \cap B)~: the probability of getting A and B
+  #+end_notes
+
+- What is ~Pr(A  B)~ for independent events ~A~ and ~B~?
+  #+begin_notes
+    ~Pr(A \cap B) = Pr(A) \times Pr(B)~
+  #+end_notes
+  
+- What is ~Pr(A  B)~ as a Venn diagram?
+  #+attr_html: :width 300px
+  [[../img/7_intersection.png]]
+
+- To simulate a 2-coin flip in R, use ~sample~ for a ~flip~:
+  #+begin_src R
+    sample(
+      x = c("heads","tails"),  # vector of events to choose
+      size = 2,  # number of items to choose from
+      replace = TRUE, # put item back for next pick
+      prob = c(0.5,0.5))  # vector of probabilities per event
+  #+end_src
+
+- The default for replacement is ~FALSE~ (i.e. do not put item back)
+  
+- To repeat the experiment, use ~replicate~ (a wrapper for ~sapply~):
+  #+begin_src R :noweb yes
+    coin <- c("heads", "tails")
+    pcoin <- c(0.5,0.5)  # probabilities
+    size <- 2
+    n <- 2
+
+    replicate(
+      n, # number of repetitions
+      expr=sample(coin,size,TRUE,pcoin)) # what to repeat
+  #+end_src
+
+- By default, ~replicate~ simplifies the result to an array one
+  dimension higher than the input:
+  #+begin_src R
+    is.matrix(replicate(n, sample(coin,size,TRUE,pcoin)))
+  #+end_src
 
 * Week 15: Probability distributions
 #+attr_html: :width 500px
@@ -1774,7 +1835,7 @@ Nov 29 and Dec 1.
   #+begin_quote
   - Yes, but the interesting question is what this means
   - Usually presented in terms of scenarios or problems
-  - Math/stats is presented using event/state spaces 
+  - Math/stats is presented using event/state spaces
   - Data science prefers simulations and observations
   #+end_quote
 - *Get your Emacs knife out now so that you can code along with me!*
