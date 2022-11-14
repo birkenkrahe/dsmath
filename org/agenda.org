@@ -1718,56 +1718,8 @@ Are you comfy? Poppy is!
 
 *Some of these questions may show up in the final exam in December*
 
-*Practice file at [[https://tinyurl.com/mr77ned7][tinyurl.com/mr77ned7]] to code/note along at will*
+*Practice file at [[https://tinyurl.com/2s3kx6pt][tinyurl.com/2s3kx6pt]] to code/note along at will*
 
-- What does this figure illustrate?
-  #+attr_html: :width 500px
-  [[../img/dc_prob.png]]
-  #+begin_notes
-  - The "simultaneous" flip of two fair coins ~rbinom(1,2,0.5)~
-  - Flipping one fair coin twice
-  - Probabilities of an event A and an event B
-  - ~Pr(A=0) + Pr(A=1) = Pr(B=0) + Pr(B=1) = 1~
-  - ~Pr(A \cap B)~: the probability of getting A and B
-  #+end_notes
-
-- What is ~Pr(A  B)~ for independent events ~A~ and ~B~?
-  #+begin_notes
-    ~Pr(A \cap B) = Pr(A) \times Pr(B)~
-  #+end_notes
-  
-- What is ~Pr(A  B)~ as a Venn diagram?
-  #+attr_html: :width 300px
-  [[../img/7_intersection.png]]
-
-- To simulate a 2-coin flip in R, use ~sample~ for a ~flip~:
-  #+begin_src R
-    sample(
-      x = c("heads","tails"),  # vector of events to choose
-      size = 2,  # number of items to choose from
-      replace = TRUE, # put item back for next pick
-      prob = c(0.5,0.5))  # vector of probabilities per event
-  #+end_src
-
-- The default for replacement is ~FALSE~ (i.e. do not put item back)
-  
-- To repeat the experiment, use ~replicate~ (a wrapper for ~sapply~):
-  #+begin_src R :noweb yes
-    coin <- c("heads", "tails")
-    pcoin <- c(0.5,0.5)  # probabilities
-    size <- 2
-    n <- 2
-
-    replicate(
-      n, # number of repetitions
-      expr=sample(coin,size,TRUE,pcoin)) # what to repeat
-  #+end_src
-
-- By default, ~replicate~ simplifies the result to an array one
-  dimension higher than the input:
-  #+begin_src R
-    is.matrix(replicate(n, sample(coin,size,TRUE,pcoin)))
-  #+end_src
 
 * Week 15: Probability distributions
 #+attr_html: :width 500px
