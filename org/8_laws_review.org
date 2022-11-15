@@ -3,7 +3,80 @@
 #+SUBTITLE: Applied math for data science, fall 2022
 #+STARTUP:overview hideblocks indent
 #+PROPERTY: header-args:R :results output :session *R* :exports both
+* README
 
-  *You can find the solutions to these questions in GitHub*
+- A few exercises to review the "Laws of probability" DataCamp lesson.
+- You can find the solutions to these questions in GitHub (pdf repo)
 
-  1) 
+* TODO Identify yourself and make entities pretty
+
+- Replace ~[yourname]~ at the top by your own name and add ~(pledged)~
+- Add ~entitiespretty~ to the ~#+STARTUP~ line to make entities pretty
+  
+* TODO Problems
+
+1) What does [[https://github.com/birkenkrahe/dsmath/blob/main/img/dc_prob.png][this figure]] illustrate?
+
+2) What is ~Pr(A \cap B)~ (AND) for independent events ~A~ and ~B~?
+
+3) What is ~Pr(A \cap B)~ as a Venn diagram?
+
+4) What happens to the Venn diagram if the probabilities are not equal?
+
+5) How do you simulate ~Pr(A \cap B)~ if ~Pr(A)=0.4~ and ~Pr(B)=.2~?
+
+   #+begin_src R
+
+   #+end_src
+
+6) What is ~Pr(A \cup B)~ (OR) as a Venn diagram?
+
+7) What is ~Pr(A \cup B)~ for independent events ~A~ and ~B~?
+
+8) A and B are independent events. How do you simulate ~Pr(A \cup B)~ if
+   ~Pr(A) = 0.2~ and ~Pr(B) = 0.6~?
+   #+begin_src R
+
+   #+end_src
+
+9) Multiplying a random variable by a factor will also multiply the
+   expected value by that factor.
+
+   Create a histogram of ~X \tilde Binomial(10,0.5)~ and a histogram
+   ~Y\tilde3*X~, put them into one plot array, and show the expected
+   value in each histogram.
+
+   Remember that the x-axis scales for each plot are chosen based on
+   the plot data - you have to align them to make the plots comparable.
+
+   #+begin_src R :results graphics file :file hist.png
+
+   #+end_src
+
+10) The multiplication rule for random variables also applies to the
+    spread. Use a function to show how the spread changes in the
+    previous example, from X to Y.
+    #+begin_src R
+
+    #+end_src
+
+11) What is the expected value of the binomial distributions X + Y?
+    Print the expected value of X, Y and X+Y.
+    #+begin_src R
+
+    #+end_src
+
+12) Can you put the three distributions X, Y, and X + Y into one plot
+    array to make them comparable, and indicate the expected values
+    with thick red, blue and yellow vertical lines?
+
+    Remember that the x-axis scales for each plot are chosen based on
+    the plot data - you have to align them to make the plots comparable.
+
+    #+begin_src R :results graphics file :file XplusY.png
+
+    #+end_src
+
+13) Do expected value and variance follow simple additive laws if the
+    underlying distributions are not independent? Why or why not?
+
