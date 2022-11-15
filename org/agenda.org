@@ -1708,18 +1708,20 @@ Are you comfy? Poppy is!
 - [ ] Simulating a deck of 52 standard playing cards
 
 ** TODO Presenting in Emacs: [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-can-i-present-in-emacs][new FAQ]]
-
 #+attr_html: :width 250px
 [[../img/paratrooper.png]]
 
 ~present-demo.org~ ([[https://github.com/birkenkrahe/org/blob/master/emacs/present_demo.org][GitHub]] - [[https://raw.githubusercontent.com/birkenkrahe/org/master/emacs/present_demo.org][raw Org-mode file]]: [[https://tinyurl.com/556k452p][tinyurl.com/556k452p]])
 
 ** TODO DataCamp lesson review & extension
+#+attr_html: :width 400px
+[[../img/datacamp.png]]
 
-*Some of these questions may show up in the final exam in December*
+- *Some of these questions may show up in the final exam in December*
 
-*Practice file at [[https://tinyurl.com/2s3kx6pt][tinyurl.com/2s3kx6pt]] to code/note along at will*
+- *Practice file at [[https://tinyurl.com/2s3kx6pt][tinyurl.com/2s3kx6pt]] to code/note along at will*
 
+- Upload the completed file [[https://lyon.instructure.com/courses/655/assignments/3786][on Canvas as "Practice 8"]]
 
 * Week 15: Probability distributions
 #+attr_html: :width 500px

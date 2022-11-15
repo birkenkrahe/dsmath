@@ -64,29 +64,29 @@ Source: [[https://www.explainxkcd.com/wiki/index.php/1132:_Frequentists_vs._Baye
 #+attr_html: :width 400px
 [[../img/7_fairdie.png]]
 
-  - Example: the six-sided, "fair" die, which does not exist, has
-    ~Pr(A) = 1/6~ for every one of its outcomes ~A \in {1,2,3,4,5,6}~. The
-    die roll is assumed to be /identical/ and /objective/, though it never
-    really is.
+- Example: the six-sided, "fair" die, which does not exist, has
+  ~Pr(A) = 1/6~ for every one of its outcomes ~A \in {1,2,3,4,5,6}~. The
+  die roll is assumed to be /identical/ and /objective/, though it never
+  really is.
 
-  - The (empirical) law of large numbers guarantees that a large enough
-    number of observations will yield the ideal ~Pr(A)~.
+- The (empirical) law of large numbers guarantees that a large enough
+  number of observations will yield the ideal ~Pr(A)~.
 
-  - We can *simulate* this using R:
-    1) define a standard, six-sided, fair die
-    2) roll die once (with replacement)
-    #+begin_src R
-      die <- rep(x=1:6)  # define a standard die
-      sample(
-        x = die, # vector to sample from
-        size = 1)  # size of sample - "roll die once"
-    #+end_src
+- We can *simulate* this using R:
+  1) define a standard, six-sided, fair die
+  2) roll die once (with replacement)
+  #+begin_src R
+    die <- rep(x=1:6)  # define a standard die
+    sample(
+      x = die, # vector to sample from
+      size = 1)  # size of sample - "roll die once"
+  #+end_src
 
-    #+RESULTS:
-    : [1] 2
+  #+RESULTS:
+  : [1] 2
 
-  - ~sample~ takes a sample of the specified ~size~ from the elements of ~x~
-    either with or without replacement (~replace~).
+- ~sample~ takes a sample of the specified ~size~ from the elements of ~x~
+  either with or without replacement (~replace~).
 
 * Visualization - "Monte Carlo Simulation"
 
@@ -117,10 +117,10 @@ Source: [[https://www.explainxkcd.com/wiki/index.php/1132:_Frequentists_vs._Baye
 
   #+RESULTS: roll_die
   : events
-  :  1  2  3  4  5  6 
+  :  1  2  3  4  5  6
   : 15 24 11 15 14 21
   : events
-  :    1    2    3    4    5    6 
+  :    1    2    3    4    5    6
   : 0.15 0.24 0.11 0.15 0.14 0.21
   : [1] 0.1666667
 
@@ -318,7 +318,7 @@ Event B: "you roll an even number" - Pr(B) = Pr({2,4,6}) = 3/6 = 1/2
   |---------------+---------+--------------------|
   |               |         |                    |
 
-* TODO Practice: probability theory operations 
+* TODO Practice: probability theory operations
 * References
 
 - [[https://nostarch.com/bookofr][Davies TD (2016). Book of R. NoStarch Press. URL: nostarch.com]]
