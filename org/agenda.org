@@ -1701,19 +1701,22 @@ Are you comfy? Poppy is!
 #+attr_html: :width 500px
 [[../img/venn.png]]
 
-- [ ] Presenting in Emacs (FAQ + examples)
-- [ ] DataCamp lesson review
+- [X] Presenting in Emacs (FAQ + examples)
 - [ ] Monte Carlo Simulation
 - [ ] Intersection, Union, Complement
+- [ ] DataCamp lesson review "Laws of Probability"
 - [ ] Simulating a deck of 52 standard playing cards
 
-** TODO Presenting in Emacs: [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-can-i-present-in-emacs][new FAQ]]
+* Presenting in Emacs: [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-can-i-present-in-emacs][new FAQ]]
 #+attr_html: :width 250px
 [[../img/paratrooper.png]]
 
-~present-demo.org~ ([[https://github.com/birkenkrahe/org/blob/master/emacs/present_demo.org][GitHub]] - [[https://raw.githubusercontent.com/birkenkrahe/org/master/emacs/present_demo.org][raw Org-mode file]]: [[https://tinyurl.com/556k452p][tinyurl.com/556k452p]])
+- Demo file ~present-demo.org~
+- [[https://github.com/birkenkrahe/org/blob/master/emacs/present_demo.org][GitHub]] - [[https://raw.githubusercontent.com/birkenkrahe/org/master/emacs/present_demo.org][raw Org-mode file]]: [[https://tinyurl.com/556k452p][tinyurl.com/556k452p]]
+- Show: *speaker notes* / themes (*black*, *moon*, *serif*)
+- Extensive documentation on GitHub ([[reveal.js)][org-reveal]])
 
-** TODO DataCamp lesson review & extension
+* TODO DataCamp lesson review & extension
 #+attr_html: :width 400px
 [[../img/datacamp.png]]
 
