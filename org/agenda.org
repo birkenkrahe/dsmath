@@ -1702,8 +1702,8 @@ Are you comfy? Poppy is!
 [[../img/venn.png]]
 
 - [X] Presenting in Emacs (FAQ + examples)
-- [ ] Monte Carlo Simulation
-- [ ] Intersection, Union, Complement
+- [X] Monte Carlo Simulation
+- [X] Intersection, Union, Complement
 - [ ] DataCamp lesson review "Laws of Probability"
 - [ ] Simulating a deck of 52 standard playing cards
 
@@ -1722,14 +1722,16 @@ Are you comfy? Poppy is!
 
 - *Some of these questions may show up in the final exam in December*
 
-- *Practice file at [[https://tinyurl.com/2s3kx6pt][tinyurl.com/2s3kx6pt]] to code/note along at will*
+- Complete the practice file at [[https://tinyurl.com/2s3kx6pt][tinyurl.com/2s3kx6pt]] 
 
-- Upload the completed file [[https://lyon.instructure.com/courses/655/assignments/3786][on Canvas as "Practice 8"]]
+- Upload the completed file [[https://lyon.instructure.com/courses/655/assignments/3786][on Canvas as "Practice 8"]] (last upload!)
 
 * Week 15: Probability distributions
 #+attr_html: :width 500px
 [[../img/normal.png]]
 
+** TODO Final exam review 
+** TODO About the final presentations
 ** TODO Course evaluation now! Hit me! Hard!
 #+attr_html: :width 480px
 [[../img/eval.png]]

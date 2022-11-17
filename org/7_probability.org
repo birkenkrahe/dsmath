@@ -287,7 +287,121 @@ Event B: "you roll an even number" - Pr(B) = Pr({2,4,6}) = 3/6 = 1/2
   is ~1 - 1/2 = 1/2~. If none of {4,5,6} is obtained, you must have
   rolled a {1,2,3}.
 
-* IN PROGRESS Practice: probability with a deck of cards
+* IN PROGRESS Building and drawing from a deck of cards
+** Creating and picking from an urn
+
+- To compute the probability distribution of one draw of a simple set,
+  like a set of six ~beads~ is simple even manually.
+
+- Example: pick a bead at random from an urn with six ~beads~
+
+- First create the urn:
+  #+begin_src R
+    beads <- rep(c("red","blue"), times = c(2,3))
+    beads
+  #+end_src
+
+  #+RESULTS:
+  : [1] "red"  "red"  "blue" "blue" "blue"
+
+- Pick one bead at random (repeat execution a few times):
+  #+begin_src R
+    sample(beads,1)
+  #+end_src
+
+  #+RESULTS:
+  : [1] "red"
+  
+** Repeated picking from an urn
+
+- Repeat picking from an urn ~B~ times using ~replicate~:
+  #+begin_src R :results silent
+    B <- 10000
+    events <- replicate(B, sample(beads, 1))
+  #+end_src
+
+- Print the distribution: what output do you expect?
+  #+begin_src R
+    tab <- table(events)
+    tab
+  #+end_src
+
+  #+RESULTS:
+  : events
+  : blue  red 
+  : 5892 4108
+
+- Plot the proportions: what output do you expect?
+  #+begin_src R
+    prop <- prop.table(tab)
+    prop
+  #+end_src
+
+  #+RESULTS:
+  : events
+  :   blue    red 
+  : 0.5892 0.4108
+  
+- Plot the distribution: what output do you expect?
+  #+begin_src R :results graphics file :file urn.png
+    barplot(tab, col=c("blue","red"))
+  #+end_src
+
+  #+RESULTS:
+  [[file:urn.png]]
+
+- As ~B~ gets larger, the estimates will get closer to ~2/5=0.4~ for ~red~
+  and ~3/5=0.6~ for ~blue~.
+
+** Setting the random seed
+
+- To ensure that results with pseudo-random numbers are identical
+
+- A popular way to pick the seed: year-month-day, e.g.
+  #+begin_src R
+    2022-11-17
+  #+end_src
+
+  #+RESULTS:
+  : [1] 1994
+
+- Consequently:
+  #+begin_src R
+    set.seed(1994)
+  #+end_src
+  
+** With and without replacement
+
+- The ~sample~ function has an argument to pick more than one element
+  from the urn (by default, ~replace=FALSE~, without replacement
+
+- ~sample~ can be used directly without ~replicate~ to repeat the same
+  experiment of picking 1 out of the 5 ~beads~, continually, under the
+  same conditions, /with replacement/:
+  #+begin_src R
+    set.seed(1994)
+    events <- sample(beads, B, replace=TRUE)
+    prop.table(table(events))
+  #+end_src
+
+  #+RESULTS:
+  : events
+  :   blue    red 
+  : 0.5966 0.4034
+  
+- Setting the seed leads to identical results every time
+
+** IN PROGRESS Combinations and permutations
+
+- For more complicated cases than six beads or dice, the computations
+  are perhaps not simple: what is the probability that if I draw five
+  cards from a deck of 52 playing cards, I get all cards of the same
+  suit (a "flush" in poker)?
+
+- To simulate this scenario, we build a deck of cards
+
+*** TO BE CONTINUED
+
 * References
 
 - [[https://nostarch.com/bookofr][Davies TD (2016). Book of R. NoStarch Press. URL: nostarch.com]]
