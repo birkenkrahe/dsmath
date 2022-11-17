@@ -19,7 +19,6 @@
 
    What is ~1 - (Pr(A=0) + Pr(A=1) = Pr(B=0) + Pr(B=1))~?
 
-
 2) What does [[https://github.com/birkenkrahe/dsmath/blob/main/img/dc_prob.png][this figure]] illustrate?
 
 3) What is ~Pr(A \cap B)~ (AND) for independent events ~A~ and ~B~?

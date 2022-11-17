@@ -190,7 +190,7 @@ Event B: "you roll an even number" - Pr(B) = Pr({2,4,6}) = 3/6 = 1/2
 - A /conditional/ probability is the probability of one event occurring
   after taking into account the occurrence of another event.
 
-- ~P(A|B)~ is the probability that A occurs /given/ that B has occurred.
+- ~Pr(A|B)~ is the probability that A occurs /given/ that B has occurred.
 - If ~Pr(A|B) = Pr(A)~ then A and B are (stochastically) /independent/
 - If ~Pr(A|B) \ne Pr(A)~ then A and B are (stochastically) /dependent/
 - Generally, ~Pr(A|B) \ne Pr(B|A)~
