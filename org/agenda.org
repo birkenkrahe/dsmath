@@ -1730,9 +1730,18 @@ Are you comfy? Poppy is!
 #+attr_html: :width 500px
 [[../img/normal.png]]
 
-** TODO Final exam review
-- Note: the last two DataCamp home assignments ("Bayesian statistics"
-  and "Related distributions") are not part of the final exam.
+* TODO Test driving the final exam (Dec 5-7)
+#+attr_html: :width 400px
+[[../img/beautifulmind.png]]
+
+*Note:* the last two DataCamp home assignments ("Bayesian statistics"
+and "Related distributions") are not part of the final exam.
+
+*Selection of quiz questions (__/___) from the final exam (40/__):*
+
+1) How
+
+
 ** TODO About the final presentations
 ** TODO Course evaluation now! Hit me! Hard!
 #+attr_html: :width 480px
