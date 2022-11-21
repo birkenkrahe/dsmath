@@ -1707,7 +1707,7 @@ Are you comfy? Poppy is!
 - [ ] DataCamp lesson review "Laws of Probability"
 - [ ] Simulating a deck of 52 standard playing cards
 
-* Presenting in Emacs: [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-can-i-present-in-emacs][new FAQ]]
+** Presenting in Emacs: [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-can-i-present-in-emacs][new FAQ]]
 #+attr_html: :width 250px
 [[../img/paratrooper.png]]
 
@@ -1716,7 +1716,7 @@ Are you comfy? Poppy is!
 - Show: *speaker notes* / themes (*black*, *moon*, *serif*)
 - Extensive documentation on GitHub ([[reveal.js)][org-reveal]])
 
-* TODO DataCamp lesson review & extension
+** DataCamp lesson review & extension
 #+attr_html: :width 400px
 [[../img/datacamp.png]]
 
@@ -1730,7 +1730,9 @@ Are you comfy? Poppy is!
 #+attr_html: :width 500px
 [[../img/normal.png]]
 
-** TODO Final exam review 
+** TODO Final exam review
+- Note: the last two DataCamp home assignments ("Bayesian statistics"
+  and "Related distributions") are not part of the final exam.
 ** TODO About the final presentations
 ** TODO Course evaluation now! Hit me! Hard!
 #+attr_html: :width 480px
@@ -1741,7 +1743,24 @@ Are you comfy? Poppy is!
 - *A couple of examples of useful feedback for me from past surveys:*
 #+attr_html: :width 700px
 [[../img/eval1.png]]
-* TODO Final sprint reviews (Nov 29, Dec 1)
+** TODO Easter egg - solution
+
+I asked what these pieces of art have in common:
+- Goya, The Clothed Maja (Madrid)
+- Da Vinci, The Last Supper (Milan)
+- van Gogh, Sunflowers (Louvre)
+- Botticelli, La Primavera (Florence)
+
+#+begin_notes
+The answer: they've all been attacked in 2022 by climate activists
+from the [[https://www.last-generation.org/]["Last Generation]]" group. This group attacks public art with
+mashed potatoes, black paint, tomato soup etc. and the attackers glue
+themselves to the wall shouting slogans until they are taken away. Two
+more have been added to the list in the last 2 weeks:
+- Klimt, Death and Life (Austria)
+- Monet, Les Meules (Berlin)
+#+end_notes
+* Week 16: Final sprint reviews (Nov 29, Dec 1)
 #+attr_html: :width 500px
 [[../img/botticelli.jpg]]
 
@@ -1754,53 +1773,6 @@ Are you comfy? Poppy is!
 *Timing:* We have 5-6 teams + 1 solo presenter and a total of 150
 minutes available - i.e. ca. 20 min per team on Tuesday + Thursday,
 Nov 29 and Dec 1.
-
-** TODO Probability: a world of change
-#+attr_html: :width 500px
-[[../img/change.png]]
-[[https://twitter.com/historydefined/status/1586953757824356352?s=20&t=WXVh5nGDFHf536Tqqt3PPg\]\]][Source: "We live in a world of change." (1929)]]
-
-#+begin_quote
-»The very meaning of /expertness/ is acquired /courage/ to brace one's self for the cruel crisis from the moment one sees it grimly loom.« Henry James (1907)
-#+end_quote
-
-- Which types of statements are verifiable?
-  #+begin_notes
-  1) Falsifiable: sunset, telephone, electricity
-  2) Not falsifiable: safety, good old days, improvements
-  #+end_notes
-- How can statements be verified?
-  #+begin_quote
-  1) By experimentation to show the statement's truth or falsehood
-  2) Experiments have to be repeated, in principle forever
-  3) The data need to be validated, transparent and accessible
-  4) Format statements can be formally proven or disproven
-  #+end_quote
-- What's better, falsification or verification?
-  #+begin_quote
-  - Falsification is the refutation of statements
-  - Verification refers to statements that are shown to be true
-  - The goal of science is to create knowledge by identifying true
-    statements as true (verified) and false statements as false
-    (falsified).
-  - None is better, verification implies better specificity
-  #+end_quote
-- Which statements can you attach probabilities to?
-  #+begin_quote
-  - Statements whose claims can be measured or quantified
-  - Statements about events that have not happened yet
-  #+end_quote
-- Can I multiply, divide, add and subtract probabilities?
-  #+begin_quote
-  - Yes, but the interesting question is what this means
-  - Usually presented in terms of scenarios or problems
-  - Math/stats is presented using event/state spaces
-  - Data science prefers simulations and observations
-  #+end_quote
-- *Get your Emacs knife out now so that you can code along with me!*
-  #+begin_example bash
-    $ emacs --file prob.org
-  #+end_example
 
 * References
 #+attr_html: :width 500px

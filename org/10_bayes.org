@@ -1,0 +1,14 @@
+#+TITLE: Bayesian Statistics
+#+AUTHOR: MARCUS BIRKENKRAHE
+#+SUBTITLE: Applied math for data science (DSC 482/MTH 445) Fall 2022
+#+PROPERTY: header-args:R :session *R* :results output :exports both
+#+STARTUP: overview hideblocks indent inlineimages entitiespretty
+#+attr_html: :width 600px
+#+caption: Monet, Les Meules, 
+[[../img/monet_les_Meules.jpg]]
+* README
+
+* References
+- [[https://nostarch.com/bookofr][Davies TD (2016). Book of R. NoStarch Press. URL: nostarch.com]]
+- Matloff N (2019). Probability and Statistics for Data Science. CRC
+  Press.
