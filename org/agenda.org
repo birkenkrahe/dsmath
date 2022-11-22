@@ -1730,20 +1730,8 @@ Are you comfy? Poppy is!
 #+attr_html: :width 500px
 [[../img/normal.png]]
 
-* TODO Test driving the final exam (Dec 5-7)
-#+attr_html: :width 400px
-[[../img/beautifulmind.png]]
 
-*Note:* the last two DataCamp home assignments ("Bayesian statistics"
-and "Related distributions") are not part of the final exam.
-
-*Selection of quiz questions (__/___) from the final exam (40/__):*
-
-1) How
-
-
-** TODO About the final presentations
-** TODO Course evaluation now! Hit me! Hard!
+* TODO Course evaluation now! Hit me! Hard!
 #+attr_html: :width 480px
 [[../img/eval.png]]
 
@@ -1769,6 +1757,292 @@ more have been added to the list in the last 2 weeks:
 - Klimt, Death and Life (Austria)
 - Monet, Les Meules (Berlin)
 #+end_notes
+* TODO DataCamp assignments: Bayesian Stats & Distributions (bonus)
+[[../img/7_Thomas_Bayes.gif]]
+
+/Thomas Bayes, English Presbyterian minister & statistician (1701-1761)/
+
+- Bayesian Statistics and Bayes Theorem: updating your expectations
+  based on prior knowledge of conditions
+
+- E.g. Bayes' theorem allows the health risk to an individual of a
+  known age to be assessed more accurately (by conditioning on age)
+
+  Pr(A∣B)= Pr(B∣A) \times Pr(A) / Pr(B)
+
+- Applications to popular puzzles: Three Prisoners Problem, Monty Hall
+  Problem etc.
+
+- For a discussion with Monte Carlo simulations of these problems, see
+  e.g. Irizarry (2021), ch. 13.7. ([[http://rafalab.dfci.harvard.edu/dsbook/probability.html][link]])
+
+*Note*: The last DataCamp assignment "Related distributions" is a *bonus*
+assignment, and the last two DataCamp home assignments ("Bayesian
+statistics" and "Related distributions") are *not* part of the final
+exam.
+  
+* TODO About the final presentations
+#+attr_html: :width 500px
+[[../img/presentation.jpg]]
+
+- FAQ: [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#what-should-we-do-in-the-fourth-sprint][What should you do in the 4th and final sprint review?]]
+
+- FAQ: [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-should-we-prepare-for-the-final-presentation][How should we prepare for the final presentation?]]
+  1) go through the *checklist*
+  2) act *strategically*
+  3) *show* me your presentation beforehand if in doubt
+  4) *rehearse* under real conditions (in the class room if you can)
+
+- *Upload* [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#what-do-we-have-to-deliver-for-the-final-essay-or-presentation][some material]] online (see email later this week)
+
+- *Timing*: enter your time/names/titles [[https://lyon.instructure.com/courses/571/pages/register-your-final-presentation-date-here][in Canvas]] 
+
+* TODO Test driving the final exam (Dec 5-7)
+#+attr_html: :width 400px
+[[../img/beautifulmind.png]]
+
+*Selection of quiz questions (__/120) from the final exam (40/120):*
+
+1) What are mutually exclusive events? What's an example? How could
+   you show this using a Monte Carlo simulation?
+   #+begin_notes
+   If A and B are mutually exclusive, then ~Pr(A \cap B) = 0~, and
+   in R: ~intersect(A,B)=0~
+   #+end_notes
+
+2) What probability does this Venn diagram represent if A and B are
+   events? Answer in terms of set theory, probability and stochastics.
+   #+attr_html: :width 300px
+   [[../img/7_complement.png]]
+   #+begin_notes
+   - The complement of Pr(A) [set theory = state space]
+   - The probability 1 - Pr(A) [probability theory = prediction]
+   - The probability that A will not occur [stochastics = [process]
+   #+end_notes
+
+3) When can you smooth a density plot (and what does the "smoothing" represent)?
+   #+attr_html: :width 300px
+   [[../img/entryquiz_density.png]]
+   #+begin_notes
+    - Smoothing means making assumptions about the underlying
+      distribution and drawing a curve accordingly
+    - Smoothing accuracy depends on the underlying data set.
+    - In R, ~density~ achieves this using a Fast Fourier Transform (FFT)
+    - Used in digital recording, sampling, voice recognition etc.
+   #+end_notes
+   #+begin_src R :results silent
+     par(mfrow=c(1,1))
+     hist(Nile, col="lightblue",las=1)
+     par(new=TRUE)
+     lines(plot(density(Nile),
+                col="red", lwd=2,
+                main="",xlab="",ylab="", # remove axis labels
+                axes="n"))
+    #+end_src   
+
+4) What is agile project management? Do you know an example method?
+   What's agile about the processes of the example? What has this to
+   do with applied math?
+   #+begin_notes
+      - Agility with regard to deadlines and deliverables
+      - Focus on customer contact and feedback
+      - Example methods: Kanban (board), Scrum (sprints)
+      [[../img/kanban.png]]
+      - Applied math: application of mathematics to real-world
+        problems implies that there is a customer=beneficiary
+      #+end_notes
+
+5) What does DataCamp have to offer?
+   #+begin_notes
+     - Courses in R, Python, SQL, Tableau, R Shiny, Power BI
+     - Certificates for complete courses (career-relevant)
+     - Cloud-based workspace for R, Python, SQL
+     - Webinars on current data science topics
+     - Blog and tutorials
+   #+end_notes
+
+6) What does ~read.csv~ do? What does this function have to do with
+   ~factor~ variables? What are ~factor~ variables?
+
+7) ~df~ is a data frame with four variables: ~Weight~ [kg], ~Height~ [cm],
+   ~Sex~ [male/female], and ~Name~.
+   - How can you extract the ~Name~ of those who are taller than 180 cm?
+   - What type of variable is ~Sex~?
+   - How can I plot ~Sex~ as a bar chart? (2 ways)
+   #+begin_src R
+     df <- read.csv(file="../data/dataset.csv",header=TRUE)
+     str(df)
+     df$Name[df$Height > 180]
+     str(df$Sex) # character, categorical variable
+     barplot(table(df$Sex)) # bar chart from frequency table
+     plot(factor(df$Sex)) # bar chart from factor levels
+   #+end_src
+
+   #+RESULTS:
+   : 'data.frame':	10 obs. of  4 variables:
+   :  $ Weight: int  55 85 75 42 93 63 58 75 89 67
+   :  $ Height: int  161 185 174 154 188 178 170 167 181 178
+   :  $ Sex   : chr  "female" "male" "male" "female" ...
+   :  $ Name  : chr  "Jane" "Jim" "Joe" "Carla" ...
+   : [1] "Jim"   "Carl"  "Derek"
+   :  chr [1:10] "female" "male" "male" "female" "male" "male" "female" "male" ...
+
+8) What constitutes "failure" in scientific research? How does
+   "literate programming" relate to it, what is it, and how did it
+   impact this class exactly?
+   #+begin_notes
+     - Failure: not documenting your process systematically,
+       diligently, intelligently and truthfully.
+     - Literate programming: documentation + code + output = story
+     - This class: Emacs + ESS + Org-mode tool used for lecture +
+       practice + assignments
+   #+end_notes
+
+9) When do you have to undertake a literature review and why?
+   #+begin_notes
+    Any time
+   #+end_notes
+
+10) What are the steps of a scientific research process?
+    #+begin_notes
+       - IMRaD: Introduction, Methods, Results and Discussion
+       - Literature review (What are we trying to find out?)
+       - Methodology (How will you try to find it out?)
+       - Results (What did you find out?)
+       - Discussion & limitations (Answer to Why? and Bias)
+    #+end_notes
+
+11) Which plots visualize measures of spread? What are they? What
+    other plots are there?
+    #+begin_notes
+     Boxplots!
+     #+attr_html: :width 400px
+     [[../img/boxtest.png]]
+        #+end_notes
+    #+begin_src R
+      summary(mtcars$mpg)
+    #+end_src
+
+12) What kind of data are longitude and latitude?
+    #+begin_notes
+      - bivariate data
+      - multivariate data
+      - spatial coordinate (grid) data
+      - numeric-continuous data
+    #+end_notes
+    
+13) The dataset ~chickwts~ contains information about feed types given
+    to chicks and their weight. How can you extract the observations 5
+    to 10 of the feed types in the dataset? What information do you
+    need for that?
+    #+begin_src R
+      ## data frame info: variable names and types
+      str(chickwts) # built in - no package to install/load
+
+      chickwts[5:10,"feed"] # row number, feature name
+      chickwts[5:10,2] # row number, column number
+      chickwts$feed[c(5,6,7,8,9,10)]
+    #+end_src
+
+    #+RESULTS:
+    : 'data.frame':	71 obs. of  2 variables:
+    :  $ weight: num  179 160 136 227 217 168 108 124 143 140 ...
+    :  $ feed  : Factor w/ 6 levels "casein","horsebean",..: 2 2 2 2 2 2 2 2 2 2 ...
+    : [1] horsebean horsebean horsebean horsebean horsebean horsebean
+    : Levels: casein horsebean linseed meatmeal soybean sunflower
+    : [1] horsebean horsebean horsebean horsebean horsebean horsebean
+    : Levels: casein horsebean linseed meatmeal soybean sunflower
+    : [1] horsebean horsebean horsebean horsebean horsebean horsebean
+    : Levels: casein horsebean linseed meatmeal soybean sunflower
+
+14) What's a discrete, bimodal distribution?
+    #+begin_notes
+     - two (=bi) significant peaks (=modes)
+     - discrete = outcomes are countable in a finite amount of time,
+       e.g. 6 sides of a die, or 2 sides of a coin
+     - distribution: a set of values
+    #+end_notes
+    #+attr_html: :width 300px
+    [[../img/bimodal.png]]
+    
+15) Describe how to get from population to sample and back.
+    #+attr_html: :width 400px
+    [[../img/3_parameter.png]]
+
+16) Name the elements of this expression (how do you get it?):
+    #+attr_html: :width 700px
+    [[../img/expression.png]]
+    #+begin_src R
+      library(MASS)
+      str(whiteside)
+    #+end_src
+
+    #+RESULTS:
+    : 'data.frame':	56 obs. of  3 variables:
+    :  $ Insul: Factor w/ 2 levels "Before","After": 1 1 1 1 1 1 1 1 1 1 ...
+    :  $ Temp : num  -0.8 -0.7 0.4 2.5 2.9 3.2 3.6 3.9 4.2 4.3 ...
+    :  $ Gas  : num  7.2 6.9 6.4 6 5.8 5.8 5.6 4.7 5.8 5.2 ...
+
+    #+begin_notes
+    1) Dependent numeric-continuous variable
+    2) Accessor operator for non-atomic column vectors
+    3) Index operator to access vector elements
+    4) Independent categorical-nominal variable
+    5) Logical equality operator
+    6) Ordered factor level (string value)
+    7) Logical AND operator
+    8) data frame
+    #+end_notes
+    
+17) How can you compute the median of the tooth length from the
+    ~ToothGrowth~ data set for both values of the vitamin C supply using
+    the ~tapply~ function?
+    #+begin_src R
+      tapply(X=ToothGrowth$len,
+             INDEX=ToothGrowth$supp,
+             FUN=median)
+    #+end_src
+
+    #+RESULTS:
+    :   OJ   VC 
+    : 22.7 16.5
+    
+18) What is a dot plot, how do you create one in R, and when would you
+    use it?
+    #+begin_notes
+    "Thin frequencies" are better represented as dots in a so-called dot
+    plot, with the ~dotchart~ function (is it generic? How would you
+    check?)
+    #+end_notes
+    #+begin_src R :results graphics file :file ../img/test.png
+      par(mfrow=c(1,2),pty='s')
+      plot(x=table(chickwts$feed),
+           main="Chicken feeds",
+           ylab="Frequencies")
+      dotchart(x=table(chickwts$feed),
+               main="Chicken feeds",
+               pch=21, bg="green", pt.cex=1.2)
+    #+end_src
+
+    #+RESULTS:
+    [[file:../img/test.png]]
+
+19) What is the 100% percentile (1.0th quantile)? How is it visualized?
+    #+begin_notes
+     - It's the maximum value
+     - Upper whisker of a boxplot
+    #+end_notes
+
+20) Name the diagrams in the 4-plot figure:
+    #+attr_html: :width 400px
+    [[../img/plots.png]]
+
+    #+begin_notes
+     1) scatterplot
+     2) histogram
+     3) density estimate (smoothed histogram)
+     4) normal qq-plot (checks how Gaussian a distribution is)
+    #+end_notes
 * Week 16: Final sprint reviews (Nov 29, Dec 1)
 #+attr_html: :width 500px
 [[../img/botticelli.jpg]]
@@ -1788,6 +2062,7 @@ Nov 29 and Dec 1.
 [[../img/books.jpg]]
 
 - Davies, TD (2016). The Book of R. NoStarch Press.
+- Irizarry, R (2021). Introduction to Data Science. CRC Press.
 - James, H (1909). The Art of the Novel. Scribner.
 - Lawlor J, Banville F, Forero-Muñoz N-R, Hébert K, Martínez-Lanfranco
   JA, Rogy P, et al. (2022) Ten simple rules for teaching yourself
