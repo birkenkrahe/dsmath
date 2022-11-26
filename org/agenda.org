@@ -1730,8 +1730,12 @@ Are you comfy? Poppy is!
 #+attr_html: :width 500px
 [[../img/normal.png]]
 
+- [ ] Course evaluation in Canvas
+- [ ] DataCamp assignments (and bonus rules)
+- [ ] About the final presentations
+- [ ] Test drive: final exam (20/40)
 
-* TODO Course evaluation now! Hit me! Hard!
+** Course evaluation now! Hit me! Hard!
 #+attr_html: :width 480px
 [[../img/eval.png]]
 
@@ -1740,7 +1744,7 @@ Are you comfy? Poppy is!
 - *A couple of examples of useful feedback for me from past surveys:*
 #+attr_html: :width 700px
 [[../img/eval1.png]]
-** TODO Easter egg - solution
+** Easter egg - solution
 
 I asked what these pieces of art have in common:
 - Goya, The Clothed Maja (Madrid)
@@ -1757,7 +1761,7 @@ more have been added to the list in the last 2 weeks:
 - Klimt, Death and Life (Austria)
 - Monet, Les Meules (Berlin)
 #+end_notes
-* TODO DataCamp assignments: Bayesian Stats & Distributions (bonus)
+** DataCamp assignments: Bayesian Stats & Distributions (bonus)
 [[../img/7_Thomas_Bayes.gif]]
 
 /Thomas Bayes, English Presbyterian minister & statistician (1701-1761)/
@@ -1766,7 +1770,7 @@ more have been added to the list in the last 2 weeks:
   based on prior knowledge of conditions
 
 - E.g. Bayes' theorem allows the health risk to an individual of a
-  known age to be assessed more accurately (by conditioning on age)
+  known age to be assessed "more accurately" (by conditioning on age)
 
   Pr(A∣B)= Pr(B∣A) \times Pr(A) / Pr(B)
 
@@ -1781,7 +1785,7 @@ assignment, and the last two DataCamp home assignments ("Bayesian
 statistics" and "Related distributions") are *not* part of the final
 exam.
   
-* TODO About the final presentations
+** About the final presentations
 #+attr_html: :width 500px
 [[../img/presentation.jpg]]
 
@@ -1797,14 +1801,14 @@ exam.
 
 - *Timing*: enter your time/names/titles [[https://lyon.instructure.com/courses/571/pages/register-your-final-presentation-date-here][in Canvas]] 
 
-* TODO Test driving the final exam (Dec 5-7)
+** Test driving the final exam (Dec 5-7)
 #+attr_html: :width 400px
 [[../img/beautifulmind.png]]
 
-*Selection of quiz questions (__/120) from the final exam (40/120):*
+*Selection of quiz questions (20/40) from the final exam (40/120):*
 
 1) What are mutually exclusive events? What's an example? How could
-   you show this using a Monte Carlo simulation?
+   you show this using R?
    #+begin_notes
    If A and B are mutually exclusive, then ~Pr(A \cap B) = 0~, and
    in R: ~intersect(A,B)=0~
@@ -1817,10 +1821,11 @@ exam.
    #+begin_notes
    - The complement of Pr(A) [set theory = state space]
    - The probability 1 - Pr(A) [probability theory = prediction]
-   - The probability that A will not occur [stochastics = [process]
+   - The probability that A will not occur [stochastics = [process]]
    #+end_notes
-
-3) When can you smooth a density plot (and what does the "smoothing" represent)?
+   
+3) When can you smooth a plot (and what does the "smoothing"
+   represent)?
    #+attr_html: :width 300px
    [[../img/entryquiz_density.png]]
    #+begin_notes
@@ -1857,8 +1862,12 @@ exam.
      - Courses in R, Python, SQL, Tableau, R Shiny, Power BI
      - Certificates for complete courses (career-relevant)
      - Cloud-based workspace for R, Python, SQL
-     - Webinars on current data science topics
+     - Webinars on current data science topics (live events)
      - Blog and tutorials
+     - Competitions
+     - Practice exercises
+     - Mobile app
+     - Projects
    #+end_notes
 
 6) What does ~read.csv~ do? What does this function have to do with
@@ -1872,20 +1881,35 @@ exam.
    #+begin_src R
      df <- read.csv(file="../data/dataset.csv",header=TRUE)
      str(df)
+     df
      df$Name[df$Height > 180]
      str(df$Sex) # character, categorical variable
+     par(mfrow=c(1,2))
      barplot(table(df$Sex)) # bar chart from frequency table
      plot(factor(df$Sex)) # bar chart from factor levels
    #+end_src
 
    #+RESULTS:
-   : 'data.frame':	10 obs. of  4 variables:
-   :  $ Weight: int  55 85 75 42 93 63 58 75 89 67
-   :  $ Height: int  161 185 174 154 188 178 170 167 181 178
-   :  $ Sex   : chr  "female" "male" "male" "female" ...
-   :  $ Name  : chr  "Jane" "Jim" "Joe" "Carla" ...
-   : [1] "Jim"   "Carl"  "Derek"
-   :  chr [1:10] "female" "male" "male" "female" "male" "male" "female" "male" ...
+   #+begin_example
+   'data.frame':	10 obs. of  4 variables:
+    $ Weight: int  55 85 75 42 93 63 58 75 89 67
+    $ Height: int  161 185 174 154 188 178 170 167 181 178
+    $ Sex   : chr  "female" "male" "male" "female" ...
+    $ Name  : chr  "Jane" "Jim" "Joe" "Carla" ...
+      Weight Height    Sex  Name
+   1      55    161 female  Jane
+   2      85    185   male   Jim
+   3      75    174   male   Joe
+   4      42    154 female Carla
+   5      93    188   male  Carl
+   6      63    178   male Chris
+   7      58    170 female  Dora
+   8      75    167   male  Dave
+   9      89    181   male Derek
+   10     67    178 female Lucia
+   [1] "Jim"   "Carl"  "Derek"
+    chr [1:10] "female" "male" "male" "female" "male" "male" "female" "male" ...
+   #+end_example
 
 8) What constitutes "failure" in scientific research? How does
    "literate programming" relate to it, what is it, and how did it
@@ -1900,9 +1924,9 @@ exam.
 
 9) When do you have to undertake a literature review and why?
    #+begin_notes
-    Any time
+    Any time (because you need to know what's been done before)
    #+end_notes
-
+   
 10) What are the steps of a scientific research process?
     #+begin_notes
        - IMRaD: Introduction, Methods, Results and Discussion
@@ -1923,6 +1947,10 @@ exam.
       summary(mtcars$mpg)
     #+end_src
 
+    #+RESULTS:
+    :    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+    :   10.40   15.43   19.20   20.09   22.80   33.90
+
 12) What kind of data are longitude and latitude?
     #+begin_notes
       - bivariate data
@@ -1942,18 +1970,23 @@ exam.
       chickwts[5:10,"feed"] # row number, feature name
       chickwts[5:10,2] # row number, column number
       chickwts$feed[c(5,6,7,8,9,10)]
+      chickwts$feed[5:10]
     #+end_src
 
     #+RESULTS:
-    : 'data.frame':	71 obs. of  2 variables:
-    :  $ weight: num  179 160 136 227 217 168 108 124 143 140 ...
-    :  $ feed  : Factor w/ 6 levels "casein","horsebean",..: 2 2 2 2 2 2 2 2 2 2 ...
-    : [1] horsebean horsebean horsebean horsebean horsebean horsebean
-    : Levels: casein horsebean linseed meatmeal soybean sunflower
-    : [1] horsebean horsebean horsebean horsebean horsebean horsebean
-    : Levels: casein horsebean linseed meatmeal soybean sunflower
-    : [1] horsebean horsebean horsebean horsebean horsebean horsebean
-    : Levels: casein horsebean linseed meatmeal soybean sunflower
+    #+begin_example
+    'data.frame':	71 obs. of  2 variables:
+     $ weight: num  179 160 136 227 217 168 108 124 143 140 ...
+     $ feed  : Factor w/ 6 levels "casein","horsebean",..: 2 2 2 2 2 2 2 2 2 2 ...
+    [1] horsebean horsebean horsebean horsebean horsebean horsebean
+    Levels: casein horsebean linseed meatmeal soybean sunflower
+    [1] horsebean horsebean horsebean horsebean horsebean horsebean
+    Levels: casein horsebean linseed meatmeal soybean sunflower
+    [1] horsebean horsebean horsebean horsebean horsebean horsebean
+    Levels: casein horsebean linseed meatmeal soybean sunflower
+    [1] horsebean horsebean horsebean horsebean horsebean horsebean
+    Levels: casein horsebean linseed meatmeal soybean sunflower
+    #+end_example
 
 14) What's a discrete, bimodal distribution?
     #+begin_notes
@@ -1977,12 +2010,6 @@ exam.
       str(whiteside)
     #+end_src
 
-    #+RESULTS:
-    : 'data.frame':	56 obs. of  3 variables:
-    :  $ Insul: Factor w/ 2 levels "Before","After": 1 1 1 1 1 1 1 1 1 1 ...
-    :  $ Temp : num  -0.8 -0.7 0.4 2.5 2.9 3.2 3.6 3.9 4.2 4.3 ...
-    :  $ Gas  : num  7.2 6.9 6.4 6 5.8 5.8 5.6 4.7 5.8 5.2 ...
-
     #+begin_notes
     1) Dependent numeric-continuous variable
     2) Accessor operator for non-atomic column vectors
@@ -2002,10 +2029,6 @@ exam.
              INDEX=ToothGrowth$supp,
              FUN=median)
     #+end_src
-
-    #+RESULTS:
-    :   OJ   VC 
-    : 22.7 16.5
     
 18) What is a dot plot, how do you create one in R, and when would you
     use it?
@@ -2044,14 +2067,12 @@ exam.
      4) normal qq-plot (checks how Gaussian a distribution is)
     #+end_notes
 * Week 16: Final sprint reviews (Nov 29, Dec 1)
-#+attr_html: :width 500px
-[[../img/botticelli.jpg]]
+#+attr_html: :width 600px
+[[../img/dsmath_projects_f22.png]]
 
-[[https://en.wikipedia.org/wiki/Primavera_(Botticelli)][Image: Botticelli's Primavera (1482), Florence]][fn:1]
-
-- *Present* final project prototype in no particular order!
-- *Submit* all material prior to the presentation!
-- *Read* *[[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-should-we-prepare-for-the-final-presentation][the FAQ]]* with the checklist carefully *now*!
+- *Present* final project prototype!
+- *Submit* all material [[https://lyon.instructure.com/courses/655/assignments/2280][to Canvas]]!
+- *Read* *[[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-should-we-prepare-for-the-final-presentation][the FAQ]]* with the checklist!
 
 *Timing:* We have 5-6 teams + 1 solo presenter and a total of 150
 minutes available - i.e. ca. 20 min per team on Tuesday + Thursday,
