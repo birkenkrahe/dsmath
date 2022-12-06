@@ -1801,7 +1801,7 @@ exam.
 
 - *Timing*: enter your time/names/titles [[https://lyon.instructure.com/courses/571/pages/register-your-final-presentation-date-here][in Canvas]] 
 
-** Test driving the final exam (Dec 5-7)
+** TEST DRIVING THE FINAL EXAM (DEC 5-7)
 #+attr_html: :width 400px
 [[../img/beautifulmind.png]]
 
@@ -1813,7 +1813,6 @@ exam.
    If A and B are mutually exclusive, then ~Pr(A \cap B) = 0~, and
    in R: ~intersect(A,B)=0~
    #+end_notes
-
 2) What probability does this Venn diagram represent if A and B are
    events? Answer in terms of set theory, probability and stochastics.
    #+attr_html: :width 300px
@@ -1823,7 +1822,6 @@ exam.
    - The probability 1 - Pr(A) [probability theory = prediction]
    - The probability that A will not occur [stochastics = [process]]
    #+end_notes
-   
 3) When can you smooth a plot (and what does the "smoothing"
    represent)?
    #+attr_html: :width 300px
@@ -1844,7 +1842,6 @@ exam.
                 main="",xlab="",ylab="", # remove axis labels
                 axes="n"))
     #+end_src   
-
 4) What is agile project management? Do you know an example method?
    What's agile about the processes of the example? What has this to
    do with applied math?
@@ -1856,7 +1853,6 @@ exam.
       - Applied math: application of mathematics to real-world
         problems implies that there is a customer=beneficiary
       #+end_notes
-
 5) What does DataCamp have to offer?
    #+begin_notes
      - Courses in R, Python, SQL, Tableau, R Shiny, Power BI
@@ -1869,11 +1865,27 @@ exam.
      - Mobile app
      - Projects
    #+end_notes
+6) Name the elements of this expression (how do you get it?):
+   #+attr_html: :width 700px
+   [[../img/expression.png]]
+   #+begin_src R
+     library(MASS)
+     str(whiteside)
+   #+end_src
 
-6) What does ~read.csv~ do? What does this function have to do with
+   #+begin_notes
+   1) Dependent numeric-continuous variable
+   2) Accessor operator for non-atomic column vectors
+   3) Index operator to access vector elements
+   4) Independent categorical-nominal variable
+   5) Logical equality operator
+   6) Ordered factor level (string value)
+   7) Logical AND operator
+   8) data frame
+   #+end_notes
+7) What does ~read.csv~ do? What does this function have to do with
    ~factor~ variables? What are ~factor~ variables?
-
-7) ~df~ is a data frame with four variables: ~Weight~ [kg], ~Height~ [cm],
+8) ~df~ is a data frame with four variables: ~Weight~ [kg], ~Height~ [cm],
    ~Sex~ [male/female], and ~Name~.
    - How can you extract the ~Name~ of those who are taller than 180 cm?
    - What type of variable is ~Sex~?
@@ -1910,8 +1922,7 @@ exam.
    [1] "Jim"   "Carl"  "Derek"
     chr [1:10] "female" "male" "male" "female" "male" "male" "female" "male" ...
    #+end_example
-
-8) What constitutes "failure" in scientific research? How does
+9) What constitutes "failure" in scientific research? How does
    "literate programming" relate to it, what is it, and how did it
    impact this class exactly?
    #+begin_notes
@@ -1921,13 +1932,11 @@ exam.
      - This class: Emacs + ESS + Org-mode tool used for lecture +
        practice + assignments
    #+end_notes
-
-9) When do you have to undertake a literature review and why?
-   #+begin_notes
-    Any time (because you need to know what's been done before)
-   #+end_notes
-   
-10) What are the steps of a scientific research process?
+10) When do you have to undertake a literature review and why?
+    #+begin_notes
+     Any time (because you need to know what's been done before)
+    #+end_notes
+11) What are the steps of a scientific research process?
     #+begin_notes
        - IMRaD: Introduction, Methods, Results and Discussion
        - Literature review (What are we trying to find out?)
@@ -1935,8 +1944,7 @@ exam.
        - Results (What did you find out?)
        - Discussion & limitations (Answer to Why? and Bias)
     #+end_notes
-
-11) Which plots visualize measures of spread? What are they? What
+12) Which plots visualize measures of spread? What are they? What
     other plots are there?
     #+begin_notes
      Boxplots!
@@ -1950,16 +1958,14 @@ exam.
     #+RESULTS:
     :    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
     :   10.40   15.43   19.20   20.09   22.80   33.90
-
-12) What kind of data are longitude and latitude?
+13) What kind of data are longitude and latitude?
     #+begin_notes
       - bivariate data
       - multivariate data
       - spatial coordinate (grid) data
       - numeric-continuous data
     #+end_notes
-    
-13) The dataset ~chickwts~ contains information about feed types given
+14) The dataset ~chickwts~ contains information about feed types given
     to chicks and their weight. How can you extract the observations 5
     to 10 of the feed types in the dataset? What information do you
     need for that?
@@ -1987,8 +1993,7 @@ exam.
     [1] horsebean horsebean horsebean horsebean horsebean horsebean
     Levels: casein horsebean linseed meatmeal soybean sunflower
     #+end_example
-
-14) What's a discrete, bimodal distribution?
+15) What's a discrete, bimodal distribution?
     #+begin_notes
      - two (=bi) significant peaks (=modes)
      - discrete = outcomes are countable in a finite amount of time,
@@ -1997,40 +2002,10 @@ exam.
     #+end_notes
     #+attr_html: :width 300px
     [[../img/bimodal.png]]
-    
-15) Describe how to get from population to sample and back.
+16) Describe how to get from population to sample and back.
     #+attr_html: :width 400px
     [[../img/3_parameter.png]]
-
-16) Name the elements of this expression (how do you get it?):
-    #+attr_html: :width 700px
-    [[../img/expression.png]]
-    #+begin_src R
-      library(MASS)
-      str(whiteside)
-    #+end_src
-
-    #+begin_notes
-    1) Dependent numeric-continuous variable
-    2) Accessor operator for non-atomic column vectors
-    3) Index operator to access vector elements
-    4) Independent categorical-nominal variable
-    5) Logical equality operator
-    6) Ordered factor level (string value)
-    7) Logical AND operator
-    8) data frame
-    #+end_notes
-    
-17) How can you compute the median of the tooth length from the
-    ~ToothGrowth~ data set for both values of the vitamin C supply using
-    the ~tapply~ function?
-    #+begin_src R
-      tapply(X=ToothGrowth$len,
-             INDEX=ToothGrowth$supp,
-             FUN=median)
-    #+end_src
-    
-18) What is a dot plot, how do you create one in R, and when would you
+17) What is a dot plot, how do you create one in R, and when would you
     use it?
     #+begin_notes
     "Thin frequencies" are better represented as dots in a so-called dot
@@ -2050,12 +2025,19 @@ exam.
     #+RESULTS:
     [[file:../img/test.png]]
 
+18) How can you compute the median of the tooth length from the
+    ~ToothGrowth~ data set for both values of the vitamin C supply using
+    the ~tapply~ function?
+    #+begin_src R
+      tapply(X=ToothGrowth$len,
+             INDEX=ToothGrowth$supp,
+             FUN=median)
+    #+end_src
 19) What is the 100% percentile (1.0th quantile)? How is it visualized?
     #+begin_notes
      - It's the maximum value
      - Upper whisker of a boxplot
     #+end_notes
-
 20) Name the diagrams in the 4-plot figure:
     #+attr_html: :width 400px
     [[../img/plots.png]]
