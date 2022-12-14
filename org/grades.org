@@ -1,0 +1,158 @@
+#+title: DSC 482/MTH 445 Grades Analysis - Fall 2022
+#+options: toc:nil num:nil
+#+startup: overview hideblocks indent
+#+property: header-args:R :results output :session *R*
+
+1) Download data into data frame ~dsmath~
+   #+begin_src R
+     dsmath <- read.csv(
+       file="data/dsmath.csv",
+       header=TRUE)
+     str(dsmath)
+   #+end_src
+
+2) Final grades ~final_dsmath~ and final exam results ~exam_dsmath~
+   #+begin_src R
+     final_dsmath <- (as.numeric(dsmath$Final.Score[3:nrow(dsmath)-1]))
+     final_dsmath
+     exam_dsmath <- as.numeric(dsmath$Final.exam.Final.Score[3:nrow(dsmath)-1])
+     exam_dsmath
+   #+end_src
+
+3) Plot final grades and final exam results:
+   #+begin_src R :results graphics file :file ./img/dsmath_f22_final.png
+     par(mfrow=c(2,2), pty='s')
+     hist(final_dsmath,
+          xlab="Grade (%)",
+          main="Final grades\nApplied math for data science")
+     plot(density(final_dsmath),
+          xlab="Grade (%)",
+          main="Final grades\nDSC 482 - Fall 2022")
+     hist(exam_dsmath,
+          xlab="Points (%)",
+          main="Final exam results\nApplied math for data science")
+     plot(density(exam_dsmath),
+          xlab="Points (%)",
+          main="Final exam results\nDSC 482 - Fall 2022")
+   #+end_src
+
+   [[../img/dsmath_f22_final.png]]
+
+4) Final projects - grade table and stats summary
+   #+begin_src R
+     proj <- data.frame(
+       sr1 = 100*dsmath[3:nrow(dsmath)-1,grep("X1st", colnames(dsmath))]/20,
+       sr2 = 100*dsmath[3:nrow(dsmath)-1,grep("X2nd", colnames(dsmath))]/20,
+       sr3 = 100*dsmath[3:nrow(dsmath)-1,grep("X3rd", colnames(dsmath))]/20,
+       sr4 = 100*dsmath[3:nrow(dsmath)-1,grep("Fourth", colnames(dsmath))]/40)
+     proj
+     summary(proj)
+   #+end_src
+
+5) Barplots - sprint review averages
+   #+begin_src R
+     avg_proj_dsmath <- sapply(X=proj,FUN=mean)
+     str(avg_proj_dsmath)
+   #+end_src
+
+   Barplot of project averages by sprint review:
+   #+begin_src R :results graphics file :file ./img/dsmath_f22_projects1.png
+     barplot(avg_proj_dsmath)
+   #+end_src
+
+   [[../img/dsmath_f22_projects1.png]]
+
+   With the individual member results (stacked barplot):
+   #+begin_src R
+     as.matrix(proj)
+   #+end_src
+
+   Barplot of project averages by team member and sprint review:
+   #+begin_src R :results graphics file :file ./img/dsmath_f22_projects2.png
+     barplot(as.matrix(proj))
+   #+end_src
+
+   [[../img/dsmath_f22_projects2.png]]
+
+   But what we want is grouping the results by team. We build the data
+   frame using index vectors. These vectors are built using ~grep~
+   searching for the name of the team members (names removed here):
+   #+begin_src R
+     ## dsmath$Student[3:nrow(dsmath)-1]  # all students
+     dsmath_soccer_idx <- sort(c(grep("____",dsmath$Student)-1, 
+                          grep("____",dsmath$Student)-1))
+     dsmath_soccer_idx
+     dsmath_baseball_idx <- sort(c(grep("____",dsmath$Student)-1, 
+                            grep("____",dsmath$Student)-1))
+     dsmath_baseball_idx
+     dsmath_football_idx <- sort(c(grep("____",dsmath$Student)-1, 
+                            grep("____",dsmath$Student)-1))
+     dsmath_football_idx
+     dsmath_shift_idx <- c(grep("____",dsmath$Student)-1) 
+     dsmath_shift_idx
+     dsmath_traffic_idx <- sort(c(grep("____",dsmath$Student)-1, 
+                           grep("____",dsmath$Student)-1))
+     dsmath_traffic_idx
+     dsmath_armadillo_idx <- sort(c(grep("____",dsmath$Student)-1, 
+                             grep("____",dsmath$Student)-1))
+     dsmath_armadillo_idx
+     dsmath_kappasig_idx <- sort(c(grep("____",dsmath$Student)-1,
+                            grep("____",dsmath$Student)-1))
+     dsmath_kappasig_idx
+   #+end_src
+
+   Extract team project data by building the data frame row-by-row
+   using the index vectors that contain the indices for each team.
+   #+begin_src R
+     dsmath_proj_team <- proj[dsmath_soccer_idx[1],]
+     dsmath_proj_team[2,] <- proj[dsmath_baseball_idx[1],]
+     dsmath_proj_team[3,] <- proj[dsmath_football_idx[1],]
+     dsmath_proj_team[4,] <- proj[dsmath_shift_idx[1],]
+     dsmath_proj_team[5,] <- proj[dsmath_traffic_idx[1],]
+     dsmath_proj_team[6,] <- proj[dsmath_armadillo_idx[1],]
+     dsmath_proj_team[7,] <- proj[dsmath_kappasig_idx[1],]
+     rownames(dsmath_proj_team) <- c("Soccer",
+                                     "Baseball",
+                                     "Football",
+                                     "Shift",
+                                     "Traffic",
+                                     "Armadillo",
+                                     "KappaSig")
+     dsmath_proj_team
+   #+end_src
+
+   To create a proportional barplot, we need to normalize the data
+   frame. This is done with a function.
+   #+begin_src R
+     dsmath_teams <- apply(X=dsmath_proj_team,
+                           MARGIN=2,
+                           FUN=function(x){
+                             x*100/sum(x,na.rm=TRUE)})
+     sum(dsmath_teams[,1])
+     dsmath_teams
+   #+end_src
+
+6) Barplot of project averages by team and sprint review:
+   #+begin_src R :results graphics file :file ./img/dsmath_f22_projects3.png
+     colors <- c("red","green","yellow","blue","black","pink", "cyan")
+     barplot(dsmath_teams,
+             col=colors,
+             xlab="Sprint review",
+             names.arg=c("1st","2nd","3rd","4th"),
+             las=2)
+     legend("topright",
+            legend=rownames(dsmath_proj_team),
+            pch=15,
+            title="Team:",
+            col=colors)
+   #+end_src
+
+   [[../img/dsmath_f22_projects3.png]]
+
+7) Data entry - Student + final grade + course average (80% = B).
+   #+begin_src R
+     data.frame(
+       "Student"=dsmath$Student[3:nrow(dsmath)-1],
+       "Grade"=final_dsmath)
+     mean(final_dsmath)
+   #+end_src

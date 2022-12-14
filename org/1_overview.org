@@ -219,7 +219,7 @@ review]]).
 #+caption: David Morin, Probability for the enthusiastic beginner (2016)
 [[../img/1_morin.jpg]]
 #+attr_html: :width 150px
-#+caption: Norman Matloff, Probability and Statistics for Data Science (2020)x
+#+caption: Norman Matloff, Probability and Statistics for Data Science (2020)
 [[../img/1_matloff.png]]
 
 - Matloff, Probability & statistics for data science (2020) => library
